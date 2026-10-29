@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#3F5366">
+  <meta name="description" content="The Measure — an independent publication of Phi Labs.">
+  <title>The Measure — A Phi Labs Publication</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <style>
+:root {
+  --background: #3f5366;
+  --background-deep: #34485b;
+  --background-raised: #475d70;
+  --paper: #f3f4f1;
+  --white: #f9f9f6;
+  --text: #e6eaeb;
+  --muted: #bbc7cc;
+  --subdued: #9eafb9;
+  --gold: #c6ab78;
+  --gold-soft: rgba(198,171,120,.42);
+  --gold-subtle: rgba(198,171,120,.24);
+  --line: rgba(240,242,238,.16);
+  --font: 'Anonymouse', 'Anonymous Pro', Hack, 'IBM Plex Mono', 'DejaVu Sans Mono', 'Liberation Mono', ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--background); color: var(--text); font-family: var(--font); font-size: 14px; -webkit-font-smoothing: antialiased; }
+body::before { content: ''; position: fixed; top: 0; left: 0; right: 0; height: 5px; background: var(--gold); z-index: 10; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+[hidden] { display: none !important; }
+.site-shell { min-height: 100vh; position: relative; }
+.masthead { position: absolute; z-index: 2; left: clamp(28px,4.2vw,76px); top: 45px; width: 247px; }
+.brand-link { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+.brand-symbol { height: 61px; width: 61px; object-fit: contain; flex-shrink: 0; }
+.brand-type { display: flex; flex-direction: column; justify-content: center; white-space: nowrap; }
+.brand-topline { color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .42em; margin: 0 0 1px 2px; }
+.brand-wordmark { color: var(--white); font-size: 22px; font-weight: 700; letter-spacing: .045em; line-height: 1.03; }
+.brand-stop { color: var(--gold); }
+.brand-signature { color: var(--muted); font-size: 7.8px; letter-spacing: .065em; margin-top: 8px; }
+.masthead-rule { display: flex; align-items: center; gap: 0; width: 220px; margin-top: 28px; opacity: .72; }
+.masthead-rule > span:first-child { width: 100%; height: 1px; background: var(--gold-soft); }
+.rule-dot { width: 4px; height: 4px; flex-shrink: 0; background: var(--gold); transform: rotate(45deg); }
+.right-rail { position: fixed; z-index: 6; width: 185px; right: clamp(25px,4.2vw,76px); top: 193px; }
+.rail-topline { color: var(--gold); letter-spacing: .14em; font-weight: 700; font-size: 10px; display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+.small-gold-square { width: 6px; height: 6px; border: 1px solid var(--gold); transform: rotate(45deg); }
+.primary-nav { display: grid; gap: 4px; }
+.primary-nav a { display: grid; grid-template-columns: 33px 1fr; align-items: baseline; gap: 2px; padding: 12px 0; text-decoration: none; color: var(--muted); font-size: 12px; line-height: 1.55; border-bottom: 1px solid transparent; transition: color .15s ease, border-color .15s ease; }
+.primary-nav a:hover, .primary-nav a[aria-current="page"] { color: var(--white); }
+.primary-nav a[aria-current="page"] { border-color: var(--gold-soft); }
+.nav-index { color: var(--gold); font-size: 10px; }
+.rail-divider { height: 1px; background: var(--gold-soft); margin: 20px 0; }
+.rail-tool { display: flex; align-items: center; gap: 12px; background: transparent; border: 0; color: var(--muted); font-size: 12px; padding: 4px 0; text-align: left; }
+.rail-tool:hover { color: var(--white); }
+.rail-tool svg { color: var(--gold); }
+.search-panel { margin: 19px 0 0; }
+.search-panel label { display: block; color: var(--gold); font-size: 9px; letter-spacing: .16em; padding-bottom: 10px; }
+.search-panel input { width: 100%; border: 1px solid var(--gold-soft); border-radius: 0; color: var(--white); background: var(--background-deep); padding: 11px 10px; font-size: 11px; outline-offset: 2px; }
+.search-panel input::placeholder { color: var(--subdued); }
+.search-help { color: var(--subdued); font-size: 9px; line-height: 1.7; }
+.search-results { display: grid; gap: 7px; max-height: 260px; overflow-y: auto; }
+.search-result { text-decoration: none; display: block; font-size: 10px; line-height: 1.6; color: var(--white); padding: 10px; border: 1px solid var(--gold-subtle); }
+.search-result span { display: block; color: var(--gold); font-size: 8px; letter-spacing: .09em; margin-bottom: 5px; }
+.rail-bottom { display: flex; flex-direction: column; margin-top: 72px; gap: 9px; color: var(--subdued); font-size: 8px; line-height: 1.75; letter-spacing: .05em; }
+.tiny-gold-rule { display: block; height: 2px; width: 32px; background: var(--gold); margin-bottom: 5px; }
+.reading-column { width: min(800px,calc(100% - 490px)); max-width: 800px; margin: 0 auto; padding: 187px 0 108px; min-height: 100vh; }
+.initial-loading { color: var(--gold); font-size: 11px; letter-spacing: .16em; }
+.eyebrow { display: inline-flex; align-items: center; gap: 12px; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .15em; line-height: 1.7; text-transform: uppercase; }
+.eyebrow::before { content: ''; height: 1px; width: 30px; background: var(--gold); }
+.edition-marker { display: flex; justify-content: space-between; align-items: center; gap: 20px; color: var(--muted); font-size: 9px; line-height: 1.8; letter-spacing: .13em; padding-bottom: 19px; border-bottom: 1px solid var(--gold-soft); }
+.edition-marker strong { color: var(--gold); font-weight: 700; }
+.hero { padding: 51px 0 57px; border-bottom: 1px solid var(--gold-soft); }
+.hero h1 { font-size: clamp(38px,4vw,62px); line-height: 1.15; letter-spacing: -.075em; font-weight: 700; color: var(--white); margin: 23px 0 22px; max-width: 760px; }
+.hero h1 .accent-word { color: var(--gold); }
+.hero .hero-summary { font-size: 14px; line-height: 2.05; max-width: 650px; color: var(--muted); margin: 0; }
+.hero-footer { display: flex; align-items: center; gap: 20px; margin-top: 32px; }
+.inline-link { display: inline-flex; align-items: center; gap: 15px; padding: 0 0 8px; border-bottom: 1px solid var(--gold); color: var(--white); text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.inline-link:hover { color: var(--gold); }
+.inline-link svg { color: var(--gold); }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: 53px 0 20px; }
+.section-heading h2 { margin: 0; color: var(--white); font-size: 13px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.section-heading .heading-rule { height: 1px; background: var(--gold-subtle); flex: 1; }
+.section-heading .section-counter { font-size: 9px; color: var(--gold); letter-spacing: .1em; }
+.article-list { display: grid; }
+.article-row { text-decoration: none; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 20px; padding: 26px 0 29px; transition: padding-left .15s ease, background .15s ease; }
+.article-row:hover { padding-left: 10px; background: rgba(255,255,255,.018); }
+.article-row .article-meta { color: var(--gold); font-size: 9px; font-weight: 700; letter-spacing: .1em; line-height: 1.5; text-transform: uppercase; }
+.article-row h3 { color: var(--white); font-size: clamp(17px,2vw,21px); font-weight: 700; line-height: 1.5; letter-spacing: -.045em; margin: 10px 0 7px; }
+.article-row p { margin: 0; color: var(--muted); font-size: 11.5px; line-height: 1.95; max-width: 610px; }
+.article-row .row-trailing { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; min-width: 75px; }
+.article-row .read-time { color: var(--subdued); font-size: 9px; }
+.row-arrow { color: var(--gold); font-size: 24px; font-weight: 400; }
+.special-feature { background: rgba(20,36,51,.14); border: 1px solid var(--gold-soft); padding: 34px 34px 32px; margin-top: 24px; position: relative; }
+.special-feature::before, .special-feature::after { content: ''; width: 10px; height: 10px; position: absolute; border-color: var(--gold); border-style: solid; }
+.special-feature::before { left: -1px; top: -1px; border-width: 2px 0 0 2px; }
+.special-feature::after { right: -1px; bottom: -1px; border-width: 0 2px 2px 0; }
+.special-grid { display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 22px; }
+.special-feature .tag { color: var(--gold); font-size: 9px; font-weight: 700; letter-spacing: .16em; }
+.special-feature h3 { color: var(--white); font-size: 24px; font-weight: 700; line-height: 1.42; letter-spacing: -.06em; margin: 18px 0 12px; }
+.special-feature p { font-size: 11.5px; line-height: 2; color: var(--muted); margin: 0; max-width: 550px; }
+.pdf-icon { color: var(--gold); font-size: 10px; border: 1px solid var(--gold-soft); padding: 8px 9px; }
+.special-feature .report-links { margin-top: 25px; display: flex; gap: 25px; flex-wrap: wrap; }
+.special-feature .report-links a { color: var(--white); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 6px; font-size: 10px; font-weight: 700; letter-spacing: .06em; }
+.special-feature .report-links a:hover { color: var(--gold); }
+.note-line { display: flex; align-items: center; gap: 15px; color: var(--subdued); font-size: 9px; line-height: 1.9; margin: 22px 0 0; }
+.note-line .note-mark { color: var(--gold); }
+.page-head { padding: 50px 0 33px; border-bottom: 1px solid var(--gold-soft); }
+.page-head h1 { color: var(--white); font-size: clamp(32px,3.8vw,54px); font-weight: 700; letter-spacing: -.065em; line-height: 1.21; margin: 18px 0 14px; }
+.page-head p { max-width: 710px; font-size: 13px; line-height: 2.04; color: var(--muted); margin: 0; }
+.article-head { padding: 47px 0 37px; border-bottom: 1px solid var(--gold-soft); }
+.article-head h1 { color: var(--white); font-size: clamp(34px,4.1vw,58px); letter-spacing: -.065em; font-weight: 700; line-height: 1.23; margin: 22px 0; }
+.article-deck { color: var(--muted); font-size: 14px; line-height: 1.96; max-width: 720px; margin: 0 0 30px; }
+.byline { display: flex; flex-wrap: wrap; gap: 9px 25px; align-items: center; color: var(--subdued); font-size: 9px; letter-spacing: .04em; }
+.byline strong { color: var(--white); font-weight: 700; }
+.article-body { padding-top: 23px; }
+.article-body p { color: var(--text); font-size: 13px; line-height: 2.24; margin: 25px 0; max-width: 760px; }
+.article-body h2 { font-size: 19px; letter-spacing: -.03em; line-height: 1.6; color: var(--white); margin: 43px 0 16px; }
+.article-body blockquote { border-left: 2px solid var(--gold); margin: 39px 0; padding: 7px 0 7px 26px; color: var(--white); font-size: 16px; line-height: 1.9; }
+.article-body ul { color: var(--text); line-height: 2.1; font-size: 12px; padding-left: 20px; }
+.article-body li { margin-bottom: 11px; }
+.article-end { border-top: 1px solid var(--gold-soft); padding-top: 20px; margin-top: 52px; display: flex; gap: 22px; justify-content: space-between; flex-wrap: wrap; }
+.article-end a, .article-end button { color: var(--white); text-decoration: none; border: 0; border-bottom: 1px solid var(--gold); background: transparent; padding: 7px 0; font-size: 10px; }
+.article-end a:hover, .article-end button:hover { color: var(--gold); }
+.empty-state { padding: 30px 0; color: var(--muted); line-height: 2; }
+.about-copy p { color: var(--text); line-height: 2.2; font-size: 13px; margin: 28px 0; }
+.info-pair { display: grid; grid-template-columns: 180px 1fr; padding: 18px 0; border-bottom: 1px solid var(--line); gap: 20px; font-size: 11px; line-height: 1.9; }
+.info-pair dt { color: var(--gold); text-transform: uppercase; letter-spacing: .08em; }
+.info-pair dd { color: var(--white); margin: 0; }
+.archive-year { color: var(--gold); font-weight: 700; font-size: 12px; margin: 36px 0 3px; }
+.site-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; margin: 0 clamp(28px,4.2vw,76px); padding: 28px 0 30px; border-top: 1px solid var(--gold-soft); color: var(--subdued); letter-spacing: .08em; font-size: 8px; line-height: 1.6; }
+.footer-mark, .footer-separator { color: var(--gold); }
+.footer-separator { padding: 0 8px; }
+.noscript-notice { margin-top: 100px; }
+
+@media (max-width: 1290px) {
+  .masthead { left: 25px; }
+  .right-rail { right: 26px; width: 164px; }
+  .reading-column { width: min(800px, calc(100% - 425px)); }
+  .brand-symbol { width: 52px; height: 52px; }
+  .brand-wordmark { font-size: 20px; }
+}
+@media (max-width: 1060px) {
+  .masthead { position: relative; top: auto; left: auto; margin: 0; padding: 32px 35px 23px; width: auto; }
+  .masthead-rule { display: none; }
+  .right-rail { position: relative; top: auto; right: auto; width: auto; margin: 0 35px; border-top: 1px solid var(--gold-soft); border-bottom: 1px solid var(--gold-soft); padding: 8px 0 9px; }
+  .rail-topline, .rail-divider, .rail-bottom { display: none; }
+  .primary-nav { display: flex; gap: 21px; overflow-x: auto; scrollbar-width: thin; }
+  .primary-nav a { display: inline-flex; align-items: baseline; gap: 9px; flex: 0 0 auto; border: none; padding: 11px 0; font-size: 10px; }
+  .primary-nav a[aria-current="page"] { color: var(--gold); }
+  .rail-tools { position: absolute; top: -64px; right: 0; }
+  .rail-tool { width: 20px; overflow: hidden; white-space: nowrap; }
+  .rail-tool svg { flex: 0 0 17px; }
+  .search-panel { position: absolute; top: 34px; right: 0; width: min(300px,80vw); padding: 16px; background: var(--background-deep); border: 1px solid var(--gold-soft); box-shadow: 0 12px 25px rgba(0,0,0,.15); }
+  .reading-column { width: min(800px,calc(100% - 70px)); padding-top: 44px; }
+}
+@media (max-width: 620px) {
+  body { font-size: 12px; }
+  .masthead { padding: 28px 19px 21px; }
+  .brand-link { gap: 9px; }
+  .brand-symbol { width: 47px; height: 47px; }
+  .brand-wordmark { font-size: 19px; }
+  .brand-topline { font-size: 8px; }
+  .brand-signature { font-size: 7px; }
+  .right-rail { margin: 0 19px; }
+  .primary-nav { gap: 18px; }
+  .primary-nav a { font-size: 10px; }
+  .rail-tools { top: -57px; }
+  .reading-column { width: calc(100% - 38px); padding-top: 37px; padding-bottom: 65px; }
+  .edition-marker { font-size: 8px; }
+  .hero { padding: 38px 0 43px; }
+  .hero h1 { font-size: clamp(33px,8.8vw,52px); letter-spacing: -.065em; }
+  .hero .hero-summary { font-size: 12px; }
+  .section-heading { margin-top: 41px; }
+  .article-row { gap: 9px; }
+  .article-row h3 { font-size: 16px; }
+  .article-row p { font-size: 10.5px; }
+  .article-row .row-trailing { min-width: 45px; }
+  .read-time { font-size: 8px; }
+  .special-feature { padding: 23px 20px; }
+  .special-feature h3 { font-size: 21px; }
+  .article-head h1 { font-size: 34px; }
+  .article-deck { font-size: 12px; }
+  .article-body p { font-size: 12px; }
+  .info-pair { grid-template-columns: 1fr; gap: 3px; }
+  .site-footer { margin: 0 19px; font-size: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0s !important; }
+}
+
+/* LOWER REGISTER / horizontal PDF cover, poster, meme and sponsored-parody strip */
+.dispatch-section {
+  max-width: 1440px;
+  padding: 23px clamp(25px, 4.2vw, 76px) 24px;
+  margin: 0 auto 8px;
+  border-top: 1px solid var(--gold-soft);
+  border-bottom: 1px solid var(--gold-subtle);
+}
+.dispatch-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 16px; }
+.dispatch-heading-copy { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 23px; }
+.dispatch-heading-title { display: flex; align-items: center; gap: 10px; }
+.dispatch-sigil { color: var(--gold); font-size: 13px; }
+.dispatch-heading-row h2 { margin: 0; color: var(--white); font-size: 11px; letter-spacing: .14em; line-height: 1.7; }
+.dispatch-descriptor { color: var(--subdued); font-size: 9px; letter-spacing: .055em; }
+.dispatch-controls { display: inline-flex; align-items: center; gap: 7px; flex-shrink: 0; }
+.dispatch-controls > span { color: var(--subdued); font-size: 8px; letter-spacing: .08em; margin-right: 12px; }
+.dispatch-arrow { width: 29px; height: 26px; border: 1px solid var(--gold-soft); background: transparent; color: var(--gold); font-size: 15px; line-height: 1; }
+.dispatch-arrow:not(:disabled):hover { background: rgba(198,171,120,.12); color: var(--white); }
+.dispatch-arrow:disabled { opacity: .35; cursor: default; }
+.dispatch-track {
+  display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--gold-soft) transparent;
+  padding: 1px 1px 13px; scroll-padding: 1px;
+}
+.dispatch-track::-webkit-scrollbar { height: 5px; }
+.dispatch-track::-webkit-scrollbar-thumb { background: var(--gold-soft); }
+.dispatch-track::-webkit-scrollbar-track { background: transparent; }
+.dispatch-tile {
+  flex: 0 0 246px; width: 246px; height: 120px; display: flex; gap: 13px; text-align: left;
+  border: 1px solid var(--gold-subtle); border-radius: 0; background: rgba(22,41,56,.30);
+  padding: 6px; text-decoration: none; color: var(--white); scroll-snap-align: start;
+  transition: background .16s ease, border-color .16s ease;
+}
+.dispatch-tile:hover { border-color: var(--gold); background: rgba(22,41,56,.49); }
+.dispatch-tile:focus-visible { outline-offset: -2px; }
+.dispatch-thumb { flex: 0 0 80px; width: 80px; height: 106px; object-fit: cover; object-position: center; background: #dde1e3; }
+.dispatch-tile-copy { display: flex; flex-direction: column; justify-content: space-between; min-width: 0; padding: 10px 4px 7px 0; line-height: 1.5; }
+.dispatch-kind { color: var(--gold); text-transform: uppercase; font-size: 8px; font-weight: 700; letter-spacing: .045em; }
+.dispatch-tile strong { font-size: 12px; line-height: 1.35; color: var(--white); font-weight: 700; overflow-wrap: anywhere; }
+.dispatch-hint { color: var(--subdued); font-size: 8px; letter-spacing: .035em; }
+.poster-dialog {
+  border: 1px solid var(--gold); background: var(--background-deep); color: var(--white);
+  width: min(850px, calc(100vw - 32px)); max-height: calc(100dvh - 32px);
+  padding: 0; box-shadow: 0 22px 65px rgba(0,0,0,.45);
+}
+.poster-dialog::backdrop { background: rgba(11,19,29,.83); }
+.poster-dialog-bar { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 14px 18px; border-bottom: 1px solid var(--gold-soft); color: var(--gold); font-size: 10px; letter-spacing: .1em; }
+.poster-dialog-close { font: inherit; color: var(--white); background: none; border: none; font-size: 10px; letter-spacing: .09em; padding: 4px 0; }
+.poster-dialog-close:hover { color: var(--gold); }
+.poster-dialog-body { padding: 20px; display: flex; gap: 24px; align-items: start; }
+.poster-dialog-body img { display: block; object-fit: contain; max-width: min(480px, 60%); max-height: calc(100dvh - 140px); height: auto; background: #e3e7e6; }
+.poster-dialog-notes { min-width: 0; max-width: 260px; padding: 10px 0; }
+.poster-dialog-notes h2 { font-size: 20px; margin: 0 0 17px; line-height: 1.3; }
+.poster-dialog-notes p { font-size: 11px; line-height: 2; color: var(--muted); margin: 0; }
+@media (max-width: 750px) {
+  .dispatch-section { padding: 20px 19px 20px; }
+  .dispatch-heading-row { align-items: flex-start; }
+  .dispatch-heading-copy { gap: 6px; }
+  .dispatch-descriptor { flex-basis: 100%; font-size: 8px; line-height: 1.6; }
+  .dispatch-controls > span { display: none; }
+  .dispatch-tile { flex-basis: 235px; width: 235px; }
+}
+@media (max-width: 590px) {
+  .poster-dialog-body { display: block; padding: 12px; }
+  .poster-dialog-body img { max-width: 100%; max-height: calc(100dvh - 225px); margin: 0 auto; }
+  .poster-dialog-notes { max-width: none; padding: 12px 2px 0; }
+  .poster-dialog-notes h2 { font-size: 16px; margin-bottom: 4px; }
+  .poster-dialog-notes p { font-size: 10px; line-height: 1.5; }
+}
+
+/* V3 / MASTHEAD + HORIZONTAL SECTIONS + ARTICLE DIRECTORY */
+:root { --report-red: #e7998e; --report-red-line: rgba(231,153,142,.44); }
+.site-shell {
+  display: grid;
+  grid-template-columns: minmax(24px,1fr) minmax(0,800px) minmax(24px,1fr);
+  grid-template-rows: auto auto minmax(0,1fr);
+  align-items: start;
+  min-height: 100vh;
+  position: relative;
+}
+.masthead {
+  position: relative; top: auto; left: auto; z-index: 2;
+  grid-column: 1/-1; grid-row: 1;
+  width: auto; margin: 0;
+  padding: 37px clamp(24px,4.2vw,76px) 32px;
+}
+.masthead-rule { display: none; }
+.brand-link { width: max-content; }
+.brand-symbol { width: 61px; height: 61px; }
+.brand-wordmark { font-size: 22px; }
+.section-bar {
+  grid-column: 2; grid-row: 2;
+  display: flex; gap: 0; align-items: stretch; justify-content: space-between;
+  min-width: 0; width: 100%;
+  border-top: 1px solid var(--gold-soft);
+  border-bottom: 1px solid var(--gold-soft);
+  white-space: nowrap;
+}
+.section-bar a {
+  position: relative; flex: 0 0 auto;
+  color: var(--muted); font-size: 10px; font-weight: 700;
+  letter-spacing: .01em; text-transform: uppercase;
+  padding: 16px 4px 15px; text-decoration: none;
+  transition: color .15s ease;
+}
+.section-bar a:hover,.section-bar a[aria-current="page"] { color: var(--white); }
+.section-bar a[aria-current="page"]::after {
+  content: ''; position: absolute; height: 2px;
+  left: 4px; right: 4px; bottom: -1px; background: var(--gold);
+}
+.section-bar a.nav-special { color: var(--report-red); }
+.section-bar a.nav-special:hover { color: #ffd5d0; }
+.section-bar a.nav-special[aria-current="page"]::after { background: var(--report-red); }
+.reading-column {
+  grid-column: 2; grid-row: 3;
+  min-width: 0; max-width: 800px; width: 100%;
+  margin: 0; padding: 35px 0 100px; min-height: 0;
+}
+.right-rail {
+  grid-column: 3; grid-row: 3; align-self: start; justify-self: start;
+  position: sticky; z-index: 2; top: 20px; right: auto;
+  width: min(185px,calc(100% - 45px)); max-height: calc(100vh - 38px);
+  margin: 31px 19px 0 26px; padding: 0 2px 26px 0;
+  overflow-y: auto; overflow-x: hidden; scrollbar-width: thin;
+  scrollbar-color: var(--gold-soft) transparent;
+}
+.rail-topline { margin: 0; font-size: 9px; gap: 8px; letter-spacing: .08em; }
+.rail-count { margin-left: auto; color: var(--muted); }
+.directory-subline { color: var(--white); font-size: 11px; line-height: 1.6; font-weight: 700; letter-spacing: .04em; margin: 13px 0 18px; }
+.rail-tools { position: static; border-top: 1px solid var(--gold-subtle); border-bottom: 1px solid var(--gold-subtle); padding: 10px 0; }
+.rail-tool { width: auto; overflow: visible; display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 10px; }
+.rail-tool svg { flex: 0 0 17px; }
+.search-panel { position: static; width: auto; padding: 14px 0 0; margin: 0; border: 0; box-shadow: none; background: transparent; }
+.search-results { max-height: none; gap: 0; }
+.search-results .timeline-entry { border-bottom: 1px solid var(--line); }
+.directory-list { margin-top: 14px; }
+.timeline-month { margin: 20px 0 4px; padding-left: 13px; color: var(--gold); letter-spacing: .12em; font-size: 8px; font-weight: 700; }
+.timeline-entry {
+  position: relative; min-width: 0; display: flex; align-items: flex-start; gap: 9px;
+  text-decoration: none; border-left: 1px solid var(--gold-subtle);
+  padding: 13px 0 13px 13px; margin-left: 3px;
+  transition: background .15s ease;
+}
+.timeline-entry::before {
+  content: ''; position: absolute; width: 5px; height: 5px; left: -3px; top: 18px;
+  border: 1px solid var(--gold); background: var(--background); transform: rotate(45deg);
+}
+.timeline-entry:hover { background: rgba(255,255,255,.035); }
+.timeline-entry:hover .timeline-copy strong { color: var(--gold); }
+.timeline-cover { display: block; flex: 0 0 43px; width: 43px; height: 62px; object-fit: cover; border: 1px solid var(--gold-subtle); background: var(--background-deep); }
+.timeline-copy { display: flex; flex-direction: column; min-width: 0; gap: 6px; }
+.timeline-date { font-size: 8px; color: var(--subdued); line-height: 1.4; letter-spacing: .01em; }
+.timeline-pdf { color: var(--report-red); }
+.timeline-copy strong { color: var(--white); font-size: 10px; line-height: 1.57; font-weight: 700; overflow-wrap: anywhere; }
+.timeline-category { color: var(--gold); text-transform: uppercase; font-size: 8px; line-height: 1.45; }
+.directory-archive { display: flex; justify-content: space-between; border-top: 1px solid var(--gold-subtle); padding-top: 16px; margin-top: 18px; text-decoration: none; color: var(--gold); font-size: 9px; font-weight: 700; letter-spacing: .05em; }
+.directory-archive:hover { color: var(--white); }
+.rail-bottom { display: flex; margin-top: 38px; font-size: 8px; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { color: var(--white); }
+.report-inline { color: var(--report-red); }
+.row-cover { width: 68px; height: 94px; object-fit: cover; border: 1px solid var(--gold-subtle); background: var(--background-deep); }
+.article-row:has(.row-cover) { grid-template-columns: 68px minmax(0,1fr) auto; }
+.article-row .row-copy { min-width: 0; }
+.special-grid { grid-template-columns: auto minmax(0,1fr); }
+.report-cover { width: 98px; height: 136px; object-fit: cover; border: 1px solid var(--gold-subtle); }
+.special-page h1 .accent-word { color: var(--report-red); }
+.article-classification { margin-top: 24px; color: var(--subdued); font-size: 9px; letter-spacing: .06em; line-height: 1.8; }
+.article-classification a { text-decoration: none; color: var(--gold); border-bottom: 1px solid var(--gold-soft); }
+.article-classification .classification-special { color: var(--report-red); border-color: var(--report-red-line); }
+.article-classification span { color: var(--subdued); padding: 0 5px; }
+.empty-state { border-bottom: 1px solid var(--gold-subtle); }
+
+@media (max-width: 1200px) {
+  .masthead { padding-left: 29px; padding-right: 29px; }
+  .right-rail { width: min(170px,calc(100% - 35px)); margin-left: 19px; margin-right: 16px; }
+  .timeline-cover { width: 35px; height: 51px; flex-basis: 35px; }
+}
+@media (max-width: 1140px) {
+  .site-shell { grid-template-columns: minmax(26px,1fr) minmax(0,800px) minmax(26px,1fr); grid-template-rows: auto auto auto auto; }
+  .masthead { padding: 29px 26px 25px; }
+  .section-bar { grid-row: 2; overflow-x: auto; overscroll-behavior-x: contain; gap: 26px; justify-content: flex-start; scrollbar-width: thin; }
+  .reading-column { grid-row: 3; padding: 32px 0 70px; }
+  .right-rail { grid-column: 2; grid-row: 4; position: static; width: 100%; max-height: none; margin: 0 0 50px; padding: 25px 0 0; border-top: 1px solid var(--gold-soft); overflow: visible; }
+  .directory-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 22px; }
+  .directory-list .timeline-month { grid-column: 1/-1; }
+  .rail-tools { position: static; }
+  .search-panel { position: static; width: 100%; background: transparent; border: 0; padding: 14px 0 0; box-shadow: none; }
+  .search-results { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px 18px; }
+  .rail-bottom { margin-top: 24px; }
+}
+@media (max-width: 700px) {
+  .site-shell { grid-template-columns: 19px minmax(0,1fr) 19px; }
+  .masthead { padding: 25px 19px 22px; }
+  .brand-symbol { width: 47px; height: 47px; }
+  .brand-wordmark { font-size: 19px; }
+  .section-bar { gap: 20px; }
+  .section-bar a { font-size: 10px; padding: 14px 0; }
+  .section-bar a[aria-current="page"]::after { left: 0; right: 0; }
+  .reading-column { width: 100%; padding: 27px 0 55px; }
+  .directory-list, .search-results { grid-template-columns: 1fr; }
+  .right-rail { margin-bottom: 35px; }
+  .article-row:has(.row-cover) { grid-template-columns: 50px minmax(0,1fr) auto; gap: 12px; }
+  .row-cover { width: 50px; height: 70px; }
+  .special-grid { gap: 15px; }
+  .report-cover { width: 65px; height: 92px; }
+  .section-heading { gap: 9px; }
+}
+
+/* JSON-published article rich blocks */
+.article-body pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#24313f;color:#f5f6f4;padding:20px;border-left:2px solid #c2a66f;font:13px/1.6 ui-monospace,monospace;}
+.article-body figure{margin:24px 0}.article-body figure img{display:block;max-width:100%;height:auto}
+  .article-body img { max-width: 100%; height: auto; }
+  .article-body pre { overflow: auto; padding: 18px; background: rgba(0,0,0,.2); }
+  .article-body table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; }
+  .article-body td,.article-body th { border: 1px solid rgba(194,166,111,.32); padding: 9px 11px; }
+  .media-figure { margin: 25px 0; }
+  .media-figure img { max-width: 100%; height: auto; display: block; }
+  .media-figure figcaption { color: #CAD2D8; font-size: 13px; line-height: 1.9; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="masthead" aria-label="The Measure masthead">
+      <a class="brand-link" href="#/" aria-label="The Measure — front page">
+        <img class="brand-symbol" src="images/logo.png" alt="">
+        <span class="brand-type">
+          <span class="brand-topline">THE</span>
+          <span class="brand-wordmark">MEASURE<span class="brand-stop">.</span></span>
+          <span class="brand-signature">A PHI LABS PUBLICATION</span>
+        </span>
+      </a>
+    </header>
+
+    <nav class="section-bar" id="primary-nav" aria-label="Editorial sections"></nav>
+
+    <aside class="right-rail" aria-label="Article directory and timeline">
+      <div class="rail-topline"><span class="small-gold-square" aria-hidden="true"></span> THE RECORD <span id="directory-count" class="rail-count">00</span></div>
+      <div class="directory-subline" id="directory-subline">PUBLICATION TIMELINE</div>
+      <div class="rail-tools">
+        <button id="search-toggle" class="rail-tool" type="button" aria-expanded="false" aria-controls="search-panel">
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.7" cy="10.7" r="6.6"/><path d="m15.5 15.5 5 5"/></svg>
+          Search articles
+        </button>
+        <div id="search-panel" class="search-panel" hidden>
+          <label for="search-input">SEARCH THE RECORD</label>
+          <input id="search-input" type="search" autocomplete="off" placeholder="Titles, subjects…">
+          <div id="search-results" class="search-results" aria-live="polite"></div>
+        </div>
+      </div>
+      <div id="directory-list" class="directory-list" aria-live="polite"></div>
+      <a class="directory-archive" href="#/archive">COMPLETE ARCHIVE <span aria-hidden="true">↗</span></a>
+      <div class="rail-bottom"><span class="tiny-gold-rule"></span><span>PHI LABS / PUBLIC INTEREST RESEARCH</span><span>EST. 28 OCT 2026</span></div>
+    </aside>
+
+    <main class="reading-column" id="main" tabindex="-1">
+      <noscript><section class="noscript-notice"><h1>JavaScript is required</h1><p>The Measure loads its editorial content from JSON. Enable JavaScript to view this demonstration.</p></section></noscript>
+      <div class="initial-loading" aria-live="polite">LOADING THE RECORD<span class="loading-dots">…</span></div>
+    </main>
+  </div>
+  <section class="dispatch-section" id="dispatch-section" aria-labelledby="dispatch-heading" hidden>
+    <div class="dispatch-heading-row">
+      <div class="dispatch-heading-copy">
+        <div class="dispatch-heading-title"><span class="dispatch-sigil" aria-hidden="true">✳</span><h2 id="dispatch-heading">THE LOWER REGISTER</h2></div>
+        <span class="dispatch-descriptor">PDF EDITIONS / VISUAL COMMENTARY / SPONSORED NOTICES</span>
+      </div>
+      <div class="dispatch-controls">
+        <span aria-hidden="true">BROWSE THE MARGINS</span>
+        <button class="dispatch-arrow" id="dispatch-prev" type="button" aria-label="Scroll poster rail left">←</button>
+        <button class="dispatch-arrow" id="dispatch-next" type="button" aria-label="Scroll poster rail right">→</button>
+      </div>
+    </div>
+    <div class="dispatch-track" id="dispatch-track" role="region" aria-label="PDF covers, cartoons, memes, and satirical sponsored posters" tabindex="0"></div>
+  </section>
+  <dialog class="poster-dialog" id="poster-dialog" aria-labelledby="poster-dialog-title">
+    <div class="poster-dialog-bar"><span id="poster-dialog-kind">VISUAL COMMENTARY</span><button class="poster-dialog-close" id="poster-dialog-close" type="button" aria-label="Close poster viewer">CLOSE ×</button></div>
+    <div class="poster-dialog-body"><img id="poster-dialog-image" src="" alt=""><div class="poster-dialog-notes"><h2 id="poster-dialog-title"></h2><p id="poster-dialog-caption"></p></div></div>
+  </dialog>
+  <footer class="site-footer" id="site-footer">
+    <div><span class="footer-mark">Φ</span> THE MEASURE <span class="footer-separator">/</span> PHI LABS</div>
+    <div><a href="#/about">ABOUT</a> <span class="footer-separator">/</span> <a href="#/archive">ARCHIVE</a> <span class="footer-separator">/</span> INDEPENDENT INQUIRY. PUBLIC RECORD.</div>
+    <div>© 2026 PHI LABS</div>
+  </footer>
+  <script>
+/* The Measure / Lower Register: native, JSON-driven PDF and poster strip. */
+'use strict';
+
+(() => {
+  const section = document.getElementById('dispatch-section');
+  const track = document.getElementById('dispatch-track');
+  const prev = document.getElementById('dispatch-prev');
+  const next = document.getElementById('dispatch-next');
+  const dialog = document.getElementById('poster-dialog');
+  const posterImage = document.getElementById('poster-dialog-image');
+  const posterTitle = document.getElementById('poster-dialog-title');
+  const posterCaption = document.getElementById('poster-dialog-caption');
+  const posterKind = document.getElementById('poster-dialog-kind');
+  const dialogClose = document.getElementById('poster-dialog-close');
+  let items = [];
+  let opener = null;
+
+  const escape = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[ch]);
+  // Site assets and PDFs only: JSON cannot inject external tracking links or executable URLs.
+  const localPath = path => {
+    if (typeof path !== 'string') return '';
+    if (/^https:\/\/[a-z0-9.-]+\.github\.io\/[A-Za-z0-9_./%~-]+$/i.test(path)) return path;
+    if (/^(?:images|articles)\/[A-Za-z0-9_./-]+$/.test(path) &&
+      !path.split('/').includes('..') && !path.includes('//')) return path;
+    return '';
+  };
+
+  function card(item, index) {
+    const src = localPath(item.image);
+    if (!src) return '';
+    const title = escape(item.title);
+    const label = escape(item.label || item.kind);
+    const isPdf = item.kind === 'pdf' && localPath(item.href);
+    const hint = isPdf ? 'OPEN PDF ↗' : 'VIEW POSTER ↗';
+    const inner = `<img class="dispatch-thumb" src="${escape(src)}" alt="" loading="lazy" decoding="async">
+      <span class="dispatch-tile-copy"><span class="dispatch-kind">${label}</span>
+      <strong>${title}</strong><span class="dispatch-hint">${hint}</span></span>`;
+    return isPdf
+      ? `<a class="dispatch-tile" href="${escape(item.href)}" target="_blank" rel="noopener" aria-label="Open PDF: ${title}">${inner}</a>`
+      : `<button class="dispatch-tile" type="button" data-register-index="${index}" aria-label="View poster: ${title}">${inner}</button>`;
+  }
+
+  function updateControls() {
+    const maximum = track.scrollWidth - track.clientWidth;
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = maximum <= 2 || track.scrollLeft >= maximum - 2;
+  }
+
+  function openPoster(index, button) {
+    const item = items[index];
+    if (!item || item.kind === 'pdf') return;
+    const image = localPath(item.image);
+    if (!image) return;
+    opener = button;
+    posterTitle.textContent = item.title || '';
+    posterCaption.textContent = item.description || '';
+    posterKind.textContent = item.label || item.kind || 'POSTER';
+    posterImage.src = image;
+    posterImage.alt = item.alt || item.title || 'Poster';
+    dialog.showModal();
+  }
+
+  track.addEventListener('click', event => {
+    const button = event.target.closest('button[data-register-index]');
+    if (button) openPoster(Number(button.dataset.registerIndex), button);
+  });
+  track.addEventListener('scroll', updateControls, { passive: true });
+  window.addEventListener('resize', updateControls);
+  for (const [control, direction] of [[prev, -1], [next, 1]]) {
+    control.addEventListener('click', () => {
+      const tile = track.querySelector('.dispatch-tile');
+      const distance = (tile ? tile.getBoundingClientRect().width + 12 : 270) * 2;
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      track.scrollBy({ left: distance * direction, behavior: reduced ? 'instant' : 'smooth' });
+    });
+  }
+  dialogClose.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener('close', () => {
+    posterImage.removeAttribute('src');
+    if (opener?.isConnected) opener.focus({ preventScroll: true });
+    opener = null;
+  });
+
+  window.mountLowerRegister = data => {
+    const records = data?.lowerRegister?.items;
+    if (!Array.isArray(records) || !records.length) return;
+    items = records;
+    track.innerHTML = items.map(card).join('');
+    section.hidden = false;
+    requestAnimationFrame(updateControls);
+  };
+})();
+
+  </script>
+  <script>
+/* SNIPE native Markdown renderer. HTML input is escaped; no third-party runtime. */
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const hrefSafe = raw => {
+  const url = String(raw ?? '').trim();
+  if (/^(?:https?:\/\/|mailto:|#|images/|articles/|\.\/|\.\.\/|\/)/i.test(url) && !/[\s<>"']/.test(url) && !url.includes('..\\')) return url;
+  return '';
+};
+function inlineMarkdown(text) {
+  let out = esc(text);
+  out = out.replace(/!\[([^\]]*)\]\(([^)\s]+)(?:\s+&quot;[^&]*&quot;)?\)/g, (_,alt,url) => {
+    const path = hrefSafe(url); return path ? `<img src="${esc(path)}" alt="${alt}" loading="lazy">` : alt;
+  });
+  out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_,label,url) => {
+    const path = hrefSafe(url); return path ? `<a href="${esc(path)}" rel="noopener noreferrer">${label}</a>` : label;
+  });
+  out = out.replace(/\*\*([^*\n]+)\*\*/g,'<strong>$1</strong>')
+    .replace(/__([^_\n]+)__/g,'<strong>$1</strong>')
+    .replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g,'<em>$1</em>')
+    .replace(/~~([^~\n]+)~~/g,'<del>$1</del>')
+    .replace(/`([^`\n]+)`/g,'<code>$1</code>');
+  return out;
+}
+function tokenizeMarkdown(md) {
+  const lines = String(md || '').replace(/\r\n?/g,'\n').split('\n');
+  const blocks = [];
+  let i=0;
+  const begins = s => /^(?:\s*$|#{1,6} |```|~~~|>\s?|\s*[-*+] |\s*\d+\. |\s*(?:---|___|\*\*\*)\s*$)/.test(s);
+  while(i<lines.length){
+    const line=lines[i];
+    if(!line.trim()){i++;continue;}
+    let m=line.match(/^(```|~~~)([^\s`]*)/);
+    if(m){const fence=m[1],lang=m[2]||'';i++;const body=[];while(i<lines.length&&!lines[i].startsWith(fence))body.push(lines[i++]);if(i<lines.length)i++;blocks.push({type:'code',lang,text:body.join('\n')});continue;}
+    m=line.match(/^(#{1,6})\s+(.+)$/);
+    if(m){blocks.push({type:'heading',depth:m[1].length,text:m[2]});i++;continue;}
+    if(/^\s*(?:---|___|\*\*\*)\s*$/.test(line)){blocks.push({type:'hr'});i++;continue;}
+    if(/^>\s?/.test(line)){const body=[];while(i<lines.length&&/^>\s?/.test(lines[i]))body.push(lines[i++].replace(/^>\s?/,''));blocks.push({type:'blockquote',text:body.join(' ')});continue;}
+    if(/^\s*(?:[-*+] |\d+\. )/.test(line)){
+      const ordered=/^\s*\d+\. /.test(line), items=[];
+      while(i<lines.length && /^\s*(?:[-*+] |\d+\. )/.test(lines[i]))items.push({text:lines[i++].replace(/^\s*(?:[-*+] |\d+\. )/,'')});
+      blocks.push({type:'list',ordered,items});continue;
+    }
+    if(line.includes('|') && i+1<lines.length && /^\s*\|?\s*:?-{3,}:?(?:\s*\|\s*:?-{3,}:?)*\s*\|?\s*$/.test(lines[i+1])){
+      const cells=s=>s.trim().replace(/^\||\|$/g,'').split('|').map(v=>v.trim());
+      const header=cells(line), rows=[];i+=2;
+      while(i<lines.length&&lines[i].includes('|')&&lines[i].trim())rows.push(cells(lines[i++]));
+      blocks.push({type:'table',header,rows});continue;
+    }
+    const body=[line];i++;
+    while(i<lines.length&&!begins(lines[i])&&!(lines[i].includes('|')&&i+1<lines.length&&/^\s*\|?\s*:?-{3,}/.test(lines[i+1])))body.push(lines[i++]);
+    blocks.push({type:'paragraph',text:body.join('\n')});
+  }
+  return blocks;
+}
+function renderMarkdown(md){
+  return tokenizeMarkdown(md).map(b=>{
+    switch(b.type){
+      case 'heading':return `<h${b.depth}>${inlineMarkdown(b.text)}</h${b.depth}>`;
+      case 'paragraph':return `<p>${inlineMarkdown(b.text).replace(/\n/g,'<br>')}</p>`;
+      case 'blockquote':return `<blockquote>${inlineMarkdown(b.text)}</blockquote>`;
+      case 'list':return `<${b.ordered?'ol':'ul'}>${b.items.map(x=>`<li>${inlineMarkdown(x.text)}</li>`).join('')}</${b.ordered?'ol':'ul'}>`;
+      case 'code':return `<pre><code class="language-${esc(b.lang)}">${esc(b.text)}</code></pre>`;
+      case 'hr':return '<hr>';
+      case 'table':return `<table><thead><tr>${b.header.map(x=>`<th>${inlineMarkdown(x)}</th>`).join('')}</tr></thead><tbody>${b.rows.map(r=>`<tr>${r.map(x=>`<td>${inlineMarkdown(x)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+      default:return '';
+    }
+  }).join('\n');
+}
+const marked = {setOptions(){}, parse:renderMarkdown,lexer:tokenizeMarkdown};
+// The renderer escapes HTML before producing its own limited markup.
+const DOMPurify = {sanitize: html => html};
+const Prism = {languages:Object.create(null),highlight:(text)=>esc(text)};
+
+  </script>
+  <script>
+/* THE MEASURE / JSON-only editorial record, seven-section navigation and timeline. */
+'use strict';
+
+const main = document.getElementById('main');
+const nav = document.getElementById('primary-nav');
+const directory = document.getElementById('directory-list');
+const directoryCount = document.getElementById('directory-count');
+const directorySubline = document.getElementById('directory-subline');
+const searchToggle = document.getElementById('search-toggle');
+const searchPanel = document.getElementById('search-panel');
+const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+let content = {
+  publication: {
+    name: 'The Measure', publisher: 'Phi Labs', volume: '01', issue: '001',
+    edition: 'THE PUBLICATION RECORD', notice: '',
+    hero: { articleId: '', label: 'RESEARCH / EDITORIAL / PUBLIC INTEREST' }
+  },
+  sections: [
+    {id:'science',name:'Science',summary:'Original research, mathematics, physics, biology and the experimental record.'},
+    {id:'technology',name:'Technology',summary:'Engineering, computing, AI, tools and the systems we build.'},
+    {id:'humanities',name:'Humanities',summary:'Philosophy, culture, history, art and human experience.'},
+    {id:'politics',name:'Politics',summary:'Institutions, governance, policy and civic life.'},
+    {id:'thinkpieces',name:'Thinkpieces',summary:'Essays, interpretation, arguments and intellectual exploration.'},
+    {id:'humor',name:'Humor',summary:'Satire, editorial cartoons, memes and cultural commentary.'},
+    {id:'special-reports',name:'Special Reports',summary:'Major research papers and portable PDF editions.'}
+  ],
+  articles: [], lowerRegister: {items:[]}
+};
+
+const escapeHTML = (value = '') => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+})[ch]);
+let sections = [];
+const section = id => sections.find(s => s.id === id);
+const arrow = '<svg viewBox="0 0 22 22" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M3 11h15m-6-6 6 6-6 6"/></svg>';
+const articleUrl = a => `#/article/${encodeURIComponent(String(a.id))}`;
+const sectionUrl = id => `#/section/${encodeURIComponent(id)}`;
+const isSpecial = a => a.type === 'pdf' || (Array.isArray(a.sections) && a.sections.includes('special-reports'));
+const articleSections = a => Array.isArray(a.sections) && a.sections.length ? a.sections : a.section ? [a.section] : [];
+const belongsTo = (a, id) => id === 'special-reports' ? isSpecial(a) : articleSections(a).includes(id);
+const allArticles = () => [...content.articles].sort((a,b) => String(b.published || b.date).localeCompare(String(a.published || a.date)));
+const inSection = id => allArticles().filter(a => belongsTo(a,id));
+const regularArticles = () => allArticles().filter(a => !isSpecial(a));
+const specialReports = () => allArticles().filter(isSpecial);
+const previewNotice = () => content.publication.notice ? `<p class="note-line"><span class="note-mark">✳</span>${escapeHTML(content.publication.notice)}</p>` : "";
+// Allow relative assets and HTTPS publication URLs; reject script/data URLs from JSON.
+const safeResource = input => {
+  if (typeof input !== 'string') return '';
+  if (/^https:\/\/[^\s]+$/i.test(input)) return input;
+  if (/^(?:images|articles)\/[A-Za-z0-9_.\/-]+$/.test(input) && !input.split('/').includes('..') && !input.includes('//')) return input;
+  return '';
+};
+const pdfLink = a => safeResource(a.pdf);
+const formatDate = a => escapeHTML(a.date || a.published || 'UNDATED');
+const monthLabel = a => {
+  if (/^\d{4}-\d{2}-\d{2}$/.test(a.published || '')) {
+    const [year, month] = a.published.split('-').map(Number);
+    return `${['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][month-1] || '—'} ${year}`;
+  }
+  return a.date?.slice(3) || 'OTHER';
+};
+const categoryLabel = a => section(articleSections(a)[0])?.name || a.category || 'Unclassified';
+const meta = a => `${escapeHTML(categoryLabel(a))} <span aria-hidden="true">/</span> ${formatDate(a)}${isSpecial(a) ? ' <span class="report-inline">/ SPECIAL REPORT</span>' : ''}`;
+function row(a) {
+  const thumb = safeResource(a.directory?.image);
+  return `<a class="article-row" href="${articleUrl(a)}">
+    ${thumb ? `<img class="row-cover" src="${escapeHTML(thumb)}" alt="" loading="lazy">` : ''}
+    <div class="row-copy"><div class="article-meta">${meta(a)}</div><h3>${escapeHTML(a.title)}</h3><p>${escapeHTML(a.summary)}</p></div>
+    <div class="row-trailing"><span class="read-time">${isSpecial(a) ? 'PDF' : `${escapeHTML(a.readingMinutes)} MIN`}</span><span class="row-arrow" aria-hidden="true">↗</span></div>
+  </a>`;
+}
+function sectionTitle(title, count) {
+  return `<div class="section-heading"><h2>${escapeHTML(title)}</h2><span class="heading-rule" aria-hidden="true"></span><span class="section-counter">${String(count).padStart(2,'0')}</span></div>`;
+}
+function edition() {
+  const p = content.publication;
+  return `<div class="edition-marker"><span>VOL ${escapeHTML(p.volume)} <strong>/</strong> NO ${escapeHTML(p.issue)}</span><span>${escapeHTML(p.edition)} <strong>·</strong> OCTOBER 2026</span></div>`;
+}
+function specialCard(a) {
+  const pdf = pdfLink(a);
+  const thumb = safeResource(a.directory?.image);
+  return `<div class="special-feature"><div class="special-grid">
+    ${thumb ? `<img class="report-cover" src="${escapeHTML(thumb)}" alt="" loading="lazy">` : ''}
+    <div><div class="tag">SPECIAL REPORT <span aria-hidden="true">/</span> ${escapeHTML(categoryLabel(a))}</div><h3>${escapeHTML(a.title)}</h3><p>${escapeHTML(a.summary)}</p></div>
+    </div><div class="report-links"><a href="${articleUrl(a)}">Report details ${arrow}</a>${pdf ? `<a href="${escapeHTML(pdf)}" target="_blank" rel="noopener">Open PDF ${arrow}</a><a href="${escapeHTML(pdf)}" download>Download PDF ↓</a>` : ''}</div></div>`;
+}
+function frontPage() {
+  const featured = content.articles.find(a => a.id === content.publication.hero.articleId)
+    || allArticles().find(a => a.type === 'article') || allArticles()[0];
+  if (!featured) return `${edition()}
+    <section class="hero" aria-labelledby="hero-title"><span class="eyebrow">THE MEASURE / PHI LABS</span>
+    <h1 id="hero-title">An independent<br>measure of things<span class="accent-word">.</span></h1>
+    <p class="hero-summary">Science. Technology. Humanities. Politics. Thinkpieces. Humor. Special Reports.<br>Independent inquiry, collected in the public record.</p>
+    <div class="hero-footer"><a class="inline-link" href="#/about">About the publication ${arrow}</a></div></section>
+    ${sectionTitle('Latest articles', 0)}<p class="empty-state">The record is ready for its first publication.</p>`;
+  const latest = regularArticles().filter(a => a.id !== featured.id).slice(0,5);
+  return `${edition()}<section class="hero" aria-labelledby="hero-title"><span class="eyebrow">${escapeHTML(content.publication.hero.label)}</span>
+      <h1 id="hero-title">${escapeHTML(featured.title)}<span class="accent-word">.</span></h1>
+      <p class="hero-summary">${escapeHTML(featured.subtitle || featured.summary || featured.blurb || '')}</p>
+      <div class="hero-footer"><a class="inline-link" href="${articleUrl(featured)}">Read the feature ${arrow}</a></div></section>
+    <section aria-labelledby="latest-title">${sectionTitle('Latest articles', latest.length).replace('<h2>', '<h2 id="latest-title">')}
+      <div class="article-list">${latest.map(row).join('')}</div></section>
+    ${specialReports().length ? `<section aria-labelledby="specials-heading">${sectionTitle('Special reports', specialReports().length).replace('<h2>', '<h2 id="specials-heading">')}${specialReports().slice(0,1).map(specialCard).join('')}</section>` : ''}`;
+}
+function sectionListing(id) {
+  const s = section(id); if (!s) return notFound();
+  const items = inSection(id), special = id === 'special-reports';
+  return `${edition()}<header class="page-head ${special ? 'special-page' : ''}">
+      <span class="eyebrow">${special ? 'LONGFORM / THE RECORD' : 'EDITORIAL SECTION / THE MEASURE'}</span>
+      <h1>${escapeHTML(s.name)}<span class="accent-word">.</span></h1><p>${escapeHTML(s.summary)}</p></header>
+    ${sectionTitle(special ? 'PDF editions' : 'The latest', items.length)}
+    ${items.length ? special ? items.map(specialCard).join('') : `<div class="article-list">${items.map(row).join('')}</div>` : `<div class="empty-state">No articles are filed under ${escapeHTML(s.name)} yet. The section is ready for its first publication.</div>`}
+    ${previewNotice()}`;
+}
+function renderBlocks(blocks = []) {
+  if (!Array.isArray(blocks)) return '';
+  return blocks.map(block => {
+    if (block.type === 'heading') return `<h2>${escapeHTML(block.text)}</h2>`;
+    if (block.type === 'paragraph') return `<p>${escapeHTML(block.text)}</p>`;
+    if (block.type === 'quote') return `<blockquote>${escapeHTML(block.text)}</blockquote>`;
+    if (block.type === 'list' && Array.isArray(block.items)) return `<${block.ordered ? 'ol' : 'ul'}>${block.items.map(s => `<li>${escapeHTML(s)}</li>`).join('')}</${block.ordered ? 'ol' : 'ul'}>`;
+    if (block.type === 'code') return `<pre><code>${escapeHTML(block.text)}</code></pre>`;
+    if (block.type === 'rule') return '<hr>';
+    if (block.type === 'image') { const src = safeResource(block.src); return src ? `<figure><img loading="lazy" src="${escapeHTML(src)}" alt="${escapeHTML(block.alt || '')}"></figure>` : ''; }
+    return '';
+  }).join('');
+}
+function singleArticle(a) {
+  const special = isSpecial(a), pdf = pdfLink(a), primary = articleSections(a)[0] || 'thinkpieces';
+  const picture = a.type === 'media' ? safeResource(a.image || a.url) : '';
+  const body = picture
+    ? `<figure class="media-figure"><img src="${escapeHTML(picture)}" alt="${escapeHTML(a.title)}" loading="eager"><figcaption>${escapeHTML(a.blurb || a.summary || '')}</figcaption></figure>`
+    : typeof a.markdown === 'string' ? renderMarkdown(a.markdown) : renderBlocks(a.blocks);
+  return `${edition()}<article><header class="article-head"><span class="eyebrow">${special ? 'SPECIAL REPORT / PDF EDITION' : a.type === 'media' ? 'VISUAL COMMENTARY / THE MEASURE' : 'ARTICLE / THE MEASURE'}</span>
+    <h1>${escapeHTML(a.title)}<span style="color:var(--gold)">.</span></h1>
+    <p class="article-deck">${escapeHTML(a.subtitle || a.summary || a.blurb || '')}</p>
+    <div class="byline"><span>BY <strong>${escapeHTML(a.author || 'Phi Labs')}</strong></span><span>${formatDate(a)}</span>${a.readingMinutes ? `<span>${escapeHTML(a.readingMinutes)} MIN READ</span>` : ''}</div>
+    <div class="article-classification">FILED UNDER <a href="${sectionUrl(primary)}">${escapeHTML(categoryLabel(a))}</a>${special ? ` <span>/</span> <a class="classification-special" href="${sectionUrl('special-reports')}">SPECIAL REPORTS</a>` : ''}</div>
+    </header><div class="article-body">${body}</div>
+    ${pdf ? `<div class="special-feature" style="margin-top:45px"><div class="tag">DOCUMENT / PDF</div><h3>${escapeHTML(a.title)}</h3><p>Open or save the portable edition.</p><div class="report-links"><a href="${escapeHTML(pdf)}" target="_blank" rel="noopener">Open PDF ${arrow}</a><a href="${escapeHTML(pdf)}" download>Download PDF ↓</a></div></div>` : ''}
+    <div class="article-end"><a href="${sectionUrl(primary)}">← ${escapeHTML(categoryLabel(a))}</a><button type="button" id="copy-article-link">Copy article link ↗</button></div></article>`;
+}
+function archive() {
+  const items = allArticles();
+  return `${edition()}<header class="page-head"><span class="eyebrow">PUBLICATION RECORD / INDEX</span><h1>Archive<span class="accent-word">.</span></h1><p>A chronological index of everything published in The Measure. Reports are stored once and cross-listed by editorial section.</p></header><div class="article-list">${items.map(row).join('')}</div>${previewNotice()}`;
+}
+function about() {
+  return `${edition()}<header class="page-head"><span class="eyebrow">ABOUT THE PUBLICATION</span><h1>An independent<br>measure of things<span class="accent-word">.</span></h1><p>The Measure is the editorial and research publication of Phi Labs.</p></header>
+    <div class="about-copy"><p>The Measure provides a home for exploratory research, scientific and philosophical inquiry, technical analysis, and work undertaken in the public interest.</p>
+    <p>Articles are rendered directly from JSON. Special Reports also have portable PDF editions, and appear both in their subject section and the Special Reports catalog.</p></div>
+    <dl><div class="info-pair"><dt>Published by</dt><dd>Phi Labs</dd></div><div class="info-pair"><dt>Founded</dt><dd>28 October 2026</dd></div><div class="info-pair"><dt>Formats</dt><dd>Online articles / longform PDFs</dd></div><div class="info-pair"><dt>Sections</dt><dd>Science / Technology / Humanities / Politics / Thinkpieces / Humor / Special Reports</dd></div></dl>${previewNotice()}`;
+}
+function notFound() {
+  return `${edition()}<header class="page-head"><span class="eyebrow">RECORD NOT FOUND</span><h1>Nothing at this address<span class="accent-word">.</span></h1><p>The requested article or section does not exist in the current publication index.</p></header><div class="article-end"><a href="#/">← Return to front page</a></div>`;
+}
+function route() {
+  const path = (window.location.hash || '#/').slice(1).split('?')[0];
+  if (path.startsWith('/article/')) return { type: 'article', id: decodeURIComponent(path.slice('/article/'.length)) };
+  if (path.startsWith('/section/')) return { type: 'section', id: decodeURIComponent(path.slice('/section/'.length)) };
+  // Older mockup URLs continue working, but the top-level navigation is now seven sections.
+  if (path === '/specials') return { type: 'section', id: 'special-reports' };
+  if (path === '/articles' || path === '/archive') return { type: 'archive' };
+  if (path === '/about') return { type: 'about' };
+  if (path === '/') return { type: 'home' };
+  return { type: 'missing' };
+}
+function routeDirectory(r) {
+  if (r.type === 'section') return { list: section(r.id) ? inSection(r.id) : [], label: section(r.id)?.name || 'INDEX' };
+  if (r.type === 'article') {
+    const a = content.articles.find(x => x.id === r.id);
+    if (a) return { list: inSection(articleSections(a)[0]), label: section(articleSections(a)[0])?.name || 'INDEX' };
+  }
+  return { list: allArticles(), label: 'PUBLICATION TIMELINE' };
+}
+function timelineEntry(a) {
+  const image = a.directory?.style === 'thumbnail' ? safeResource(a.directory.image) : '';
+  return `<a class="timeline-entry ${image ? 'timeline-with-cover' : 'timeline-text-only'}" href="${articleUrl(a)}">
+    ${image ? `<img class="timeline-cover" src="${escapeHTML(image)}" alt="" loading="lazy">` : ''}
+    <span class="timeline-copy"><span class="timeline-date">${formatDate(a)}${isSpecial(a) ? '<span class="timeline-pdf"> / PDF</span>' : ''}</span>
+    <strong>${escapeHTML(a.title)}</strong><span class="timeline-category">${escapeHTML(categoryLabel(a))}</span></span></a>`;
+}
+function renderDirectory(r) {
+  const { list, label } = routeDirectory(r);
+  directoryCount.textContent = String(list.length).padStart(2,'0');
+  directorySubline.textContent = label.toUpperCase();
+  let month = '';
+  directory.innerHTML = list.length ? list.map(a => {
+    const m = monthLabel(a), group = month !== m ? `<div class="timeline-month">${escapeHTML(m)}</div>` : '';
+    month = m; return group + timelineEntry(a);
+  }).join('') : `<p class="search-help">No entries in this section yet.</p>`;
+}
+function mountSectionNav() {
+  nav.innerHTML = sections.map(s =>
+    `<a href="${sectionUrl(s.id)}" data-nav="${escapeHTML(s.id)}" class="${s.id === 'special-reports' ? 'nav-special' : ''}">${escapeHTML(s.name)}</a>`
+  ).join('');
+}
+function updateNavigation(r) {
+  let active = r.type === 'section' ? r.id : null;
+  if (r.type === 'article') {
+    const a = content.articles.find(x => x.id === r.id);
+    active = a ? articleSections(a)[0] : null;
+  }
+  nav.querySelectorAll('a').forEach(a => a.dataset.nav === active ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current'));
+}
+let currentRender = 0;
+async function render() {
+  if (!content) return;
+  const renderId = ++currentRender;
+  const r = route();
+  if (r.type === 'article') {
+    const entry = content.articles.find(a => a.id === r.id);
+    if (entry?.content && !Array.isArray(entry.blocks)) {
+      main.innerHTML = '<p class="initial-loading">LOADING ARTICLE…</p>';
+      try {
+        const path = safeResource(entry.content);
+        if (!path) throw new Error('Unsafe article path');
+        const response = await fetch(path, {cache:'no-store'});
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const record = await response.json();
+        if (record.id !== entry.id || (!Array.isArray(record.blocks) && typeof record.markdown !== 'string')) throw new Error('Malformed article JSON');
+        Object.assign(entry, { blocks:record.blocks, markdown:record.markdown, author:record.author, subtitle:record.subtitle, readingMinutes:record.readingMinutes });
+      } catch(error) {
+        entry.blocks = [{type:'paragraph',text:'Article temporarily unavailable: '+error.message}];
+      }
+      if (renderId !== currentRender) return;
+    }
+  }
+  updateNavigation(r);
+  if (r.type === 'home') main.innerHTML = frontPage();
+  else if (r.type === 'section') main.innerHTML = sectionListing(r.id);
+  else if (r.type === 'archive') main.innerHTML = archive();
+  else if (r.type === 'about') main.innerHTML = about();
+  else if (r.type === 'article') {
+    const a = content.articles.find(a => a.id === r.id);
+    main.innerHTML = a ? singleArticle(a) : notFound();
+  } else main.innerHTML = notFound();
+  renderDirectory(r);
+  if (!searchPanel.hidden && searchInput.value.trim()) renderSearch();
+  const a = r.type === 'article' ? content.articles.find(x => x.id === r.id) : null;
+  document.title = `${a ? a.title : r.type === 'section' ? section(r.id)?.name || 'Not found' : {home:'Front page',archive:'Archive',about:'About'}[r.type] || 'The Measure'} — The Measure`;
+  const share = document.getElementById('copy-article-link');
+  if (share) share.addEventListener('click', async () => {
+    const original = share.textContent;
+    try { await navigator.clipboard.writeText(window.location.href); share.textContent = 'Copied ✓'; }
+    catch { share.textContent = 'Copy unavailable'; }
+    setTimeout(() => { if (share.isConnected) share.textContent = original; }, 2000);
+  });
+  window.scrollTo({top:0,behavior:'instant'});
+}
+function renderSearch() {
+  if (!content) return;
+  const term = searchInput.value.toLowerCase().trim();
+  if (!term) { searchResults.innerHTML = '<p class="search-help">Search titles, summaries, categories, or tags.</p>'; return; }
+  const hits = allArticles().filter(a => [a.title,a.subtitle,a.summary,a.category,...(a.tags||[]),...articleSections(a)].join(' ').toLowerCase().includes(term));
+  searchResults.innerHTML = hits.length ? hits.map(timelineEntry).join('') : '<p class="search-help">No matching articles.</p>';
+}
+searchToggle.addEventListener('click', () => {
+  const opened = searchPanel.hidden;
+  searchPanel.hidden = !opened;
+  directory.hidden = opened;
+  searchToggle.setAttribute('aria-expanded', String(opened));
+  if (opened) { renderSearch(); searchInput.focus(); }
+});
+searchInput.addEventListener('input', renderSearch);
+searchResults.addEventListener('click', event => {
+  if (event.target.closest('a')) { searchPanel.hidden = true; directory.hidden = false; searchToggle.setAttribute('aria-expanded','false'); }
+});
+
+function manifestMediaToRail(item) {
+  const pdf = item.mediaType === 'pdf';
+  const tags = Array.isArray(item.tags) ? item.tags : [];
+  const isParodyAd = tags.some(t => /^(?:ad|advert|parody-ad|sponsored)$/i.test(t));
+  return { id:item.id, kind:pdf?'pdf':isParodyAd?'ad':'meme',
+    label:pdf?'PDF / SPECIAL REPORT':isParodyAd?'SPONSORED SATIRE':'VISUAL COMMENTARY',
+    title:item.title, description:item.blurb || item.summary || '',
+    image:item.image || (pdf?'images/pdf-placeholder.svg':''), href:item.pdf || item.url,
+    alt:item.title
+  };
+}
+async function loadGithubCatalog() {
+  const response = await fetch('manifest.json', {cache:'no-store'});
+  if (!response.ok) throw new Error('Manifest fetch failed: HTTP '+response.status);
+  const manifest = await response.json();
+  if (manifest.schema !== 'phi-labs.publication-manifest.v1' || manifest.version !== 1 || !Array.isArray(manifest.items))
+    throw new Error('Unrecognized publication manifest schema');
+  const ids = new Set();
+  const records = manifest.items.filter(item => {
+    if (!item || typeof item.id !== 'string' || typeof item.title !== 'string') return false;
+    if (ids.has(item.id)) throw new Error('Duplicate publication ID: '+item.id);
+    ids.add(item.id);
+    return ['article','media','pdf'].includes(item.type);
+  });
+  content.articles = records;
+  content.lowerRegister.items = records.filter(item => item.type === 'media' || item.type === 'pdf').map(manifestMediaToRail);
+}
+window.addEventListener('hashchange', render);
+(async function initialize() {
+  try {
+    await loadGithubCatalog();
+    sections = content.sections;
+    mountSectionNav();
+    window.mountLowerRegister(content);
+    render();
+  } catch (err) {
+    main.innerHTML = `<div class="page-head"><span class="eyebrow">CONTENT UNAVAILABLE</span><h1>Could not load the record.</h1><p>The Measure reads <code>manifest.json</code> directly. Serve this directory over HTTP and ensure the manifest is present.</p><p style="font-size:10px">${escapeHTML(err.message)}</p></div>`;
+  }
+})();
+
+
+  </script>
+</body>
+</html>
