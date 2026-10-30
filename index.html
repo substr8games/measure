@@ -407,23 +407,123 @@ button { cursor: pointer; }
 .article-body figure{margin:24px 0}.article-body figure img{display:block;max-width:100%;height:auto}
   .article-body img { max-width: 100%; height: auto; }
   .article-body pre { overflow: auto; padding: 18px; background: rgba(0,0,0,.2); }
+/* Bracket editorial grids: rows and columns of ordinary Markdown, no table semantics. */
+.article-body .editorial-grid-scroll { max-width: 100%; overflow-x: auto; margin: 2em 0; }
+.article-body .editorial-grid { min-width: max(100%, var(--editorial-min-width)); }
+.article-body .editorial-row { display: grid; grid-template-columns: repeat(var(--editorial-columns), minmax(0, 1fr)); gap: 22px; margin-bottom: 24px; }
+.article-body .editorial-row:last-child { margin-bottom: 0; }
+.article-body .editorial-cell { min-width: 0; overflow-wrap: anywhere; }
+.article-body .editorial-cell > :first-child { margin-top: 0; }
+.article-body .editorial-cell > :last-child { margin-bottom: 0; }
+.article-body .editorial-cell img { display: block; max-width: 100%; height: auto; }
+@media (max-width: 680px) {
+  .article-body .editorial-grid { min-width: 0; }
+  .article-body .editorial-row { grid-template-columns: minmax(0, 1fr); gap: 16px; padding-bottom: 22px; }
+  .article-body .editorial-row:last-child { padding-bottom: 0; }
+}
   .article-body table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; }
   .article-body td,.article-body th { border: 1px solid rgba(194,166,111,.32); padding: 9px 11px; }
+  /* A blank-header Markdown table with two cells is a borderless editorial split. */
+  .article-body table.editorial-split { display: table; width: 100%; table-layout: fixed; border-collapse: separate; overflow: visible; margin: 28px 0; }
+  .article-body table.editorial-split td { width: 50%; padding: 0 15px 0 0; vertical-align: middle; border: none; overflow-wrap: anywhere; }
+  .article-body table.editorial-split td + td { padding: 0 0 0 15px; }
+  .article-body table.editorial-split img { display: block; max-width: 100%; height: auto; }
+  @media (max-width: 680px) {
+    .article-body table.editorial-split, .article-body table.editorial-split tbody,
+    .article-body table.editorial-split tr, .article-body table.editorial-split td { display: block; width: 100%; }
+    .article-body table.editorial-split td, .article-body table.editorial-split td + td { padding: 0; }
+    .article-body table.editorial-split td + td { margin-top: 18px; }
+  }
   .media-figure { margin: 25px 0; }
   .media-figure img { max-width: 100%; height: auto; display: block; }
   .media-figure figcaption { color: #CAD2D8; font-size: 13px; line-height: 1.9; margin-top: 15px; }
+/* v5.3 visual update: supplied background + supplied lockup + larger typography */
+body {
+  background-color: #0a1220;
+  background-image:
+    linear-gradient(rgba(6, 12, 19, 0.58), rgba(6, 12, 19, 0.68)),
+    url("images/the-measure-background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  font-size: 28px;
+}
+.brand-link { display: inline-block; }
+.brand-symbol, .brand-type { display: none !important; }
+.brand-lockup { display: block; width: min(560px, 42vw); height: auto; }
+.masthead { padding-top: 34px; padding-bottom: 26px; }
+.section-bar a { font-size: 19px; padding: 24px 8px 22px; letter-spacing: .035em; }
+.rail-topline { font-size: 16px; }
+.directory-subline { font-size: 22px; margin: 16px 0 22px; }
+.rail-tool { font-size: 18px; gap: 11px; }
+.search-panel label { font-size: 14px; }
+.search-panel input { font-size: 18px; padding: 14px 12px; }
+.search-help { font-size: 14px; }
+.timeline-month { font-size: 13px; margin-top: 24px; }
+.timeline-date { font-size: 12px; }
+.timeline-copy strong { font-size: 17px; line-height: 1.5; }
+.timeline-category { font-size: 12px; }
+.directory-archive { font-size: 14px; }
+.rail-bottom { font-size: 12px; line-height: 1.8; }
+.eyebrow { font-size: 18px; gap: 16px; }
+.eyebrow::before { width: 42px; }
+.edition-marker { font-size: 15px; padding-bottom: 24px; }
+.hero .hero-summary { font-size: 26px; line-height: 1.8; max-width: 760px; }
+.inline-link { font-size: 18px; padding-bottom: 10px; }
+.section-heading { margin: 64px 0 26px; }
+.section-heading h2 { font-size: 21px; }
+.section-heading .section-counter { font-size: 15px; }
+.article-row { padding: 30px 0 34px; }
+.article-row .article-meta { font-size: 14px; }
+.article-row h3 { font-size: clamp(26px, 2.5vw, 34px); line-height: 1.35; }
+.article-row p { font-size: 22px; line-height: 1.8; max-width: 680px; }
+.article-row .read-time { font-size: 13px; }
+.row-arrow { font-size: 34px; }
+.special-feature .tag { font-size: 14px; }
+.special-feature h3 { font-size: 34px; }
+.special-feature p { font-size: 21px; line-height: 1.8; }
+.special-feature .report-links a { font-size: 15px; }
+.note-line { font-size: 14px; }
+.page-head p { font-size: 24px; line-height: 1.8; }
+.article-deck { font-size: 24px; line-height: 1.8; }
+.byline { font-size: 14px; gap: 10px 28px; }
+.article-body p { font-size: 22px; line-height: 1.95; }
+.article-body h2 { font-size: 32px; margin: 50px 0 18px; }
+.article-body blockquote { font-size: 24px; line-height: 1.8; }
+.article-body ul { font-size: 20px; }
+.article-end a, .article-end button { font-size: 16px; }
+.about-copy p { font-size: 22px; line-height: 1.95; }
+.info-pair { font-size: 18px; }
+.archive-year { font-size: 18px; }
+.dispatch-heading-row h2 { font-size: 16px; }
+.dispatch-descriptor, .dispatch-controls > span { font-size: 12px; }
+.dispatch-tile strong { font-size: 16px; }
+.dispatch-kind, .dispatch-hint { font-size: 12px; }
+.site-footer { font-size: 12px; }
+@media (max-width: 1140px) {
+  .brand-lockup { width: min(520px, 68vw); }
+  .section-bar a { font-size: 17px; }
+}
+@media (max-width: 700px) {
+  body { background-attachment: scroll; background-size: cover; }
+  .brand-lockup { width: min(88vw, 420px); }
+  .section-bar a { font-size: 14px; padding: 18px 0; }
+  .directory-subline { font-size: 18px; }
+  .hero .hero-summary, .article-deck, .page-head p, .article-body p, .about-copy p, .article-row p { font-size: 18px; }
+  .eyebrow, .edition-marker, .inline-link, .article-row .article-meta, .byline, .info-pair { font-size: 12px; }
+  .section-heading h2 { font-size: 18px; }
+  .dispatch-tile strong { font-size: 14px; }
+  .site-footer { font-size: 10px; }
+}
   </style>
 </head>
 <body>
   <div class="site-shell">
     <header class="masthead" aria-label="The Measure masthead">
       <a class="brand-link" href="#/" aria-label="The Measure — front page">
-        <img class="brand-symbol" src="images/logo.png" alt="">
-        <span class="brand-type">
-          <span class="brand-topline">THE</span>
-          <span class="brand-wordmark">MEASURE<span class="brand-stop">.</span></span>
-          <span class="brand-signature">A PHI LABS PUBLICATION</span>
-        </span>
+        <img class="brand-lockup" src="images/the-measure-lockup.png" alt="The Measure — A Phi Labs Publication">
+      </a>
       </a>
     </header>
 
@@ -597,6 +697,51 @@ function inlineMarkdown(text) {
     .replace(/`([^`\n]+)`/g,'<code>$1</code>');
   return out;
 }
+// Editorial grid extension: {[| first cell / | next cell |] [| next row ... |]}
+// A standalone [| ... |] is also valid as one row. Only line-leading | creates a column.
+function readEditorialGrid(lines, start) {
+  const opening = lines[start].match(/^\s*(\{)?\[\|\s?(.*)$/);
+  if (!opening) return null;
+  const wrapped = Boolean(opening[1]);
+  const rows = [];
+  let row = [], cell = [], i = start, pending = opening[2];
+  while (i < lines.length) {
+    let line = pending;
+    if (line === null) line = lines[i];
+    pending = null;
+    const closing = line.match(/^(.*?)\|\](\})?\s*$/);
+    const ended = Boolean(closing);
+    const endsGrid = ended && Boolean(closing[2]);
+    if (ended) line = closing[1];
+    // A leading pipe starts another column, unless it was just the row terminator.
+    if (/^\s*\|/.test(line)) {
+      row.push(cell.join('\n').trim());
+      cell = [line.replace(/^\s*\|\s?/, '')];
+    } else if (line || !ended) {
+      cell.push(line);
+    }
+    if (ended) {
+      if (endsGrid && !wrapped) return null;
+      row.push(cell.join('\n').trim());
+      rows.push(row);
+      row = []; cell = [];
+      if (endsGrid || !wrapped) {
+        const columns = Math.max(...rows.map(cells => cells.length));
+        return {block:{type:'editorial-grid',rows,columns},next:i+1};
+      }
+      // A wrapped grid only continues with another explicit row opener.
+      i++;
+      while (i < lines.length && !lines[i].trim()) i++;
+      if (i >= lines.length) return null;
+      const next = lines[i].match(/^\s*\[\|\s?(.*)$/);
+      if (!next) return null;
+      pending = next[1];
+      continue;
+    }
+    i++;
+  }
+  return null;
+}
 function tokenizeMarkdown(md) {
   const lines = String(md || '').replace(/\r\n?/g,'\n').split('\n');
   const blocks = [];
@@ -604,6 +749,8 @@ function tokenizeMarkdown(md) {
   const begins = s => /^(?:\s*$|#{1,6} |```|~~~|>\s?|\s*[-*+] |\s*\d+\. |\s*(?:---|___|\*\*\*)\s*$)/.test(s);
   while(i<lines.length){
     const line=lines[i];
+    const editorial = readEditorialGrid(lines, i);
+    if (editorial) { blocks.push(editorial.block); i=editorial.next; continue; }
     if(!line.trim()){i++;continue;}
     let m=line.match(/^(```|~~~)([^\s`]*)/);
     if(m){const fence=m[1],lang=m[2]||'';i++;const body=[];while(i<lines.length&&!lines[i].startsWith(fence))body.push(lines[i++]);if(i<lines.length)i++;blocks.push({type:'code',lang,text:body.join('\n')});continue;}
@@ -617,16 +764,28 @@ function tokenizeMarkdown(md) {
       blocks.push({type:'list',ordered,items});continue;
     }
     if(line.includes('|') && i+1<lines.length && /^\s*\|?\s*:?-{3,}:?(?:\s*\|\s*:?-{3,}:?)*\s*\|?\s*$/.test(lines[i+1])){
-      const cells=s=>s.trim().replace(/^\||\|$/g,'').split('|').map(v=>v.trim());
+      const cells=s=>s.trim().replace(/^\||\|$/g,'').split(/(?<!\\)\|/).map(v=>v.replace(/\\\|/g,'|').trim());
       const header=cells(line), rows=[];i+=2;
       while(i<lines.length&&lines[i].includes('|')&&lines[i].trim())rows.push(cells(lines[i++]));
       blocks.push({type:'table',header,rows});continue;
     }
     const body=[line];i++;
-    while(i<lines.length&&!begins(lines[i])&&!(lines[i].includes('|')&&i+1<lines.length&&/^\s*\|?\s*:?-{3,}/.test(lines[i+1])))body.push(lines[i++]);
+    while(i<lines.length&&!begins(lines[i])&&!/^\s*(?:\{\[\||\[\|)/.test(lines[i])&&!(lines[i].includes('|')&&i+1<lines.length&&/^\s*\|?\s*:?-{3,}/.test(lines[i+1])))body.push(lines[i++]);
     blocks.push({type:'paragraph',text:body.join('\n')});
   }
   return blocks;
+}
+function renderEditorialGrid(block) {
+  // The column count is calculated from actual rows, never from markup.
+  const columns = block.columns;
+  const content = block.rows.map(row => {
+    const cells = Array.from({length:columns}, (_, index) => {
+      const markdown = row[index] || '';
+      return `<div class="editorial-cell">${renderMarkdown(markdown)}</div>`;
+    }).join('');
+    return `<div class="editorial-row">${cells}</div>`;
+  }).join('');
+  return `<div class="editorial-grid-scroll"><div class="editorial-grid" style="--editorial-columns:${columns};--editorial-min-width:${columns * 165}px" role="group" aria-label="Editorial layout">${content}</div></div>`;
 }
 function renderMarkdown(md){
   return tokenizeMarkdown(md).map(b=>{
@@ -637,7 +796,16 @@ function renderMarkdown(md){
       case 'list':return `<${b.ordered?'ol':'ul'}>${b.items.map(x=>`<li>${inlineMarkdown(x.text)}</li>`).join('')}</${b.ordered?'ol':'ul'}>`;
       case 'code':return `<pre><code class="language-${esc(b.lang)}">${esc(b.text)}</code></pre>`;
       case 'hr':return '<hr>';
-      case 'table':return `<table><thead><tr>${b.header.map(x=>`<th>${inlineMarkdown(x)}</th>`).join('')}</tr></thead><tbody>${b.rows.map(r=>`<tr>${r.map(x=>`<td>${inlineMarkdown(x)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+      case 'editorial-grid': return renderEditorialGrid(b);
+      case 'table': {
+        // A blank-header, single-row two-column Markdown table doubles as an editorial split.
+        // Cells are ordinary Markdown; no extra article schema or image-specific fields.
+        const isSplit = b.header.length === 2 && b.header.every(cell => !cell.trim()) &&
+          b.rows.length === 1 && b.rows[0].length === 2;
+        const content = b.rows.map(row => `<tr>${row.map(cell => `<td>${inlineMarkdown(cell)}</td>`).join('')}</tr>`).join('');
+        if (isSplit) return `<table class="editorial-split" aria-label="Two-column layout"><tbody>${content}</tbody></table>`;
+        return `<table><thead><tr>${b.header.map(cell => `<th>${inlineMarkdown(cell)}</th>`).join('')}</tr></thead><tbody>${content}</tbody></table>`;
+      }
       default:return '';
     }
   }).join('\n');
