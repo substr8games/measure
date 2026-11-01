@@ -637,6 +637,25 @@ body {
   .series-context-nav { flex-direction: column; }
   .series-context-entry:last-child { text-align: left; }
 }
+/* v5.6.2: wide-screen article contents in otherwise unused left margin. */
+.article-toc { display: none; grid-column: 1; grid-row: 3; align-self: start; justify-self: end; position: sticky;
+  top: 24px; width: min(226px, calc(100% - 52px)); max-height: calc(100dvh - 48px);
+  margin: 31px 24px 0 28px; padding: 0 0 22px; overflow: auto; scrollbar-width: thin;
+  scrollbar-color: var(--gold-soft) transparent; }
+.article-toc-heading { display: block; padding: 0 0 13px; color: var(--gold); border-bottom: 1px solid var(--gold-soft);
+  font-size: 12px; font-weight: 700; letter-spacing: .12em; }
+.article-toc-list { list-style: none; display: grid; gap: 0; padding: 11px 0 0; margin: 0; }
+.article-toc-list li { min-width: 0; }
+.article-toc-list a { display: block; text-decoration: none; color: var(--muted); overflow-wrap: anywhere;
+  font-size: 12px; line-height: 1.6; padding: 7px 7px 7px 11px; border-left: 2px solid transparent; }
+.article-toc-list .toc-level-3 a { padding-left: 23px; font-size: 11px; }
+.article-toc-list .toc-level-4 a { padding-left: 35px; font-size: 10px; }
+.article-toc-list a:hover, .article-toc-list a[aria-current="location"] { border-left-color: var(--gold);
+  color: var(--white); background: rgba(198,171,120,.075); }
+.article-body :is(h2,h3,h4)[id^="tm-section-"] { scroll-margin-top: 24px; }
+@media (min-width: 1440px) {
+  .article-toc:not([hidden]) { display: block; }
+}
   </style>
 </head>
 <body>
@@ -667,6 +686,11 @@ body {
       <a class="directory-series" id="directory-series" href="#/series" hidden>SERIES <span aria-hidden="true">↗</span></a>
       <a class="directory-archive" href="#/archive">COMPLETE ARCHIVE <span aria-hidden="true">↗</span></a>
       <div class="rail-bottom"><span class="tiny-gold-rule"></span><span>PHI LABS / PUBLIC INTEREST RESEARCH</span><span>EST. 28 OCT 2026</span></div>
+    </aside>
+
+    <aside class="article-toc" id="article-toc" aria-label="Table of contents" hidden>
+      <span class="article-toc-heading">IN THIS ARTICLE</span>
+      <nav aria-label="Article sections"><ol class="article-toc-list" id="article-toc-list"></ol></nav>
     </aside>
 
     <main class="reading-column" id="main" tabindex="-1">
@@ -1063,7 +1087,7 @@ function frontPage() {
   return `${edition()}<section class="hero" aria-labelledby="hero-title"><span class="eyebrow">${escapeHTML(content.publication.hero.label)}</span>
       <h1 id="hero-title">${escapeHTML(featured.title)}<span class="accent-word">.</span></h1>
       <p class="hero-summary">${escapeHTML(featured.subtitle || featured.summary || featured.blurb || '')}</p>
-      <div class="hero-footer"><a class="inline-link" href="${articleUrl(featured)}">Read the feature ${arrow}</a></div></section>
+      <div class="hero-footer"><a class="inline-link" data-classification="${classificationFor(featured)}" href="${articleUrl(featured)}">${depthDot(classificationFor(featured))}Read the feature ${arrow}</a></div></section>
     <section aria-labelledby="latest-title">${sectionTitle('Latest articles', latest.length).replace('<h2>', '<h2 id="latest-title">')}
       <div class="article-list">${latest.map(row).join('')}</div></section>
     ${seriesPreview()}
@@ -1173,11 +1197,69 @@ function updateNavigation(r) {
   }
   nav.querySelectorAll('a').forEach(a => a.dataset.nav === active ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current'));
 }
+/* v5.6.2: build a table of contents from published headings; no content edits required. */
+const articleToc = document.getElementById('article-toc');
+const articleTocList = document.getElementById('article-toc-list');
+let articleTocHeadings = [];
+function clearArticleToc() {
+  articleToc.hidden = true;
+  articleTocList.replaceChildren();
+  articleTocHeadings = [];
+}
+function updateArticleTocPosition() {
+  if (articleToc.hidden || !articleTocHeadings.length) return;
+  let active = articleTocHeadings[0].id;
+  for (const heading of articleTocHeadings) {
+    if (heading.getBoundingClientRect().top > 155) break;
+    active = heading.id;
+  }
+  articleTocList.querySelectorAll('a[data-toc-id]').forEach(link => {
+    if (link.dataset.tocId === active) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+}
+function mountArticleToc(r) {
+  if (r.type !== 'article' || !main.querySelector('.article-content')) return;
+  const headingNodes = [...main.querySelectorAll('.article-body h2, .article-body h3, .article-body h4')];
+  if (headingNodes.length < 2) return;
+  articleTocHeadings = headingNodes;
+  articleTocList.innerHTML = headingNodes.map((heading, i) => {
+    const id = 'tm-section-' + (i + 1);
+    heading.id = id; heading.tabIndex = -1;
+    const label = (heading.textContent || '').trim().replace(/\s+/g, ' ');
+    const level = heading.tagName.slice(1);
+    const link = '#/article/' + encodeURIComponent(r.id) + '?section=' + encodeURIComponent(id);
+    return `<li class="toc-level-${level}"><a href="${link}" data-toc-id="${id}">${escapeHTML(label)}</a></li>`;
+  }).join('');
+  articleToc.hidden = false;
+  updateArticleTocPosition();
+  const requested = (window.location.hash.match(/[?&]section=(tm-section-\d+)/) || [])[1];
+  const target = requested && articleTocHeadings.find(heading => heading.id === requested);
+  if (target) requestAnimationFrame(() => target.scrollIntoView({block:'start'}));
+}
+articleTocList.addEventListener('click', event => {
+  const link = event.target.closest('a[data-toc-id]');
+  if (!link) return;
+  const target = articleTocHeadings.find(h => h.id === link.dataset.tocId);
+  if (!target) return;
+  event.preventDefault();
+  window.history.replaceState(null, '', link.href);
+  target.scrollIntoView({behavior:'smooth',block:'start'});
+  target.focus({preventScroll:true});
+  updateArticleTocPosition();
+});
+let articleTocScrollQueued = false;
+window.addEventListener('scroll', () => {
+  if (articleTocScrollQueued || articleToc.hidden) return;
+  articleTocScrollQueued = true;
+  requestAnimationFrame(() => { articleTocScrollQueued = false; updateArticleTocPosition(); });
+}, {passive:true});
 let currentRender = 0;
 async function render(preserveScroll = false) {
   if (!content) return;
   const renderId = ++currentRender;
   const r = route();
+  clearArticleToc();
   if (r.type === 'article') {
     const entry = content.articles.find(a => a.id === r.id);
     if (entry?.content && !Array.isArray(entry.blocks)) {
@@ -1223,6 +1305,7 @@ async function render(preserveScroll = false) {
     }
   } else main.innerHTML = notFound();
   renderDirectory(r);
+  mountArticleToc(r);
   const seriesLink = document.getElementById('directory-series');
   if (seriesLink) (r.type === 'series-index' || r.type === 'series') ? seriesLink.setAttribute('aria-current','page') : seriesLink.removeAttribute('aria-current');
   if (!searchPanel.hidden && searchInput.value.trim()) renderSearch();
