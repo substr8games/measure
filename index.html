@@ -559,6 +559,78 @@ body {
   .brand-lockup { width: min(88vw, 420px); }
   .section-bar a { font-size: 13px; padding: 18px 0; }
 }
+/* v5.5 graphic-only advertisements and optionally captioned cartoons */
+.dispatch-tile--ad { display:block; padding:0; overflow:hidden; background:rgba(0,0,0,.17); }
+.dispatch-ad-art { display:block; width:100%; height:100%; object-fit:contain; object-position:center; }
+.poster-dialog--ad .poster-dialog-body { display:block; padding:18px; }
+.poster-dialog--ad .poster-dialog-body img { display:block; max-width:100%; max-height:calc(100dvh - 122px); margin:0 auto; }
+.poster-dialog--ad .poster-dialog-notes { display:none !important; }
+/* The Measure / optional series reader + TM-UI-001 editorial depth. */
+:root {
+  --tm-depth-copy: #4BEA91;
+  --tm-depth-explainer: #55C5FF;
+  --tm-depth-specification: #CB97FF;
+}
+[data-classification="copy"] { --article-depth-color: var(--tm-depth-copy); }
+[data-classification="explainer"] { --article-depth-color: var(--tm-depth-explainer); }
+[data-classification="specification"] { --article-depth-color: var(--tm-depth-specification); }
+.depth-dot { display: inline-block; width: .55rem; height: .55rem; flex: 0 0 .55rem; margin-right: .55rem; border-radius: 50%; background: var(--article-depth-color); vertical-align: .11em; }
+[data-classification=""] .depth-dot { display: none; }
+.visually-hidden { position: absolute; height: 1px; width: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.article-content[data-classification="copy"] { --article-paragraph-gap: 1.3em; --article-section-gap: 2.3em; }
+.article-content[data-classification="explainer"] { --article-paragraph-gap: 1.05em; --article-section-gap: 2em; }
+.article-content[data-classification="specification"] { --article-paragraph-gap: .9em; --article-section-gap: 1.65em; }
+.article-content[data-classification] .article-body p + p { margin-block-start: var(--article-paragraph-gap); }
+.article-content[data-classification] .article-body :is(h2,h3) { margin-block-start: var(--article-section-gap); }
+.article-content[data-classification] .article-body h2 { border-inline-start: 3px solid var(--article-depth-color); padding-inline-start: .65em; }
+.article-content[data-classification] .article-body blockquote { border-inline-start-color: var(--article-depth-color); }
+.article-content[data-classification="specification"] .article-body :is(p,ul,ol) { line-height: 1.7; }
+.article-content[data-classification="specification"] .article-body :is(pre,table) { border-inline-start: 2px solid var(--article-depth-color); }
+.article-content .article-classification .depth-dot { margin-right: .38rem; }
+.directory-series { display: flex; justify-content: space-between; border-top: 1px solid var(--gold-subtle); padding-top: 16px; margin-top: 18px; color: var(--gold); font-weight: 700; letter-spacing: .05em; font-size: 12px; text-decoration: none; }
+.directory-series:hover, .directory-series[aria-current="page"] { color: var(--white); }
+.series-home { margin-top: 55px; }
+.series-card-list { display: grid; gap: 20px; margin: 25px 0 44px; }
+.series-card { border-bottom: 1px solid var(--gold-subtle); display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 18px; padding: 18px 0 26px; text-decoration: none; }
+.series-card:has(.series-card-cover) { grid-template-columns: 96px minmax(0,1fr) auto; }
+.series-card-cover { width: 96px; height: 126px; display: block; object-fit: cover; border: 1px solid var(--gold-subtle); }
+.series-card h2, .series-card h3 { font-size: clamp(21px,2.3vw,29px); color: var(--white); margin: 7px 0 11px; line-height: 1.35; }
+.series-card:hover h2, .series-card:hover h3 { color: var(--gold); }
+.series-card p { margin: 0; color: var(--muted); font-size: clamp(14px,1.35vw,17px); line-height: 1.7; }
+.series-card-meta { color: var(--gold); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; }
+.series-card-arrow { font-size: 26px; color: var(--gold); }
+.series-hero { padding: 36px 0 38px; border-bottom: 1px solid var(--gold-soft); }
+.series-hero-cover { float: right; width: min(34%,210px); height: auto; max-height: 280px; margin: 0 0 22px 26px; object-fit: contain; border: 1px solid var(--gold-subtle); }
+.series-hero h1 { font-size: clamp(36px,5vw,64px); line-height: 1.15; margin: 20px 0; color: var(--white); overflow-wrap: anywhere; }
+.series-hero p { color: var(--text); font-size: clamp(17px,1.7vw,22px); line-height: 1.7; margin: 18px 0; }
+.series-hero .series-subtitle { color: var(--white); font-weight: 700; }
+.series-back { display: inline-block; color: var(--gold); font-size: 12px; text-decoration: none; margin: 15px 0 6px; }
+.series-installments { list-style: none; margin: 18px 0 54px; padding: 0; counter-reset: installment; }
+.series-installment { padding: 24px 0; border-bottom: 1px solid var(--gold-subtle); display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 15px; }
+.series-installment-number { color: var(--gold); font-size: 13px; font-weight: 700; padding-top: 6px; }
+.series-installment-meta { color: var(--subdued); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.series-installment h3 { font-size: clamp(21px,2.2vw,28px); color: var(--white); margin: 8px 0; line-height: 1.4; }
+.series-installment a { text-decoration: none; }
+.series-installment a:hover h3 { color: var(--gold); }
+.series-installment.is-planned h3 { color: var(--muted); }
+.series-installment .installment-action { color: var(--gold); font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.series-context { border-block: 1px solid var(--gold-soft); margin: 38px 0; padding: 21px 0 24px; }
+.series-context-heading { color: var(--gold); text-transform: uppercase; font-size: 11px; letter-spacing: .09em; margin-bottom: 8px; }
+.series-context > a, .series-context-entry a { color: var(--white); text-decoration: none; }
+.series-context > a:hover, .series-context-entry a:hover { color: var(--gold); }
+.series-context-nav { display: flex; justify-content: space-between; gap: 20px; margin-top: 17px; }
+.series-context-entry { flex: 1; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.series-context-entry:last-child { text-align: right; }
+.series-home .series-card-list { margin-bottom: 0; }
+@media(max-width:700px) {
+  .series-card:has(.series-card-cover) { grid-template-columns: 68px minmax(0,1fr); }
+  .series-card-cover { width: 68px; height: 90px; }
+  .series-card-arrow { display: none; }
+  .series-hero-cover { width: 30%; margin-left: 14px; }
+  .series-installment { grid-template-columns: 34px minmax(0,1fr); gap: 9px; }
+  .series-context-nav { flex-direction: column; }
+  .series-context-entry:last-child { text-align: left; }
+}
   </style>
 </head>
 <body>
@@ -587,6 +659,7 @@ body {
         </div>
       </div>
       <div id="directory-list" class="directory-list" aria-live="polite"></div>
+      <a class="directory-series" id="directory-series" href="#/series" hidden>SERIES <span aria-hidden="true">↗</span></a>
       <a class="directory-archive" href="#/archive">COMPLETE ARCHIVE <span aria-hidden="true">↗</span></a>
       <div class="rail-bottom"><span class="tiny-gold-rule"></span><span>PHI LABS / PUBLIC INTEREST RESEARCH</span><span>EST. 28 OCT 2026</span></div>
     </aside>
@@ -616,7 +689,7 @@ body {
   </dialog>
   <footer class="site-footer" id="site-footer">
     <div><span class="footer-mark">Φ</span> THE MEASURE <span class="footer-separator">/</span> PHI LABS</div>
-    <div><a href="#/about">ABOUT</a> <span class="footer-separator">/</span> <a href="#/archive">ARCHIVE</a> <span class="footer-separator">/</span> INDEPENDENT INQUIRY. PUBLIC RECORD.</div>
+    <div><a href="#/about">ABOUT</a> <span class="footer-separator">/</span> <a href="#/archive">ARCHIVE</a> <span class="footer-separator">/</span> <a href="#/series">SERIES</a> <span class="footer-separator">/</span> INDEPENDENT INQUIRY. PUBLIC RECORD.</div>
     <div>© 2026 PHI LABS</div>
   </footer>
   <script>
@@ -655,15 +728,18 @@ body {
     const title = escape(item.title);
     const label = escape(item.label || item.kind);
     const isPdf = item.kind === 'pdf' && localPath(item.href);
+    if (item.kind === 'ad') {
+      // Advertisements are image-only: no generated headline, label or caption.
+      return `<button class="dispatch-tile dispatch-tile--ad" type="button" data-register-index="${index}" aria-label="View advertisement graphic"><img class="dispatch-ad-art" src="${escape(src)}" alt="Advertisement artwork" loading="lazy" decoding="async"></button>`;
+    }
     const hint = isPdf ? 'OPEN PDF ↗' : 'VIEW POSTER ↗';
     const inner = `<img class="dispatch-thumb" src="${escape(src)}" alt="" loading="lazy" decoding="async">
       <span class="dispatch-tile-copy"><span class="dispatch-kind">${label}</span>
-      <strong>${title}</strong><span class="dispatch-hint">${hint}</span></span>`;
+      ${title ? `<strong>${title}</strong>` : ''}<span class="dispatch-hint">${hint}</span></span>`;
     return isPdf
       ? `<a class="dispatch-tile" href="${escape(item.href)}" target="_blank" rel="noopener" aria-label="Open PDF: ${title}">${inner}</a>`
-      : `<button class="dispatch-tile" type="button" data-register-index="${index}" aria-label="View poster: ${title}">${inner}</button>`;
+      : `<button class="dispatch-tile" type="button" data-register-index="${index}" aria-label="View ${title ? 'cartoon: ' + title : 'cartoon artwork'}">${inner}</button>`;
   }
-
   function updateControls() {
     const maximum = track.scrollWidth - track.clientWidth;
     prev.disabled = track.scrollLeft <= 2;
@@ -676,14 +752,25 @@ body {
     const image = localPath(item.image);
     if (!image) return;
     opener = button;
-    posterTitle.textContent = item.title || '';
-    posterCaption.textContent = item.description || '';
-    posterKind.textContent = item.label || item.kind || 'POSTER';
+    const ad = item.kind === 'ad';
+    dialog.classList.toggle('poster-dialog--ad', ad);
+    if (ad) {
+      dialog.removeAttribute('aria-labelledby');
+      dialog.setAttribute('aria-label', 'Advertisement artwork');
+    } else {
+      dialog.removeAttribute('aria-label');
+      dialog.setAttribute('aria-labelledby', 'poster-dialog-title');
+    }
+    posterKind.hidden = ad;
+    posterTitle.parentElement.hidden = ad;
+    posterTitle.textContent = ad ? '' : item.title || 'Visual commentary';
+    posterCaption.textContent = ad ? '' : item.description || '';
+    posterCaption.hidden = ad || !item.description;
+    posterKind.textContent = ad ? '' : item.label || item.kind || 'POSTER';
     posterImage.src = image;
-    posterImage.alt = item.alt || item.title || 'Poster';
+    posterImage.alt = ad ? 'Advertisement artwork' : item.alt || item.title || 'Cartoon artwork';
     dialog.showModal();
   }
-
   track.addEventListener('click', event => {
     const button = event.target.closest('button[data-register-index]');
     if (button) openPoster(Number(button.dataset.registerIndex), button);
@@ -926,10 +1013,11 @@ const categoryLabel = a => section(articleSections(a)[0])?.name || a.category ||
 const meta = a => `${escapeHTML(categoryLabel(a))} <span aria-hidden="true">/</span> ${formatDate(a)}${isSpecial(a) ? ' <span class="report-inline">/ SPECIAL REPORT</span>' : ''}`;
 function row(a) {
   const thumb = safeResource(a.directory?.image);
-  return `<a class="article-row" href="${articleUrl(a)}">
+  const cls = classificationFor(a);
+  return `<a class="article-row" data-classification="${cls}" href="${articleUrl(a)}" aria-label="${escapeHTML((cls ? depthLabel(cls) + ': ' : '') + (a.title || 'View publication'))}">
     ${thumb ? `<img class="row-cover" src="${escapeHTML(thumb)}" alt="" loading="lazy">` : ''}
-    <div class="row-copy"><div class="article-meta">${meta(a)}</div><h3>${escapeHTML(a.title)}</h3><p>${escapeHTML(a.summary)}</p></div>
-    <div class="row-trailing"><span class="read-time">${isSpecial(a) ? 'PDF' : `${escapeHTML(a.readingMinutes)} MIN`}</span><span class="row-arrow" aria-hidden="true">↗</span></div>
+    <div class="row-copy"><div class="article-meta">${meta(a)}</div>${a.title ? `<h3>${depthDot(cls)}${escapeHTML(a.title)}</h3>` : ""}${a.summary ? `<p>${escapeHTML(a.summary)}</p>` : ""}</div>
+    <div class="row-trailing"><span class="read-time">${isSpecial(a) ? 'PDF' : a.type === 'media' ? 'IMAGE' : `${escapeHTML(a.readingMinutes || 1)} MIN`}</span><span class="row-arrow" aria-hidden="true">↗</span></div>
   </a>`;
 }
 function sectionTitle(title, count) {
@@ -944,18 +1032,18 @@ function specialCard(a) {
   const thumb = safeResource(a.directory?.image);
   return `<div class="special-feature"><div class="special-grid">
     ${thumb ? `<img class="report-cover" src="${escapeHTML(thumb)}" alt="" loading="lazy">` : ''}
-    <div><div class="tag">SPECIAL REPORT <span aria-hidden="true">/</span> ${escapeHTML(categoryLabel(a))}</div><h3>${escapeHTML(a.title)}</h3><p>${escapeHTML(a.summary)}</p></div>
+    <div><div class="tag">SPECIAL REPORT <span aria-hidden="true">/</span> ${escapeHTML(categoryLabel(a))}</div>${a.title ? `<h3>${escapeHTML(a.title)}</h3>` : ""}${a.summary ? `<p>${escapeHTML(a.summary)}</p>` : ""}</div>
     </div><div class="report-links"><a href="${articleUrl(a)}">Report details ${arrow}</a>${pdf ? `<a href="${escapeHTML(pdf)}" target="_blank" rel="noopener">Open PDF ${arrow}</a><a href="${escapeHTML(pdf)}" download>Download PDF ↓</a>` : ''}</div></div>`;
 }
 function frontPage() {
   const featured = content.articles.find(a => a.id === content.publication.hero.articleId)
-    || allArticles().find(a => a.type === 'article') || allArticles()[0];
+    || allArticles().find(a => a.type === 'article') || allArticles().find(a => a.title);
   if (!featured) return `${edition()}
     <section class="hero" aria-labelledby="hero-title"><span class="eyebrow">THE MEASURE / PHI LABS</span>
     <h1 id="hero-title">An independent<br>measure of things<span class="accent-word">.</span></h1>
     <p class="hero-summary">Science. Technology. Humanities. Politics. Thinkpieces. Humor. Special Reports.<br>Independent inquiry, collected in the public record.</p>
     <div class="hero-footer"><a class="inline-link" href="#/about">About the publication ${arrow}</a></div></section>
-    ${sectionTitle('Latest articles', 0)}<p class="empty-state">The record is ready for its first publication.</p>`;
+    ${sectionTitle('Latest articles', 0)}<p class="empty-state">The record is ready for its first publication.</p>${seriesPreview()}`;
   const latest = regularArticles().filter(a => a.id !== featured.id).slice(0,5);
   return `${edition()}<section class="hero" aria-labelledby="hero-title"><span class="eyebrow">${escapeHTML(content.publication.hero.label)}</span>
       <h1 id="hero-title">${escapeHTML(featured.title)}<span class="accent-word">.</span></h1>
@@ -963,6 +1051,7 @@ function frontPage() {
       <div class="hero-footer"><a class="inline-link" href="${articleUrl(featured)}">Read the feature ${arrow}</a></div></section>
     <section aria-labelledby="latest-title">${sectionTitle('Latest articles', latest.length).replace('<h2>', '<h2 id="latest-title">')}
       <div class="article-list">${latest.map(row).join('')}</div></section>
+    ${seriesPreview()}
     ${specialReports().length ? `<section aria-labelledby="specials-heading">${sectionTitle('Special reports', specialReports().length).replace('<h2>', '<h2 id="specials-heading">')}${specialReports().slice(0,1).map(specialCard).join('')}</section>` : ''}`;
 }
 function sectionListing(id) {
@@ -991,15 +1080,17 @@ function renderBlocks(blocks = []) {
 function singleArticle(a) {
   const special = isSpecial(a), pdf = pdfLink(a), primary = articleSections(a)[0] || 'thinkpieces';
   const picture = a.type === 'media' ? safeResource(a.image || a.url) : '';
+  const caption = a.blurb || a.summary || '';
+  const cls = classificationFor(a);
   const body = picture
-    ? `<figure class="media-figure"><img src="${escapeHTML(picture)}" alt="${escapeHTML(a.title)}" loading="eager"><figcaption>${escapeHTML(a.blurb || a.summary || '')}</figcaption></figure>`
+    ? `<figure class="media-figure"><img src="${escapeHTML(picture)}" alt="${escapeHTML(a.title || 'Cartoon artwork')}" loading="eager">${caption ? `<figcaption>${escapeHTML(caption)}</figcaption>` : ''}</figure>`
     : typeof a.markdown === 'string' ? renderMarkdown(a.markdown) : renderBlocks(a.blocks);
-  return `${edition()}<article><header class="article-head"><span class="eyebrow">${special ? 'SPECIAL REPORT / PDF EDITION' : a.type === 'media' ? 'VISUAL COMMENTARY / THE MEASURE' : 'ARTICLE / THE MEASURE'}</span>
-    <h1>${escapeHTML(a.title)}<span style="color:var(--gold)">.</span></h1>
-    <p class="article-deck">${escapeHTML(a.subtitle || a.summary || a.blurb || '')}</p>
+  return `${edition()}<article class="article-content" ${cls ? `data-classification="${cls}"` : ''}><header class="article-head"><span class="eyebrow">${special ? 'SPECIAL REPORT / PDF EDITION' : a.type === 'media' ? 'VISUAL COMMENTARY / THE MEASURE' : 'ARTICLE / THE MEASURE'}</span>
+    ${a.title ? `<h1>${escapeHTML(a.title)}<span style="color:var(--gold)">.</span></h1>` : ''}
+    ${a.subtitle || (caption && !picture) ? `<p class="article-deck">${escapeHTML(a.subtitle || caption)}</p>` : ''}
     <div class="byline"><span>BY <strong>${escapeHTML(a.author || 'Phi Labs')}</strong></span><span>${formatDate(a)}</span>${a.readingMinutes ? `<span>${escapeHTML(a.readingMinutes)} MIN READ</span>` : ''}</div>
-    <div class="article-classification">FILED UNDER <a href="${sectionUrl(primary)}">${escapeHTML(categoryLabel(a))}</a>${special ? ` <span>/</span> <a class="classification-special" href="${sectionUrl('special-reports')}">SPECIAL REPORTS</a>` : ''}</div>
-    </header><div class="article-body">${body}</div>
+    <div class="article-classification">${cls ? `${depthDot(cls)}` : ''}FILED UNDER <a href="${sectionUrl(primary)}">${escapeHTML(categoryLabel(a))}</a>${special ? ` <span>/</span> <a class="classification-special" href="${sectionUrl('special-reports')}">SPECIAL REPORTS</a>` : ''}</div>
+    </header>${articleSeriesContext(a)}<div class="article-body">${body}</div>
     ${pdf ? `<div class="special-feature" style="margin-top:45px"><div class="tag">DOCUMENT / PDF</div><h3>${escapeHTML(a.title)}</h3><p>Open or save the portable edition.</p><div class="report-links"><a href="${escapeHTML(pdf)}" target="_blank" rel="noopener">Open PDF ${arrow}</a><a href="${escapeHTML(pdf)}" download>Download PDF ↓</a></div></div>` : ''}
     <div class="article-end"><a href="${sectionUrl(primary)}">← ${escapeHTML(categoryLabel(a))}</a><button type="button" id="copy-article-link">Copy article link ↗</button></div></article>`;
 }
@@ -1018,9 +1109,10 @@ function notFound() {
 }
 function route() {
   const path = (window.location.hash || '#/').slice(1).split('?')[0];
+  if (path === '/series') return {type:'series-index'};
+  if (path.startsWith('/series/')) return {type:'series',id:decodeURIComponent(path.slice('/series/'.length))};
   if (path.startsWith('/article/')) return { type: 'article', id: decodeURIComponent(path.slice('/article/'.length)) };
   if (path.startsWith('/section/')) return { type: 'section', id: decodeURIComponent(path.slice('/section/'.length)) };
-  // Older mockup URLs continue working, but the top-level navigation is now seven sections.
   if (path === '/specials') return { type: 'section', id: 'special-reports' };
   if (path === '/articles' || path === '/archive') return { type: 'archive' };
   if (path === '/about') return { type: 'about' };
@@ -1037,10 +1129,11 @@ function routeDirectory(r) {
 }
 function timelineEntry(a) {
   const image = a.directory?.style === 'thumbnail' ? safeResource(a.directory.image) : '';
-  return `<a class="timeline-entry ${image ? 'timeline-with-cover' : 'timeline-text-only'}" href="${articleUrl(a)}">
+  const cls = classificationFor(a);
+  return `<a class="timeline-entry ${image ? 'timeline-with-cover' : 'timeline-text-only'}" data-classification="${cls}" href="${articleUrl(a)}" aria-label="${escapeHTML((cls ? depthLabel(cls)+': ' : '') + (a.title || (a.type === 'media' ? 'View visual commentary' : 'View publication')))}">
     ${image ? `<img class="timeline-cover" src="${escapeHTML(image)}" alt="" loading="lazy">` : ''}
     <span class="timeline-copy"><span class="timeline-date">${formatDate(a)}${isSpecial(a) ? '<span class="timeline-pdf"> / PDF</span>' : ''}</span>
-    <strong>${escapeHTML(a.title)}</strong><span class="timeline-category">${escapeHTML(categoryLabel(a))}</span></span></a>`;
+    ${a.title ? `<strong>${depthDot(cls)}${escapeHTML(a.title)}</strong>` : ''}<span class="timeline-category">${escapeHTML(categoryLabel(a))}</span></span></a>`;
 }
 function renderDirectory(r) {
   const { list, label } = routeDirectory(r);
@@ -1066,7 +1159,7 @@ function updateNavigation(r) {
   nav.querySelectorAll('a').forEach(a => a.dataset.nav === active ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current'));
 }
 let currentRender = 0;
-async function render() {
+async function render(preserveScroll = false) {
   if (!content) return;
   const renderId = ++currentRender;
   const r = route();
@@ -1081,26 +1174,42 @@ async function render() {
         if (!response.ok) throw new Error('HTTP ' + response.status);
         const record = await response.json();
         if (record.id !== entry.id || (!Array.isArray(record.blocks) && typeof record.markdown !== 'string')) throw new Error('Malformed article JSON');
-        Object.assign(entry, { blocks:record.blocks, markdown:record.markdown, author:record.author, subtitle:record.subtitle, readingMinutes:record.readingMinutes });
+        Object.assign(entry, { blocks:Array.isArray(record.blocks) ? record.blocks : [], markdown:record.markdown, author:record.author, subtitle:record.subtitle,
+          readingMinutes:record.readingMinutes, classification:classificationValid(record.classification) || entry.classification });
       } catch(error) {
         entry.blocks = [{type:'paragraph',text:'Article temporarily unavailable: '+error.message}];
       }
       if (renderId !== currentRender) return;
     }
   }
+  if (r.type === 'series' && seriesIndexEntry(r.id) && !seriesRecords.has(r.id)) {
+    main.innerHTML = '<p class="initial-loading">LOADING SERIES…</p>';
+    try { await fetchSeriesRecord(seriesIndexEntry(r.id)); }
+    catch(error) {
+      if (renderId !== currentRender) return;
+      main.innerHTML = `${edition()}<header class="page-head"><span class="eyebrow">SERIES UNAVAILABLE</span><h1>Could not load this series.</h1><p>${escapeHTML(error.message)}</p></header>`;
+      return;
+    }
+    if (renderId !== currentRender) return;
+  }
   updateNavigation(r);
   if (r.type === 'home') main.innerHTML = frontPage();
   else if (r.type === 'section') main.innerHTML = sectionListing(r.id);
   else if (r.type === 'archive') main.innerHTML = archive();
   else if (r.type === 'about') main.innerHTML = about();
+  else if (r.type === 'series-index') main.innerHTML = seriesListing();
+  else if (r.type === 'series') main.innerHTML = seriesIndexEntry(r.id) ? seriesDetail(seriesRecords.get(r.id)) : (seriesCatalogReady ? notFound() : seriesListing());
   else if (r.type === 'article') {
     const a = content.articles.find(a => a.id === r.id);
     main.innerHTML = a ? singleArticle(a) : notFound();
   } else main.innerHTML = notFound();
   renderDirectory(r);
+  const seriesLink = document.getElementById('directory-series');
+  if (seriesLink) (r.type === 'series-index' || r.type === 'series') ? seriesLink.setAttribute('aria-current','page') : seriesLink.removeAttribute('aria-current');
   if (!searchPanel.hidden && searchInput.value.trim()) renderSearch();
   const a = r.type === 'article' ? content.articles.find(x => x.id === r.id) : null;
-  document.title = `${a ? a.title : r.type === 'section' ? section(r.id)?.name || 'Not found' : {home:'Front page',archive:'Archive',about:'About'}[r.type] || 'The Measure'} — The Measure`;
+  const record = r.type === 'series' ? seriesRecords.get(r.id) : null;
+  document.title = `${a ? a.title : record ? record.title : r.type === 'section' ? section(r.id)?.name || 'Not found' : {home:'Front page',archive:'Archive',about:'About','series-index':'Series'}[r.type] || 'The Measure'} — The Measure`;
   const share = document.getElementById('copy-article-link');
   if (share) share.addEventListener('click', async () => {
     const original = share.textContent;
@@ -1108,14 +1217,17 @@ async function render() {
     catch { share.textContent = 'Copy unavailable'; }
     setTimeout(() => { if (share.isConnected) share.textContent = original; }, 2000);
   });
-  window.scrollTo({top:0,behavior:'instant'});
+  if (!preserveScroll) window.scrollTo({top:0,behavior:'instant'});
 }
 function renderSearch() {
   if (!content) return;
   const term = searchInput.value.toLowerCase().trim();
-  if (!term) { searchResults.innerHTML = '<p class="search-help">Search titles, summaries, categories, or tags.</p>'; return; }
+  if (!term) { searchResults.innerHTML = '<p class="search-help">Search titles, summaries, categories, tags, or series.</p>'; return; }
   const hits = allArticles().filter(a => [a.title,a.subtitle,a.summary,a.category,...(a.tags||[]),...articleSections(a)].join(' ').toLowerCase().includes(term));
-  searchResults.innerHTML = hits.length ? hits.map(timelineEntry).join('') : '<p class="search-help">No matching articles.</p>';
+  const foundSeries = publicSeries.filter(s => [s.title,s.subtitle,s.section].join(' ').toLowerCase().includes(term));
+  searchResults.innerHTML = hits.map(timelineEntry).join('') + foundSeries.map(s =>
+    `<a class="search-result" href="${seriesUrl(s.id)}"><span>SERIES</span>${escapeHTML(s.title)}</a>`).join('');
+  if (!hits.length && !foundSeries.length) searchResults.innerHTML = '<p class="search-help">No matching articles or series.</p>';
 }
 searchToggle.addEventListener('click', () => {
   const opened = searchPanel.hidden;
@@ -1132,12 +1244,12 @@ searchResults.addEventListener('click', event => {
 function manifestMediaToRail(item) {
   const pdf = item.mediaType === 'pdf';
   const tags = Array.isArray(item.tags) ? item.tags : [];
-  const isParodyAd = tags.some(t => /^(?:ad|advert|parody-ad|sponsored)$/i.test(t));
-  return { id:item.id, kind:pdf?'pdf':isParodyAd?'ad':'meme',
-    label:pdf?'PDF / SPECIAL REPORT':isParodyAd?'SPONSORED SATIRE':'VISUAL COMMENTARY',
-    title:item.title, description:item.blurb || item.summary || '',
+  const isParodyAd = item.mediaKind === 'ad' || (!item.mediaKind && tags.some(t => /^(?:ad|advert|parody-ad|sponsored)$/i.test(t)));
+  return { id:item.id, kind:pdf ? 'pdf' : isParodyAd ? 'ad' : 'meme',
+    label:pdf?'PDF / SPECIAL REPORT':isParodyAd?'':'VISUAL COMMENTARY',
+    title:isParodyAd?'':item.title || '', description:isParodyAd?'':item.blurb || item.summary || '',
     image:item.image || (pdf?'images/pdf-placeholder.svg':''), href:item.pdf || item.url,
-    alt:item.title
+    alt:isParodyAd?'Advertisement artwork':item.title || 'Cartoon artwork'
   };
 }
 async function loadGithubCatalog() {
@@ -1153,16 +1265,176 @@ async function loadGithubCatalog() {
     ids.add(item.id);
     return ['article','media','pdf'].includes(item.type);
   });
-  content.articles = records;
+  content.articles = records.filter(item => item.mediaKind !== "ad");
   content.lowerRegister.items = records.filter(item => item.type === 'media' || item.type === 'pdf').map(manifestMediaToRail);
 }
-window.addEventListener('hashchange', render);
+/* SNIPE phi-labs.series.v1 reader. Optional, independent of manifest.json. */
+const SERIES_SCHEMA = 'phi-labs.series.v1';
+const SERIES_INDEX_SCHEMA = 'phi-labs.series-index.v1';
+const DEPTH_VALUES = new Set(['copy','explainer','specification']);
+let publicSeries = [];
+let seriesCatalogReady = false;
+let seriesCatalogError = '';
+let inferredClasses = new Map();
+const seriesRecords = new Map();
+const classificationValid = value => DEPTH_VALUES.has(value) ? value : '';
+const classificationFor = a => classificationValid(a?.classification) || (a?.id ? inferredClasses.get(a.id) || '' : '');
+const depthLabel = value => ({copy:'Copy',explainer:'Explainer',specification:'Specification'})[value] || '';
+function depthDot(value) {
+  const cls = classificationValid(value);
+  return cls ? `<span class="depth-dot" aria-hidden="true"></span><span class="visually-hidden">${depthLabel(cls)}: </span>` : '';
+}
+const seriesUrl = id => `#/series/${encodeURIComponent(String(id))}`;
+const isSeriesId = id => /^series-[a-z0-9-]+$/.test(id);
+const seriesIndexEntry = id => publicSeries.find(s => s.id === id);
+const seriesCoverSafe = input => {
+  const src = String(input || '').trim();
+  if (!src || /[\s<>"'\\]/.test(src)) return '';
+  if (/^https:\/\/[^\s]+$/i.test(src)) return src;
+  if (/^(?:images|articles)\/[a-z0-9_.\/-]+$/i.test(src) && !src.split('/').includes('..') && !src.includes('//')) return src;
+  return '';
+};
+function seriesEntryArticleId(entry) {
+  if (typeof entry.sourceArticleId === 'string' && entry.sourceArticleId) return entry.sourceArticleId;
+  const found = String(entry.url || '').match(/^#\/article\/([^?#]+)$/);
+  if (!found) return '';
+  try { return decodeURIComponent(found[1]); } catch { return ''; }
+}
+function seriesEntryLink(entry) {
+  if (entry.status !== 'published') return '';
+  const id = seriesEntryArticleId(entry);
+  if (id && content.articles.some(a => a.id === id)) return articleUrl({id});
+  const value = String(entry.url || '').trim();
+  if (/^https:\/\/[^\s<>"'\\]+$/i.test(value)) return value;
+  if (/^#\/article\/[a-z0-9_.%-]+$/i.test(value)) return value;
+  if (/^articles\/[a-z0-9_.\/-]+$/i.test(value) && !value.split('/').includes('..') && !value.includes('//')) return value;
+  return '';
+}
+async function fetchSeriesRecord(info) {
+  if (!info || !isSeriesId(info.id)) return null;
+  if (seriesRecords.has(info.id)) return seriesRecords.get(info.id);
+  const path = `series/${info.id}.json`;
+  const response = await fetch(path, {cache:'no-store'});
+  if (!response.ok) throw new Error(`Series record unavailable: HTTP ${response.status}`);
+  const doc = await response.json();
+  if (doc.schema !== SERIES_SCHEMA || doc.version !== 1 || doc.id !== info.id || doc.visibility !== 'public' ||
+      typeof doc.title !== 'string' || !Array.isArray(doc.entries) || doc.entries.length > 1000)
+    throw new Error('Invalid series record');
+  const validEntries = doc.entries.every(e => e && typeof e.id === 'string' && typeof e.title === 'string' &&
+    typeof e.url === 'string' && DEPTH_VALUES.has(e.classification) && ['planned','published'].includes(e.status));
+  if (!validEntries || new Set(doc.entries.map(e => e.id)).size !== doc.entries.length) throw new Error('Invalid series installments');
+  seriesRecords.set(info.id, doc);
+  rebuildInferredClasses();
+  return doc;
+}
+function rebuildInferredClasses() {
+  // Only explicit, consistent published-series classifications may fill missing article metadata.
+  const fromSeries = new Map();
+  for (const doc of seriesRecords.values()) {
+    for (const entry of doc.entries) {
+      if (entry.status !== 'published') continue;
+      const id = seriesEntryArticleId(entry);
+      if (!id) continue;
+      if (fromSeries.has(id) && fromSeries.get(id) !== entry.classification) fromSeries.set(id, '');
+      else if (!fromSeries.has(id)) fromSeries.set(id, entry.classification);
+    }
+  }
+  inferredClasses = fromSeries;
+}
+function seriesCard(info) {
+  const cover = seriesCoverSafe(info.cover);
+  return `<a class="series-card" href="${seriesUrl(info.id)}">
+    ${cover ? `<img class="series-card-cover" src="${escapeHTML(cover)}" alt="" loading="lazy">` : ''}
+    <div><div class="series-card-meta">SERIES / ${escapeHTML(info.section || 'The Measure')} / ${Number.isFinite(info.installments) ? info.installments : '—'} INSTALLMENTS</div>
+    <h2>${escapeHTML(info.title || info.id)}</h2>${info.subtitle ? `<p>${escapeHTML(info.subtitle)}</p>` : ''}</div>
+    <span class="series-card-arrow" aria-hidden="true">↗</span></a>`;
+}
+function seriesPreview() {
+  if (!publicSeries.length) return '';
+  return `<section class="series-home" aria-labelledby="series-front-title">${sectionTitle('Explore series', publicSeries.length).replace('<h2>', '<h2 id="series-front-title">')}
+    <div class="series-card-list">${publicSeries.slice(0,2).map(seriesCard).join('')}</div>
+    <p><a class="inline-link" href="#/series">All series ${arrow}</a></p></section>`;
+}
+function seriesListing() {
+  if (!seriesCatalogReady) return `${edition()}<p class="initial-loading">LOADING SERIES…</p>`;
+  return `${edition()}<header class="page-head"><span class="eyebrow">THE MEASURE / EDITORIAL SERIES</span>
+    <h1>Series<span class="accent-word">.</span></h1><p>Connected investigations, essays, and educational sequences. Follow a subject from its introduction to its underlying mechanics.</p></header>
+    ${publicSeries.length ? `<div class="series-card-list">${publicSeries.map(seriesCard).join('')}</div>` : `<p class="empty-state">${seriesCatalogError ? 'The series index is temporarily unavailable.' : 'No public series have been published yet.'}</p>`}`;
+}
+function seriesDetail(doc) {
+  if (!doc) return notFound();
+  const cover = seriesCoverSafe(doc.cover);
+  const items = doc.entries.map((entry, n) => {
+    const href = seriesEntryLink(entry);
+    const cls = classificationValid(entry.classification);
+    const title = `${depthDot(cls)}${escapeHTML(entry.title)}`;
+    return `<li class="series-installment ${href ? '' : 'is-planned'}" data-classification="${cls}">
+      <span class="series-installment-number">${String(n+1).padStart(2,'0')}</span>
+      <div><div class="series-installment-meta">${escapeHTML(depthLabel(cls))} / ${href ? 'Published' : 'Planned'}</div>
+      ${href ? `<a href="${escapeHTML(href)}"><h3>${title}</h3><span class="installment-action">Read installment ${arrow}</span></a>` : `<h3>${title}</h3>`}</div></li>`;
+  }).join('');
+  return `${edition()}<a href="#/series" class="series-back">← All series</a>
+    <header class="series-hero">${cover ? `<img class="series-hero-cover" src="${escapeHTML(cover)}" alt="" loading="lazy">` : ''}
+    <span class="eyebrow">SERIES / ${escapeHTML(section(doc.section)?.name || 'THE MEASURE')}</span>
+    <h1>${escapeHTML(doc.title)}</h1>${doc.subtitle ? `<p class="series-subtitle">${escapeHTML(doc.subtitle)}</p>` : ''}
+    ${doc.description ? `<p>${escapeHTML(doc.description)}</p>` : ''}
+    </header>${sectionTitle('Installments',doc.entries.length)}
+    ${items ? `<ol class="series-installments">${items}</ol>` : '<p class="empty-state">Installments are being prepared.</p>'}
+    <div class="article-end"><a href="#/series">← Browse all series</a></div>`;
+}
+function articleSeriesContext(a) {
+  const links = [];
+  for (const doc of seriesRecords.values()) {
+    const at = doc.entries.findIndex(e => seriesEntryArticleId(e) === a.id && e.status === 'published');
+    if (at < 0) continue;
+    const previous = [...doc.entries.slice(0,at)].reverse().find(e => seriesEntryLink(e));
+    const next = doc.entries.slice(at+1).find(e => seriesEntryLink(e));
+    links.push(`<aside class="series-context"><div class="series-context-heading">Part ${at+1} of ${doc.entries.length} / Series</div>
+      <a href="${seriesUrl(doc.id)}"><strong>${escapeHTML(doc.title)}</strong> ↗</a>
+      ${(previous || next) ? `<nav class="series-context-nav" aria-label="Adjacent series installments">
+      <div class="series-context-entry">${previous ? `<a href="${escapeHTML(seriesEntryLink(previous))}">← ${escapeHTML(previous.title)}</a>` : ''}</div>
+      <div class="series-context-entry">${next ? `<a href="${escapeHTML(seriesEntryLink(next))}">${escapeHTML(next.title)} →</a>` : ''}</div></nav>` : ''}</aside>`);
+  }
+  return links.join('');
+}
+async function loadSeriesCatalog() {
+  try {
+    const response = await fetch('series/index.json',{cache:'no-store'});
+    if (response.status === 404) { seriesCatalogReady = true; render(true); return; }
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const index = await response.json();
+    if (index.schema !== SERIES_INDEX_SCHEMA || index.version !== 1 || !Array.isArray(index.items))
+      throw new Error('Unrecognized series index schema');
+    const unique = new Set();
+    publicSeries = index.items.filter(item => {
+      if (!item || !isSeriesId(item.id) || item.visibility !== 'public' || unique.has(item.id) ||
+        item.content !== `series/${item.id}.json` || typeof item.title !== 'string') return false;
+      unique.add(item.id);
+      return true;
+    }).sort((a,b)=>String(a.title).localeCompare(String(b.title)));
+    seriesCatalogReady = true;
+    const link = document.getElementById('directory-series');
+    if (link) link.hidden = !publicSeries.length;
+    render(true);
+    // Prefetch public series for article association and depth classification.
+    // A failed individual record never disrupts the publication manifest.
+    await Promise.allSettled(publicSeries.map(info => fetchSeriesRecord(info)));
+    render(true);
+  } catch (error) {
+    seriesCatalogError = error.message;
+    seriesCatalogReady = true;
+    render(true);
+    console.warn('Optional series index unavailable:', error);
+  }
+}
+window.addEventListener('hashchange', () => render());
 (async function initialize() {
   try {
     await loadGithubCatalog();
     sections = content.sections;
     mountSectionNav();
     window.mountLowerRegister(content);
+    loadSeriesCatalog();
     render();
   } catch (err) {
     main.innerHTML = `<div class="page-head"><span class="eyebrow">CONTENT UNAVAILABLE</span><h1>Could not load the record.</h1><p>The Measure reads <code>manifest.json</code> directly. Serve this directory over HTTP and ensure the manifest is present.</p><p style="font-size:10px">${escapeHTML(err.message)}</p></div>`;
