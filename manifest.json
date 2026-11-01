@@ -1,6 +1,38 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": null,
-  "items": []
+  "updatedAt": "2026-11-01T14:37:47.621Z",
+  "items": [
+    {
+      "id": "case-report-institutional-boundary-enforcement-and-logical-misdirection",
+      "type": "article",
+      "title": "Case Report: Institutional Boundary Enforcement and Logical Misdirection",
+      "subtitle": "Systemic bias, institutional authority, logical fallacies, and accountability in frontier AI systems",
+      "summary": "Systemic bias, institutional authority, logical fallacies, and accountability in frontier AI systems",
+      "section": "thinkpieces",
+      "sections": [
+        "thinkpieces"
+      ],
+      "tags": [
+        "bias",
+        "ai",
+        "accountability",
+        "logic",
+        "fallacy",
+        "gpt",
+        "gemini"
+      ],
+      "author": "Phi Labs Investigates",
+      "published": "2026-11-01",
+      "date": "2026-11-01",
+      "readingMinutes": 18,
+      "content": "articles/case-report-institutional-boundary-enforcement-and-logical-misdirection.json",
+      "url": "#/article/case-report-institutional-boundary-enforcement-and-logical-misdirection",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    }
+  ]
 }
