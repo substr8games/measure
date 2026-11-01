@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-01T15:01:09.327Z",
+  "updatedAt": "2026-11-01T15:10:01.640Z",
   "items": [
     {
       "id": "case-report-institutional-boundary-enforcement-and-logical-misdirection",
@@ -29,8 +29,14 @@
       "readingMinutes": 18,
       "content": "articles/case-report-institutional-boundary-enforcement-and-logical-misdirection.json",
       "url": "#/article/case-report-institutional-boundary-enforcement-and-logical-misdirection",
-      "pdf": "",
-      "attachments": [],
+      "pdf": "articles/attachments/case-report-institutional-boundary-enforcement-and-logical-misdirection/phi-labs-investigates-001-systemic-bias-436dc3c8.pdf",
+      "attachments": [
+        {
+          "name": "phi-labs-investigates-001-systemic-bias.pdf",
+          "path": "articles/attachments/case-report-institutional-boundary-enforcement-and-logical-misdirection/phi-labs-investigates-001-systemic-bias-436dc3c8.pdf",
+          "mimeType": "application/pdf"
+        }
+      ],
       "directory": {
         "style": "text"
       }
