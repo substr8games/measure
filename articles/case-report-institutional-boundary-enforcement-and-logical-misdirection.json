@@ -8,9 +8,10 @@
   "author": "Phi Labs Investigates",
   "date": "2026-11-01",
   "published": "2026-11-01",
-  "section": "thinkpieces",
+  "section": "technology",
   "sections": [
-    "thinkpieces"
+    "technology",
+    "special-reports"
   ],
   "tags": [
     "bias",
@@ -1277,5 +1278,5 @@
     "titleAlign": "left",
     "customCss": ""
   },
-  "updatedAt": "2026-11-01T14:37:45.711Z"
+  "updatedAt": "2026-11-01T15:01:07.133Z"
 }
