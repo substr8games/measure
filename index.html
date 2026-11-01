@@ -233,6 +233,12 @@ button { cursor: pointer; }
 .dispatch-kind { color: var(--gold); text-transform: uppercase; font-size: 8px; font-weight: 700; letter-spacing: .045em; }
 .dispatch-tile strong { font-size: 12px; line-height: 1.35; color: var(--white); font-weight: 700; overflow-wrap: anywhere; }
 .dispatch-hint { color: var(--subdued); font-size: 8px; letter-spacing: .035em; }
+.dispatch-tile--article { padding: 13px 15px; min-width: 246px; }
+.dispatch-tile--article:has(.dispatch-thumb) { padding: 6px; }
+.dispatch-tile--article .dispatch-tile-copy { flex: 1; padding: 0; width: 100%; }
+.dispatch-tile--article:has(.dispatch-thumb) .dispatch-tile-copy { padding: 9px 4px 6px 0; }
+.dispatch-tile--article strong { display: block; line-height: 1.4; font-size: 12px; }
+.dispatch-tile--article .depth-dot { width: .48rem; height: .48rem; margin-right: .35rem; }
 .poster-dialog {
   border: 1px solid var(--gold); background: var(--background-deep); color: var(--white);
   width: min(850px, calc(100vw - 32px)); max-height: calc(100dvh - 32px);
@@ -639,7 +645,6 @@ body {
       <a class="brand-link" href="#/" aria-label="The Measure — front page">
         <img class="brand-lockup" src="images/the-measure-lockup.png" alt="The Measure — A Phi Labs Publication">
       </a>
-      </a>
     </header>
 
     <nav class="section-bar" id="primary-nav" aria-label="Editorial sections"></nav>
@@ -673,7 +678,7 @@ body {
     <div class="dispatch-heading-row">
       <div class="dispatch-heading-copy">
         <div class="dispatch-heading-title"><span class="dispatch-sigil" aria-hidden="true">✳</span><h2 id="dispatch-heading">THE LOWER REGISTER</h2></div>
-        <span class="dispatch-descriptor">PDF EDITIONS / VISUAL COMMENTARY / SPONSORED NOTICES</span>
+        <span class="dispatch-descriptor">RECENT ARTICLES / PDF EDITIONS / VISUAL COMMENTARY / SPONSORED NOTICES</span>
       </div>
       <div class="dispatch-controls">
         <span aria-hidden="true">BROWSE THE MARGINS</span>
@@ -723,6 +728,16 @@ body {
   };
 
   function card(item, index) {
+    if (item.kind === 'article') {
+      const href = String(item.href || '');
+      if (!/^#\/article\/[a-z0-9-]+$/i.test(href)) return '';
+      const cover = localPath(item.image);
+      const depth = ['copy','explainer','specification'].includes(item.classification) ? item.classification : '';
+      return `<a class="dispatch-tile dispatch-tile--article" data-classification="${depth}" href="${escape(href)}" aria-label="Read article: ${escape(item.title)}">
+        ${cover ? `<img class="dispatch-thumb" src="${escape(cover)}" alt="" loading="lazy">` : ''}
+        <span class="dispatch-tile-copy"><span class="dispatch-kind">RECENT ARTICLE${item.date ? ' / ' + escape(item.date) : ''}</span>
+        <strong>${depth ? '<span class="depth-dot" aria-hidden="true"></span>' : ''}${escape(item.title)}</strong><span class="dispatch-hint">READ ARTICLE ↗</span></span></a>`;
+    }
     const src = localPath(item.image);
     if (!src) return '';
     const title = escape(item.title);
@@ -809,7 +824,7 @@ body {
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const hrefSafe = raw => {
   const url = String(raw ?? '').trim();
-  if (/^(?:https?:\/\/|mailto:|#|images/|articles/|\.\/|\.\.\/|\/)/i.test(url) && !/[\s<>"']/.test(url) && !url.includes('..\\')) return url;
+  if (/^(?:https?:\/\/|mailto:|#|images\/|articles\/|\.\/|\.\.\/|\/)/i.test(url) && !/[\s<>"']/.test(url) && !url.includes('..\\')) return url;
   return '';
 };
 function inlineMarkdown(text) {
@@ -1084,7 +1099,7 @@ function singleArticle(a) {
   const cls = classificationFor(a);
   const body = picture
     ? `<figure class="media-figure"><img src="${escapeHTML(picture)}" alt="${escapeHTML(a.title || 'Cartoon artwork')}" loading="eager">${caption ? `<figcaption>${escapeHTML(caption)}</figcaption>` : ''}</figure>`
-    : typeof a.markdown === 'string' ? renderMarkdown(a.markdown) : renderBlocks(a.blocks);
+    : typeof a.markdown === 'string' && typeof renderMarkdown === 'function' ? renderMarkdown(a.markdown) : renderBlocks(a.blocks);
   return `${edition()}<article class="article-content" ${cls ? `data-classification="${cls}"` : ''}><header class="article-head"><span class="eyebrow">${special ? 'SPECIAL REPORT / PDF EDITION' : a.type === 'media' ? 'VISUAL COMMENTARY / THE MEASURE' : 'ARTICLE / THE MEASURE'}</span>
     ${a.title ? `<h1>${escapeHTML(a.title)}<span style="color:var(--gold)">.</span></h1>` : ''}
     ${a.subtitle || (caption && !picture) ? `<p class="article-deck">${escapeHTML(a.subtitle || caption)}</p>` : ''}
@@ -1201,7 +1216,11 @@ async function render(preserveScroll = false) {
   else if (r.type === 'series') main.innerHTML = seriesIndexEntry(r.id) ? seriesDetail(seriesRecords.get(r.id)) : (seriesCatalogReady ? notFound() : seriesListing());
   else if (r.type === 'article') {
     const a = content.articles.find(a => a.id === r.id);
-    main.innerHTML = a ? singleArticle(a) : notFound();
+    try { main.innerHTML = a ? singleArticle(a) : notFound(); }
+    catch (error) {
+      console.error('Article render failed:', error);
+      main.innerHTML = `${edition()}<header class="page-head"><span class="eyebrow">ARTICLE UNAVAILABLE</span><h1>Could not display the article.</h1><p>${escapeHTML(error.message || 'Unknown rendering error')}</p></header><div class="article-end"><a href="#/">← Back to the front page</a></div>`;
+    }
   } else main.innerHTML = notFound();
   renderDirectory(r);
   const seriesLink = document.getElementById('directory-series');
@@ -1242,7 +1261,7 @@ searchResults.addEventListener('click', event => {
 });
 
 function manifestMediaToRail(item) {
-  const pdf = item.mediaType === 'pdf';
+  const pdf = item.type === 'pdf' || item.mediaType === 'pdf';
   const tags = Array.isArray(item.tags) ? item.tags : [];
   const isParodyAd = item.mediaKind === 'ad' || (!item.mediaKind && tags.some(t => /^(?:ad|advert|parody-ad|sponsored)$/i.test(t)));
   return { id:item.id, kind:pdf ? 'pdf' : isParodyAd ? 'ad' : 'meme',
@@ -1266,7 +1285,13 @@ async function loadGithubCatalog() {
     return ['article','media','pdf'].includes(item.type);
   });
   content.articles = records.filter(item => item.mediaKind !== "ad");
-  content.lowerRegister.items = records.filter(item => item.type === 'media' || item.type === 'pdf').map(manifestMediaToRail);
+  const latestTextArticles = records.filter(item => item.type === 'article' && item.mediaKind !== 'ad')
+    .sort((a,b) => String(b.published || b.date || '').localeCompare(String(a.published || a.date || '')))
+    .slice(0, 10).map(item => ({kind:'article', id:item.id, title:item.title, date:item.date || item.published || '',
+      classification:item.classification || '', image:item.directory?.image || '',
+      href:`#/article/${encodeURIComponent(item.id)}`}));
+  const mediaTiles = records.filter(item => item.type === 'media' || item.type === 'pdf').map(manifestMediaToRail);
+  content.lowerRegister.items = [...latestTextArticles, ...mediaTiles];
 }
 /* SNIPE phi-labs.series.v1 reader. Optional, independent of manifest.json. */
 const SERIES_SCHEMA = 'phi-labs.series.v1';
@@ -1400,7 +1425,7 @@ function articleSeriesContext(a) {
 async function loadSeriesCatalog() {
   try {
     const response = await fetch('series/index.json',{cache:'no-store'});
-    if (response.status === 404) { seriesCatalogReady = true; render(true); return; }
+    if (response.status === 404) { seriesCatalogReady = true; if (route().type === 'series-index' || route().type === 'series') render(true); return; }
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const index = await response.json();
     if (index.schema !== SERIES_INDEX_SCHEMA || index.version !== 1 || !Array.isArray(index.items))
