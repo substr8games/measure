@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-02T14:41:22.195Z",
+  "updatedAt": "2026-11-02T16:06:19.316Z",
   "items": [
     {
       "id": "the-institutionalist-manifesto",
@@ -27,6 +27,36 @@
       "classification": "copy",
       "content": "articles/the-institutionalist-manifesto.json",
       "url": "#/article/the-institutionalist-manifesto",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "the-machine-did-not-make-you-stupid",
+      "type": "article",
+      "title": "The Machine Did Not Make You Stupid",
+      "subtitle": "On artificial intelligence, intellectual insecurity, and the cult of difficulty",
+      "summary": "On artificial intelligence, intellectual insecurity, and the cult of difficulty",
+      "section": "thinkpieces",
+      "sections": [
+        "thinkpieces"
+      ],
+      "tags": [
+        "llm",
+        "ai",
+        "insecurity",
+        "difficulty",
+        "intellect"
+      ],
+      "author": "Phi Labs Staff",
+      "published": "2026-11-02",
+      "date": "2026-11-02",
+      "readingMinutes": 7,
+      "classification": "copy",
+      "content": "articles/the-machine-did-not-make-you-stupid.json",
+      "url": "#/article/the-machine-did-not-make-you-stupid",
       "pdf": "",
       "attachments": [],
       "directory": {

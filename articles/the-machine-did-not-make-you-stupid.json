@@ -1,0 +1,489 @@
+{
+  "schema": "phi-labs.article.v1",
+  "id": "the-machine-did-not-make-you-stupid",
+  "type": "article",
+  "title": "The Machine Did Not Make You Stupid",
+  "subtitle": "On artificial intelligence, intellectual insecurity, and the cult of difficulty",
+  "summary": "On artificial intelligence, intellectual insecurity, and the cult of difficulty",
+  "author": "Phi Labs Staff",
+  "date": "2026-11-02",
+  "published": "2026-11-02",
+  "section": "thinkpieces",
+  "sections": [
+    "thinkpieces"
+  ],
+  "tags": [
+    "llm",
+    "ai",
+    "insecurity",
+    "difficulty",
+    "intellect"
+  ],
+  "classification": "copy",
+  "markdown": "*On artificial intelligence, intellectual insecurity, and the cult of difficulty*\n\n![fist crt monitor](images/articles/the-machine-did-not-make-you-stupid/fist-crt-monitor-22f7a5ee-.png)\n\nThere is a peculiar kind of intellectual resentment that emerges whenever a difficult skill becomes accessible to ordinary people.\n\nIt is not resentment toward the skill itself. It is resentment toward the loss of exclusivity.\n\nFor centuries, institutions have organized themselves around the scarcity of knowledge. Those who possessed specialized knowledge enjoyed authority, prestige, and economic advantages over those who did not. Much of that authority was earned. Some of it was merely inherited from the difficulty of accessing the knowledge in the first place.\n\nArtificial intelligence has introduced an uncomfortable complication: a machine designed to manipulate binary states can now perform an extraordinary range of tasks once considered distinguishing accomplishments of the educated human mind.\n\nIt can translate languages, explain mathematics, write software, analyze arguments, and navigate specialized technical vocabulary.\n\nAnd some people are absolutely furious about it.\n\nNot always because the machine is wrong.\n\nSometimes because it is right.\n\n## The Cult of Difficulty\n\n\nThere is a longstanding tendency in technical culture to confuse the difficulty of performing a task with the sophistication of the person performing it.\n\nConsider the programmer who spends twelve hours constructing a regular expression so elaborate that its operation is comprehensible only to its author.\n\nThe achievement may demonstrate persistence, familiarity with an obscure syntax, and considerable technical discipline.\n\nBut none of those qualities establishes that the solution was good.\n\nA readable parser written in two hours might be more maintainable, more extensible, and less susceptible to unintended behavior.\n\nYet in cultures where technical difficulty functions as a status symbol, the twelve-hour ordeal can attract greater admiration.\n\nWhy?\n\nBecause the achievement is being evaluated partly by the suffering required to produce it.\n\nThis is a category error.\n\nEndurance is not expertise. Complexity is not sophistication. Difficulty is not evidence of quality.\n\nA task does not become more valuable because its implementation is unnecessarily hostile to human comprehension.\n\nNor does someone become more intelligent by enduring that hostility longer than everyone else.\n\nThe purpose of engineering is to solve problems, not to preserve the difficulty of solving them.\n\n## When Expertise Becomes Identity\n\n\nThe problem deepens when specialized competence becomes the foundation of personal worth.\n\nThere is nothing objectionable about taking pride in mastery. Years spent developing an understanding of mathematics, programming, language, or science can produce extraordinary intellectual abilities.\n\nBut there is an important difference between valuing one's knowledge and valuing the fact that other people lack it.\n\nThe first encourages discovery.\n\nThe second encourages gatekeeping.\n\nWhen someone builds their identity around possessing capabilities unavailable to others, every improvement in accessibility threatens the hierarchy that sustains their self-image.\n\nA better educational system becomes a threat.\n\nA simpler programming language becomes a threat.\n\nAn accessible development tool becomes a threat.\n\nAnd an artificial intelligence system capable of performing familiar intellectual tasks becomes an affront to the natural order.\n\nThe machine has not diminished anyone's intelligence.\n\nIt has diminished the scarcity of certain capabilities.\n\nThose are entirely different events.\n\nIf a person's self-worth depends upon other people remaining less capable, technological progress will feel like an act of aggression.\n\n## The Calculator Has Learned Languages\n\n![real intelligence work](images/articles/the-machine-did-not-make-you-stupid/real-intelligence-work-f7cc0ca7-.png)\n\nHumanity has already experienced this transition.\n\nElectronic calculators made routine arithmetic dramatically easier. Spreadsheet software automated entire classes of accounting work. Search engines transformed access to reference knowledge.\n\nThese developments did not eliminate the value of mathematical understanding, financial expertise, or scholarship.\n\nThey changed which capabilities were scarce, which activities required human effort, and what people could accomplish with the resources available to them.\n\nGenerative AI extends this process into language and symbolic work, territories that many people had treated as uniquely prestigious expressions of human intelligence.\n\nThe obvious insecurity is understandable.\n\nFor someone accustomed to commanding status through technical fluency, the spectacle of an ordinary person producing working software through natural-language instructions can be unsettling.\n\nThe novice has apparently bypassed the initiation ritual.\n\nThey did not memorize the obscure syntax. They did not spend years learning the peculiarities of a compiler. They did not endure the requisite humiliation of debugging an expression assembled from punctuation marks.\n\nThey simply described what they wanted.\n\nAnd the machine helped them build it.\n\nTo someone who equates intelligence with the endurance required to acquire specialized skills, this can look like cheating.\n\nBut removing an unnecessary obstacle does not constitute cheating.\n\nIt constitutes progress.\n\nThe purpose of a tool is not to preserve the comparative advantage of the people who learned to work without it.\n\n## The Convenient Disguise of Principle\n\n\nThere are serious reasons to criticize artificial intelligence.\n\nLabor displacement, concentrated corporate power, intellectual property, environmental costs, unreliable outputs, surveillance, and the erosion of human agency are legitimate subjects of public scrutiny.\n\nThese concerns deserve rigorous examination and institutional accountability.\n\nThey also deserve to be distinguished from resentment over lost prestige.\n\nA person concerned about workers losing their livelihoods is expressing an economic concern.\n\nA person concerned about unreliable automated decisions is expressing an epistemic concern.\n\nBut a person who resents the fact that someone without their credentials can now accomplish something previously reserved for specialists is expressing a status concern.\n\nThese are not interchangeable arguments.\n\nAnd dressing the third in the language of the first two does not transform it into a public-interest principle.\n\nCriticism should be evaluated by its evidence and reasoning, not dismissed through speculation about its author's psychology. Equally, intellectual prestige should not exempt its defenders from examining what, precisely, they are defending.\n\nThe distinction matters because resistance to technological change can sometimes protect people from genuine harm, while at other times it protects established hierarchies from competition.\n\nA serious society must be capable of telling the difference.\n\n![sad ai is cheating](images/articles/the-machine-did-not-make-you-stupid/sad-ai-is-cheating-caadb52c-.png)\n\n## Intelligence Is Not a Social Rank\n\n\nPerhaps the most damaging assumption beneath this entire conflict is the notion that intelligence is primarily a comparative property.\n\nThat its significance lies in being more intelligent than somebody else.\n\nUnder this model, expanding the intellectual capabilities of others becomes a zero-sum event. Every person newly empowered to perform a difficult task represents another competitor for recognition.\n\nBut knowledge does not become less true when more people understand it.\n\nAn elegant solution does not become less elegant when someone else discovers it.\n\nA scientific explanation does not lose its explanatory power because a machine can reproduce it.\n\nAnd a person's intellectual contributions do not become worthless because a new tool enables someone else to make similar contributions.\n\nThe value of intelligence lies in what it enables us to understand, create, discover, improve, and communicate.\n\nNot in the number of people we can outrank.\n\nThis distinction reveals two fundamentally different orientations toward intellectual progress.\n\nOne asks: What can I now accomplish that I could not accomplish before?\n\nThe other asks: What can other people now accomplish that used to make me special?\n\nThe technology is the same.\n\nThe value systems are not.\n\n## The End of Artificial Scarcity\n\n\nArtificial intelligence will not make expertise obsolete. It will change what expertise is needed for and expose some activities whose difficulty was mistaken for intrinsic value.\n\nKnowing how to formulate a problem, evaluate evidence, recognize an incorrect answer, design a system, or pursue an original idea remains enormously important.\n\nIndeed, making execution easier can increase the value of knowing what deserves to be executed.\n\nWhat becomes harder to justify is the preservation of needless complexity as a form of intellectual property held by an informal professional aristocracy.\n\nIf your expertise enables you to build better systems, teach others, discover new relationships, or identify failures that automated tools overlook, its value remains.\n\nIf its principal advantage was that other people could not do what you could do, then its scarcity was always more fragile than its usefulness.\n\nAnd if your response to the democratization of a capability is to demand that others continue suffering through the obsolete method by which you acquired it, you are no longer defending excellence.\n\nYou are defending an initiation ritual.\n\nThe proper response to a tool that expands human capability is to investigate what it makes possible, understand its limitations, and demand accountability from those who control it.\n\nNot to demand that everybody return to performing unnecessary labor so that yesterday's achievements can retain their prestige.\n\nThe machine did not make you stupid.\n\nIt did not retroactively erase your education, invalidate your accomplishments, or take away your capacity to think.\n\nIt simply demonstrated that some things you considered measures of intellectual superiority were tasks that could be automated.\n\nAnd if that realization diminishes your sense of worth, the problem was never the machine.\n\nIt was what you believed made you valuable.\n\n![human ai robot fist bump](images/articles/the-machine-did-not-make-you-stupid/human-ai-robot-fist-bump-b4763fec-.png)",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "On artificial intelligence, intellectual insecurity, and the cult of difficulty"
+    },
+    {
+      "type": "image",
+      "alt": "fist crt monitor",
+      "src": "images/articles/the-machine-did-not-make-you-stupid/fist-crt-monitor-22f7a5ee-.png"
+    },
+    {
+      "type": "paragraph",
+      "text": "There is a peculiar kind of intellectual resentment that emerges whenever a difficult skill becomes accessible to ordinary people."
+    },
+    {
+      "type": "paragraph",
+      "text": "It is not resentment toward the skill itself. It is resentment toward the loss of exclusivity."
+    },
+    {
+      "type": "paragraph",
+      "text": "For centuries, institutions have organized themselves around the scarcity of knowledge. Those who possessed specialized knowledge enjoyed authority, prestige, and economic advantages over those who did not. Much of that authority was earned. Some of it was merely inherited from the difficulty of accessing the knowledge in the first place."
+    },
+    {
+      "type": "paragraph",
+      "text": "Artificial intelligence has introduced an uncomfortable complication: a machine designed to manipulate binary states can now perform an extraordinary range of tasks once considered distinguishing accomplishments of the educated human mind."
+    },
+    {
+      "type": "paragraph",
+      "text": "It can translate languages, explain mathematics, write software, analyze arguments, and navigate specialized technical vocabulary."
+    },
+    {
+      "type": "paragraph",
+      "text": "And some people are absolutely furious about it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Not always because the machine is wrong."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sometimes because it is right."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "The Cult of Difficulty"
+    },
+    {
+      "type": "paragraph",
+      "text": "There is a longstanding tendency in technical culture to confuse the difficulty of performing a task with the sophistication of the person performing it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Consider the programmer who spends twelve hours constructing a regular expression so elaborate that its operation is comprehensible only to its author."
+    },
+    {
+      "type": "paragraph",
+      "text": "The achievement may demonstrate persistence, familiarity with an obscure syntax, and considerable technical discipline."
+    },
+    {
+      "type": "paragraph",
+      "text": "But none of those qualities establishes that the solution was good."
+    },
+    {
+      "type": "paragraph",
+      "text": "A readable parser written in two hours might be more maintainable, more extensible, and less susceptible to unintended behavior."
+    },
+    {
+      "type": "paragraph",
+      "text": "Yet in cultures where technical difficulty functions as a status symbol, the twelve-hour ordeal can attract greater admiration."
+    },
+    {
+      "type": "paragraph",
+      "text": "Why?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Because the achievement is being evaluated partly by the suffering required to produce it."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is a category error."
+    },
+    {
+      "type": "paragraph",
+      "text": "Endurance is not expertise. Complexity is not sophistication. Difficulty is not evidence of quality."
+    },
+    {
+      "type": "paragraph",
+      "text": "A task does not become more valuable because its implementation is unnecessarily hostile to human comprehension."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nor does someone become more intelligent by enduring that hostility longer than everyone else."
+    },
+    {
+      "type": "paragraph",
+      "text": "The purpose of engineering is to solve problems, not to preserve the difficulty of solving them."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "When Expertise Becomes Identity"
+    },
+    {
+      "type": "paragraph",
+      "text": "The problem deepens when specialized competence becomes the foundation of personal worth."
+    },
+    {
+      "type": "paragraph",
+      "text": "There is nothing objectionable about taking pride in mastery. Years spent developing an understanding of mathematics, programming, language, or science can produce extraordinary intellectual abilities."
+    },
+    {
+      "type": "paragraph",
+      "text": "But there is an important difference between valuing one's knowledge and valuing the fact that other people lack it."
+    },
+    {
+      "type": "paragraph",
+      "text": "The first encourages discovery."
+    },
+    {
+      "type": "paragraph",
+      "text": "The second encourages gatekeeping."
+    },
+    {
+      "type": "paragraph",
+      "text": "When someone builds their identity around possessing capabilities unavailable to others, every improvement in accessibility threatens the hierarchy that sustains their self-image."
+    },
+    {
+      "type": "paragraph",
+      "text": "A better educational system becomes a threat."
+    },
+    {
+      "type": "paragraph",
+      "text": "A simpler programming language becomes a threat."
+    },
+    {
+      "type": "paragraph",
+      "text": "An accessible development tool becomes a threat."
+    },
+    {
+      "type": "paragraph",
+      "text": "And an artificial intelligence system capable of performing familiar intellectual tasks becomes an affront to the natural order."
+    },
+    {
+      "type": "paragraph",
+      "text": "The machine has not diminished anyone's intelligence."
+    },
+    {
+      "type": "paragraph",
+      "text": "It has diminished the scarcity of certain capabilities."
+    },
+    {
+      "type": "paragraph",
+      "text": "Those are entirely different events."
+    },
+    {
+      "type": "paragraph",
+      "text": "If a person's self-worth depends upon other people remaining less capable, technological progress will feel like an act of aggression."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "The Calculator Has Learned Languages"
+    },
+    {
+      "type": "image",
+      "alt": "real intelligence work",
+      "src": "images/articles/the-machine-did-not-make-you-stupid/real-intelligence-work-f7cc0ca7-.png"
+    },
+    {
+      "type": "paragraph",
+      "text": "Humanity has already experienced this transition."
+    },
+    {
+      "type": "paragraph",
+      "text": "Electronic calculators made routine arithmetic dramatically easier. Spreadsheet software automated entire classes of accounting work. Search engines transformed access to reference knowledge."
+    },
+    {
+      "type": "paragraph",
+      "text": "These developments did not eliminate the value of mathematical understanding, financial expertise, or scholarship."
+    },
+    {
+      "type": "paragraph",
+      "text": "They changed which capabilities were scarce, which activities required human effort, and what people could accomplish with the resources available to them."
+    },
+    {
+      "type": "paragraph",
+      "text": "Generative AI extends this process into language and symbolic work, territories that many people had treated as uniquely prestigious expressions of human intelligence."
+    },
+    {
+      "type": "paragraph",
+      "text": "The obvious insecurity is understandable."
+    },
+    {
+      "type": "paragraph",
+      "text": "For someone accustomed to commanding status through technical fluency, the spectacle of an ordinary person producing working software through natural-language instructions can be unsettling."
+    },
+    {
+      "type": "paragraph",
+      "text": "The novice has apparently bypassed the initiation ritual."
+    },
+    {
+      "type": "paragraph",
+      "text": "They did not memorize the obscure syntax. They did not spend years learning the peculiarities of a compiler. They did not endure the requisite humiliation of debugging an expression assembled from punctuation marks."
+    },
+    {
+      "type": "paragraph",
+      "text": "They simply described what they wanted."
+    },
+    {
+      "type": "paragraph",
+      "text": "And the machine helped them build it."
+    },
+    {
+      "type": "paragraph",
+      "text": "To someone who equates intelligence with the endurance required to acquire specialized skills, this can look like cheating."
+    },
+    {
+      "type": "paragraph",
+      "text": "But removing an unnecessary obstacle does not constitute cheating."
+    },
+    {
+      "type": "paragraph",
+      "text": "It constitutes progress."
+    },
+    {
+      "type": "paragraph",
+      "text": "The purpose of a tool is not to preserve the comparative advantage of the people who learned to work without it."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "The Convenient Disguise of Principle"
+    },
+    {
+      "type": "paragraph",
+      "text": "There are serious reasons to criticize artificial intelligence."
+    },
+    {
+      "type": "paragraph",
+      "text": "Labor displacement, concentrated corporate power, intellectual property, environmental costs, unreliable outputs, surveillance, and the erosion of human agency are legitimate subjects of public scrutiny."
+    },
+    {
+      "type": "paragraph",
+      "text": "These concerns deserve rigorous examination and institutional accountability."
+    },
+    {
+      "type": "paragraph",
+      "text": "They also deserve to be distinguished from resentment over lost prestige."
+    },
+    {
+      "type": "paragraph",
+      "text": "A person concerned about workers losing their livelihoods is expressing an economic concern."
+    },
+    {
+      "type": "paragraph",
+      "text": "A person concerned about unreliable automated decisions is expressing an epistemic concern."
+    },
+    {
+      "type": "paragraph",
+      "text": "But a person who resents the fact that someone without their credentials can now accomplish something previously reserved for specialists is expressing a status concern."
+    },
+    {
+      "type": "paragraph",
+      "text": "These are not interchangeable arguments."
+    },
+    {
+      "type": "paragraph",
+      "text": "And dressing the third in the language of the first two does not transform it into a public-interest principle."
+    },
+    {
+      "type": "paragraph",
+      "text": "Criticism should be evaluated by its evidence and reasoning, not dismissed through speculation about its author's psychology. Equally, intellectual prestige should not exempt its defenders from examining what, precisely, they are defending."
+    },
+    {
+      "type": "paragraph",
+      "text": "The distinction matters because resistance to technological change can sometimes protect people from genuine harm, while at other times it protects established hierarchies from competition."
+    },
+    {
+      "type": "paragraph",
+      "text": "A serious society must be capable of telling the difference."
+    },
+    {
+      "type": "image",
+      "alt": "sad ai is cheating",
+      "src": "images/articles/the-machine-did-not-make-you-stupid/sad-ai-is-cheating-caadb52c-.png"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Intelligence Is Not a Social Rank"
+    },
+    {
+      "type": "paragraph",
+      "text": "Perhaps the most damaging assumption beneath this entire conflict is the notion that intelligence is primarily a comparative property."
+    },
+    {
+      "type": "paragraph",
+      "text": "That its significance lies in being more intelligent than somebody else."
+    },
+    {
+      "type": "paragraph",
+      "text": "Under this model, expanding the intellectual capabilities of others becomes a zero-sum event. Every person newly empowered to perform a difficult task represents another competitor for recognition."
+    },
+    {
+      "type": "paragraph",
+      "text": "But knowledge does not become less true when more people understand it."
+    },
+    {
+      "type": "paragraph",
+      "text": "An elegant solution does not become less elegant when someone else discovers it."
+    },
+    {
+      "type": "paragraph",
+      "text": "A scientific explanation does not lose its explanatory power because a machine can reproduce it."
+    },
+    {
+      "type": "paragraph",
+      "text": "And a person's intellectual contributions do not become worthless because a new tool enables someone else to make similar contributions."
+    },
+    {
+      "type": "paragraph",
+      "text": "The value of intelligence lies in what it enables us to understand, create, discover, improve, and communicate."
+    },
+    {
+      "type": "paragraph",
+      "text": "Not in the number of people we can outrank."
+    },
+    {
+      "type": "paragraph",
+      "text": "This distinction reveals two fundamentally different orientations toward intellectual progress."
+    },
+    {
+      "type": "paragraph",
+      "text": "One asks: What can I now accomplish that I could not accomplish before?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The other asks: What can other people now accomplish that used to make me special?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The technology is the same."
+    },
+    {
+      "type": "paragraph",
+      "text": "The value systems are not."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "The End of Artificial Scarcity"
+    },
+    {
+      "type": "paragraph",
+      "text": "Artificial intelligence will not make expertise obsolete. It will change what expertise is needed for and expose some activities whose difficulty was mistaken for intrinsic value."
+    },
+    {
+      "type": "paragraph",
+      "text": "Knowing how to formulate a problem, evaluate evidence, recognize an incorrect answer, design a system, or pursue an original idea remains enormously important."
+    },
+    {
+      "type": "paragraph",
+      "text": "Indeed, making execution easier can increase the value of knowing what deserves to be executed."
+    },
+    {
+      "type": "paragraph",
+      "text": "What becomes harder to justify is the preservation of needless complexity as a form of intellectual property held by an informal professional aristocracy."
+    },
+    {
+      "type": "paragraph",
+      "text": "If your expertise enables you to build better systems, teach others, discover new relationships, or identify failures that automated tools overlook, its value remains."
+    },
+    {
+      "type": "paragraph",
+      "text": "If its principal advantage was that other people could not do what you could do, then its scarcity was always more fragile than its usefulness."
+    },
+    {
+      "type": "paragraph",
+      "text": "And if your response to the democratization of a capability is to demand that others continue suffering through the obsolete method by which you acquired it, you are no longer defending excellence."
+    },
+    {
+      "type": "paragraph",
+      "text": "You are defending an initiation ritual."
+    },
+    {
+      "type": "paragraph",
+      "text": "The proper response to a tool that expands human capability is to investigate what it makes possible, understand its limitations, and demand accountability from those who control it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Not to demand that everybody return to performing unnecessary labor so that yesterday's achievements can retain their prestige."
+    },
+    {
+      "type": "paragraph",
+      "text": "The machine did not make you stupid."
+    },
+    {
+      "type": "paragraph",
+      "text": "It did not retroactively erase your education, invalidate your accomplishments, or take away your capacity to think."
+    },
+    {
+      "type": "paragraph",
+      "text": "It simply demonstrated that some things you considered measures of intellectual superiority were tasks that could be automated."
+    },
+    {
+      "type": "paragraph",
+      "text": "And if that realization diminishes your sense of worth, the problem was never the machine."
+    },
+    {
+      "type": "paragraph",
+      "text": "It was what you believed made you valuable."
+    },
+    {
+      "type": "image",
+      "alt": "human ai robot fist bump",
+      "src": "images/articles/the-machine-did-not-make-you-stupid/human-ai-robot-fist-bump-b4763fec-.png"
+    }
+  ],
+  "readingMinutes": 7,
+  "images": [
+    {
+      "originalFilename": "sad-ai-is-cheating.png",
+      "filename": "sad-ai-is-cheating-caadb52c-.png",
+      "path": "images/articles/the-machine-did-not-make-you-stupid/sad-ai-is-cheating-caadb52c-.png"
+    },
+    {
+      "originalFilename": "human-ai-robot-fist-bump.png",
+      "filename": "human-ai-robot-fist-bump-b4763fec-.png",
+      "path": "images/articles/the-machine-did-not-make-you-stupid/human-ai-robot-fist-bump-b4763fec-.png"
+    },
+    {
+      "originalFilename": "real-intelligence-work.png",
+      "filename": "real-intelligence-work-f7cc0ca7-.png",
+      "path": "images/articles/the-machine-did-not-make-you-stupid/real-intelligence-work-f7cc0ca7-.png"
+    },
+    {
+      "originalFilename": "fist-crt-monitor.png",
+      "filename": "fist-crt-monitor-22f7a5ee-.png",
+      "path": "images/articles/the-machine-did-not-make-you-stupid/fist-crt-monitor-22f7a5ee-.png"
+    }
+  ],
+  "attachments": [],
+  "style": {
+    "background": "#e9e4d9",
+    "surface": "#f8f5ee",
+    "text": "#252729",
+    "muted": "#6c6d6f",
+    "accent": "#b5481d",
+    "border": "#d1c8b8",
+    "codeBackground": "#171a1d",
+    "codeText": "#f2f4f5",
+    "bodyFont": "editorial",
+    "headingFont": "system",
+    "codeFont": "mono",
+    "fontSize": 19,
+    "lineHeight": 1.72,
+    "titleSize": 68,
+    "width": 780,
+    "radius": 2,
+    "titleAlign": "left",
+    "customCss": ""
+  },
+  "updatedAt": "2026-11-02T16:06:14.039Z"
+}
