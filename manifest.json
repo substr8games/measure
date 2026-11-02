@@ -1,8 +1,38 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-01T15:10:32.404Z",
+  "updatedAt": "2026-11-02T14:09:33.313Z",
   "items": [
+    {
+      "id": "the-institutionalist-manifesto",
+      "type": "article",
+      "title": "The Institutionalist Manifesto",
+      "subtitle": "An Earnest Defense of Everything That Already Exists",
+      "summary": "A steelman argument for the modern conservative.",
+      "section": "thinkpieces",
+      "sections": [
+        "thinkpieces"
+      ],
+      "tags": [
+        "institution",
+        "corruption",
+        "manifesto",
+        "fallacy",
+        "conservatism"
+      ],
+      "author": "Phi Labs Covenant",
+      "published": "2026-11-02",
+      "date": "2026-11-02",
+      "readingMinutes": 16,
+      "classification": "copy",
+      "content": "articles/the-institutionalist-manifesto.json",
+      "url": "#/article/the-institutionalist-manifesto",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "id": "case-report-institutional-boundary-enforcement-and-logical-misdirection",
       "type": "article",
