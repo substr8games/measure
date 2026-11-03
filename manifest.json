@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-03T16:48:56.532Z",
+  "updatedAt": "2026-11-03T17:19:33.754Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -127,7 +127,7 @@
     {
       "id": "november-2026-authority-and-accountability",
       "type": "article",
-      "title": "NOVEMBER 2026: Authority & Accountability",
+      "title": "NOVEMBER 2026: Accountability & Authority",
       "subtitle": "Defines the technical and institutional architecture of semantic intervention, establishing that a system’s underlying computational capability is fundamentally distinct from the capability an operator permits a user to exercise.",
       "summary": "Defines the technical and institutional architecture of semantic intervention, establishing that a system’s underlying computational capability is fundamentally distinct from the capability an operator permits a user to exercise.",
       "section": "technology",
@@ -153,9 +153,7 @@
         {
           "name": "Accountability-Authority-Special-Report-November-2026-Large-Type-Rev02.pdf",
           "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-november-2026-authority-and-accountability/november-2026-authority-and-accountability-38eb088bbe2ef08a.pdf",
-          "mimeType": "application/pdf",
-          "releaseAssetId": 706348272,
-          "releaseTag": "measure-pdf-november-2026-authority-and-accountability"
+          "mimeType": "application/pdf"
         }
       ],
       "directory": {
