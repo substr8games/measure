@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-03T02:52:45.534Z",
+  "updatedAt": "2026-11-03T02:54:54.631Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -36,7 +36,7 @@
       "type": "media",
       "mediaType": "image",
       "mediaKind": "funny",
-      "title": "deep cover",
+      "title": "no",
       "summary": "",
       "blurb": "",
       "tags": [],
@@ -50,7 +50,7 @@
       "image": "images/media/deep-cover-e4370260.png",
       "pdf": "",
       "file": "images/media/deep-cover-e4370260.png",
-      "originalFilename": "deep-cover.png",
+      "originalFilename": "publish-research-findings.png",
       "mimeType": "image/png",
       "directory": {
         "style": "thumbnail",
