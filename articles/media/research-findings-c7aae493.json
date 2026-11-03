@@ -1,0 +1,27 @@
+{
+  "schema": "phi-labs.media.v1",
+  "id": "research-findings-c7aae493",
+  "type": "media",
+  "mediaType": "image",
+  "mediaKind": "funny",
+  "title": "research findings",
+  "summary": "",
+  "blurb": "",
+  "tags": [],
+  "section": "humor",
+  "sections": [
+    "humor"
+  ],
+  "date": "2026-11-03",
+  "published": "2026-11-03",
+  "url": "images/media/research-findings-c7aae493.png",
+  "image": "images/media/research-findings-c7aae493.png",
+  "pdf": "",
+  "file": "images/media/research-findings-c7aae493.png",
+  "originalFilename": "publish-research-findings.png",
+  "mimeType": "image/png",
+  "directory": {
+    "style": "thumbnail",
+    "image": "images/media/research-findings-c7aae493.png"
+  }
+}
