@@ -760,16 +760,14 @@ body { font-size:16px; }
 .content-warning {
   border: 0;
   border-radius: 0;
-  background: #000;
+  background: transparent;
   color: #fff;
   padding: 0;
-  width: 100vw;
-  max-width: 100vw;
-  max-height: 100dvh;
+  width: fit-content;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px);
   margin: auto;
-  overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  overflow: visible;
 }
 .content-warning::backdrop {
   background: rgba(0, 0, 0, .70);
@@ -778,28 +776,30 @@ body { font-size:16px; }
 }
 .content-warning-placard {
   position: relative;
-  width: 100%;
+  width: fit-content;
   background: #000;
   line-height: 0;
 }
 .content-warning-art {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px);
   height: auto;
 }
 .content-warning-dismiss {
   position: absolute;
   left: 57.5%;
-  top: 84.5%;
+  top: 75.5%;
   transform: translate(-50%, -50%);
-  width: clamp(160px, 28vw, 390px);
-  min-height: clamp(44px, 6.2vw, 86px);
-  padding: 8px 15px;
+  width: clamp(96px, 14vw, 230px);
+  min-height: clamp(28px, 3.9vw, 50px);
+  padding: 6px 12px;
   border: 3px solid #061009;
   border-radius: 0;
   background: #4BEA91;
   color: #03140b;
-  font: 900 clamp(15px, 2.3vw, 30px)/1.15 var(--font);
+  font: 900 clamp(12px, 1.45vw, 18px)/1.05 var(--font);
   letter-spacing: .005em;
   text-transform: none;
   box-shadow: 0 0 0 2px rgba(75,234,145,.35), 0 8px 20px rgba(0,0,0,.65);
@@ -808,7 +808,9 @@ body { font-size:16px; }
 .content-warning-dismiss:hover { background: #71ffac; }
 .content-warning-dismiss:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 @media (max-width: 500px) {
-  .content-warning-dismiss { border-width: 2px; padding: 6px 10px; }
+  .content-warning { max-width: calc(100vw - 10px); max-height: calc(100dvh - 10px); }
+  .content-warning-art { max-width: calc(100vw - 10px); max-height: calc(100dvh - 10px); }
+  .content-warning-dismiss { border-width: 2px; padding: 5px 9px; width: clamp(88px, 30vw, 140px); min-height: 28px; font-size: clamp(10px, 3vw, 13px); }
 }
   </style>
 </head>
