@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-03T05:05:32.292Z",
+  "updatedAt": "2026-11-03T06:17:49.605Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -102,7 +102,7 @@
       "image": "images/media/rave-advertising-test4-538f132b.png",
       "pdf": "",
       "file": "images/media/rave-advertising-test4-538f132b.png",
-      "originalFilename": "rave-advertising-test4.png",
+      "originalFilename": "rave-advertising-test5.png",
       "mimeType": "image/png",
       "directory": {
         "style": "none"
@@ -110,8 +110,19 @@
       "advertiser": "<3baby",
       "thumbnail": {
         "x": 50,
-        "y": 17.742153041716847,
+        "y": 15.136056872311114,
         "zoom": 1
+      },
+      "viewerImage": "",
+      "viewerCaption": "",
+      "lowerRegisterEnabled": true,
+      "sidebar": {
+        "enabled": true,
+        "thumbnail": {
+          "x": 0,
+          "y": 100,
+          "zoom": 1
+        }
       }
     },
     {
