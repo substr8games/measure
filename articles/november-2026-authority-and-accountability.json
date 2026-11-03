@@ -37,9 +37,11 @@
   "images": [],
   "attachments": [
     {
-      "name": "Accountability-Authority-Special-Report-November-2026-Large-Type-Rev02.pdf",
-      "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-november-2026-authority-and-accountability/november-2026-authority-and-accountability-38eb088bbe2ef08a.pdf",
-      "mimeType": "application/pdf"
+      "name": "Accountability-Authority-Special-Report-November-2026-RAID-Rev04.pdf",
+      "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-november-2026-authority-and-accountability/november-2026-authority-and-accountability-574296c621b71402.pdf",
+      "mimeType": "application/pdf",
+      "releaseAssetId": 706904551,
+      "releaseTag": "measure-pdf-november-2026-authority-and-accountability"
     }
   ],
   "style": {
@@ -62,5 +64,5 @@
     "titleAlign": "left",
     "customCss": ""
   },
-  "updatedAt": "2026-11-03T17:19:31.573Z"
+  "updatedAt": "2026-11-03T19:58:54.185Z"
 }
