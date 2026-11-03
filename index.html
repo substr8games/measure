@@ -574,10 +574,25 @@ body {
 .dispatch-tile--ad:hover .dispatch-ad-viewport { border-color:var(--gold); }
 .poster-dialog--ad { width:fit-content; max-width:calc(100vw - 24px); overflow:auto; }
 .poster-dialog--ad .poster-dialog-body { display:flex; flex-direction:column; align-items:center; gap:0; width:fit-content; max-width:100%; padding:12px; }
-.poster-dialog--ad .poster-dialog-body img { display:block; width:auto; height:auto; max-width:min(640px, calc(100vw - 50px)); max-height:calc(100dvh - 165px); margin:0; object-fit:contain; background:transparent; }
+.poster-dialog--ad #poster-dialog-image { display:block; width:auto; height:auto; max-width:min(640px, calc(100vw - 50px)); max-height:calc(100dvh - 225px); margin:0; object-fit:contain; background:transparent; }
 .poster-dialog--ad .poster-dialog-notes { display:block; box-sizing:border-box; align-self:stretch; width:100%; max-width:640px; padding:12px 2px 3px; }
 .poster-dialog--ad .poster-dialog-notes p { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; font-size:13px; line-height:1.6; color:var(--text); }
 .poster-dialog--ad .poster-dialog-notes[hidden] { display:none !important; }
+/* Advertiser galleries: compact, artwork-sized viewer with campaign navigation. */
+.poster-dialog--ad { max-height:calc(100dvh - 24px); }
+.poster-dialog--ad .poster-dialog-bar { gap:14px; }
+.poster-dialog--ad .poster-dialog-bar #poster-dialog-kind { font-size:11px; font-weight:700; letter-spacing:.065em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.poster-dialog-bar .poster-dialog-close { margin-left:auto; flex-shrink:0; }
+.poster-gallery-tools { display:flex; gap:9px; align-items:center; margin-left:auto; font-size:10px; color:var(--subdued); white-space:nowrap; }
+.poster-gallery-tools[hidden], .poster-gallery-thumbnails[hidden] { display:none !important; }
+.poster-gallery-arrow { border:1px solid var(--gold-soft); color:var(--gold); background:transparent; padding:4px 9px; font:inherit; }
+.poster-gallery-arrow:hover { border-color:var(--gold); color:var(--white); }
+.poster-gallery-thumbnails { display:flex; gap:7px; width:100%; max-width:min(640px,calc(100vw - 50px)); overflow-x:auto; padding:10px 0 0; scrollbar-width:thin; }
+.poster-gallery-thumb { display:block; flex:0 0 51px; width:51px; height:51px; padding:2px; border:1px solid var(--gold-subtle); background:rgba(0,0,0,.20); }
+.poster-gallery-thumb[aria-current="true"] { border-color:var(--gold); }
+.poster-gallery-thumb:hover { border-color:var(--white); }
+.poster-gallery-thumb img { display:block; width:100%; height:100%; object-fit:cover; }
+@media(max-width:590px) { .poster-dialog--ad #poster-dialog-image { max-height:calc(100dvh - 260px); } .poster-gallery-tools { gap:5px; } .poster-gallery-arrow { padding:3px 7px; } }
 /* The Measure / optional series reader + TM-UI-001 editorial depth. */
 :root {
   --tm-depth-copy: #4BEA91;
@@ -805,8 +820,8 @@ body { font-size:16px; }
     <div class="dispatch-track" id="dispatch-track" role="region" aria-label="PDF covers, cartoons, memes, and satirical sponsored posters" tabindex="0"></div>
   </section>
   <dialog class="poster-dialog" id="poster-dialog" aria-labelledby="poster-dialog-title">
-    <div class="poster-dialog-bar"><span id="poster-dialog-kind">VISUAL COMMENTARY</span><button class="poster-dialog-close" id="poster-dialog-close" type="button" aria-label="Close poster viewer">CLOSE ×</button></div>
-    <div class="poster-dialog-body"><img id="poster-dialog-image" src="" alt=""><div class="poster-dialog-notes"><h2 id="poster-dialog-title"></h2><p id="poster-dialog-caption"></p></div></div>
+    <div class="poster-dialog-bar"><span id="poster-dialog-kind">VISUAL COMMENTARY</span><div class="poster-gallery-tools" id="poster-gallery-tools" hidden><button class="poster-gallery-arrow" id="poster-gallery-prev" type="button" aria-label="Previous advertisement">←</button><span id="poster-gallery-count" aria-live="polite"></span><button class="poster-gallery-arrow" id="poster-gallery-next" type="button" aria-label="Next advertisement">→</button></div><button class="poster-dialog-close" id="poster-dialog-close" type="button" aria-label="Close poster viewer">CLOSE ×</button></div>
+    <div class="poster-dialog-body"><img id="poster-dialog-image" src="" alt=""><div class="poster-dialog-notes"><h2 id="poster-dialog-title"></h2><p id="poster-dialog-caption"></p></div><div class="poster-gallery-thumbnails" id="poster-gallery-thumbnails" role="group" aria-label="Advertiser gallery" hidden></div></div>
   </dialog>
   <footer class="site-footer" id="site-footer">
     <div><span class="footer-mark">Φ</span> THE MEASURE <span class="footer-separator">&#60;/3</span> BUILD GAMES. MAKE ART.<span class="footer-separator"> ;] </span> PHI LABS. </div>
@@ -832,7 +847,15 @@ body { font-size:16px; }
   const posterCaption = document.getElementById('poster-dialog-caption');
   const posterKind = document.getElementById('poster-dialog-kind');
   const dialogClose = document.getElementById('poster-dialog-close');
+  const galleryTools = document.getElementById('poster-gallery-tools');
+  const galleryPrev = document.getElementById('poster-gallery-prev');
+  const galleryNext = document.getElementById('poster-gallery-next');
+  const galleryCount = document.getElementById('poster-gallery-count');
+  const galleryThumbnails = document.getElementById('poster-gallery-thumbnails');
   let items = [];
+  let catalogItems = [];
+  let galleryItems = [];
+  let galleryIndex = 0;
   let opener = null;
 
   const escape = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
@@ -897,33 +920,101 @@ body { font-size:16px; }
     next.disabled = maximum <= 2 || track.scrollLeft >= maximum - 2;
   }
 
+  // An advertiser owns one gallery, regardless of the individual thumbnail used
+  // to enter it. The Lower Register shuffle does not reorder the brand gallery.
+  function advertiserKey(item) {
+    return String(item?.advertiser || '').trim().toLocaleLowerCase()
+      .replace(/\s+/g, ' ').replace(/^(?:<3|♥|♡)\s*/, '♥');
+  }
+  function displayGallerySlide(index) {
+    if (!galleryItems.length) return;
+    galleryIndex = (index + galleryItems.length) % galleryItems.length;
+    const item = galleryItems[galleryIndex];
+    const baseImage = localPath(item.image);
+    const image = localPath(item.viewerImage) || baseImage;
+    posterImage.onerror = () => {
+      // Optional HD files can be removed later; keep the original usable.
+      posterImage.onerror = null;
+      if (baseImage && posterImage.getAttribute('src') !== baseImage) posterImage.src = baseImage;
+    };
+    posterImage.src = image;
+    posterImage.alt = (item.advertiser ? item.advertiser + ' ' : '') + 'advertisement ' + (galleryIndex+1);
+    const caption = String(item.viewerCaption || '').trim();
+    posterTitle.parentElement.hidden = !caption;
+    posterCaption.textContent = caption;
+    posterCaption.hidden = !caption;
+    galleryCount.textContent = (galleryIndex + 1) + ' / ' + galleryItems.length;
+    galleryThumbnails.querySelectorAll('button[data-gallery-index]').forEach(button => {
+      button.setAttribute('aria-current',String(Number(button.dataset.galleryIndex) === galleryIndex));
+    });
+    galleryThumbnails.querySelector('button[aria-current="true"]')?.scrollIntoView({block:'nearest',inline:'nearest'});
+  }
+  function openAdGallery(item, button) {
+    const key = advertiserKey(item);
+    // Unnamed advertisements do not get merged into an accidental mega-gallery.
+    galleryItems = key ? catalogItems.filter(candidate =>
+      candidate.kind === 'ad' && advertiserKey(candidate) === key && localPath(candidate.image)
+    ) : [item];
+    if (!galleryItems.length) galleryItems = [item];
+    galleryIndex = Math.max(0,galleryItems.findIndex(candidate => candidate.id === item.id));
+    opener = button;
+    dialog.classList.add('poster-dialog--ad');
+    dialog.removeAttribute('aria-labelledby');
+    const sponsor = String(item.advertiser || '').trim();
+    const label = 'AD' + (sponsor ? ' - ' + sponsor : '');
+    dialog.setAttribute('aria-label',label + ' gallery');
+    posterKind.hidden = false;
+    posterKind.textContent = label;
+    posterTitle.hidden = true;
+    const multiple = galleryItems.length > 1;
+    galleryTools.hidden = !multiple;
+    galleryThumbnails.hidden = !multiple;
+    galleryThumbnails.innerHTML = multiple ? galleryItems.map((entry,i) =>
+      `<button class="poster-gallery-thumb" type="button" data-gallery-index="${i}" aria-label="View advertisement ${i+1} of ${galleryItems.length}"><img src="${escape(localPath(entry.image))}" alt="" loading="lazy"></button>`
+    ).join('') : '';
+    dialog.showModal();
+    displayGallerySlide(galleryIndex);
+  }
   function openPoster(index, button) {
     const item = items[index];
     if (!item || item.kind === 'pdf') return;
-    const image = (item.kind === 'ad' ? localPath(item.viewerImage) : '') || localPath(item.image);
+    if (item.kind === 'ad') { openAdGallery(item,button); return; }
+    const image = localPath(item.image);
     if (!image) return;
     opener = button;
-    const ad = item.kind === 'ad';
-    dialog.classList.toggle('poster-dialog--ad', ad);
-    if (ad) {
-      dialog.removeAttribute('aria-labelledby');
-      dialog.setAttribute('aria-label', 'Advertisement artwork');
-    } else {
-      dialog.removeAttribute('aria-label');
-      dialog.setAttribute('aria-labelledby', 'poster-dialog-title');
-    }
-    const adCopy = ad ? String(item.viewerCaption || '').trim() : '';
-    posterKind.hidden = ad;
-    posterTitle.parentElement.hidden = ad && !adCopy;
-    posterTitle.hidden = ad;
-    posterTitle.textContent = ad ? '' : item.title || 'Visual commentary';
-    posterCaption.textContent = ad ? adCopy : item.description || '';
-    posterCaption.hidden = ad ? !adCopy : !item.description;
-    posterKind.textContent = ad ? '' : item.label || item.kind || 'POSTER';
+    galleryItems = [];
+    dialog.classList.remove('poster-dialog--ad');
+    dialog.removeAttribute('aria-label');
+    dialog.setAttribute('aria-labelledby','poster-dialog-title');
+    galleryTools.hidden = true;
+    galleryThumbnails.hidden = true;
+    galleryThumbnails.replaceChildren();
+    posterKind.hidden = false;
+    posterKind.textContent = item.label || item.kind || 'POSTER';
+    posterTitle.parentElement.hidden = false;
+    posterTitle.hidden = false;
+    posterTitle.textContent = item.title || 'Visual commentary';
+    posterCaption.textContent = item.description || '';
+    posterCaption.hidden = !item.description;
+    posterImage.onerror = null;
     posterImage.src = image;
-    posterImage.alt = ad ? 'Advertisement artwork' : item.alt || item.title || 'Cartoon artwork';
+    posterImage.alt = item.alt || item.title || 'Cartoon artwork';
     dialog.showModal();
   }
+  galleryPrev.addEventListener('click', () => displayGallerySlide(galleryIndex - 1));
+  galleryNext.addEventListener('click', () => displayGallerySlide(galleryIndex + 1));
+  galleryThumbnails.addEventListener('click', event => {
+    const button = event.target.closest('button[data-gallery-index]');
+    if (button) displayGallerySlide(Number(button.dataset.galleryIndex));
+  });
+  dialog.addEventListener('keydown', event => {
+    if (!galleryItems.length || !dialog.open) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      displayGallerySlide(galleryIndex + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+
   leftAdButton.addEventListener('click', () => {
     const index = Number(leftAdButton.dataset.registerIndex);
     if (Number.isInteger(index)) openPoster(index,leftAdButton);
@@ -945,7 +1036,10 @@ body { font-size:16px; }
   dialogClose.addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
   dialog.addEventListener('close', () => {
+    posterImage.onerror = null;
     posterImage.removeAttribute('src');
+    galleryItems = [];
+    galleryThumbnails.replaceChildren();
     if (opener?.isConnected) opener.focus({ preventScroll: true });
     opener = null;
   });
@@ -953,7 +1047,8 @@ body { font-size:16px; }
   window.mountLowerRegister = data => {
     const records = data?.lowerRegister?.items;
     if (!Array.isArray(records) || !records.length) return;
-    // Shuffle once per page load; navigation never rerandomizes the rail.
+    // Brand galleries retain manifest order; only the public Lower Register shuffles.
+    catalogItems = [...records];
     items = [...records];
     for (let i = items.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
