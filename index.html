@@ -566,8 +566,9 @@ body {
   .section-bar a { font-size: 13px; padding: 18px 0; }
 }
 /* v5.5 graphic-only advertisements and optionally captioned cartoons */
-.dispatch-tile--ad { display:block; padding:0; overflow:hidden; background:rgba(0,0,0,.17); }
-.dispatch-ad-art { display:block; width:100%; height:100%; object-fit:contain; object-position:center; }
+.dispatch-tile--ad { display:flex; flex-direction:column; padding:0; overflow:hidden; background:rgba(0,0,0,.17); }
+.dispatch-ad-art { display:block; width:100%; flex:1 1 auto; min-height:0; object-fit:contain; object-position:center; }
+.dispatch-ad-label { flex:0 0 auto; display:block; padding:4px 9px 5px; min-height:22px; border-top:1px solid var(--gold-subtle); color:var(--gold); font-size:10px; letter-spacing:.06em; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .poster-dialog--ad .poster-dialog-body { display:block; padding:18px; }
 .poster-dialog--ad .poster-dialog-body img { display:block; max-width:100%; max-height:calc(100dvh - 122px); margin:0 auto; }
 .poster-dialog--ad .poster-dialog-notes { display:none !important; }
@@ -575,16 +576,22 @@ body {
 :root {
   --tm-depth-copy: #4BEA91;
   --tm-depth-explainer: #55C5FF;
+  --tm-depth-deep-dive: #CB97FF;
+  --tm-depth-investigation: #FFB100;
   --tm-depth-specification: #CB97FF;
 }
 [data-classification="copy"] { --article-depth-color: var(--tm-depth-copy); }
 [data-classification="explainer"] { --article-depth-color: var(--tm-depth-explainer); }
+[data-classification="deep-dive"] { --article-depth-color: var(--tm-depth-deep-dive); }
+[data-classification="investigation"] { --article-depth-color: var(--tm-depth-investigation); }
 [data-classification="specification"] { --article-depth-color: var(--tm-depth-specification); }
 .depth-dot { display: inline-block; width: .55rem; height: .55rem; flex: 0 0 .55rem; margin-right: .55rem; border-radius: 50%; background: var(--article-depth-color); vertical-align: .11em; }
 [data-classification=""] .depth-dot { display: none; }
 .visually-hidden { position: absolute; height: 1px; width: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .article-content[data-classification="copy"] { --article-paragraph-gap: 1.3em; --article-section-gap: 2.3em; }
 .article-content[data-classification="explainer"] { --article-paragraph-gap: 1.05em; --article-section-gap: 2em; }
+.article-content[data-classification="deep-dive"] { --article-paragraph-gap: 1.05em; --article-section-gap: 1.8em; }
+.article-content[data-classification="investigation"] { --article-paragraph-gap: 1.1em; --article-section-gap: 2.05em; }
 .article-content[data-classification="specification"] { --article-paragraph-gap: .9em; --article-section-gap: 1.65em; }
 .article-content[data-classification] .article-body p + p { margin-block-start: var(--article-paragraph-gap); }
 .article-content[data-classification] .article-body :is(h2,h3) { margin-block-start: var(--article-section-gap); }
@@ -592,6 +599,8 @@ body {
 .article-content[data-classification] .article-body blockquote { border-inline-start-color: var(--article-depth-color); }
 .article-content[data-classification="specification"] .article-body :is(p,ul,ol) { line-height: 1.7; }
 .article-content[data-classification="specification"] .article-body :is(pre,table) { border-inline-start: 2px solid var(--article-depth-color); }
+.article-content[data-classification="deep-dive"] .article-body :is(pre,table) { border-inline-start: 2px solid var(--article-depth-color); }
+.article-content[data-classification="investigation"] .article-body blockquote { border-inline-start-width: 3px; }
 .article-content .article-classification .depth-dot { margin-right: .38rem; }
 .directory-series { display: flex; justify-content: space-between; border-top: 1px solid var(--gold-subtle); padding-top: 16px; margin-top: 18px; color: var(--gold); font-weight: 700; letter-spacing: .05em; font-size: 12px; text-decoration: none; }
 .directory-series:hover, .directory-series[aria-current="page"] { color: var(--white); }
@@ -717,8 +726,8 @@ body {
     <div class="poster-dialog-body"><img id="poster-dialog-image" src="" alt=""><div class="poster-dialog-notes"><h2 id="poster-dialog-title"></h2><p id="poster-dialog-caption"></p></div></div>
   </dialog>
   <footer class="site-footer" id="site-footer">
-    <div><span class="footer-mark">Φ</span> THE MEASURE <span class="footer-separator">/</span> PHI LABS</div>
-    <div><a href="#/about">ABOUT</a> <span class="footer-separator">/</span> <a href="#/archive">ARCHIVE</a> <span class="footer-separator">/</span> <a href="#/series">SERIES</a> <span class="footer-separator">/</span> INDEPENDENT INQUIRY. PUBLIC RECORD.</div>
+    <div><span class="footer-mark">Φ</span> THE MEASURE <span class="footer-separator">&#60;/3</span> BUILD GAMES. MAKE ART.<span class="footer-separator"> ;] </span> PHI LABS. </div>
+    <div><a href="#/about">ABOUT</a> <span class="footer-separator">/</span> <a href="#/archive">ARCHIVE</a> <span class="footer-separator"></3</span> <a href="#/series">SERIES</a> <span class="footer-separator">/</span> INDEPENDENT INQUIRY. PUBLIC RECORD.</div>
     <div>© 2026 PHI LABS</div>
   </footer>
   <script>
@@ -745,6 +754,8 @@ body {
   // Site assets and PDFs only: JSON cannot inject external tracking links or executable URLs.
   const localPath = path => {
     if (typeof path !== 'string') return '';
+    // GitHub Release PDF downloads are counted by GitHub, not the site.
+    if (/^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\/releases\/download\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\.pdf$/i.test(path)) return path;
     if (/^https:\/\/[a-z0-9.-]+\.github\.io\/[A-Za-z0-9_./%~-]+$/i.test(path)) return path;
     if (/^(?:images|articles)\/[A-Za-z0-9_./-]+$/.test(path) &&
       !path.split('/').includes('..') && !path.includes('//')) return path;
@@ -756,7 +767,7 @@ body {
       const href = String(item.href || '');
       if (!/^#\/article\/[a-z0-9-]+$/i.test(href)) return '';
       const cover = localPath(item.image);
-      const depth = ['copy','explainer','specification'].includes(item.classification) ? item.classification : '';
+      const depth = ['copy','explainer','deep-dive','investigation','specification'].includes(item.classification) ? item.classification : '';
       return `<a class="dispatch-tile dispatch-tile--article" data-classification="${depth}" href="${escape(href)}" aria-label="Read article: ${escape(item.title)}">
         ${cover ? `<img class="dispatch-thumb" src="${escape(cover)}" alt="" loading="lazy">` : ''}
         <span class="dispatch-tile-copy"><span class="dispatch-kind">RECENT ARTICLE${item.date ? ' / ' + escape(item.date) : ''}</span>
@@ -768,8 +779,10 @@ body {
     const label = escape(item.label || item.kind);
     const isPdf = item.kind === 'pdf' && localPath(item.href);
     if (item.kind === 'ad') {
-      // Advertisements are image-only: no generated headline, label or caption.
-      return `<button class="dispatch-tile dispatch-tile--ad" type="button" data-register-index="${index}" aria-label="View advertisement graphic"><img class="dispatch-ad-art" src="${escape(src)}" alt="Advertisement artwork" loading="lazy" decoding="async"></button>`;
+      // Advertisements keep artwork prominent, with a compact sponsor label below.
+      const sponsor = String(item.advertiser || '').trim();
+      const adLabel = 'AD' + (sponsor ? ' - ' + sponsor : '');
+      return `<button class="dispatch-tile dispatch-tile--ad" type="button" data-register-index="${index}" aria-label="View advertisement: ${escape(adLabel)}"><img class="dispatch-ad-art" src="${escape(src)}" alt="Advertisement artwork" loading="lazy" decoding="async"><span class="dispatch-ad-label">${escape(adLabel)}</span></button>`;
     }
     const hint = isPdf ? 'OPEN PDF ↗' : 'VIEW POSTER ↗';
     const inner = `<img class="dispatch-thumb" src="${escape(src)}" alt="" loading="lazy" decoding="async">
@@ -835,7 +848,12 @@ body {
   window.mountLowerRegister = data => {
     const records = data?.lowerRegister?.items;
     if (!Array.isArray(records) || !records.length) return;
-    items = records;
+    // Shuffle once per page load; navigation never rerandomizes the rail.
+    items = [...records];
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
     track.innerHTML = items.map(card).join('');
     section.hidden = false;
     requestAnimationFrame(updateControls);
@@ -1351,7 +1369,7 @@ function manifestMediaToRail(item) {
     label:pdf?'PDF / SPECIAL REPORT':isParodyAd?'':'VISUAL COMMENTARY',
     title:isParodyAd?'':item.title || '', description:isParodyAd?'':item.blurb || item.summary || '',
     image:item.image || (pdf?'images/pdf-placeholder.svg':''), href:item.pdf || item.url,
-    alt:isParodyAd?'Advertisement artwork':item.title || 'Cartoon artwork'
+    alt:isParodyAd?'Advertisement artwork':item.title || 'Cartoon artwork', advertiser:isParodyAd ? String(item.advertiser || '').trim() : ''
   };
 }
 async function loadGithubCatalog() {
@@ -1379,7 +1397,7 @@ async function loadGithubCatalog() {
 /* SNIPE phi-labs.series.v1 reader. Optional, independent of manifest.json. */
 const SERIES_SCHEMA = 'phi-labs.series.v1';
 const SERIES_INDEX_SCHEMA = 'phi-labs.series-index.v1';
-const DEPTH_VALUES = new Set(['copy','explainer','specification']);
+const DEPTH_VALUES = new Set(['copy','explainer','deep-dive','investigation','specification']);
 let publicSeries = [];
 let seriesCatalogReady = false;
 let seriesCatalogError = '';
@@ -1387,7 +1405,7 @@ let inferredClasses = new Map();
 const seriesRecords = new Map();
 const classificationValid = value => DEPTH_VALUES.has(value) ? value : '';
 const classificationFor = a => classificationValid(a?.classification) || (a?.id ? inferredClasses.get(a.id) || '' : '');
-const depthLabel = value => ({copy:'Copy',explainer:'Explainer',specification:'Specification'})[value] || '';
+const depthLabel = value => ({copy:'Copy',explainer:'Explainer','deep-dive':'Deep Dive',investigation:'Investigation',specification:'Specification (legacy)'})[value] || '';
 function depthDot(value) {
   const cls = classificationValid(value);
   return cls ? `<span class="depth-dot" aria-hidden="true"></span><span class="visually-hidden">${depthLabel(cls)}: </span>` : '';
