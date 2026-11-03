@@ -756,6 +756,60 @@ body { font-size:16px; }
   .article-row h3 { font-size:18px; }
   .article-row p { font-size:14px; }
 }
+/* One-time front-page placard; the page behind it is intentionally unreadable. */
+.content-warning {
+  border: 0;
+  border-radius: 0;
+  background: #000;
+  color: #fff;
+  padding: 0;
+  width: 100vw;
+  max-width: 100vw;
+  max-height: 100dvh;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.content-warning::backdrop {
+  background: rgba(0, 0, 0, .70);
+  backdrop-filter: blur(56px) brightness(.20);
+  -webkit-backdrop-filter: blur(56px) brightness(.20);
+}
+.content-warning-placard {
+  position: relative;
+  width: 100%;
+  background: #000;
+  line-height: 0;
+}
+.content-warning-art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.content-warning-dismiss {
+  position: absolute;
+  left: 57.5%;
+  top: 84.5%;
+  transform: translate(-50%, -50%);
+  width: clamp(160px, 28vw, 390px);
+  min-height: clamp(44px, 6.2vw, 86px);
+  padding: 8px 15px;
+  border: 3px solid #061009;
+  border-radius: 0;
+  background: #4BEA91;
+  color: #03140b;
+  font: 900 clamp(15px, 2.3vw, 30px)/1.15 var(--font);
+  letter-spacing: .005em;
+  text-transform: none;
+  box-shadow: 0 0 0 2px rgba(75,234,145,.35), 0 8px 20px rgba(0,0,0,.65);
+  z-index: 1;
+}
+.content-warning-dismiss:hover { background: #71ffac; }
+.content-warning-dismiss:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+@media (max-width: 500px) {
+  .content-warning-dismiss { border-width: 2px; padding: 6px 10px; }
+}
   </style>
 </head>
 <body>
@@ -828,6 +882,32 @@ body { font-size:16px; }
     <div><a href="#/about">ABOUT</a> <span class="footer-separator">/</span> <a href="#/archive">ARCHIVE</a> <span class="footer-separator"></3</span> <a href="#/series">SERIES</a> <span class="footer-separator">/</span> INDEPENDENT INQUIRY. PUBLIC RECORD.</div>
     <div>© 2026 PHI LABS</div>
   </footer>
+  <dialog class="content-warning" id="content-warning" aria-label="Adult content warning">
+    <div class="content-warning-placard">
+      <img class="content-warning-art" src="images/adult-content-warning.png" alt="Adult content warning. This website contains explicit content suitable for all ages. We use satire to steal your autonomy and strip you of your agency. Phi Labs Research takes zero responsibility for your emotional state or actions resulting from the use of our website." width="1000" height="640">
+      <button class="content-warning-dismiss" id="content-warning-dismiss" type="button">well i never</button>
+    </div>
+  </dialog>
+  <script>
+  /* Show once on a direct front-page arrival. Deep links never trigger the placard. */
+  (() => {
+    const landingRoute = (window.location.hash || '#/').slice(1).split('?')[0];
+    if (landingRoute !== '/' && landingRoute !== '') return;
+    const key = 'the-measure.content-warning-dismissed.v1';
+    try { if (window.localStorage.getItem(key) === '1') return; }
+    catch (_) { /* Storage is optional; the button still works. */ }
+    const dialog = document.getElementById('content-warning');
+    const button = document.getElementById('content-warning-dismiss');
+    dialog.addEventListener('cancel', event => event.preventDefault());
+    button.addEventListener('click', () => {
+      try { window.localStorage.setItem(key, '1'); }
+      catch (_) { /* No persistent storage available. */ }
+      dialog.close();
+    });
+    dialog.showModal();
+    button.focus({ preventScroll: true });
+  })();
+  </script>
   <script>
 /* The Measure / Lower Register: native, JSON-driven PDF and poster strip. */
 'use strict';
