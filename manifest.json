@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-03T04:10:38.388Z",
+  "updatedAt": "2026-11-03T04:11:37.852Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -82,6 +82,30 @@
       "directory": {
         "style": "thumbnail",
         "image": "images/media/no-92e63a88.png"
+      }
+    },
+    {
+      "schema": "phi-labs.media.v1",
+      "id": "rave-advertising-test4-538f132b",
+      "type": "media",
+      "mediaType": "image",
+      "mediaKind": "ad",
+      "title": "",
+      "summary": "",
+      "blurb": "",
+      "tags": [],
+      "section": "humor",
+      "sections": [],
+      "date": "2026-11-03",
+      "published": "2026-11-03",
+      "url": "images/media/rave-advertising-test4-538f132b.png",
+      "image": "images/media/rave-advertising-test4-538f132b.png",
+      "pdf": "",
+      "file": "images/media/rave-advertising-test4-538f132b.png",
+      "originalFilename": "rave-advertising-test4.png",
+      "mimeType": "image/png",
+      "directory": {
+        "style": "none"
       }
     },
     {
