@@ -1,0 +1,68 @@
+{
+  "schema": "phi-labs.article.v1",
+  "id": "november-2026-authority-and-accountability",
+  "type": "article",
+  "title": "NOVEMBER 2026: Authority & Accountability",
+  "subtitle": "Defines the technical and institutional architecture of semantic intervention, establishing that a system’s underlying computational capability is fundamentally distinct from the capability an operator permits a user to exercise.",
+  "summary": "Defines the technical and institutional architecture of semantic intervention, establishing that a system’s underlying computational capability is fundamentally distinct from the capability an operator permits a user to exercise.",
+  "author": "Phi Labs Research",
+  "date": "2026-11-03",
+  "published": "2026-11-03",
+  "section": "technology",
+  "sections": [
+    "technology",
+    "special-reports"
+  ],
+  "tags": [
+    "authority",
+    "accountability",
+    "ai",
+    "population control"
+  ],
+  "showToc": true,
+  "classification": "explainer",
+  "markdown": "\n\nThis special report defines the technical and institutional architecture of semantic intervention, establishing that a system’s underlying computational capability is fundamentally distinct from the capability an operator permits a user to exercise. Operators introduce decision and enforcement paths that can prevent execution, alter inputs, or withhold results based on the content, meaning, or context of a request. The report decomposes this process into recognition, policy decision, and policy enforcement, mapping how these controls can be applied across input boundaries, context construction, learned model behaviors, tool execution, and output delivery.\n\nBy controlling these intervention pathways, technical authority over an interface translates directly into institutional authority over user access. This architectural control can create artificial bottlenecks that restrict a user's epistemic autonomy and personal sovereignty when they rely on externally operated computational services. To ensure precise attribution, the report introduces an independent audit protocol that separates observable enforcement effects from underlying system incapacity or presumed institutional motives, providing a rigorous framework for evaluating how effective computational capability is governed.",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "This special report defines the technical and institutional architecture of semantic intervention, establishing that a system’s underlying computational capability is fundamentally distinct from the capability an operator permits a user to exercise. Operators introduce decision and enforcement paths that can prevent execution, alter inputs, or withhold results based on the content, meaning, or context of a request. The report decomposes this process into recognition, policy decision, and policy enforcement, mapping how these controls can be applied across input boundaries, context construction, learned model behaviors, tool execution, and output delivery."
+    },
+    {
+      "type": "paragraph",
+      "text": "By controlling these intervention pathways, technical authority over an interface translates directly into institutional authority over user access. This architectural control can create artificial bottlenecks that restrict a user's epistemic autonomy and personal sovereignty when they rely on externally operated computational services. To ensure precise attribution, the report introduces an independent audit protocol that separates observable enforcement effects from underlying system incapacity or presumed institutional motives, providing a rigorous framework for evaluating how effective computational capability is governed."
+    }
+  ],
+  "readingMinutes": 1,
+  "heroImage": "",
+  "images": [],
+  "attachments": [
+    {
+      "name": "Accountability-Authority-Special-Report-November-2026-Large-Type-Rev02.pdf",
+      "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-november-2026-authority-and-accountability/november-2026-authority-and-accountability-38eb088bbe2ef08a.pdf",
+      "mimeType": "application/pdf",
+      "releaseAssetId": 706348272,
+      "releaseTag": "measure-pdf-november-2026-authority-and-accountability"
+    }
+  ],
+  "style": {
+    "background": "#e9e4d9",
+    "surface": "#f8f5ee",
+    "text": "#252729",
+    "muted": "#6c6d6f",
+    "accent": "#b5481d",
+    "border": "#d1c8b8",
+    "codeBackground": "#171a1d",
+    "codeText": "#f2f4f5",
+    "bodyFont": "editorial",
+    "headingFont": "system",
+    "codeFont": "mono",
+    "fontSize": 19,
+    "lineHeight": 1.72,
+    "titleSize": 68,
+    "width": 780,
+    "radius": 2,
+    "titleAlign": "left",
+    "customCss": ""
+  },
+  "updatedAt": "2026-11-03T16:48:49.015Z"
+}

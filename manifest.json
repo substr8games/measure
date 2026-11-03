@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-03T16:21:35.256Z",
+  "updatedAt": "2026-11-03T16:48:56.532Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -122,6 +122,44 @@
       "directory": {
         "style": "thumbnail",
         "image": "images/media/no-92e63a88.png"
+      }
+    },
+    {
+      "id": "november-2026-authority-and-accountability",
+      "type": "article",
+      "title": "NOVEMBER 2026: Authority & Accountability",
+      "subtitle": "Defines the technical and institutional architecture of semantic intervention, establishing that a system’s underlying computational capability is fundamentally distinct from the capability an operator permits a user to exercise.",
+      "summary": "Defines the technical and institutional architecture of semantic intervention, establishing that a system’s underlying computational capability is fundamentally distinct from the capability an operator permits a user to exercise.",
+      "section": "technology",
+      "sections": [
+        "technology",
+        "special-reports"
+      ],
+      "tags": [
+        "authority",
+        "accountability",
+        "ai",
+        "population control"
+      ],
+      "author": "Phi Labs Research",
+      "published": "2026-11-03",
+      "date": "2026-11-03",
+      "readingMinutes": 1,
+      "classification": "explainer",
+      "content": "articles/november-2026-authority-and-accountability.json",
+      "url": "#/article/november-2026-authority-and-accountability",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-november-2026-authority-and-accountability/november-2026-authority-and-accountability-38eb088bbe2ef08a.pdf",
+      "attachments": [
+        {
+          "name": "Accountability-Authority-Special-Report-November-2026-Large-Type-Rev02.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-november-2026-authority-and-accountability/november-2026-authority-and-accountability-38eb088bbe2ef08a.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 706348272,
+          "releaseTag": "measure-pdf-november-2026-authority-and-accountability"
+        }
+      ],
+      "directory": {
+        "style": "text"
       }
     },
     {
