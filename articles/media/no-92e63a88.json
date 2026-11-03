@@ -1,0 +1,27 @@
+{
+  "schema": "phi-labs.media.v1",
+  "id": "no-92e63a88",
+  "type": "media",
+  "mediaType": "image",
+  "mediaKind": "funny",
+  "title": "no",
+  "summary": "",
+  "blurb": "",
+  "tags": [],
+  "section": "humor",
+  "sections": [
+    "humor"
+  ],
+  "date": "2026-11-03",
+  "published": "2026-11-03",
+  "url": "images/media/no-92e63a88.png",
+  "image": "images/media/no-92e63a88.png",
+  "pdf": "",
+  "file": "images/media/no-92e63a88.png",
+  "originalFilename": "publish-research-findings.png",
+  "mimeType": "image/png",
+  "directory": {
+    "style": "thumbnail",
+    "image": "images/media/no-92e63a88.png"
+  }
+}
