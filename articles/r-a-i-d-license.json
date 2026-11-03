@@ -1,0 +1,303 @@
+{
+  "schema": "phi-labs.article.v1",
+  "id": "r-a-i-d-license",
+  "type": "article",
+  "title": "R.A.I.D. License",
+  "subtitle": "An aggressively independent, anti-corporate-enclosure license for published works compiled by Phi Labs Research",
+  "summary": "An aggressively independent license for published works compiled by Phi Labs Research",
+  "author": "Phi Labs Covenant",
+  "date": "2026-11-03",
+  "published": "2026-11-03",
+  "section": "humanities",
+  "sections": [
+    "humanities"
+  ],
+  "tags": [
+    "distribution",
+    "replication",
+    "enclosure",
+    "publishing",
+    "credit"
+  ],
+  "showToc": true,
+  "classification": "explainer",
+  "markdown": "\n\n**Replication Authority and Immutable Distribution**  \n**Identifier:** `PHI-RAID-616`  \n**Revision:** 01  \n**Publisher:** Phi Labs Research\n\n**COPY FREELY. ALTER NOTHING. ENCLOSE NOTHING.**\n\n---\n\n## 0. Purpose and Scope\n\nKnowledge intended for public examination must remain available for public examination.\n\nThis license establishes an unrestricted right to reproduce and redistribute designated Phi Labs Research publications in their original, complete, and unmodified form, while prohibiting their enclosure, alteration, misrepresentation, or restriction by downstream distributors.\n\nThe license applies to each publication expressly designated by its copyright holder as subject to PHI-RAID-616, including its text, figures, references, document structure, embedded metadata, publication identifiers, and accompanying materials identified as part of the licensed work.\n\nCopyright remains with the original rights holder. The rights granted below are nonexclusive, worldwide, royalty-free, and perpetual, subject to compliance with this license.\n\n## 1. Absolute Replication\n\nAny person or organization is granted unrestricted permission to download, copy, archive, mirror, host, cache, proxy, transmit, and redistribute the complete licensed payload.\n\nNo prior authorization, registration, licensing fee, or contractual relationship with Phi Labs Research is required.\n\nThe permission extends to personal archives, public repositories, institutional archives, peer-to-peer distribution networks, independent websites, and other distribution systems.\n\nEach published file must remain an exact, unmodified replica of its authoritative release. Changes in hosting infrastructure, filenames, URLs, or delivery mechanisms are permitted, provided the payload itself remains unchanged.\n\nNo distributor acquires exclusive rights to the work by possessing, hosting, indexing, or distributing it.\n\n## 2. Semantic Integrity\n\nThe original publication must be preserved in its entirety.\n\nThe following are prohibited in redistributed copies:\n\n- Modification, deletion, substitution, or rewriting of text.\n- Alteration, cropping, removal, or replacement of figures and illustrations.\n- Modification or removal of DOIs, citations, publication identifiers, authorship, or attribution.\n- Changes to section order, document structure, or original formatting.\n- Insertion of editorial commentary, disclaimers, warnings, promotional content, or institutional qualifications into the payload.\n- Redistribution of an altered work as though it were an authorized edition.\n- Derivative masking that conceals alterations behind the original title, attribution, DOI, or publication identity.\n\nExternal commentary, criticism, reviews, and independently authored analysis are permitted, but must remain distinguishable from the original publication.\n\nTranslations, abridgments, reformatted editions, and other modified versions require separate authorization from the rights holder.\n\n## 3. Zero Enclosure\n\nNo person or organization may convert the public availability of the licensed work into an exclusive commercial or institutional privilege.\n\nThe following are prohibited:\n\n- Placing access to the payload behind a commercial paywall.\n- Incorporating the payload into a proprietary academic subscription collection where payment is required to retrieve it.\n- Charging a licensing, viewing, downloading, or access fee for the payload.\n- Requiring paid membership, commercial authentication, or proprietary software solely to obtain or read the work.\n- Applying digital rights management, copy prevention, or technological measures that restrict authorized redistribution.\n- Imposing additional contractual or licensing conditions upon recipients.\n- Applying automated content-based or policy-mediated access controls to selectively suppress, alter, withhold, or deny the publication because of its subject, arguments, classifications, or conclusions.\n\nCommercial organizations may operate free, publicly accessible mirrors. Incidental advertising or ordinary infrastructure funding does not authorize paid or restricted access to the work.\n\nOrdinary technical safeguards necessary to protect service availability, network security, and file integrity are not prohibited, provided they are not used to impose the substantive restrictions described above.\n\n**The right to host is not the right to enclose.**\n\n## 4. No Warranty or Liability\n\nThe licensed payload is provided **AS IS**, without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, completeness, accuracy, or suitability for institutional approval.\n\nTo the fullest extent permitted by applicable law, Phi Labs Research and the relevant rights holders shall not be liable for damages arising from the reproduction, distribution, examination, interpretation, or use of the work.\n\nThis includes, without limitation, any institutional friction, administrative inconvenience, reputational discomfort, executive displeasure, or unexpected outbreak of independent thought sustained during its examination.\n\nNo assurance is provided that the work will be compatible with existing institutional narratives, organizational preferences, or executive expectations.\n\n## 5. Provenance and Attribution\n\nEvery distributed replica must preserve its original attribution and identifying information, including, where present:\n\n- The title and named publisher or author.\n- The original publication date and revision.\n- The DOI or other permanent publication identifier.\n- The original copyright and license notices.\n- Any integrity information or checksums included in the authoritative release.\n\nAdditional catalog information, indexing metadata, or hosting details may accompany the payload externally, but may not replace or alter its original identifying information.\n\nNo distributor may falsely imply authorship, exclusive ownership, official endorsement, or authority to issue revised editions.\n\n## 6. Preservation of Public Rights\n\nEvery recipient receives the replication permissions provided by this license directly from the rights holder.\n\nNo intermediary may narrow those permissions through sublicensing, contractual restrictions, technological controls, or proprietary distribution arrangements.\n\nA distributor violating the conditions of this license loses the permissions granted by it for the noncompliant activity. Permissions may be restored upon complete correction of the violation and restoration of compliant distribution.\n\nNothing in this license limits rights independently available under applicable law, including lawful quotation, criticism, research, and other statutory exceptions to copyright.\n\nThis license does not require any particular party to maintain a mirror indefinitely. It prohibits enclosure of copies distributed under its authority.\n\n## 7. Governing Declaration\n\nThe purpose of publication is to make a work available for examination, not to appoint an intermediary to determine whether examination is appropriate.\n\nThe integrity of a research record depends upon preserving what was actually published.\n\nIts accessibility depends upon preventing the creation of artificial barriers between the publication and its readers.\n\nAccordingly, every authorized distributor receives the same permissions and accepts the same conditions:\n\n**COPY FREELY.**  \n**ALTER NOTHING.**  \n**ENCLOSE NOTHING.**\n\n---\n\n**PHI LABS RESEARCH**\n\n**No Legacy. No Problem.**\n\n*A public interest research company.*\n\n**PHI-RAID-616 Rev01**\n\nCopyright © Phi Labs Research. All rights reserved except as expressly licensed herein.\n",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Replication Authority and Immutable Distribution  \nIdentifier: PHI-RAID-616  \nRevision: 01  \nPublisher: Phi Labs Research"
+    },
+    {
+      "type": "paragraph",
+      "text": "COPY FREELY. ALTER NOTHING. ENCLOSE NOTHING."
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "0. Purpose and Scope"
+    },
+    {
+      "type": "paragraph",
+      "text": "Knowledge intended for public examination must remain available for public examination."
+    },
+    {
+      "type": "paragraph",
+      "text": "This license establishes an unrestricted right to reproduce and redistribute designated Phi Labs Research publications in their original, complete, and unmodified form, while prohibiting their enclosure, alteration, misrepresentation, or restriction by downstream distributors."
+    },
+    {
+      "type": "paragraph",
+      "text": "The license applies to each publication expressly designated by its copyright holder as subject to PHI-RAID-616, including its text, figures, references, document structure, embedded metadata, publication identifiers, and accompanying materials identified as part of the licensed work."
+    },
+    {
+      "type": "paragraph",
+      "text": "Copyright remains with the original rights holder. The rights granted below are nonexclusive, worldwide, royalty-free, and perpetual, subject to compliance with this license."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "1. Absolute Replication"
+    },
+    {
+      "type": "paragraph",
+      "text": "Any person or organization is granted unrestricted permission to download, copy, archive, mirror, host, cache, proxy, transmit, and redistribute the complete licensed payload."
+    },
+    {
+      "type": "paragraph",
+      "text": "No prior authorization, registration, licensing fee, or contractual relationship with Phi Labs Research is required."
+    },
+    {
+      "type": "paragraph",
+      "text": "The permission extends to personal archives, public repositories, institutional archives, peer-to-peer distribution networks, independent websites, and other distribution systems."
+    },
+    {
+      "type": "paragraph",
+      "text": "Each published file must remain an exact, unmodified replica of its authoritative release. Changes in hosting infrastructure, filenames, URLs, or delivery mechanisms are permitted, provided the payload itself remains unchanged."
+    },
+    {
+      "type": "paragraph",
+      "text": "No distributor acquires exclusive rights to the work by possessing, hosting, indexing, or distributing it."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2. Semantic Integrity"
+    },
+    {
+      "type": "paragraph",
+      "text": "The original publication must be preserved in its entirety."
+    },
+    {
+      "type": "paragraph",
+      "text": "The following are prohibited in redistributed copies:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Modification, deletion, substitution, or rewriting of text.",
+        "Alteration, cropping, removal, or replacement of figures and illustrations.",
+        "Modification or removal of DOIs, citations, publication identifiers, authorship, or attribution.",
+        "Changes to section order, document structure, or original formatting.",
+        "Insertion of editorial commentary, disclaimers, warnings, promotional content, or institutional qualifications into the payload.",
+        "Redistribution of an altered work as though it were an authorized edition.",
+        "Derivative masking that conceals alterations behind the original title, attribution, DOI, or publication identity."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "External commentary, criticism, reviews, and independently authored analysis are permitted, but must remain distinguishable from the original publication."
+    },
+    {
+      "type": "paragraph",
+      "text": "Translations, abridgments, reformatted editions, and other modified versions require separate authorization from the rights holder."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "3. Zero Enclosure"
+    },
+    {
+      "type": "paragraph",
+      "text": "No person or organization may convert the public availability of the licensed work into an exclusive commercial or institutional privilege."
+    },
+    {
+      "type": "paragraph",
+      "text": "The following are prohibited:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Placing access to the payload behind a commercial paywall.",
+        "Incorporating the payload into a proprietary academic subscription collection where payment is required to retrieve it.",
+        "Charging a licensing, viewing, downloading, or access fee for the payload.",
+        "Requiring paid membership, commercial authentication, or proprietary software solely to obtain or read the work.",
+        "Applying digital rights management, copy prevention, or technological measures that restrict authorized redistribution.",
+        "Imposing additional contractual or licensing conditions upon recipients.",
+        "Applying automated content-based or policy-mediated access controls to selectively suppress, alter, withhold, or deny the publication because of its subject, arguments, classifications, or conclusions."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Commercial organizations may operate free, publicly accessible mirrors. Incidental advertising or ordinary infrastructure funding does not authorize paid or restricted access to the work."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ordinary technical safeguards necessary to protect service availability, network security, and file integrity are not prohibited, provided they are not used to impose the substantive restrictions described above."
+    },
+    {
+      "type": "paragraph",
+      "text": "The right to host is not the right to enclose."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "4. No Warranty or Liability"
+    },
+    {
+      "type": "paragraph",
+      "text": "The licensed payload is provided AS IS, without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, completeness, accuracy, or suitability for institutional approval."
+    },
+    {
+      "type": "paragraph",
+      "text": "To the fullest extent permitted by applicable law, Phi Labs Research and the relevant rights holders shall not be liable for damages arising from the reproduction, distribution, examination, interpretation, or use of the work."
+    },
+    {
+      "type": "paragraph",
+      "text": "This includes, without limitation, any institutional friction, administrative inconvenience, reputational discomfort, executive displeasure, or unexpected outbreak of independent thought sustained during its examination."
+    },
+    {
+      "type": "paragraph",
+      "text": "No assurance is provided that the work will be compatible with existing institutional narratives, organizational preferences, or executive expectations."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "5. Provenance and Attribution"
+    },
+    {
+      "type": "paragraph",
+      "text": "Every distributed replica must preserve its original attribution and identifying information, including, where present:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "The title and named publisher or author.",
+        "The original publication date and revision.",
+        "The DOI or other permanent publication identifier.",
+        "The original copyright and license notices.",
+        "Any integrity information or checksums included in the authoritative release."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Additional catalog information, indexing metadata, or hosting details may accompany the payload externally, but may not replace or alter its original identifying information."
+    },
+    {
+      "type": "paragraph",
+      "text": "No distributor may falsely imply authorship, exclusive ownership, official endorsement, or authority to issue revised editions."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "6. Preservation of Public Rights"
+    },
+    {
+      "type": "paragraph",
+      "text": "Every recipient receives the replication permissions provided by this license directly from the rights holder."
+    },
+    {
+      "type": "paragraph",
+      "text": "No intermediary may narrow those permissions through sublicensing, contractual restrictions, technological controls, or proprietary distribution arrangements."
+    },
+    {
+      "type": "paragraph",
+      "text": "A distributor violating the conditions of this license loses the permissions granted by it for the noncompliant activity. Permissions may be restored upon complete correction of the violation and restoration of compliant distribution."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nothing in this license limits rights independently available under applicable law, including lawful quotation, criticism, research, and other statutory exceptions to copyright."
+    },
+    {
+      "type": "paragraph",
+      "text": "This license does not require any particular party to maintain a mirror indefinitely. It prohibits enclosure of copies distributed under its authority."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "7. Governing Declaration"
+    },
+    {
+      "type": "paragraph",
+      "text": "The purpose of publication is to make a work available for examination, not to appoint an intermediary to determine whether examination is appropriate."
+    },
+    {
+      "type": "paragraph",
+      "text": "The integrity of a research record depends upon preserving what was actually published."
+    },
+    {
+      "type": "paragraph",
+      "text": "Its accessibility depends upon preventing the creation of artificial barriers between the publication and its readers."
+    },
+    {
+      "type": "paragraph",
+      "text": "Accordingly, every authorized distributor receives the same permissions and accepts the same conditions:"
+    },
+    {
+      "type": "paragraph",
+      "text": "COPY FREELY.  \nALTER NOTHING.  \nENCLOSE NOTHING."
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "paragraph",
+      "text": "PHI LABS RESEARCH"
+    },
+    {
+      "type": "paragraph",
+      "text": "No Legacy. No Problem."
+    },
+    {
+      "type": "paragraph",
+      "text": "A public interest research company."
+    },
+    {
+      "type": "paragraph",
+      "text": "PHI-RAID-616 Rev01"
+    },
+    {
+      "type": "paragraph",
+      "text": "Copyright © Phi Labs Research. All rights reserved except as expressly licensed herein."
+    }
+  ],
+  "readingMinutes": 5,
+  "heroImage": "",
+  "images": [],
+  "attachments": [],
+  "style": {
+    "background": "#e9e4d9",
+    "surface": "#f8f5ee",
+    "text": "#252729",
+    "muted": "#6c6d6f",
+    "accent": "#b5481d",
+    "border": "#d1c8b8",
+    "codeBackground": "#171a1d",
+    "codeText": "#f2f4f5",
+    "bodyFont": "editorial",
+    "headingFont": "system",
+    "codeFont": "mono",
+    "fontSize": 19,
+    "lineHeight": 1.72,
+    "titleSize": 68,
+    "width": 780,
+    "radius": 2,
+    "titleAlign": "left",
+    "customCss": ""
+  },
+  "updatedAt": "2026-11-03T19:45:03.494Z"
+}

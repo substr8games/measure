@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-03T19:37:34.246Z",
+  "updatedAt": "2026-11-03T19:45:06.632Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -221,6 +221,36 @@
           "mimeType": "application/pdf"
         }
       ],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "r-a-i-d-license",
+      "type": "article",
+      "title": "R.A.I.D. License",
+      "subtitle": "An aggressively independent, anti-corporate-enclosure license for published works compiled by Phi Labs Research",
+      "summary": "An aggressively independent license for published works compiled by Phi Labs Research",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "distribution",
+        "replication",
+        "enclosure",
+        "publishing",
+        "credit"
+      ],
+      "author": "Phi Labs Covenant",
+      "published": "2026-11-03",
+      "date": "2026-11-03",
+      "readingMinutes": 5,
+      "classification": "explainer",
+      "content": "articles/r-a-i-d-license.json",
+      "url": "#/article/r-a-i-d-license",
+      "pdf": "",
+      "attachments": [],
       "directory": {
         "style": "text"
       }
