@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-03T02:47:08.396Z",
+  "updatedAt": "2026-11-03T02:49:34.485Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -9,7 +9,7 @@
       "type": "media",
       "mediaType": "image",
       "mediaKind": "funny",
-      "title": "chillin bro u?",
+      "title": "nah",
       "summary": "",
       "blurb": "",
       "tags": [],
@@ -23,7 +23,7 @@
       "image": "images/media/chillin-bro-u-7f2c77bb.png",
       "pdf": "",
       "file": "images/media/chillin-bro-u-7f2c77bb.png",
-      "originalFilename": "nm-u.png",
+      "originalFilename": "publish-research-findings.png",
       "mimeType": "image/png",
       "directory": {
         "style": "thumbnail",
