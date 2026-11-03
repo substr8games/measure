@@ -1,0 +1,45 @@
+{
+  "schema": "phi-labs.media.v1",
+  "id": "try-obnoxs-edc9d054",
+  "type": "media",
+  "mediaType": "image",
+  "mediaKind": "ad",
+  "title": "",
+  "summary": "",
+  "blurb": "",
+  "advertiser": "NoXS",
+  "viewerImage": "images/media/try-obnoxs-edc9d054-viewer.png",
+  "viewerCaption": "",
+  "lowerRegisterEnabled": true,
+  "thumbnail": {
+    "x": 76.15142036098506,
+    "y": 28.12918469147062,
+    "zoom": 2.4
+  },
+  "sidebar": {
+    "enabled": true,
+    "thumbnail": {
+      "x": 56.267429214814825,
+      "y": 18.943313046567354,
+      "zoom": 1.85
+    }
+  },
+  "tags": [
+    "noxs",
+    "programming",
+    "code"
+  ],
+  "section": "humor",
+  "sections": [],
+  "date": "2026-11-03",
+  "published": "2026-11-03",
+  "url": "images/media/try-obnoxs-edc9d054.png",
+  "image": "images/media/try-obnoxs-edc9d054.png",
+  "pdf": "",
+  "file": "images/media/try-obnoxs-edc9d054.png",
+  "originalFilename": "try_obNoXS.png",
+  "mimeType": "image/png",
+  "directory": {
+    "style": "none"
+  }
+}
