@@ -1,8 +1,38 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-03T19:25:41.835Z",
+  "updatedAt": "2026-11-03T19:37:34.246Z",
   "items": [
+    {
+      "schema": "phi-labs.media.v1",
+      "id": "attention-economy-3d609df9",
+      "type": "media",
+      "mediaType": "image",
+      "mediaKind": "funny",
+      "title": "attention economy",
+      "summary": "",
+      "blurb": "",
+      "advertiser": "",
+      "viewerImage": "",
+      "viewerCaption": "",
+      "tags": [],
+      "section": "humor",
+      "sections": [
+        "humor"
+      ],
+      "date": "2026-11-03",
+      "published": "2026-11-03",
+      "url": "images/media/attention-economy-3d609df9.png",
+      "image": "images/media/attention-economy-3d609df9.png",
+      "pdf": "",
+      "file": "images/media/attention-economy-3d609df9.png",
+      "originalFilename": "lel_tesseract.png",
+      "mimeType": "image/png",
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/media/attention-economy-3d609df9.png"
+      }
+    },
     {
       "schema": "phi-labs.media.v1",
       "id": "chillin-bro-u-7f2c77bb",
