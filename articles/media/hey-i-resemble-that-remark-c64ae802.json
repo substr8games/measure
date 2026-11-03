@@ -1,0 +1,35 @@
+{
+  "schema": "phi-labs.media.v1",
+  "id": "hey-i-resemble-that-remark-c64ae802",
+  "type": "media",
+  "mediaType": "image",
+  "mediaKind": "funny",
+  "title": "hey i resemble that remark",
+  "summary": "",
+  "blurb": "",
+  "advertiser": "",
+  "viewerImage": "",
+  "viewerCaption": "",
+  "tags": [
+    "dumb",
+    "rock",
+    "remark",
+    "resemble"
+  ],
+  "section": "humor",
+  "sections": [
+    "humor"
+  ],
+  "date": "2026-11-03",
+  "published": "2026-11-03",
+  "url": "images/media/hey-i-resemble-that-remark-c64ae802.png",
+  "image": "images/media/hey-i-resemble-that-remark-c64ae802.png",
+  "pdf": "",
+  "file": "images/media/hey-i-resemble-that-remark-c64ae802.png",
+  "originalFilename": "i-resemble-that-remark.png",
+  "mimeType": "image/png",
+  "directory": {
+    "style": "thumbnail",
+    "image": "images/media/hey-i-resemble-that-remark-c64ae802.png"
+  }
+}
