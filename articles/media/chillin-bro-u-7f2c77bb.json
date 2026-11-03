@@ -1,0 +1,27 @@
+{
+  "schema": "phi-labs.media.v1",
+  "id": "chillin-bro-u-7f2c77bb",
+  "type": "media",
+  "mediaType": "image",
+  "mediaKind": "funny",
+  "title": "chillin bro u?",
+  "summary": "",
+  "blurb": "",
+  "tags": [],
+  "section": "humor",
+  "sections": [
+    "humor"
+  ],
+  "date": "2026-11-03",
+  "published": "2026-11-03",
+  "url": "images/media/chillin-bro-u-7f2c77bb.png",
+  "image": "images/media/chillin-bro-u-7f2c77bb.png",
+  "pdf": "",
+  "file": "images/media/chillin-bro-u-7f2c77bb.png",
+  "originalFilename": "nm-u.png",
+  "mimeType": "image/png",
+  "directory": {
+    "style": "thumbnail",
+    "image": "images/media/chillin-bro-u-7f2c77bb.png"
+  }
+}
