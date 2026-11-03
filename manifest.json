@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-03T06:17:49.605Z",
+  "updatedAt": "2026-11-03T16:11:28.404Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -55,6 +55,46 @@
       "directory": {
         "style": "thumbnail",
         "image": "images/media/deep-cover-e4370260.png"
+      }
+    },
+    {
+      "id": "manufacturing-distraction-federal-elections-and-the-compute-cartel",
+      "type": "article",
+      "title": "Manufacturing Distraction: Federal Elections and the Compute Cartel",
+      "subtitle": "On manufactured conflict, managed participation, and the difference between using a system and governing it.",
+      "summary": "Phi labs breaks down manufactured conflict, managed participation, and the difference between using a system and governing it.",
+      "section": "thinkpieces",
+      "sections": [
+        "thinkpieces"
+      ],
+      "tags": [
+        "distraction",
+        "control",
+        "discourse",
+        "manipulation",
+        "politics",
+        "government",
+        "ai"
+      ],
+      "author": "Phi Labs Staff",
+      "published": "2026-11-03",
+      "date": "2026-11-03",
+      "readingMinutes": 10,
+      "classification": "copy",
+      "content": "articles/manufacturing-distraction-federal-elections-and-the-compute-cartel.json",
+      "url": "#/article/manufacturing-distraction-federal-elections-and-the-compute-cartel",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-manufacturing-distraction-federal-elections-and-the-compute-cartel/manufacturing-distraction-federal-elections-and-the-compute-cartel-d684c082561a5fd4.pdf",
+      "attachments": [
+        {
+          "name": "manufacturing-distraction-federal-elections-and-the-compute-cartel.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-manufacturing-distraction-federal-elections-and-the-compute-cartel/manufacturing-distraction-federal-elections-and-the-compute-cartel-d684c082561a5fd4.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 706227179,
+          "releaseTag": "measure-pdf-manufacturing-distraction-federal-elections-and-the-compute-cartel"
+        }
+      ],
+      "directory": {
+        "style": "text"
       }
     },
     {
