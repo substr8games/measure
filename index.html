@@ -241,7 +241,7 @@ button { cursor: pointer; }
 .dispatch-tile--article .depth-dot { width: .48rem; height: .48rem; margin-right: .35rem; }
 .poster-dialog {
   border: 1px solid var(--gold); background: var(--background-deep); color: var(--white);
-  width: min(850px, calc(100vw - 32px)); max-height: calc(100dvh - 32px);
+  width: fit-content; max-width: calc(100vw - 24px); max-height: calc(100dvh - 24px);
   padding: 0; box-shadow: 0 22px 65px rgba(0,0,0,.45);
 }
 .poster-dialog::backdrop { background: rgba(11,19,29,.83); }
@@ -572,9 +572,12 @@ body {
 .dispatch-ad-label { display:block; width:100%; padding:6px 2px 2px; line-height:1.35; border:0; color:var(--gold); font-size:10px; letter-spacing:.06em; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .dispatch-tile--ad:hover { background:transparent; }
 .dispatch-tile--ad:hover .dispatch-ad-viewport { border-color:var(--gold); }
-.poster-dialog--ad .poster-dialog-body { display:block; padding:18px; }
-.poster-dialog--ad .poster-dialog-body img { display:block; max-width:100%; max-height:calc(100dvh - 122px); margin:0 auto; }
-.poster-dialog--ad .poster-dialog-notes { display:none !important; }
+.poster-dialog--ad { width:fit-content; max-width:calc(100vw - 24px); overflow:auto; }
+.poster-dialog--ad .poster-dialog-body { display:flex; flex-direction:column; align-items:center; gap:0; width:fit-content; max-width:100%; padding:12px; }
+.poster-dialog--ad .poster-dialog-body img { display:block; width:auto; height:auto; max-width:min(640px, calc(100vw - 50px)); max-height:calc(100dvh - 165px); margin:0; object-fit:contain; background:transparent; }
+.poster-dialog--ad .poster-dialog-notes { display:block; box-sizing:border-box; align-self:stretch; width:100%; max-width:640px; padding:12px 2px 3px; }
+.poster-dialog--ad .poster-dialog-notes p { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; font-size:13px; line-height:1.6; color:var(--text); }
+.poster-dialog--ad .poster-dialog-notes[hidden] { display:none !important; }
 /* The Measure / optional series reader + TM-UI-001 editorial depth. */
 :root {
   --tm-depth-copy: #4BEA91;
@@ -717,9 +720,10 @@ body { font-size:16px; }
   margin:31px 24px 0 0; z-index:1; }
 .left-rail-ad-button { display:block; width:100%; border:0; padding:0; background:transparent;
   color:var(--gold); text-align:left; cursor:pointer; font:inherit; }
-.left-rail-ad-art { display:block; width:100%; height:480px; object-fit:cover; object-position:center;
+.left-rail-ad-viewport { display:block; width:100%; height:480px; overflow:hidden;
   background:var(--background-deep); border:1px solid var(--gold-subtle); }
-.left-rail-ad-button:hover .left-rail-ad-art { border-color:var(--gold); }
+.left-rail-ad-art { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
+.left-rail-ad-button:hover .left-rail-ad-viewport { border-color:var(--gold); }
 .left-rail-ad-label { display:block; margin-top:7px; font-size:10px; line-height:1.4;
   letter-spacing:.06em; overflow-wrap:anywhere; }
 @media (min-width:1200px) {
@@ -776,7 +780,7 @@ body { font-size:16px; }
 
     <aside class="left-rail-ad" id="left-rail-ad" aria-label="Sponsored notice" hidden>
       <button class="left-rail-ad-button" id="left-rail-ad-button" type="button">
-        <img class="left-rail-ad-art" id="left-rail-ad-image" alt="Advertisement artwork" loading="lazy">
+        <span class="left-rail-ad-viewport"><img class="left-rail-ad-art" id="left-rail-ad-image" alt="Advertisement artwork" loading="lazy"></span>
         <span class="left-rail-ad-label" id="left-rail-ad-label"></span>
       </button>
     </aside>
@@ -845,12 +849,16 @@ body { font-size:16px; }
     return '';
   };
 
-  // Crop parameters are stored in each manifest ad; old ads keep their full-art preview.
-  function publicAdCropStyle(item) {
-    const thumb = item.thumbnail;
-    if (!thumb || typeof thumb !== 'object') return 'style="object-fit:cover;object-position:50% 50%"';
+  // Bottom-strip and sidebar placements use separate saved framing instructions.
+  function publicAdCropValues(thumb) {
     const numeric = (n, fallback, lo, hi) => Number.isFinite(Number(n)) && n != null ? Math.max(lo,Math.min(hi,Number(n))) : fallback;
-    const x = numeric(thumb.x,50,0,100), y = numeric(thumb.y,50,0,100), zoom = numeric(thumb.zoom,1,1,3);
+    return {
+      x:numeric(thumb?.x,50,0,100),y:numeric(thumb?.y,50,0,100),
+      zoom:numeric(thumb?.zoom,1,1,3)
+    };
+  }
+  function publicAdCropStyle(thumb) {
+    const {x,y,zoom} = publicAdCropValues(thumb);
     return `style="object-fit:cover;object-position:${x}% ${y}%;transform-origin:${x}% ${y}%;transform:scale(${zoom})"`;
   }
   function card(item, index) {
@@ -873,7 +881,7 @@ body { font-size:16px; }
       // Advertisements keep artwork prominent, with a compact sponsor label below.
       const sponsor = String(item.advertiser || '').trim();
       const adLabel = 'AD' + (sponsor ? ' - ' + sponsor : '');
-      return `<button class="dispatch-tile dispatch-tile--ad" type="button" data-register-index="${index}" aria-label="View advertisement: ${escape(adLabel)}"><span class="dispatch-ad-viewport"><img class="dispatch-ad-art" src="${escape(src)}" ${publicAdCropStyle(item)} alt="Advertisement artwork" loading="lazy" decoding="async"></span><span class="dispatch-ad-label">${escape(adLabel)}</span></button>`;
+      return `<button class="dispatch-tile dispatch-tile--ad" type="button" data-register-index="${index}" aria-label="View advertisement: ${escape(adLabel)}"><span class="dispatch-ad-viewport"><img class="dispatch-ad-art" src="${escape(src)}" ${publicAdCropStyle(item.thumbnail)} alt="Advertisement artwork" loading="lazy" decoding="async"></span><span class="dispatch-ad-label">${escape(adLabel)}</span></button>`;
     }
     const hint = isPdf ? 'OPEN PDF ↗' : 'VIEW POSTER ↗';
     const inner = `<img class="dispatch-thumb" src="${escape(src)}" alt="" loading="lazy" decoding="async">
@@ -892,7 +900,7 @@ body { font-size:16px; }
   function openPoster(index, button) {
     const item = items[index];
     if (!item || item.kind === 'pdf') return;
-    const image = localPath(item.image);
+    const image = (item.kind === 'ad' ? localPath(item.viewerImage) : '') || localPath(item.image);
     if (!image) return;
     opener = button;
     const ad = item.kind === 'ad';
@@ -904,11 +912,13 @@ body { font-size:16px; }
       dialog.removeAttribute('aria-label');
       dialog.setAttribute('aria-labelledby', 'poster-dialog-title');
     }
+    const adCopy = ad ? String(item.viewerCaption || '').trim() : '';
     posterKind.hidden = ad;
-    posterTitle.parentElement.hidden = ad;
+    posterTitle.parentElement.hidden = ad && !adCopy;
+    posterTitle.hidden = ad;
     posterTitle.textContent = ad ? '' : item.title || 'Visual commentary';
-    posterCaption.textContent = ad ? '' : item.description || '';
-    posterCaption.hidden = ad || !item.description;
+    posterCaption.textContent = ad ? adCopy : item.description || '';
+    posterCaption.hidden = ad ? !adCopy : !item.description;
     posterKind.textContent = ad ? '' : item.label || item.kind || 'POSTER';
     posterImage.src = image;
     posterImage.alt = ad ? 'Advertisement artwork' : item.alt || item.title || 'Cartoon artwork';
@@ -949,12 +959,17 @@ body { font-size:16px; }
       const j = Math.floor(Math.random() * (i + 1));
       [items[i], items[j]] = [items[j], items[i]];
     }
-    track.innerHTML = items.map(card).join('');
-    // Pick the first ad in the already randomized Lower Register; do not reshuffle on navigation.
-    const leftIndex = items.findIndex(item => item.kind === 'ad' && localPath(item.image));
+    track.innerHTML = items.map((item,index) => item.kind === 'ad' && item.lowerRegisterEnabled === false ? '' : card(item,index)).join('');
+    // Sidebar is strictly opt-in. Old ads, and ads without explicit approval,
+    // never occupy this placement. Shuffle only among approved ads.
+    const leftIndex = items.findIndex(item => item.kind === 'ad' && item.sidebar?.enabled === true && localPath(item.image));
     if (leftIndex >= 0) {
       const ad = items[leftIndex];
       leftAdImage.src = localPath(ad.image);
+      const {x,y,zoom} = publicAdCropValues(ad.sidebar.thumbnail);
+      leftAdImage.style.objectPosition = `${x}% ${y}%`;
+      leftAdImage.style.transformOrigin = `${x}% ${y}%`;
+      leftAdImage.style.transform = `scale(${zoom})`;
       const sponsor = String(ad.advertiser || '').trim();
       const label = 'AD' + (sponsor ? ' - ' + sponsor : '');
       leftAdLabel.textContent = label;
@@ -962,7 +977,7 @@ body { font-size:16px; }
       leftAdButton.dataset.registerIndex = String(leftIndex);
       leftAd.hidden = false;
     } else { leftAd.hidden = true; }
-    section.hidden = false;
+    section.hidden = !track.children.length;
     requestAnimationFrame(updateControls);
   };
 })();
@@ -1476,7 +1491,12 @@ function manifestMediaToRail(item) {
     label:pdf?'PDF / SPECIAL REPORT':isParodyAd?'':'VISUAL COMMENTARY',
     title:isParodyAd?'':item.title || '', description:isParodyAd?'':item.blurb || item.summary || '',
     image:item.image || (pdf?'images/pdf-placeholder.svg':''), href:item.pdf || item.url,
-    alt:isParodyAd?'Advertisement artwork':item.title || 'Cartoon artwork', advertiser:isParodyAd ? String(item.advertiser || '').trim() : '', thumbnail:isParodyAd ? (item.thumbnail || null) : null
+    alt:isParodyAd?'Advertisement artwork':item.title || 'Cartoon artwork', advertiser:isParodyAd ? String(item.advertiser || '').trim() : '',
+    thumbnail:isParodyAd ? (item.thumbnail || null) : null,
+    lowerRegisterEnabled:isParodyAd ? item.lowerRegisterEnabled !== false : true,
+    sidebar:isParodyAd ? (item.sidebar || null) : null,
+    viewerImage:isParodyAd ? (item.viewerImage || '') : '',
+    viewerCaption:isParodyAd ? (item.viewerCaption || '') : ''
   };
 }
 async function loadGithubCatalog() {
