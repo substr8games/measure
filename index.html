@@ -813,6 +813,19 @@ body { font-size:16px; }
   .content-warning-art { max-width: calc(100vw - 10px); max-height: calc(100dvh - 10px); }
   .content-warning-dismiss { border-width: 2px; padding: 5px 9px; width: clamp(88px, 30vw, 140px); min-height: 28px; font-size: clamp(10px, 3vw, 13px); }
 }
+/* The Measure / independently published photographic collections. */
+.gallery-page-head {padding-bottom:25px;border-bottom:1px solid var(--gold-soft);}
+.gallery-page-head h1 {font-size:clamp(34px,5vw,63px);line-height:1.07;overflow-wrap:anywhere;}
+.gallery-page-head p {max-width:680px;line-height:1.65;color:var(--subdued);}
+.gallery-page-meta {font-size:10px;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-top:14px;}
+.gallery-public-grid {display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin:28px 0 65px;}
+.gallery-public-card {display:flex;flex-direction:column;align-items:stretch;text-align:left;border:1px solid var(--gold-subtle);background:transparent;color:var(--white);cursor:pointer;padding:0;font:inherit;min-width:0;}
+.gallery-public-card:hover,.gallery-public-card:focus-visible {border-color:var(--gold);outline:0;}
+.gallery-public-card img {width:100%;height:205px;object-fit:cover;display:block;background:#121515;}
+.gallery-public-card span {padding:10px 12px;color:var(--subdued);font-size:11px;line-height:1.4;min-height:34px;overflow-wrap:anywhere;}
+.gallery-public-card b {color:var(--gold);font-size:10px;letter-spacing:.08em;}
+.poster-dialog--ad .poster-dialog-notes h2 {font-size:clamp(15px,2.5vw,24px);}
+@media(max-width:560px){.gallery-public-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.gallery-public-card img{height:145px}.gallery-public-card span{padding:8px;font-size:10px}}
   </style>
 </head>
 <body>
@@ -939,6 +952,7 @@ body { font-size:16px; }
   let catalogItems = [];
   let galleryItems = [];
   let galleryIndex = 0;
+  let gallerySource = '';
   let opener = null;
 
   const escape = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
@@ -950,7 +964,7 @@ body { font-size:16px; }
     // GitHub Release PDF downloads are counted by GitHub, not the site.
     if (/^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\/releases\/download\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\.pdf$/i.test(path)) return path;
     if (/^https:\/\/[a-z0-9.-]+\.github\.io\/[A-Za-z0-9_./%~-]+$/i.test(path)) return path;
-    if (/^(?:images|articles)\/[A-Za-z0-9_./-]+$/.test(path) &&
+    if (/^(?:images|articles|galleries)\/[A-Za-z0-9_./-]+$/.test(path) &&
       !path.split('/').includes('..') && !path.includes('//')) return path;
     return '';
   };
@@ -977,6 +991,11 @@ body { font-size:16px; }
         ${cover ? `<img class="dispatch-thumb" src="${escape(cover)}" alt="" loading="lazy">` : ''}
         <span class="dispatch-tile-copy"><span class="dispatch-kind">RECENT ARTICLE${item.date ? ' / ' + escape(item.date) : ''}</span>
         <strong>${depth ? '<span class="depth-dot" aria-hidden="true"></span>' : ''}${escape(item.title)}</strong><span class="dispatch-hint">READ ARTICLE ↗</span></span></a>`;
+    }
+    if (item.kind === 'gallery') {
+      const image = localPath(item.image);
+      const href = '#/gallery/' + encodeURIComponent(item.id);
+      return `<a class="dispatch-tile dispatch-tile--article" href="${escape(href)}" aria-label="View gallery: ${escape(item.title)}">${image ? `<img class="dispatch-thumb" src="${escape(image)}" alt="" loading="lazy">` : ''}<span class="dispatch-tile-copy"><span class="dispatch-kind">PHOTO GALLERY</span><strong>${escape(item.title)}</strong><span class="dispatch-hint">VIEW COLLECTION ↗</span></span></a>`;
     }
     const src = localPath(item.image);
     if (!src) return '';
@@ -1021,9 +1040,10 @@ body { font-size:16px; }
       if (baseImage && posterImage.getAttribute('src') !== baseImage) posterImage.src = baseImage;
     };
     posterImage.src = image;
-    posterImage.alt = (item.advertiser ? item.advertiser + ' ' : '') + 'advertisement ' + (galleryIndex+1);
+    posterImage.alt = gallerySource === 'collection' ? (item.alt || item.title || 'Gallery image') : (item.advertiser ? item.advertiser + ' ' : '') + 'advertisement ' + (galleryIndex+1);
     const caption = String(item.viewerCaption || '').trim();
-    posterTitle.parentElement.hidden = !caption;
+    posterTitle.parentElement.hidden = gallerySource === 'collection' ? false : !caption;
+    if (gallerySource === 'collection') {posterTitle.hidden = !item.title;posterTitle.textContent = item.title || '';}
     posterCaption.textContent = caption;
     posterCaption.hidden = !caption;
     galleryCount.textContent = (galleryIndex + 1) + ' / ' + galleryItems.length;
@@ -1032,7 +1052,32 @@ body { font-size:16px; }
     });
     galleryThumbnails.querySelector('button[aria-current="true"]')?.scrollIntoView({block:'nearest',inline:'nearest'});
   }
-  function openAdGallery(item, button) {
+  function openCollectionGallery(record,index=0,button=null) {
+    const source=Array.isArray(record?.images)?record.images:[];
+    galleryItems=source.filter(entry=>localPath(entry.path)).map(entry=>({
+      image:entry.path,viewerImage:'',title:entry.caption||'',viewerCaption:entry.caption||'',alt:entry.alt||'',id:entry.id
+    }));
+    if(!galleryItems.length)return;
+    gallerySource='collection';opener=button;
+    dialog.classList.add('poster-dialog--ad');
+    dialog.removeAttribute('aria-labelledby');
+    dialog.setAttribute('aria-label',String(record.title||'Photo')+' gallery');
+    posterKind.hidden=false;posterKind.textContent='GALLERY / '+String(record.title||'COLLECTION');
+    const multiple=galleryItems.length>1;
+    galleryTools.hidden=!multiple;galleryThumbnails.hidden=!multiple;
+    galleryThumbnails.innerHTML=multiple?galleryItems.map((entry,i)=>
+      `<button class="poster-gallery-thumb" type="button" data-gallery-index="${i}" aria-label="View image ${i+1} of ${galleryItems.length}"><img src="${escape(localPath(entry.image))}" alt="" loading="lazy"></button>`
+    ).join(''):'';
+    dialog.showModal();displayGallerySlide(index);
+  }
+  window.measureOpenCollectionGallery=openCollectionGallery;
+  async function openAdGallery(item, button) {
+    const linked = window.measureGalleryForAdvertiser?.(item.advertiser);
+    if (linked) {
+      try {const record=await window.measureFetchGalleryRecord(linked.id);if(record.images.length){openCollectionGallery(record,0,button);return;}}
+      catch(error){console.warn('Linked gallery unavailable, showing advertiser ads',error);}
+    }
+    gallerySource='ad';
     const key = advertiserKey(item);
     // Unnamed advertisements do not get merged into an accidental mega-gallery.
     galleryItems = key ? catalogItems.filter(candidate =>
@@ -1059,6 +1104,7 @@ body { font-size:16px; }
     displayGallerySlide(galleryIndex);
   }
   function openPoster(index, button) {
+    gallerySource='';
     const item = items[index];
     if (!item || item.kind === 'pdf') return;
     if (item.kind === 'ad') { openAdGallery(item,button); return; }
@@ -1066,6 +1112,7 @@ body { font-size:16px; }
     if (!image) return;
     opener = button;
     galleryItems = [];
+    gallerySource='';
     dialog.classList.remove('poster-dialog--ad');
     dialog.removeAttribute('aria-label');
     dialog.setAttribute('aria-labelledby','poster-dialog-title');
@@ -1275,7 +1322,7 @@ function renderEditorialGrid(block) {
   return `<div class="editorial-grid-scroll"><div class="editorial-grid" style="--editorial-columns:${columns};--editorial-min-width:${columns * 165}px" role="group" aria-label="Editorial layout">${content}</div></div>`;
 }
 function renderMarkdown(md){
-  return tokenizeMarkdown(md).map(b=>{
+  return tokenizeMarkdown(String(md || '').replace(/<!--\s*pagebreak\s*-->/gi, '')).map(b=>{
     switch(b.type){
       case 'heading':return `<h${b.depth}>${inlineMarkdown(b.text)}</h${b.depth}>`;
       case 'paragraph':return `<p>${inlineMarkdown(b.text).replace(/\n/g,'<br>')}</p>`;
@@ -1340,7 +1387,7 @@ const escapeHTML = (value = '') => String(value ?? '').replace(/[&<>"']/g, ch =>
 let sections = [];
 const section = id => sections.find(s => s.id === id);
 const arrow = '<svg viewBox="0 0 22 22" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M3 11h15m-6-6 6 6-6 6"/></svg>';
-const articleUrl = a => `#/article/${encodeURIComponent(String(a.id))}`;
+const articleUrl = a => a.type === 'gallery' ? `#/gallery/${encodeURIComponent(String(a.id))}` : `#/article/${encodeURIComponent(String(a.id))}`;
 const sectionUrl = id => `#/section/${encodeURIComponent(id)}`;
 const isSpecial = a => a.type === 'pdf' || (Array.isArray(a.sections) && a.sections.includes('special-reports'));
 const articleSections = a => Array.isArray(a.sections) && a.sections.length ? a.sections : a.section ? [a.section] : [];
@@ -1354,7 +1401,7 @@ const previewNotice = () => content.publication.notice ? `<p class="note-line"><
 const safeResource = input => {
   if (typeof input !== 'string') return '';
   if (/^https:\/\/[^\s]+$/i.test(input)) return input;
-  if (/^(?:images|articles)\/[A-Za-z0-9_.\/-]+$/.test(input) && !input.split('/').includes('..') && !input.includes('//')) return input;
+  if (/^(?:images|articles|galleries)\/[A-Za-z0-9_.\/-]+$/.test(input) && !input.split('/').includes('..') && !input.includes('//')) return input;
   return '';
 };
 const pdfLink = a => safeResource(a.pdf);
@@ -1374,7 +1421,7 @@ function row(a) {
   return `<a class="article-row" data-classification="${cls}" href="${articleUrl(a)}" aria-label="${escapeHTML((cls ? depthLabel(cls) + ': ' : '') + (a.title || 'View publication'))}">
     ${thumb ? `<img class="row-cover" src="${escapeHTML(thumb)}" alt="" loading="lazy">` : ''}
     <div class="row-copy"><div class="article-meta">${meta(a)}</div>${a.title ? `<h3>${depthDot(cls)}${escapeHTML(a.title)}</h3>` : ""}${a.summary ? `<p>${escapeHTML(a.summary)}</p>` : ""}</div>
-    <div class="row-trailing"><span class="read-time">${isSpecial(a) ? 'PDF' : a.type === 'media' ? 'IMAGE' : `${escapeHTML(a.readingMinutes || 1)} MIN`}</span><span class="row-arrow" aria-hidden="true">↗</span></div>
+    <div class="row-trailing"><span class="read-time">${isSpecial(a) ? 'PDF' : a.type === 'gallery' ? 'GALLERY' : a.type === 'media' ? 'IMAGE' : `${escapeHTML(a.readingMinutes || 1)} MIN`}</span><span class="row-arrow" aria-hidden="true">↗</span></div>
   </a>`;
 }
 function sectionTitle(title, count) {
@@ -1434,6 +1481,46 @@ function renderBlocks(blocks = []) {
     return '';
   }).join('');
 }
+// Gallery publication records share the same manifest as articles/media.
+const GALLERY_PUBLIC_SCHEMA='phi-labs.gallery.v1';
+const galleryRecords=new Map();
+let publicGalleries=[];
+function galleryAdvertiserKey(value){
+  return String(value||'').trim().toLocaleLowerCase().replace(/\s+/g,' ').replace(/^(?:<3|♥|♡)\s*/,'♥');
+}
+function galleryForAdvertiser(value){
+  const key=galleryAdvertiserKey(value);
+  return key?publicGalleries.find(entry=>galleryAdvertiserKey(entry.advertiser)===key):null;
+}
+async function fetchGalleryRecord(id){
+  if(galleryRecords.has(id))return galleryRecords.get(id);
+  const info=publicGalleries.find(g=>g.id===id);
+  if(!info)throw Error('Gallery not in publication index');
+  const path=safeResource(info.content);
+  if(!path||!/^galleries\//.test(path))throw Error('Invalid gallery record path');
+  const response=await fetch(path,{cache:'no-store'});
+  if(!response.ok)throw Error('Gallery unavailable: HTTP '+response.status);
+  const record=await response.json();
+  if(record.schema!==GALLERY_PUBLIC_SCHEMA||record.type!=='gallery'||record.id!==id||!Array.isArray(record.images))throw Error('Invalid gallery record');
+  record.images=record.images.filter(img=>img&&typeof img.id==='string'&&safeResource(img.path));
+  galleryRecords.set(id,record);
+  return record;
+}
+window.measureGalleryForAdvertiser=galleryForAdvertiser;
+window.measureFetchGalleryRecord=fetchGalleryRecord;
+function galleryPage(record){
+  if(!record)return notFound();
+  const images=record.images||[];
+  return `${edition()}<header class="page-head gallery-page-head"><span class="eyebrow">PHOTO COLLECTION / THE MEASURE</span>
+    <h1>${escapeHTML(record.title)}<span class="accent-word">.</span></h1>
+    ${record.description?`<p>${escapeHTML(record.description)}</p>`:''}
+    <div class="gallery-page-meta">${formatDate(record)} / ${images.length} IMAGES${record.advertiser?' / '+escapeHTML(record.advertiser):''}</div>
+    </header><section class="gallery-public-grid" aria-label="${escapeHTML(record.title)} images">${images.map((image,index)=>{
+      const path=safeResource(image.path);
+      return `<button type="button" class="gallery-public-card" data-gallery-slide="${index}" aria-label="Open image ${index+1} of ${images.length}">
+       <img src="${escapeHTML(path)}" alt="${escapeHTML(image.alt||'')}" loading="lazy"><span><b>${String(index+1).padStart(2,'0')}</b>${image.caption?' / '+escapeHTML(image.caption):''}</span></button>`;
+    }).join('')}</section><div class="article-end"><a href="#/section/${encodeURIComponent(record.section||'humor')}">← Back to ${escapeHTML(categoryLabel(record))}</a></div>`;
+}
 function singleArticle(a) {
   const special = isSpecial(a), pdf = pdfLink(a), primary = articleSections(a)[0] || 'thinkpieces';
   const picture = a.type === 'media' ? safeResource(a.image || a.url) : '';
@@ -1468,6 +1555,7 @@ function route() {
   const path = (window.location.hash || '#/').slice(1).split('?')[0];
   if (path === '/series') return {type:'series-index'};
   if (path.startsWith('/series/')) return {type:'series',id:decodeURIComponent(path.slice('/series/'.length))};
+  if (path.startsWith('/gallery/')) return {type: 'gallery',id:decodeURIComponent(path.slice('/gallery/'.length))};
   if (path.startsWith('/article/')) return { type: 'article', id: decodeURIComponent(path.slice('/article/'.length)) };
   if (path.startsWith('/section/')) return { type: 'section', id: decodeURIComponent(path.slice('/section/'.length)) };
   if (path === '/specials') return { type: 'section', id: 'special-reports' };
@@ -1478,7 +1566,7 @@ function route() {
 }
 function routeDirectory(r) {
   if (r.type === 'section') return { list: section(r.id) ? inSection(r.id) : [], label: section(r.id)?.name || 'INDEX' };
-  if (r.type === 'article') {
+  if (r.type === 'article' || r.type === 'gallery') {
     const a = content.articles.find(x => x.id === r.id);
     if (a) return { list: inSection(articleSections(a)[0]), label: section(articleSections(a)[0])?.name || 'INDEX' };
   }
@@ -1509,7 +1597,7 @@ function mountSectionNav() {
 }
 function updateNavigation(r) {
   let active = r.type === 'section' ? r.id : null;
-  if (r.type === 'article') {
+  if (r.type === 'article' || r.type === 'gallery') {
     const a = content.articles.find(x => x.id === r.id);
     active = a ? articleSections(a)[0] : null;
   }
@@ -1577,6 +1665,11 @@ async function render(preserveScroll = false) {
   if (!content) return;
   const renderId = ++currentRender;
   const r = route();
+  if(r.type === 'gallery' && !galleryRecords.has(r.id)) {
+    main.innerHTML = '<p class="initial-loading">LOADING GALLERY…</p>';
+    try {await fetchGalleryRecord(r.id);}catch(error) {if(renderId===currentRender)main.innerHTML=`${edition()}<header class="page-head"><h1>Gallery unavailable.</h1><p>${escapeHTML(error.message)}</p></header>`;return;}
+    if(renderId!==currentRender)return;
+  }
   clearArticleToc();
   if (r.type === 'article') {
     const entry = content.articles.find(a => a.id === r.id);
@@ -1610,6 +1703,7 @@ async function render(preserveScroll = false) {
   updateNavigation(r);
   if (r.type === 'home') main.innerHTML = frontPage();
   else if (r.type === 'section') main.innerHTML = sectionListing(r.id);
+  else if (r.type === 'gallery') main.innerHTML = galleryPage(galleryRecords.get(r.id));
   else if (r.type === 'archive') main.innerHTML = archive();
   else if (r.type === 'about') main.innerHTML = about();
   else if (r.type === 'series-index') main.innerHTML = seriesListing();
@@ -1628,8 +1722,9 @@ async function render(preserveScroll = false) {
   if (seriesLink) (r.type === 'series-index' || r.type === 'series') ? seriesLink.setAttribute('aria-current','page') : seriesLink.removeAttribute('aria-current');
   if (!searchPanel.hidden && searchInput.value.trim()) renderSearch();
   const a = r.type === 'article' ? content.articles.find(x => x.id === r.id) : null;
+  const gallery = r.type === 'gallery' ? galleryRecords.get(r.id) : null;
   const record = r.type === 'series' ? seriesRecords.get(r.id) : null;
-  document.title = `${a ? a.title : record ? record.title : r.type === 'section' ? section(r.id)?.name || 'Not found' : {home:'Front page',archive:'Archive',about:'About','series-index':'Series'}[r.type] || 'The Measure'} — The Measure`;
+  document.title = `${a ? a.title : gallery ? gallery.title : record ? record.title : r.type === 'section' ? section(r.id)?.name || 'Not found' : {home:'Front page',archive:'Archive',about:'About','series-index':'Series'}[r.type] || 'The Measure'} — The Measure`;
   const share = document.getElementById('copy-article-link');
   if (share) share.addEventListener('click', async () => {
     const original = share.textContent;
@@ -1662,6 +1757,7 @@ searchResults.addEventListener('click', event => {
 });
 
 function manifestMediaToRail(item) {
+  if (item.type === 'gallery') return {id:item.id,kind:'gallery',title:item.title,image:item.image||'',href:`#/gallery/${encodeURIComponent(item.id)}`,label:'PHOTO GALLERY'};
   const pdf = item.type === 'pdf' || item.mediaType === 'pdf';
   const tags = Array.isArray(item.tags) ? item.tags : [];
   const isParodyAd = item.mediaKind === 'ad' || (!item.mediaKind && tags.some(t => /^(?:ad|advert|parody-ad|sponsored)$/i.test(t)));
@@ -1688,16 +1784,18 @@ async function loadGithubCatalog() {
     if (!item || typeof item.id !== 'string' || typeof item.title !== 'string') return false;
     if (ids.has(item.id)) throw new Error('Duplicate publication ID: '+item.id);
     ids.add(item.id);
-    return ['article','media','pdf'].includes(item.type);
+    return ['article','media','pdf','gallery'].includes(item.type);
   });
   content.articles = records.filter(item => item.mediaKind !== "ad");
+  publicGalleries=records.filter(item=>item.type==='gallery').sort((a,b)=>String(b.published||'').localeCompare(String(a.published||'')));
   const latestTextArticles = records.filter(item => item.type === 'article' && item.mediaKind !== 'ad')
     .sort((a,b) => String(b.published || b.date || '').localeCompare(String(a.published || a.date || '')))
     .slice(0, 10).map(item => ({kind:'article', id:item.id, title:item.title, date:item.date || item.published || '',
       classification:item.classification || '', image:item.directory?.image || '',
       href:`#/article/${encodeURIComponent(item.id)}`}));
   const mediaTiles = records.filter(item => item.type === 'media' || item.type === 'pdf').map(manifestMediaToRail);
-  content.lowerRegister.items = [...latestTextArticles, ...mediaTiles];
+  const galleryTiles = publicGalleries.map(manifestMediaToRail);
+  content.lowerRegister.items = [...latestTextArticles, ...mediaTiles, ...galleryTiles];
 }
 /* SNIPE phi-labs.series.v1 reader. Optional, independent of manifest.json. */
 const SERIES_SCHEMA = 'phi-labs.series.v1';
@@ -1722,7 +1820,7 @@ const seriesCoverSafe = input => {
   const src = String(input || '').trim();
   if (!src || /[\s<>"'\\]/.test(src)) return '';
   if (/^https:\/\/[^\s]+$/i.test(src)) return src;
-  if (/^(?:images|articles)\/[a-z0-9_.\/-]+$/i.test(src) && !src.split('/').includes('..') && !src.includes('//')) return src;
+  if (/^(?:images|articles|galleries)\/[a-z0-9_.\/-]+$/i.test(src) && !src.split('/').includes('..') && !src.includes('//')) return src;
   return '';
 };
 function seriesEntryArticleId(entry) {
@@ -1858,6 +1956,7 @@ async function loadSeriesCatalog() {
     console.warn('Optional series index unavailable:', error);
   }
 }
+main.addEventListener('click',event=>{const button=event.target.closest('[data-gallery-slide]');if(!button)return;const r=route();if(r.type==='gallery'){const record=galleryRecords.get(r.id);if(record)window.measureOpenCollectionGallery?.(record,Number(button.dataset.gallerySlide),button);}});
 window.addEventListener('hashchange', () => render());
 (async function initialize() {
   try {
