@@ -21,5 +21,10 @@
   "directory": {
     "style": "none"
   },
-  "advertiser": "<3baby"
+  "advertiser": "<3baby",
+  "thumbnail": {
+    "x": 50,
+    "y": 17.742153041716847,
+    "zoom": 1
+  }
 }

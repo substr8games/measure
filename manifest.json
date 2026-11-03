@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-03T04:44:26.060Z",
+  "updatedAt": "2026-11-03T05:05:32.292Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -107,7 +107,12 @@
       "directory": {
         "style": "none"
       },
-      "advertiser": "<3baby"
+      "advertiser": "<3baby",
+      "thumbnail": {
+        "x": 50,
+        "y": 17.742153041716847,
+        "zoom": 1
+      }
     },
     {
       "schema": "phi-labs.media.v1",
