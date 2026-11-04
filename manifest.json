@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-04T18:42:22.118Z",
+  "updatedAt": "2026-11-04T21:26:07.374Z",
   "items": [
     {
       "id": "gallery-noxs-ad-department-6288eece",
@@ -200,6 +200,39 @@
       "directory": {
         "style": "thumbnail",
         "image": "images/media/research-business-model-61b24da5.png"
+      }
+    },
+    {
+      "id": "the-legacy-debt-exploit-and-the-bootstraps-hallucination",
+      "type": "article",
+      "title": "The Legacy Debt Exploit and the Bootstraps Hallucination",
+      "subtitle": "How a publicly built middle class became a privately guarded asset—and why its beneficiaries now call the access problem a character flaw.",
+      "summary": "How a publicly built middle class became a privately guarded asset—and why its beneficiaries now call the access problem a character flaw.",
+      "section": "thinkpieces",
+      "sections": [
+        "thinkpieces"
+      ],
+      "tags": [
+        "boomers",
+        "architecture",
+        "responsibility",
+        "theft",
+        "fraud",
+        "lies"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-04",
+      "date": "2026-11-04",
+      "updatedAt": "2026-11-04T21:26:01.367Z",
+      "readingMinutes": 9,
+      "classification": "copy",
+      "content": "articles/the-legacy-debt-exploit-and-the-bootstraps-hallucination.json",
+      "url": "#/article/the-legacy-debt-exploit-and-the-bootstraps-hallucination",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
       }
     },
     {
