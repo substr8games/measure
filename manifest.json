@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-04T01:45:34.138Z",
+  "updatedAt": "2026-11-04T13:57:04.258Z",
   "items": [
     {
       "id": "gallery-noxs-ad-department-6288eece",
@@ -28,6 +28,37 @@
       "directory": {
         "style": "thumbnail",
         "image": "images/galleries/gallery-noxs-ad-department-6288eece/a5dda242-6812-4cc3-ba3e-61d8afa6a445.png"
+      }
+    },
+    {
+      "schema": "phi-labs.media.v1",
+      "id": "kill-all-dolphin-085cd415",
+      "type": "media",
+      "mediaType": "image",
+      "mediaKind": "funny",
+      "title": "kill all dolphin",
+      "summary": "",
+      "blurb": "",
+      "advertiser": "",
+      "galleryId": "",
+      "viewerImage": "",
+      "viewerCaption": "",
+      "tags": [],
+      "section": "curiosities",
+      "sections": [
+        "curiosities"
+      ],
+      "date": "2026-11-04",
+      "published": "2026-11-04",
+      "url": "images/media/kill-all-dolphin-085cd415.png",
+      "image": "images/media/kill-all-dolphin-085cd415.png",
+      "pdf": "",
+      "file": "images/media/kill-all-dolphin-085cd415.png",
+      "originalFilename": "fuck-you-dolphin.png",
+      "mimeType": "image/png",
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/media/kill-all-dolphin-085cd415.png"
       }
     },
     {
