@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-04T13:57:04.258Z",
+  "updatedAt": "2026-11-04T13:59:43.735Z",
   "items": [
     {
       "id": "gallery-noxs-ad-department-6288eece",
@@ -102,6 +102,37 @@
         "style": "none"
       },
       "galleryId": "gallery-noxs-ad-department-6288eece"
+    },
+    {
+      "schema": "phi-labs.media.v1",
+      "id": "the-structure-of-things-visual-guide-983204a0",
+      "type": "media",
+      "mediaType": "image",
+      "mediaKind": "funny",
+      "title": "The Structure of Things Visual Guide",
+      "summary": "grade A structuralist propaganda",
+      "blurb": "grade A structuralist propaganda",
+      "advertiser": "",
+      "galleryId": "",
+      "viewerImage": "",
+      "viewerCaption": "",
+      "tags": [],
+      "section": "curiosities",
+      "sections": [
+        "curiosities"
+      ],
+      "date": "2026-11-04",
+      "published": "2026-11-04",
+      "url": "images/media/the-structure-of-things-visual-guide-983204a0.png",
+      "image": "images/media/the-structure-of-things-visual-guide-983204a0.png",
+      "pdf": "",
+      "file": "images/media/the-structure-of-things-visual-guide-983204a0.png",
+      "originalFilename": "structuralist-visual-guide.png",
+      "mimeType": "image/png",
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/media/the-structure-of-things-visual-guide-983204a0.png"
+      }
     },
     {
       "schema": "phi-labs.media.v1",
