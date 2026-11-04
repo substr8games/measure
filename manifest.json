@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-04T01:31:07.810Z",
+  "updatedAt": "2026-11-04T01:41:06.466Z",
   "items": [
     {
       "id": "gallery-noxs-ad-department-6288eece",
@@ -453,9 +453,9 @@
       "sidebar": {
         "enabled": true,
         "thumbnail": {
-          "x": 56.267429214814825,
-          "y": 18.943313046567354,
-          "zoom": 1.85
+          "x": 50.86875535481185,
+          "y": 71.73184041706924,
+          "zoom": 1.45
         }
       },
       "tags": [
@@ -475,7 +475,8 @@
       "mimeType": "image/png",
       "directory": {
         "style": "none"
-      }
+      },
+      "galleryId": "gallery-noxs-ad-department-6288eece"
     },
     {
       "schema": "phi-labs.media.v1",

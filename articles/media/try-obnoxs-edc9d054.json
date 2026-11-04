@@ -19,9 +19,9 @@
   "sidebar": {
     "enabled": true,
     "thumbnail": {
-      "x": 56.267429214814825,
-      "y": 18.943313046567354,
-      "zoom": 1.85
+      "x": 50.86875535481185,
+      "y": 71.73184041706924,
+      "zoom": 1.45
     }
   },
   "tags": [
@@ -41,5 +41,6 @@
   "mimeType": "image/png",
   "directory": {
     "style": "none"
-  }
+  },
+  "galleryId": "gallery-noxs-ad-department-6288eece"
 }
