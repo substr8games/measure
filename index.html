@@ -1019,6 +1019,96 @@ body { font-size:16px; }
 .class-signup-dialog .class-dialog-close {border:0;background:transparent;color:var(--gold);font-size:20px;cursor:pointer;}
 @media (max-width:1190px) { .classifieds-route .reading-column {width:min(930px,calc(100% - 70px));} }
 @media (max-width:760px) { .classifieds-route .reading-column {width:calc(100% - 38px);} .class-browser {grid-template-columns:1fr;} .class-index {border-right:0;border-bottom:1px solid var(--gold-soft);} .class-index-list {max-height:210px;} .class-reader {padding:0 16px 28px;} .class-category-list {display:grid;grid-template-columns:1fr 1fr;} .class-comment-children {padding-left:11px;} }
+/* REV32 / consistent artwork sizing and full-resolution inspection. */
+:root { --measure-image-width: 1080px; }
+/* Images remain inside the publication grid; the lightbox owns full resolution. */
+.article-body :is(figure, .media-figure) { max-width: 720px; margin-inline: auto; }
+.article-body :is(img, picture), .media-figure img { display:block; max-width: min(100%, 720px); height:auto; margin-inline:auto; }
+.article-body :is(.editorial-grid, .editorial-split) img { max-width:100%; }
+.class-artwork { width:fit-content; max-width:100%; margin-inline:auto; }
+.class-artwork img { width:auto; height:auto; max-width:min(100%, 520px); max-height:520px; object-fit:contain; }
+.article-body img, .media-figure img, .class-artwork img { cursor:zoom-in; }
+/* A poster is an image first, not a tiny illustration next to a giant sidebar. */
+.poster-dialog:not(.poster-dialog--ad) {
+  width:fit-content; max-width:calc(100vw - 20px); max-height:calc(100dvh - 20px);
+  overflow:auto;
+}
+.poster-dialog:not(.poster-dialog--ad) .poster-dialog-body {
+  display:flex; flex-direction:column; align-items:center; gap:14px;
+  padding:14px 18px 18px; width:fit-content; max-width:100%;
+}
+.poster-dialog:not(.poster-dialog--ad) #poster-dialog-image {
+  display:block; width:auto; height:auto; max-width:min(var(--measure-image-width),calc(100vw - 62px));
+  max-height:calc(100dvh - 195px); object-fit:contain; margin:auto;
+  background:transparent; cursor:zoom-in;
+}
+.poster-dialog:not(.poster-dialog--ad) .poster-dialog-notes {
+  width:100%; max-width:var(--measure-image-width); min-width:0; padding:0 2px;
+}
+.poster-dialog:not(.poster-dialog--ad) .poster-dialog-notes h2 { margin:0 0 5px; font-size:16px; }
+.poster-dialog:not(.poster-dialog--ad) .poster-dialog-notes p { line-height:1.55; }
+/* Gallery slides follow exactly the same large-image rule. */
+.poster-dialog--ad {max-width:calc(100vw - 20px);}
+.poster-dialog--ad .poster-dialog-body {max-width:100%;}
+.poster-dialog--ad #poster-dialog-image {
+  max-width:min(var(--measure-image-width),calc(100vw - 62px));
+  max-height:calc(100dvh - 245px);
+  cursor:zoom-in;
+}
+.poster-dialog--ad .poster-dialog-notes,
+.poster-dialog--ad .poster-gallery-thumbnails { max-width:var(--measure-image-width); }
+.poster-dialog-expand {
+  font:inherit; border:1px solid var(--gold-soft); color:var(--gold); background:transparent;
+  padding:6px 11px; font-size:10px; letter-spacing:.08em; margin-left:auto;
+}
+.poster-dialog-expand:hover { border-color:var(--gold); color:var(--white); }
+/* Full-screen artwork viewer: fit <= 1080px, or inspect native 1:1 pixels. */
+.image-viewer {
+  padding:0; border:1px solid var(--gold); background:#0a1018; color:var(--white);
+  width:calc(100vw - 20px); max-width:none; height:calc(100dvh - 20px);
+  max-height:none; box-shadow:0 26px 85px rgba(0,0,0,.8);
+}
+.image-viewer[open] {display:flex; flex-direction:column;}
+.image-viewer::backdrop {background:rgba(2,5,10,.94);}
+.image-viewer-toolbar {
+  display:flex; flex-wrap:wrap; align-items:center; gap:10px; flex:0 0 auto;
+  padding:10px 15px; background:var(--background-deep);
+  border-bottom:1px solid var(--gold-soft); font-size:10px; letter-spacing:.08em;
+}
+.image-viewer-name {color:var(--gold);font-weight:700;min-width:0;max-width:50%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.image-viewer-actions {margin-left:auto;display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+.image-viewer-toolbar button, .image-viewer-toolbar a {
+  border:1px solid var(--gold-soft); color:var(--muted); background:transparent; padding:7px 11px;
+  text-decoration:none; text-transform:uppercase; font:inherit; letter-spacing:.075em;
+}
+.image-viewer-toolbar button:hover, .image-viewer-toolbar a:hover,
+.image-viewer-toolbar button[aria-pressed="true"] {border-color:var(--gold);color:var(--white);}
+.image-viewer-stage {
+  flex:1 1 auto; min-height:0; overflow:auto; padding:15px; display:flex;
+  justify-content:center;align-items:center; scrollbar-width:thin;
+}
+.image-viewer-stage img {
+  display:block; width:auto; height:auto; max-width:min(var(--measure-image-width), 100%);
+  max-height:calc(100dvh - 135px); object-fit:contain; background:transparent;
+  cursor:zoom-in;
+}
+.image-viewer-stage.is-actual {display:block; text-align:center;}
+.image-viewer-stage.is-actual img {
+  max-width:none; max-height:none; margin:0 auto; cursor:zoom-out;
+}
+.image-viewer-caption {border-top:1px solid var(--gold-subtle);padding:10px 16px;color:var(--muted);font-size:11px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere;max-height:80px;overflow:auto;}
+.image-viewer-caption:empty {display:none;}
+.image-viewer-target {cursor:zoom-in;}
+@media(max-width:590px) {
+  .poster-dialog:not(.poster-dialog--ad) .poster-dialog-body {padding:10px;}
+  .poster-dialog:not(.poster-dialog--ad) #poster-dialog-image {max-width:calc(100vw - 42px);}
+  .poster-dialog-expand {margin-left:0;padding:5px 7px;font-size:9px;}
+  .image-viewer-toolbar {padding:9px;gap:7px;}
+  .image-viewer-name {max-width:100%;width:100%;}
+  .image-viewer-actions {margin-left:0;gap:6px;}
+  .image-viewer-toolbar button,.image-viewer-toolbar a {padding:6px 8px;font-size:9px;}
+  .image-viewer-stage {padding:8px;}
+}
   </style>
 </head>
 <body>
@@ -1089,6 +1179,19 @@ body { font-size:16px; }
   <dialog class="poster-dialog" id="poster-dialog" aria-labelledby="poster-dialog-title">
     <div class="poster-dialog-bar"><span id="poster-dialog-kind">VISUAL COMMENTARY</span><div class="poster-gallery-tools" id="poster-gallery-tools" hidden><button class="poster-gallery-arrow" id="poster-gallery-prev" type="button" aria-label="Previous advertisement">←</button><span id="poster-gallery-count" aria-live="polite"></span><button class="poster-gallery-arrow" id="poster-gallery-next" type="button" aria-label="Next advertisement">→</button></div><button class="poster-dialog-close" id="poster-dialog-close" type="button" aria-label="Close poster viewer">CLOSE ×</button></div>
     <div class="poster-dialog-body"><img id="poster-dialog-image" src="" alt=""><div class="poster-dialog-notes"><h2 id="poster-dialog-title"></h2><p id="poster-dialog-caption"></p></div><div class="poster-gallery-thumbnails" id="poster-gallery-thumbnails" role="group" aria-label="Advertiser gallery" hidden></div></div>
+  </dialog>
+  <dialog id="image-viewer" class="image-viewer" aria-label="Full-size image viewer">
+    <div class="image-viewer-toolbar">
+      <span id="image-viewer-name" class="image-viewer-name">THE MEASURE / IMAGE</span>
+      <div class="image-viewer-actions">
+        <button id="image-viewer-fit" type="button" aria-pressed="true">FIT</button>
+        <button id="image-viewer-actual" type="button" aria-pressed="false">100%</button>
+        <a id="image-viewer-original" target="_blank" rel="noopener">OPEN ORIGINAL ↗</a>
+        <button id="image-viewer-close" type="button">CLOSE ×</button>
+      </div>
+    </div>
+    <div class="image-viewer-stage" id="image-viewer-stage"><img id="image-viewer-image" alt=""></div>
+    <div class="image-viewer-caption" id="image-viewer-caption"></div>
   </dialog>
   <footer class="site-footer" id="site-footer">
     <div><span class="footer-mark">Φ</span> THE MEASURE <span class="footer-separator">&#60;/3</span> BUILD GAMES. MAKE ART.<span class="footer-separator"> ;] </span> PHI LABS. </div>
@@ -2264,6 +2367,141 @@ window.addEventListener('hashchange', () => render());
 })();
 
 
+  </script>
+  <script>
+/* REV32 / one image inspector for in-article, classified, and gallery artwork. */
+(() => {
+  'use strict';
+  const viewer = document.getElementById('image-viewer');
+  const stage = document.getElementById('image-viewer-stage');
+  const art = document.getElementById('image-viewer-image');
+  const name = document.getElementById('image-viewer-name');
+  const caption = document.getElementById('image-viewer-caption');
+  const original = document.getElementById('image-viewer-original');
+  const fit = document.getElementById('image-viewer-fit');
+  const actual = document.getElementById('image-viewer-actual');
+  const close = document.getElementById('image-viewer-close');
+  const poster = document.getElementById('poster-dialog');
+  const posterImage = document.getElementById('poster-dialog-image');
+  const main = document.getElementById('main');
+  let opener = null;
+
+  function setActual(enabled) {
+    stage.classList.toggle('is-actual',enabled);
+    fit.setAttribute('aria-pressed',String(!enabled));
+    actual.setAttribute('aria-pressed',String(enabled));
+    stage.scrollTo(0,0);
+  }
+  // Only same-origin published art is admitted, never arbitrary external URLs.
+  function openImage(src, title = '', description = '', source = null) {
+    if (!src) return false;
+    let url;
+    try { url = new URL(src,document.baseURI); }
+    catch (_) { return false; }
+    if (url.origin !== location.origin || !/^https?:$/.test(url.protocol) && url.protocol !== 'file:') return false;
+    opener = source;
+    art.src = url.href;
+    art.alt = title || 'Publication image';
+    name.textContent = title || 'THE MEASURE / IMAGE';
+    caption.textContent = description;
+    original.href = url.href;
+    setActual(false);
+    if (!viewer.open) viewer.showModal();
+    return true;
+  }
+  window.measureOpenImageViewer = openImage;
+  fit.addEventListener('click', () => setActual(false));
+  actual.addEventListener('click', () => setActual(true));
+  close.addEventListener('click', () => viewer.close());
+  art.addEventListener('click', () => setActual(!stage.classList.contains('is-actual')));
+  viewer.addEventListener('click', event => { if (event.target === viewer) viewer.close(); });
+  viewer.addEventListener('close', () => {
+    art.removeAttribute('src');
+    if (opener?.isConnected) opener.focus({preventScroll:true});
+    opener = null;
+  });
+  art.addEventListener('error', () => { caption.textContent = 'Image unavailable.'; });
+
+  function imageTitle(img) {
+    const classified = img.closest('.class-reader');
+    if (classified) return classified.querySelector('.class-post-header h2')?.textContent?.trim() || 'CLASSIFIED / IMAGE';
+    const article = img.closest('.article-content');
+    if (article) return article.querySelector('.article-head h1')?.textContent?.trim() || 'ARTICLE / IMAGE';
+    return img.alt?.trim() || img.closest('a')?.getAttribute('aria-label') || 'THE MEASURE / IMAGE';
+  }
+  function imageCaption(img) {
+    return img.closest('figure')?.querySelector('figcaption')?.textContent?.trim() || '';
+  }
+  function openFromImg(img) {
+    return openImage(img.currentSrc || img.getAttribute('src'),imageTitle(img),imageCaption(img),img);
+  }
+  // The gallery has its own prev/next viewer; its images already open that viewer.
+  // Every other publication image, including cover thumbnails, opens this inspector.
+  main.addEventListener('click', event => {
+    const img = event.target.closest('img');
+    if (!img || img.closest('.gallery-public-card')) return;
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+    if (openFromImg(img)) {event.preventDefault();event.stopImmediatePropagation();}
+  }, true);
+  main.addEventListener('keydown', event => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    const img = event.target.closest('img.image-viewer-target');
+    if (!img) return;
+    if (openFromImg(img)) {event.preventDefault();event.stopImmediatePropagation();}
+  },true);
+  function decorateImages() {
+    main.querySelectorAll('img:not(.image-viewer-target)').forEach(img => {
+      if (img.closest('.gallery-public-card')) return;
+      img.classList.add('image-viewer-target');
+      img.title = 'View full-size image';
+      if (!img.closest('a, button')) {
+        img.tabIndex = 0;
+        img.setAttribute('role','button');
+        img.setAttribute('aria-label', 'View full-size image: ' + imageTitle(img));
+      }
+    });
+  }
+  new MutationObserver(decorateImages).observe(main,{childList:true,subtree:true});
+  decorateImages();
+
+  // Image clicks in the Lower Register and sidebar open artwork; labels still navigate.
+  function railImageClick(event) {
+    const img = event.target.closest('img');
+    if (!img || event.button !== 0 || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+    const item = img.closest('.dispatch-tile, .left-rail-ad-button');
+    const title = item?.querySelector('strong')?.textContent?.trim() ||
+      item?.getAttribute('aria-label') || img.alt || 'THE MEASURE / IMAGE';
+    if (openImage(img.currentSrc || img.getAttribute('src'),title,'',img)) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+  }
+  document.getElementById('dispatch-track')?.addEventListener('click',railImageClick,true);
+  document.getElementById('left-rail-ad-button')?.addEventListener('click',railImageClick,true);
+  // Lower Register graphics and the existing advertiser gallery gain native-size access.
+  const posterBar = poster?.querySelector('.poster-dialog-bar');
+  if (posterBar && posterImage) {
+    const expand = document.createElement('button');
+    expand.className = 'poster-dialog-expand';
+    expand.type = 'button';
+    expand.textContent = 'FULL SIZE ↗';
+    expand.setAttribute('aria-label','Inspect the current artwork at full resolution');
+    posterBar.insertBefore(expand,document.getElementById('poster-dialog-close'));
+    function posterExpand() {
+      const title = document.getElementById('poster-dialog-title')?.textContent?.trim() || posterImage.alt || 'VISUAL COMMENTARY';
+      const description = document.getElementById('poster-dialog-caption')?.textContent?.trim() || '';
+      openImage(posterImage.currentSrc || posterImage.getAttribute('src'),title,description,expand);
+    }
+    expand.addEventListener('click',posterExpand);
+    posterImage.addEventListener('click',posterExpand);
+    posterImage.tabIndex = 0;
+    posterImage.setAttribute('role','button');
+    posterImage.setAttribute('aria-label','View current artwork at full resolution');
+    posterImage.addEventListener('keydown', event => {
+      if(event.key==='Enter'||event.key===' ') {event.preventDefault();posterExpand();}
+    });
+  }
+})();
   </script>
 </body>
 </html>
