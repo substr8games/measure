@@ -1,0 +1,31 @@
+{
+  "schema": "phi-labs.media.v1",
+  "id": "research-business-model-61b24da5",
+  "type": "media",
+  "mediaType": "image",
+  "mediaKind": "funny",
+  "title": "",
+  "summary": "",
+  "blurb": "",
+  "advertiser": "",
+  "galleryId": "",
+  "viewerImage": "",
+  "viewerCaption": "",
+  "tags": [],
+  "section": "curiosities",
+  "sections": [
+    "curiosities"
+  ],
+  "date": "2026-11-04",
+  "published": "2026-11-04",
+  "url": "images/media/research-business-model-61b24da5.png",
+  "image": "images/media/research-business-model-61b24da5.png",
+  "pdf": "",
+  "file": "images/media/research-business-model-61b24da5.png",
+  "originalFilename": "research-business-model.png",
+  "mimeType": "image/png",
+  "directory": {
+    "style": "thumbnail",
+    "image": "images/media/research-business-model-61b24da5.png"
+  }
+}
