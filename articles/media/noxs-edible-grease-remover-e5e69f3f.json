@@ -1,0 +1,41 @@
+{
+  "schema": "phi-labs.media.v1",
+  "id": "noxs-edible-grease-remover-e5e69f3f",
+  "type": "media",
+  "mediaType": "image",
+  "mediaKind": "ad",
+  "title": "",
+  "summary": "",
+  "blurb": "",
+  "advertiser": "NoXS",
+  "viewerImage": "",
+  "viewerCaption": "",
+  "lowerRegisterEnabled": true,
+  "thumbnail": {
+    "x": 10.251384797643441,
+    "y": 0,
+    "zoom": 2.25
+  },
+  "sidebar": {
+    "enabled": true,
+    "thumbnail": {
+      "x": 98.89438742458232,
+      "y": 50,
+      "zoom": 1
+    }
+  },
+  "tags": [],
+  "section": "humor",
+  "sections": [],
+  "date": "2026-11-04",
+  "published": "2026-11-04",
+  "url": "images/media/noxs-edible-grease-remover-e5e69f3f.png",
+  "image": "images/media/noxs-edible-grease-remover-e5e69f3f.png",
+  "pdf": "",
+  "file": "images/media/noxs-edible-grease-remover-e5e69f3f.png",
+  "originalFilename": "NoXS-edible-grease-remover.png",
+  "mimeType": "image/png",
+  "directory": {
+    "style": "none"
+  }
+}
