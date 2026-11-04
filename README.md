@@ -1,13 +1,10 @@
-# The Measure Rev26 — SEO public-site shell
+The Measure — Rev29 / Curiosities section
 
-Overlay root: The Measure website GitHub Pages repository root. Replace only `index.html`.
+Install: replace index.html in The Measure website repository root.
 
-- Adds a homepage canonical link and Open Graph metadata.
-- Adds a sitemap discovery link pointing to `sitemap.xml`.
-- Links to the real `read/` static article archive in the site footer.
-- Adds a usable no-JavaScript link to the public article archive.
-- Preserves the Rev25 ad/gallery routing, styling, galleries and content warning.
-
-The physical `read/` HTML pages and `sitemap.xml` are created by SNIPE's **Build SEO pages + sitemap** command. Run it after installing the SNIPE overlay, then deploy this website overlay.
-
-The website remains under its existing host and project path; no reverse proxy or server rewrite is needed.
+- Renames Humor to Curiosities in navigation and editorial descriptions.
+- New section covers art, memes, educational material, and visual experiments.
+- Legacy records filed under "humor" are displayed in Curiosities automatically.
+- Existing #/section/humor links continue to resolve to Curiosities.
+- No manifest rewrite or republishing required for the website section change.
+- Preserves Rev28 density, masthead, TOC, and Rev25 galleries.
