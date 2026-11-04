@@ -1,8 +1,35 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-03T19:58:59.403Z",
+  "updatedAt": "2026-11-04T01:01:43.926Z",
   "items": [
+    {
+      "id": "gallery-noxs-ad-department-6288eece",
+      "type": "gallery",
+      "title": "NoXS Ad Department",
+      "summary": "Deterministic compiler for the modern psychopath.",
+      "advertiser": "NoXS",
+      "section": "humor",
+      "sections": [
+        "humor"
+      ],
+      "date": "2026-11-04",
+      "published": "2026-11-04",
+      "tags": [
+        "engine",
+        "programming",
+        "computers",
+        "science"
+      ],
+      "image": "images/galleries/gallery-noxs-ad-department-6288eece/a5dda242-6812-4cc3-ba3e-61d8afa6a445.png",
+      "imageCount": 1,
+      "content": "galleries/gallery-noxs-ad-department-6288eece.json",
+      "url": "#/gallery/gallery-noxs-ad-department-6288eece",
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/galleries/gallery-noxs-ad-department-6288eece/a5dda242-6812-4cc3-ba3e-61d8afa6a445.png"
+      }
+    },
     {
       "schema": "phi-labs.media.v1",
       "id": "attention-economy-3d609df9",

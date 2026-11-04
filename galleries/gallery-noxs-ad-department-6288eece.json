@@ -1,0 +1,32 @@
+{
+  "schema": "phi-labs.gallery.v1",
+  "id": "gallery-noxs-ad-department-6288eece",
+  "type": "gallery",
+  "title": "NoXS Ad Department",
+  "description": "Deterministic compiler for the modern psychopath.",
+  "advertiser": "NoXS",
+  "section": "humor",
+  "sections": [
+    "humor"
+  ],
+  "date": "2026-11-04",
+  "published": "2026-11-04",
+  "tags": [
+    "engine",
+    "programming",
+    "computers",
+    "science"
+  ],
+  "coverId": "a5dda242-6812-4cc3-ba3e-61d8afa6a445",
+  "coverImage": "images/galleries/gallery-noxs-ad-department-6288eece/a5dda242-6812-4cc3-ba3e-61d8afa6a445.png",
+  "images": [
+    {
+      "id": "a5dda242-6812-4cc3-ba3e-61d8afa6a445",
+      "path": "images/galleries/gallery-noxs-ad-department-6288eece/a5dda242-6812-4cc3-ba3e-61d8afa6a445.png",
+      "originalFilename": "NoXS-edible-grease-remover-full.png",
+      "caption": "",
+      "alt": "NoXS edible grease remover full"
+    }
+  ],
+  "updatedAt": "2026-11-04T01:01:39.947Z"
+}
