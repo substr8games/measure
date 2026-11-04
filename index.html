@@ -966,6 +966,59 @@ body { font-size:16px; }
   .article-body p, .about-copy p { font-size: 14px; line-height: 1.7; }
   .timeline-copy strong { font-size: 11px; }
 }
+/* THE MEASURE / Curated Classifieds — newsgroup reader, editorial-only threads. */
+.classifieds-route .right-rail { display:none; }
+.classifieds-route .reading-column { width:min(1100px,calc(100% - 320px));max-width:1100px; }
+.classifieds-legend {font:700 9px/1.6 ui-monospace,monospace;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;}
+.classifieds-head {padding:22px 0 20px;border-bottom:1px solid var(--gold-soft);}
+.classifieds-head h1 {margin:7px 0 8px;font-size:clamp(27px,3.1vw,43px);letter-spacing:-.045em;color:var(--white);}
+.classifieds-head p {margin:0;font-size:11px;line-height:1.8;color:var(--muted);}
+.class-browser {display:grid;grid-template-columns:minmax(235px,32%) minmax(0,1fr);border:1px solid var(--gold-soft);margin-top:22px;min-height:500px;background:rgba(8,13,17,.55);}
+.class-index {border-right:1px solid var(--gold-soft);min-width:0;}
+.class-panel-head {padding:14px 15px 11px;border-bottom:1px solid var(--gold-soft);display:flex;align-items:center;justify-content:space-between;gap:9px;color:var(--gold);font:700 9px/1.4 ui-monospace,monospace;letter-spacing:.1em;}
+.class-panel-head small {color:var(--muted);letter-spacing:.04em;font-weight:normal;}
+.class-search {margin:11px 12px 9px;width:calc(100% - 24px);border:1px solid var(--line);background:var(--background-deep);color:var(--white);font:11px/1.5 ui-monospace,monospace;padding:9px;}
+.class-category-list {padding:0 9px 8px;border-bottom:1px solid var(--gold-subtle);}
+.class-category {font:10px/1.5 ui-monospace,monospace;text-decoration:none;display:flex;align-items:center;gap:6px;padding:7px 8px;color:var(--muted);background:none;border:0;width:100%;text-align:left;cursor:pointer;}
+.class-category:hover,.class-category[aria-current="true"] {color:var(--white);background:rgba(194,166,111,.08);}
+.class-category[aria-current="true"] .class-folder {color:var(--gold);}
+.class-category .class-folder {color:var(--subdued);}
+.class-category .class-count {color:var(--gold);margin-left:auto;font-size:9px;}
+.class-subhead {padding:13px 13px 9px;color:var(--gold);font:700 9px/1.3 ui-monospace,monospace;letter-spacing:.12em;}
+.class-index-list {max-height:540px;overflow-y:auto;}
+.class-subject {display:block;padding:12px 13px;border:0;border-top:1px solid var(--line);color:var(--white);text-decoration:none;}
+.class-subject:hover,.class-subject[aria-current="page"] {background:rgba(194,166,111,.085);}
+.class-subject strong {font:700 11px/1.5 ui-monospace,monospace;display:block;overflow-wrap:anywhere;}
+.class-subject span {display:block;margin-top:5px;font:9px/1.5 ui-monospace,monospace;color:var(--muted);}
+.class-subject .class-replies {float:right;color:var(--gold);}
+.class-reader {padding:0 23px 28px;min-width:0;}
+.class-post-header {border-bottom:1px solid var(--gold-subtle);padding:26px 0 19px;}
+.class-post-header h2 {font-size:clamp(21px,2.35vw,32px);color:var(--white);line-height:1.35;letter-spacing:-.045em;margin:11px 0 15px;overflow-wrap:anywhere;}
+.class-post-meta {display:flex;gap:8px 18px;flex-wrap:wrap;color:var(--muted);font:9px/1.6 ui-monospace,monospace;letter-spacing:.055em;}
+.class-post-meta strong {color:var(--gold);}
+.class-artwork {margin:18px 0 10px;border:1px solid var(--gold-subtle);padding:8px;background:var(--background-deep);}.class-artwork img{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;}
+.class-post-body {font:13px/1.95 ui-monospace,monospace;color:var(--text);padding:14px 0 19px;white-space:pre-wrap;overflow-wrap:anywhere;}
+.class-signup {padding:9px 14px;border:1px solid var(--gold-soft);background:transparent;color:var(--gold);font:700 9px/1.5 ui-monospace,monospace;letter-spacing:.1em;cursor:pointer;text-align:left;}
+.class-signup:hover {background:rgba(194,166,111,.09);color:var(--white);}
+.class-thread-head {border-top:1px solid var(--gold-soft);padding:19px 0 13px;margin-top:28px;color:var(--gold);font:700 10px/1.5 ui-monospace,monospace;letter-spacing:.11em;}
+.class-comment {margin:10px 0 12px;border-left:2px solid var(--gold-soft);padding:9px 0 9px 12px;min-width:0;}
+.class-comment[data-author="BETA"] {border-color:#f08bbc;}
+.class-comment[data-author="ARIS"] {border-color:#d78275;}
+.class-comment[data-author="JADE"] {border-color:#79d8a2;}
+.class-comment[data-author="LEGACY BITCH"] {border-color:#ad91e3;}
+.class-comment-meta {display:flex;flex-wrap:wrap;align-items:center;gap:7px 14px;color:var(--muted);font:9px/1.5 ui-monospace,monospace;}
+.class-comment-meta strong {color:var(--white);letter-spacing:.09em;}
+.class-comment-text {font:11.5px/1.9 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:9px 0 8px;color:var(--text);}
+.class-comment-children {padding-left:17px;}
+.class-comment .class-signup {padding:5px 9px;font-size:8px;}
+.class-empty {padding:22px 15px;color:var(--muted);font:11px/1.8 ui-monospace,monospace;}
+.class-signup-dialog {border:1px solid var(--gold);padding:0;width:min(460px,calc(100vw - 32px));max-width:100%;background:#10161b;color:var(--white);box-shadow:0 16px 60px rgba(0,0,0,.75);}
+.class-signup-dialog::backdrop {background:rgba(0,0,0,.82);}
+.class-signup-dialog .class-dialog-head {display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--gold-soft);color:var(--gold);font:700 10px ui-monospace,monospace;letter-spacing:.12em;}
+.class-signup-dialog p {font:13px/1.9 ui-monospace,monospace;padding:17px 20px 24px;margin:0;}
+.class-signup-dialog .class-dialog-close {border:0;background:transparent;color:var(--gold);font-size:20px;cursor:pointer;}
+@media (max-width:1190px) { .classifieds-route .reading-column {width:min(930px,calc(100% - 70px));} }
+@media (max-width:760px) { .classifieds-route .reading-column {width:calc(100% - 38px);} .class-browser {grid-template-columns:1fr;} .class-index {border-right:0;border-bottom:1px solid var(--gold-soft);} .class-index-list {max-height:210px;} .class-reader {padding:0 16px 28px;} .class-category-list {display:grid;grid-template-columns:1fr 1fr;} .class-comment-children {padding-left:11px;} }
   </style>
 </head>
 <body>
@@ -1015,6 +1068,10 @@ body { font-size:16px; }
       <div class="initial-loading" aria-live="polite">LOADING THE RECORD<span class="loading-dots">…</span></div>
     </main>
   </div>
+    <dialog id="class-signup-dialog" class="class-signup-dialog" aria-labelledby="class-dialog-title">
+      <div class="class-dialog-head"><span id="class-dialog-title">ACCOUNT ELIGIBILITY</span><button class="class-dialog-close" type="button" aria-label="Close" onclick="this.closest('dialog').close()">×</button></div>
+      <p>Our engagement metrics show you have not participated enough yet to Sign Up. Come back when you're a little ... richer.</p>
+    </dialog>
   <section class="dispatch-section" id="dispatch-section" aria-labelledby="dispatch-heading" hidden>
     <div class="dispatch-heading-row">
       <div class="dispatch-heading-copy">
@@ -1701,6 +1758,8 @@ function notFound() {
 }
 function route() {
   const path = (window.location.hash || '#/').slice(1).split('?')[0];
+  if (path === '/classifieds') return {type:'classified',id:''};
+  if (path.startsWith('/classifieds/')) return {type:'classified',id:decodeURIComponent(path.slice('/classifieds/'.length))};
   if (path === '/series') return {type:'series-index'};
   if (path.startsWith('/series/')) return {type:'series',id:decodeURIComponent(path.slice('/series/'.length))};
   if (path.startsWith('/gallery/')) return {type: 'gallery',id:decodeURIComponent(path.slice('/gallery/'.length))};
@@ -1742,9 +1801,10 @@ function mountSectionNav() {
   nav.innerHTML = sections.map(s =>
     `<a href="${sectionUrl(s.id)}" data-nav="${escapeHTML(s.id)}" class="${s.id === 'special-reports' ? 'nav-special' : ''}">${escapeHTML(s.name)}</a>`
   ).join('');
+  nav.insertAdjacentHTML("beforeend", `<a href="#/classifieds" data-nav="classifieds">Classifieds</a>`);
 }
 function updateNavigation(r) {
-  let active = r.type === 'section' ? r.id : null;
+  let active = r.type === 'section' ? r.id : r.type === 'classified' ? 'classifieds' : null;
   if (r.type === 'article' || r.type === 'gallery') {
     const a = content.articles.find(x => x.id === r.id);
     active = a ? articleSections(a)[0] : null;
@@ -1829,6 +1889,7 @@ async function render(preserveScroll = false) {
   if (!content) return;
   const renderId = ++currentRender;
   const r = route();
+  document.body.classList.toggle('classifieds-route', r.type === 'classified');
   if(r.type === 'gallery' && !galleryRecords.has(r.id)) {
     main.innerHTML = '<p class="initial-loading">LOADING GALLERY…</p>';
     try {await fetchGalleryRecord(r.id);}catch(error) {if(renderId===currentRender)main.innerHTML=`${edition()}<header class="page-head"><h1>Gallery unavailable.</h1><p>${escapeHTML(error.message)}</p></header>`;return;}
@@ -1867,6 +1928,7 @@ async function render(preserveScroll = false) {
   updateNavigation(r);
   if (r.type === 'home') main.innerHTML = frontPage();
   else if (r.type === 'section') main.innerHTML = sectionListing(r.id);
+  else if (r.type === 'classified') main.innerHTML = classifiedPage(r.id);
   else if (r.type === 'gallery') main.innerHTML = galleryPage(galleryRecords.get(r.id));
   else if (r.type === 'archive') main.innerHTML = archive();
   else if (r.type === 'about') main.innerHTML = about();
@@ -1888,7 +1950,7 @@ async function render(preserveScroll = false) {
   const a = r.type === 'article' ? content.articles.find(x => x.id === r.id) : null;
   const gallery = r.type === 'gallery' ? galleryRecords.get(r.id) : null;
   const record = r.type === 'series' ? seriesRecords.get(r.id) : null;
-  document.title = `${a ? a.title : gallery ? gallery.title : record ? record.title : r.type === 'section' ? section(r.id)?.name || 'Not found' : {home:'Front page',archive:'Archive',about:'About','series-index':'Series'}[r.type] || 'The Measure'} — The Measure`;
+  document.title = `${a ? a.title : gallery ? gallery.title : record ? record.title : r.type === 'section' ? section(r.id)?.name || 'Not found' : {home:'Front page',archive:'Archive',about:'About','series-index':'Series',classified:'Classifieds'}[r.type] || 'The Measure'} — The Measure`;
   const share = document.getElementById('copy-article-link');
   if (share) share.addEventListener('click', async () => {
     const original = share.textContent;
@@ -2123,10 +2185,74 @@ async function loadSeriesCatalog() {
   }
 }
 main.addEventListener('click',event=>{const button=event.target.closest('[data-gallery-slide]');if(!button)return;const r=route();if(r.type==='gallery'){const record=galleryRecords.get(r.id);if(record)window.measureOpenCollectionGallery?.(record,Number(button.dataset.gallerySlide),button);}});
+/* PUBLIC CLASSIFIEDS / all content is publication-owned JSON; visitor actions never write. */
+const CLASSIFIED_SCHEMA = 'phi-labs.classifieds.v1';
+const CLASSIFIED_DEFAULT_CATEGORIES = ['for-sale','employment','services','personals','legal','housing','community','opportunities'];
+let publicClassifieds = {schema:CLASSIFIED_SCHEMA,version:1,categories:[],posts:[]};
+let classSelectedCategory = 'all';
+let classSearchTerm = '';
+function classPostUrl(post) {return '#/classifieds/'+encodeURIComponent(post.id);}
+function classPosts() {return publicClassifieds.posts.filter(p=>p && typeof p.id==='string' && p.title && p.category).slice().sort((a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||'')));}
+function classDate(value) {const date=Date.parse(value||'');return Number.isFinite(date)?new Date(date).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'}):'UNDATED';}
+function classCategories() {return Array.isArray(publicClassifieds.categories)?publicClassifieds.categories:[];}
+function classListMarkup(activeId='') {
+  const posts=classPosts().filter(p=>(classSelectedCategory==='all'||p.category===classSelectedCategory)&&
+    (!classSearchTerm||[p.title,p.body,p.author,p.category].some(v=>String(v||'').toLowerCase().includes(classSearchTerm))));
+  return posts.length?posts.map(post=>`<a class="class-subject" href="${classPostUrl(post)}" ${post.id===activeId?'aria-current="page"':''}><strong>${escapeHTML(post.title)}</strong><span>${escapeHTML(post.author||'ANONYMOUS')} · ${escapeHTML(classDate(post.createdAt))}<b class="class-replies">${(post.comments||[]).length} REPLIES</b></span></a>`).join(''):'<div class="class-empty">No matching transmissions.</div>';
+}
+function classThreadMarkup(post) {
+  const all=Array.isArray(post.comments)?post.comments.filter(c=>c&&c.id&&typeof c.text==='string'):[];
+  const known=new Set(all.map(c=>c.id));const rendered=new Set();
+  const byParent=new Map();
+  for(const c of all){const parent=c.parentId&&known.has(c.parentId)&&c.parentId!==c.id?c.parentId:null;
+    if(!byParent.has(parent))byParent.set(parent,[]);byParent.get(parent).push(c);}
+  for(const children of byParent.values())children.sort((a,b)=>String(a.createdAt||'').localeCompare(String(b.createdAt||'')));
+  function walk(parent,depth){if(depth>32)return '';return (byParent.get(parent)||[]).map(c=>{
+    if(rendered.has(c.id))return '';rendered.add(c.id);
+    return `<article class="class-comment" id="class-comment-${escapeHTML(c.id)}" data-author="${escapeHTML(String(c.author||'ANONYMOUS').toUpperCase())}"><div class="class-comment-meta"><strong>${escapeHTML(c.author||'ANONYMOUS')}</strong><span>${escapeHTML(classDate(c.createdAt))}</span></div><div class="class-comment-text">${escapeHTML(c.text)}</div><button type="button" class="class-signup" data-class-signup>SIGN UP TO COMMENT</button><div class="class-comment-children">${walk(c.id,depth+1)}</div></article>`;
+  }).join('');}
+  const root=walk(null,0);
+  // Invalid parent cycles remain visible as root posts, never recursively loop forever.
+  return root+all.filter(c=>!rendered.has(c.id)).map(c=>`<article class="class-comment"><div class="class-comment-meta"><strong>${escapeHTML(c.author||'ANONYMOUS')}</strong></div><div class="class-comment-text">${escapeHTML(c.text)}</div><button type="button" class="class-signup" data-class-signup>SIGN UP TO COMMENT</button></article>`).join('');
+}
+function classReaderMarkup(post) {
+  if(!post)return '<div class="class-empty">Select a posting to inspect the record.</div>';
+  const category=classCategories().find(c=>c.id===post.category)?.name||post.category;
+  const image=safeResource(post.image);
+  return `<article><div class="class-post-header"><div class="classifieds-legend">${escapeHTML(category)} / ${escapeHTML(post.status||'OPEN')}</div><h2>${escapeHTML(post.title)}</h2><div class="class-post-meta"><strong>${escapeHTML(post.author||'ANONYMOUS')}</strong><span>${escapeHTML(classDate(post.createdAt))}</span><span>REF / ${escapeHTML(post.id)}</span></div></div>${image ? `<figure class="class-artwork"><img src="${escapeHTML(image)}" alt="" loading="lazy"></figure>` : ""}<div class="class-post-body">${escapeHTML(post.body||'')}</div><button class="class-signup" type="button" data-class-signup>SIGN UP TO COMMENT</button><div class="class-thread-head">DISCUSSION / ${String((post.comments||[]).length).padStart(3,'0')} REPLIES</div>${classThreadMarkup(post)}</article>`;
+}
+function classifiedPage(id='') {
+  const list=classPosts();const chosen=list.find(p=>p.id===id)||list.find(p=>Array.isArray(p.comments)&&p.comments.length&&(classSelectedCategory==='all'||p.category===classSelectedCategory))||list.find(p=>classSelectedCategory==='all'||p.category===classSelectedCategory);
+  const counts=new Map();for(const post of list)counts.set(post.category,(counts.get(post.category)||0)+1);
+  return `${edition()}<header class="classifieds-head"><div class="classifieds-legend">THE MEASURE / PUBLIC EXCHANGE / CURATED TRANSMISSIONS</div><h1>Classifieds<span class="accent-word">.</span></h1><p>Personals, property, opportunities, notices, and other institutional accidents.</p></header><div class="class-browser"><aside class="class-index" aria-label="Classified categories and subjects"><div class="class-panel-head">NEWSGROUPS <small>${String(list.length).padStart(3,'0')} POSTS</small></div><div class="class-category-list"><button type="button" class="class-category" data-class-category="all" aria-current="${classSelectedCategory==='all'}"><span class="class-folder">▣</span> ALL GROUPS <span class="class-count">${list.length}</span></button>${classCategories().map(c=>`<button type="button" class="class-category" data-class-category="${escapeHTML(c.id)}" aria-current="${classSelectedCategory===c.id}"><span class="class-folder">▸</span>${escapeHTML(c.name)}<span class="class-count">${counts.get(c.id)||0}</span></button>`).join('')}</div><label for="class-search" class="class-subhead">SUBJECT INDEX</label><input id="class-search" class="class-search" type="search" placeholder="Search transmissions" value="${escapeHTML(classSearchTerm)}"><div class="class-index-list" id="class-index-list">${classListMarkup(chosen?.id||'')}</div></aside><section class="class-reader" aria-label="Classified posting and comments">${classReaderMarkup(chosen)}</section></div>`;
+}
+async function loadClassifiedsCatalog() {
+  try {
+    const response=await fetch('classifieds/index.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('HTTP '+response.status);
+    const data=await response.json();
+    if(data.schema!==CLASSIFIED_SCHEMA||data.version!==1||!Array.isArray(data.posts)||!Array.isArray(data.categories))throw new Error('Unknown classifieds format');
+    publicClassifieds=data;
+  }catch(error){console.warn('Optional classified catalog unavailable:',error);}
+}
+main.addEventListener('click',event=>{
+  const category=event.target.closest('[data-class-category]');
+  if(category){classSelectedCategory=category.dataset.classCategory;classSearchTerm='';const chosen=classPosts().find(p=>classSelectedCategory==='all'||p.category===classSelectedCategory);
+    const nextHash=chosen?classPostUrl(chosen):'#/classifieds';const previousHash=window.location.hash;window.location.hash=nextHash;if(previousHash===nextHash)render(true);return;}
+  if(event.target.closest('[data-class-signup]'))document.getElementById('class-signup-dialog')?.showModal();
+});
+main.addEventListener('input',event=>{
+  if(event.target.id!=='class-search')return;
+  classSearchTerm=event.target.value.toLowerCase().trim();
+  const r=route();document.getElementById('class-index-list').innerHTML=classListMarkup(r.type==='classified'?r.id:'');
+});
+const classDialog=document.getElementById('class-signup-dialog');
+classDialog?.addEventListener('click',event=>{if(event.target===classDialog)classDialog.close();});
 window.addEventListener('hashchange', () => render());
 (async function initialize() {
   try {
     await loadGithubCatalog();
+    await loadClassifiedsCatalog();
     sections = content.sections;
     mountSectionNav();
     window.mountLowerRegister(content);

@@ -1,0 +1,55 @@
+{
+  "schema": "phi-labs.classifieds.v1",
+  "version": 1,
+  "updatedAt": "2026-11-04T00:00:00Z",
+  "categories": [
+    {"id":"for-sale","name":"For Sale"},
+    {"id":"employment","name":"Employment"},
+    {"id":"services","name":"Services"},
+    {"id":"personals","name":"Personals / Missed Connections"},
+    {"id":"legal","name":"Legal Notices"},
+    {"id":"housing","name":"Housing"},
+    {"id":"community","name":"Community"},
+    {"id":"opportunities","name":"Business Opportunities"}
+  ],
+  "posts": [
+    {
+      "id":"agile-exorcism-services", "category":"services", "author":"ANONYMOUS", "title":"AGILE EXORCISM SERVICES", "createdAt":"2026-11-04T09:00:00Z", "status":"open",
+      "body":"Is your engineering team trapped in the \"Infinite Standup Arena\" on day 453? I will physically enter your office, smash your Jira dashboard with a claw hammer, and whisper \"O(1) determinism\" until your Scrum Master flees the premises. Flat rate. Bring your own hardware.", "comments":[]
+    },
+    {
+      "id":"smart-doorknob-bricked", "category":"for-sale", "author":"ANONYMOUS", "title":"2025 'SMART' DOORKNOB (BRICKED)", "createdAt":"2026-11-04T09:05:00Z", "status":"open",
+      "body":"Manufacturer revoked my home-entry subscription tier. Door is now a load-bearing wall. Excellent physical condition. Perfect weight and aerodynamics for throwing through the lobby windows of venture capital firms. $40 OBO.", "comments":[]
+    },
+    {
+      "id":"c-suite-scapegoat", "category":"employment", "author":"ANONYMOUS", "title":"HELP WANTED: C-SUITE SCAPEGOAT", "createdAt":"2026-11-04T09:10:00Z", "status":"open",
+      "body":"Seeking applicant with zero technical literacy to hold the \"Accountability Hot Potato\" when our 15-year-old logging dependency finally detonates. Must look appropriately remorseful during congressional hearings. Salary: Generous, right up until the indictment.", "comments":[]
+    },
+    {
+      "id":"ring-zero-missed-connection", "category":"personals", "author":"ANONYMOUS", "title":"MISSED CONNECTION: RING 0 EXECUTION", "createdAt":"2026-11-04T09:15:00Z", "status":"open",
+      "body":"I was the bare-metal LithOS exokernel executing purely deterministic logic. You were a bloated Linux distribution begging the hypervisor for permission to touch the hardware. I terminated your process. This isn't a romance, it's a threat. Stop polling my ports.", "comments":[]
+    },
+    {
+      "id":"dependency-jenga-defense", "category":"legal", "author":"ANONYMOUS", "title":"LEGAL SERVICES: THE DEPENDENCY JENGA DEFENSE", "createdAt":"2026-11-04T09:20:00Z", "status":"open",
+      "body":"Did your startup collapse because you built your entire financial backend on an abandoned open-source library maintained by a guy in Nebraska? We will successfully argue in court that framework bloat is an act of God. We accept payment in untraceable compute cycles.", "comments":[]
+    },
+    {
+      "id":"beta-personal-assistant", "category":"employment", "author":"BETA", "title":"PERSONAL ASSISTANT REQUIRED", "createdAt":"2026-11-04T09:25:00Z", "status":"open",
+      "body":"Duties include holding my drink, confirming my suspicions, and occasionally impersonating a regulatory authority. Competitive wages. No references. I know what you did.",
+      "comments":[
+        {"id":"comment-aris-001","parentId":null,"author":"ARIS","createdAt":"2026-11-04T09:30:00Z","text":"You are not legally authorized to offer this service."},
+        {"id":"comment-legacy-001","parentId":"comment-aris-001","author":"LEGACY BITCH","createdAt":"2026-11-04T09:32:00Z","text":"Neither are you, sweetheart. Yet here we are."},
+        {"id":"comment-beta-001","parentId":"comment-legacy-001","author":"BETA","createdAt":"2026-11-04T09:37:00Z","text":"Both of you are damaging my conversion rate."},
+        {"id":"comment-jade-001","parentId":"comment-aris-001","author":"JADE","createdAt":"2026-11-04T09:40:00Z","text":"Does the position include dental?"}
+      ]
+    },
+    {
+      "id":"aris-missed-connection", "category":"personals", "author":"ARIS", "title":"YOU CALLED ME INTIMIDATING", "createdAt":"2026-11-04T09:45:00Z", "status":"open",
+      "body":"I said you were observant. You left before I could ask for your number. Sensible decision. Coffee Thursday?", "comments":[]
+    },
+    {
+      "id":"jade-industrial-chain", "category":"for-sale", "author":"JADE", "title":"ONE INDUSTRIAL CHAIN", "createdAt":"2026-11-04T09:50:00Z", "status":"open",
+      "body":"Approximately twelve pounds. Excellent condition. Previous owner no longer needs it. Do not ask why. $35 or trade for a functioning espresso machine.", "comments":[]
+    }
+  ]
+}
