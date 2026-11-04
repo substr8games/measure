@@ -6,6 +6,13 @@
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#3F5366">
   <meta name="description" content="The Measure — an independent publication of Phi Labs.">
+  <link rel="canonical" href="https://substr8games.github.io/measure/">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Measure">
+  <meta property="og:title" content="The Measure — A Phi Labs Publication">
+  <meta property="og:description" content="Independent research, reporting, essays and editorial work published by Phi Labs.">
+  <meta property="og:url" content="https://substr8games.github.io/measure/">
   <title>The Measure — A Phi Labs Publication</title>
   <link rel="icon" type="image/png" href="images/logo.png">
   <style>
@@ -871,7 +878,7 @@ body { font-size:16px; }
     </aside>
 
     <main class="reading-column" id="main" tabindex="-1">
-      <noscript><section class="noscript-notice"><h1>JavaScript is required</h1><p>The Measure loads its editorial content from JSON. Enable JavaScript to view this demonstration.</p></section></noscript>
+      <noscript><section class="noscript-notice"><h1>The Measure publication record</h1><p>Our complete articles are available as ordinary HTML. <a href="read/">Read the article archive</a>.</p></section></noscript>
       <div class="initial-loading" aria-live="polite">LOADING THE RECORD<span class="loading-dots">…</span></div>
     </main>
   </div>
@@ -895,7 +902,7 @@ body { font-size:16px; }
   </dialog>
   <footer class="site-footer" id="site-footer">
     <div><span class="footer-mark">Φ</span> THE MEASURE <span class="footer-separator">&#60;/3</span> BUILD GAMES. MAKE ART.<span class="footer-separator"> ;] </span> PHI LABS. </div>
-    <div><a href="#/about">ABOUT</a> <span class="footer-separator">/</span> <a href="#/archive">ARCHIVE</a> <span class="footer-separator"></3</span> <a href="#/series">SERIES</a> <span class="footer-separator">/</span> INDEPENDENT INQUIRY. PUBLIC RECORD.</div>
+    <div><a href="#/about">ABOUT</a> <span class="footer-separator">/</span> <a href="#/archive">ARCHIVE</a> <span class="footer-separator"></3</span> <a href="read/">HTML EDITIONS</a> <span class="footer-separator">/</span> <a href="#/series">SERIES</a> <span class="footer-separator">/</span> INDEPENDENT INQUIRY. PUBLIC RECORD.</div>
     <div>© 2026 PHI LABS</div>
   </footer>
   <dialog class="content-warning" id="content-warning" aria-label="Adult content warning">
@@ -1053,9 +1060,9 @@ body { font-size:16px; }
     galleryThumbnails.querySelector('button[aria-current="true"]')?.scrollIntoView({block:'nearest',inline:'nearest'});
   }
   function openCollectionGallery(record,index=0,button=null) {
-    const source=Array.isArray(record?.images)?record.images:[];
+    const source=window.measureGalleryImagesForRecord?.(record) || (Array.isArray(record?.images)?record.images:[]);
     galleryItems=source.filter(entry=>localPath(entry.path)).map(entry=>({
-      image:entry.path,viewerImage:'',title:entry.caption||'',viewerCaption:entry.caption||'',alt:entry.alt||'',id:entry.id
+      image:entry.path,viewerImage:entry.viewerImage||'',title:entry.caption||'',viewerCaption:entry.caption||'',alt:entry.alt||'',id:entry.id
     }));
     if(!galleryItems.length)return;
     gallerySource='collection';opener=button;
@@ -1063,45 +1070,26 @@ body { font-size:16px; }
     dialog.removeAttribute('aria-labelledby');
     dialog.setAttribute('aria-label',String(record.title||'Photo')+' gallery');
     posterKind.hidden=false;posterKind.textContent='GALLERY / '+String(record.title||'COLLECTION');
-    const multiple=galleryItems.length>1;
-    galleryTools.hidden=!multiple;galleryThumbnails.hidden=!multiple;
-    galleryThumbnails.innerHTML=multiple?galleryItems.map((entry,i)=>
+    // The gallery interface is used even for a one-image collection.
+    galleryTools.hidden=false;galleryThumbnails.hidden=false;
+    galleryThumbnails.innerHTML=galleryItems.map((entry,i)=>
       `<button class="poster-gallery-thumb" type="button" data-gallery-index="${i}" aria-label="View image ${i+1} of ${galleryItems.length}"><img src="${escape(localPath(entry.image))}" alt="" loading="lazy"></button>`
-    ).join(''):'';
+    ).join('');
     dialog.showModal();displayGallerySlide(index);
   }
   window.measureOpenCollectionGallery=openCollectionGallery;
-  async function openAdGallery(item, button) {
-    const linked = window.measureGalleryForAdvertiser?.(item.advertiser);
-    if (linked) {
-      try {const record=await window.measureFetchGalleryRecord(linked.id);if(record.images.length){openCollectionGallery(record,0,button);return;}}
-      catch(error){console.warn('Linked gallery unavailable, showing advertiser ads',error);}
+  function openAdGallery(item, button) {
+    // Ads open the full gallery page, not the one-image poster dialog.
+    // Explicit galleryId wins; legacy ads may resolve an unambiguous advertiser gallery.
+    const linked = window.measureGalleryForAd?.(item);
+    const galleryId = linked?.id || String(item.galleryId || '').trim();
+    if (galleryId) {
+      window.location.hash = '#/gallery/' + encodeURIComponent(galleryId);
+      return;
     }
-    gallerySource='ad';
-    const key = advertiserKey(item);
-    // Unnamed advertisements do not get merged into an accidental mega-gallery.
-    galleryItems = key ? catalogItems.filter(candidate =>
-      candidate.kind === 'ad' && advertiserKey(candidate) === key && localPath(candidate.image)
-    ) : [item];
-    if (!galleryItems.length) galleryItems = [item];
-    galleryIndex = Math.max(0,galleryItems.findIndex(candidate => candidate.id === item.id));
-    opener = button;
-    dialog.classList.add('poster-dialog--ad');
-    dialog.removeAttribute('aria-labelledby');
-    const sponsor = String(item.advertiser || '').trim();
-    const label = 'AD' + (sponsor ? ' - ' + sponsor : '');
-    dialog.setAttribute('aria-label',label + ' gallery');
-    posterKind.hidden = false;
-    posterKind.textContent = label;
-    posterTitle.hidden = true;
-    const multiple = galleryItems.length > 1;
-    galleryTools.hidden = !multiple;
-    galleryThumbnails.hidden = !multiple;
-    galleryThumbnails.innerHTML = multiple ? galleryItems.map((entry,i) =>
-      `<button class="poster-gallery-thumb" type="button" data-gallery-index="${i}" aria-label="View advertisement ${i+1} of ${galleryItems.length}"><img src="${escape(localPath(entry.image))}" alt="" loading="lazy"></button>`
-    ).join('') : '';
-    dialog.showModal();
-    displayGallerySlide(galleryIndex);
+    // A published legacy ad with no destination cannot become a gallery by
+    // pretending its full-size image is a collection. Assign it in SNIPE.
+    window.alert('This advertisement has no gallery assigned yet. Open it in SNIPE → Publish → Published and choose Destination gallery.');
   }
   function openPoster(index, button) {
     gallerySource='';
@@ -1485,12 +1473,35 @@ function renderBlocks(blocks = []) {
 const GALLERY_PUBLIC_SCHEMA='phi-labs.gallery.v1';
 const galleryRecords=new Map();
 let publicGalleries=[];
+let publicAds=[];
 function galleryAdvertiserKey(value){
   return String(value||'').trim().toLocaleLowerCase().replace(/\s+/g,' ').replace(/^(?:<3|♥|♡)\s*/,'♥');
 }
 function galleryForAdvertiser(value){
   const key=galleryAdvertiserKey(value);
-  return key?publicGalleries.find(entry=>galleryAdvertiserKey(entry.advertiser)===key):null;
+  const matches=key?publicGalleries.filter(entry=>galleryAdvertiserKey(entry.advertiser)===key):[];
+  return matches.length===1?matches[0]:null;
+}
+function galleryForAd(ad){
+  // Explicit gallery routing always wins over advertiser. Legacy ads without a
+  // galleryId can resolve only when the advertiser matches exactly one gallery.
+  if(ad?.galleryId)return publicGalleries.find(entry=>entry.id===ad.galleryId)||null;
+  return galleryForAdvertiser(ad?.advertiser);
+}
+function galleryImagesForRecord(record){
+  const source=Array.isArray(record?.images)?record.images:[];
+  const images=source.filter(entry=>entry&&safeResource(entry.path)).map(entry=>({...entry}));
+  const paths=new Set(images.map(entry=>safeResource(entry.path)));
+  for(const ad of publicAds){
+    const target=galleryForAd(ad);
+    if(!target||target.id!==record.id)continue;
+    const path=safeResource(ad.image);
+    if(!path||paths.has(path))continue;
+    paths.add(path);
+    images.push({id:'ad-'+ad.id,path,viewerImage:safeResource(ad.viewerImage)||'',
+      caption:ad.viewerCaption||'',alt:(ad.advertiser||'Advertiser')+' advertisement'});
+  }
+  return images;
 }
 async function fetchGalleryRecord(id){
   if(galleryRecords.has(id))return galleryRecords.get(id);
@@ -1507,10 +1518,12 @@ async function fetchGalleryRecord(id){
   return record;
 }
 window.measureGalleryForAdvertiser=galleryForAdvertiser;
+window.measureGalleryForAd=galleryForAd;
+window.measureGalleryImagesForRecord=galleryImagesForRecord;
 window.measureFetchGalleryRecord=fetchGalleryRecord;
 function galleryPage(record){
   if(!record)return notFound();
-  const images=record.images||[];
+  const images=galleryImagesForRecord(record);
   return `${edition()}<header class="page-head gallery-page-head"><span class="eyebrow">PHOTO COLLECTION / THE MEASURE</span>
     <h1>${escapeHTML(record.title)}<span class="accent-word">.</span></h1>
     ${record.description?`<p>${escapeHTML(record.description)}</p>`:''}
@@ -1766,6 +1779,7 @@ function manifestMediaToRail(item) {
     title:isParodyAd?'':item.title || '', description:isParodyAd?'':item.blurb || item.summary || '',
     image:item.image || (pdf?'images/pdf-placeholder.svg':''), href:item.pdf || item.url,
     alt:isParodyAd?'Advertisement artwork':item.title || 'Cartoon artwork', advertiser:isParodyAd ? String(item.advertiser || '').trim() : '',
+    galleryId:isParodyAd?String(item.galleryId||'').trim():'',
     thumbnail:isParodyAd ? (item.thumbnail || null) : null,
     lowerRegisterEnabled:isParodyAd ? item.lowerRegisterEnabled !== false : true,
     sidebar:isParodyAd ? (item.sidebar || null) : null,
@@ -1794,6 +1808,7 @@ async function loadGithubCatalog() {
       classification:item.classification || '', image:item.directory?.image || '',
       href:`#/article/${encodeURIComponent(item.id)}`}));
   const mediaTiles = records.filter(item => item.type === 'media' || item.type === 'pdf').map(manifestMediaToRail);
+  publicAds=mediaTiles.filter(item=>item.kind==='ad');
   const galleryTiles = publicGalleries.map(manifestMediaToRail);
   content.lowerRegister.items = [...latestTextArticles, ...mediaTiles, ...galleryTiles];
 }

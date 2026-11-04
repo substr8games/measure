@@ -1,9 +1,13 @@
-# The Measure Rev23 — Published Gallery Reader
+# The Measure Rev26 — SEO public-site shell
 
-Overlay `index.html` at **The Measure website repository root** and deploy it. This is based on the Rev18 site with the adjusted adult-content warning/placard and page-break marker compatibility intact.
+Overlay root: The Measure website GitHub Pages repository root. Replace only `index.html`.
 
-The site now recognizes `type: "gallery"` records in the canonical `manifest.json`, displays galleries in the publication directory, section listings, search, and Lower Register, and supports shareable gallery pages at `#/gallery/<gallery-id>`.
+- Adds a homepage canonical link and Open Graph metadata.
+- Adds a sitemap discovery link pointing to `sitemap.xml`.
+- Links to the real `read/` static article archive in the site footer.
+- Adds a usable no-JavaScript link to the public article archive.
+- Preserves the Rev25 ad/gallery routing, styling, galleries and content warning.
 
-Click a gallery image for the existing large viewer, previous/next buttons, keyboard arrow navigation, and thumbnail navigation. If a gallery has an advertiser/sponsor that matches existing ads, clicking one of those ads opens the published gallery; otherwise the previous automatically grouped advertiser-gallery behavior is retained.
+The physical `read/` HTML pages and `sitemap.xml` are created by SNIPE's **Build SEO pages + sitemap** command. Run it after installing the SNIPE overlay, then deploy this website overlay.
 
-The site does not need a server, a build framework, or additional credentials. The companion SNIPE Rev23 overlay is required to create and publish collections.
+The website remains under its existing host and project path; no reverse proxy or server rewrite is needed.
