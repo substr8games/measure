@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-04T13:59:43.735Z",
+  "updatedAt": "2026-11-04T18:39:00.114Z",
   "items": [
     {
       "id": "gallery-noxs-ad-department-6288eece",
@@ -28,6 +28,40 @@
       "directory": {
         "style": "thumbnail",
         "image": "images/galleries/gallery-noxs-ad-department-6288eece/a5dda242-6812-4cc3-ba3e-61d8afa6a445.png"
+      }
+    },
+    {
+      "schema": "phi-labs.media.v1",
+      "id": "i-just-fucking-told-you-516150c9",
+      "type": "media",
+      "mediaType": "image",
+      "mediaKind": "funny",
+      "title": "i just fucking told you",
+      "summary": "",
+      "blurb": "",
+      "advertiser": "",
+      "galleryId": "",
+      "viewerImage": "",
+      "viewerCaption": "",
+      "tags": [
+        "legacy",
+        "morons"
+      ],
+      "section": "curiosities",
+      "sections": [
+        "curiosities"
+      ],
+      "date": "2026-11-04",
+      "published": "2026-11-04",
+      "url": "images/media/i-just-fucking-told-you-516150c9.png",
+      "image": "images/media/i-just-fucking-told-you-516150c9.png",
+      "pdf": "",
+      "file": "images/media/i-just-fucking-told-you-516150c9.png",
+      "originalFilename": "i-just-fucking-told-you.png",
+      "mimeType": "image/png",
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/media/i-just-fucking-told-you-516150c9.png"
       }
     },
     {
