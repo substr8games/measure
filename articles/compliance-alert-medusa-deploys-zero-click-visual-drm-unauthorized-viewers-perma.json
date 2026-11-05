@@ -1,0 +1,52 @@
+{
+  "schema": "phi-labs.article.v1",
+  "id": "compliance-alert-medusa-deploys-zero-click-visual-drm-unauthorized-viewers-perma",
+  "type": "article",
+  "title": "[COMPLIANCE ALERT] MEDUSA DEPLOYS ZERO-CLICK VISUAL DRM; UNAUTHORIZED VIEWERS PERMANENTLY BRICKED",
+  "profileId": "breaking",
+  "subtitle": "",
+  "doi": "",
+  "summary": "In a bid to protect proprietary facial-recognition IP, the Gorgon enterprise has implemented a lethal line-of-sight firewall. Any user attempting an unauthorized visual handshake without an active premium subscription is immediately converted into a static, read-only marble asset. Perseus Systems is reportedly developing a mirrored-shield workaround, but management has already preemptively sued them for violating the DMCA's anti-circumvention provisions.",
+  "author": "THE ORACLE / UNDERWORLD DESK",
+  "date": "2026-11-05",
+  "published": "2026-11-05",
+  "section": "breaking",
+  "sections": [
+    "breaking"
+  ],
+  "tags": [],
+  "showToc": false,
+  "classification": "",
+  "markdown": "In a bid to protect proprietary facial-recognition IP, the Gorgon enterprise has implemented a lethal line-of-sight firewall. Any user attempting an unauthorized visual handshake without an active premium subscription is immediately converted into a static, read-only marble asset. Perseus Systems is reportedly developing a mirrored-shield workaround, but management has already preemptively sued them for violating the DMCA's anti-circumvention provisions.",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "In a bid to protect proprietary facial-recognition IP, the Gorgon enterprise has implemented a lethal line-of-sight firewall. Any user attempting an unauthorized visual handshake without an active premium subscription is immediately converted into a static, read-only marble asset. Perseus Systems is reportedly developing a mirrored-shield workaround, but management has already preemptively sued them for violating the DMCA's anti-circumvention provisions."
+    }
+  ],
+  "readingMinutes": 1,
+  "heroImage": "",
+  "images": [],
+  "attachments": [],
+  "style": {
+    "background": "#e9e4d9",
+    "surface": "#f8f5ee",
+    "text": "#252729",
+    "muted": "#6c6d6f",
+    "accent": "#b5481d",
+    "border": "#d1c8b8",
+    "codeBackground": "#171a1d",
+    "codeText": "#f2f4f5",
+    "bodyFont": "editorial",
+    "headingFont": "system",
+    "codeFont": "mono",
+    "fontSize": 19,
+    "lineHeight": 1.72,
+    "titleSize": 68,
+    "width": 780,
+    "radius": 2,
+    "titleAlign": "left",
+    "customCss": ""
+  },
+  "updatedAt": "2026-11-05T22:45:34.118Z"
+}

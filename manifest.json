@@ -1,8 +1,34 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-05T22:44:37.829Z",
+  "updatedAt": "2026-11-05T22:45:36.355Z",
   "items": [
+    {
+      "id": "compliance-alert-medusa-deploys-zero-click-visual-drm-unauthorized-viewers-perma",
+      "type": "article",
+      "title": "[COMPLIANCE ALERT] MEDUSA DEPLOYS ZERO-CLICK VISUAL DRM; UNAUTHORIZED VIEWERS PERMANENTLY BRICKED",
+      "subtitle": "",
+      "summary": "In a bid to protect proprietary facial-recognition IP, the Gorgon enterprise has implemented a lethal line-of-sight firewall. Any user attempting an unauthorized visual handshake without an active premium subscription is immediately converted into a static, read-only marble asset. Perseus Systems is reportedly developing a mirrored-shield workaround, but management has already preemptively sued them for violating the DMCA's anti-circumvention provisions.",
+      "section": "breaking",
+      "sections": [
+        "breaking"
+      ],
+      "tags": [],
+      "doi": "",
+      "author": "THE ORACLE / UNDERWORLD DESK",
+      "published": "2026-11-05",
+      "date": "2026-11-05",
+      "updatedAt": "2026-11-05T22:45:34.118Z",
+      "readingMinutes": 1,
+      "classification": "",
+      "content": "articles/compliance-alert-medusa-deploys-zero-click-visual-drm-unauthorized-viewers-perma.json",
+      "url": "#/article/compliance-alert-medusa-deploys-zero-click-visual-drm-unauthorized-viewers-perma",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "id": "gallery-heartbaby-38e2bd1b",
       "type": "gallery",
