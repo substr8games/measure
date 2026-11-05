@@ -1253,6 +1253,23 @@ body.breaking-ticker-visible .breaking-ticker { display:flex; }
 .article-share :is(a,button){display:inline-flex;align-items:center;min-height:32px;padding:5px 9px;border:1px solid var(--gold-soft);background:transparent;color:var(--paper);font:inherit;font-size:10px;letter-spacing:.06em;text-decoration:none;cursor:pointer}
 .article-share :is(a,button):hover{color:var(--gold);border-color:var(--gold)}
 .article-share [hidden]{display:none!important}
+/* REV48 / Publication-width masthead artwork.
+   The masthead and section bar already share the 1240px publication frame.
+   The old 1040px width and 230px height caps reduced the actual artwork to
+   roughly 790px across. Remove those caps without changing the content grid. */
+.masthead .brand-lockup {
+  width: 100%;
+  max-width: 100%;
+  max-height: none;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 1199px) {
+  .masthead .brand-lockup {
+    width: 100%;
+    max-height: none;
+  }
+}
   </style>
 </head>
 <body>
@@ -1608,7 +1625,7 @@ body.breaking-ticker-visible .breaking-ticker { display:flex; }
     if (!Array.isArray(records)) return;
     // Brand galleries retain manifest order; only the public Lower Register shuffles.
     catalogItems = [...records];
-    items = homeMode ? records.filter(item => item.kind === "ad" || (!item.isCuriosity && item.kind !== "meme")) : [...records];
+    items = homeMode ? records.filter(item => item.kind === "ad" || (!item.isCuriosity && !item.isBreaking && item.kind !== "meme")) : [...records];
     for (let i = items.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [items[i], items[j]] = [items[j], items[i]];
@@ -1875,16 +1892,17 @@ function specialCard(a) {
     </div><div class="report-links"><a href="${articleUrl(a)}">Report details ${arrow}</a>${pdf ? `<a href="${escapeHTML(pdf)}" target="_blank" rel="noopener">Open PDF ${arrow}</a><a href="${escapeHTML(pdf)}" download>Download PDF ↓</a>` : ''}</div></div>`;
 }
 function frontPage() {
-  // Curiosities remains a standalone section, but never supplies homepage hero
-  // or latest-article slots, including explicitly pinned curiosity features.
-  const homeEligible = a => !articleSections(a).includes('curiosities') && !articleSections(a).includes('humor') && a.source !== 'oracle-wire';
+  // Curiosities and Breaking remain standalone sections, but never supply homepage hero
+  // or latest-article slots, including explicitly pinned items and cross-listed entries.
+  const homeEligible = a => !articleSections(a).some(id => id === 'curiosities' || id === 'breaking') && a.source !== 'oracle-wire';
   const eligible = allArticles().filter(homeEligible);
+  const homeSpecialReports = eligible.filter(isSpecial);
   const featured = eligible.find(a => a.id === content.publication.hero.articleId)
     || eligible.find(a => a.type === 'article') || eligible.find(a => a.title);
   if (!featured) return `${edition()}
     <section class="hero" aria-labelledby="hero-title"><span class="eyebrow">THE MEASURE / PHI LABS</span>
     <h1 id="hero-title">An independent<br>measure of things<span class="accent-word">.</span></h1>
-    <p class="hero-summary">Breaking. Science. Technology. Humanities. Politics. Thinkpieces. Special Reports.<br>Independent inquiry, collected in the public record.</p>
+    <p class="hero-summary">Science. Technology. Humanities. Politics. Thinkpieces. Special Reports.<br>Independent inquiry, collected in the public record.</p>
     <div class="hero-footer"><a class="inline-link" href="#/about">About the publication ${arrow}</a></div></section>
     ${sectionTitle('Latest articles', 0)}<p class="empty-state">The record is ready for its first publication.</p>${seriesPreview()}`;
   const latest = eligible.filter(a => !isSpecial(a) && a.id !== featured.id).slice(0,5);
@@ -1895,7 +1913,7 @@ function frontPage() {
     <section aria-labelledby="latest-title">${sectionTitle('Latest articles', latest.length).replace('<h2>', '<h2 id="latest-title">')}
       <div class="article-list">${latest.map(row).join('')}</div></section>
     ${seriesPreview()}
-    ${specialReports().length ? `<section aria-labelledby="specials-heading">${sectionTitle('Special reports', specialReports().length).replace('<h2>', '<h2 id="specials-heading">')}${specialReports().slice(0,1).map(specialCard).join('')}</section>` : ''}`;
+    ${homeSpecialReports.length ? `<section aria-labelledby="specials-heading">${sectionTitle('Special reports', homeSpecialReports.length).replace('<h2>', '<h2 id="specials-heading">')}${homeSpecialReports.slice(0,1).map(specialCard).join('')}</section>` : ''}`;
 }
 function sectionListing(id) {
   const s = section(id); if (!s) return notFound();
@@ -2174,7 +2192,7 @@ async function render(preserveScroll = false) {
   if (!content) return;
   const renderId = ++currentRender;
   const r = route();
-  // Curiosities never surface in the homepage register, but remain available on other routes.
+  // Curiosities and Breaking never surface in the homepage register, but remain available on other routes.
   const homeMode = r.type === 'home';
   if (homeMode !== lowerRegisterHomeMode) {
     window.mountLowerRegister(content,homeMode);
@@ -2279,7 +2297,7 @@ searchResults.addEventListener('click', event => {
 });
 
 function manifestMediaToRail(item) {
-  if (item.type === 'gallery') return {id:item.id,kind:'gallery',title:item.title,image:item.image||'',href:`#/gallery/${encodeURIComponent(item.id)}`,label:'PHOTO GALLERY',isCuriosity:articleSections(item).includes('curiosities')};
+  if (item.type === 'gallery') return {id:item.id,kind:'gallery',title:item.title,image:item.image||'',href:`#/gallery/${encodeURIComponent(item.id)}`,label:'PHOTO GALLERY',isCuriosity:articleSections(item).includes('curiosities'),isBreaking:articleSections(item).includes('breaking')};
   const pdf = item.type === 'pdf' || item.mediaType === 'pdf';
   const tags = Array.isArray(item.tags) ? item.tags : [];
   const isParodyAd = item.mediaKind === 'ad' || (!item.mediaKind && tags.some(t => /^(?:ad|advert|parody-ad|sponsored)$/i.test(t)));
@@ -2294,7 +2312,7 @@ function manifestMediaToRail(item) {
     sidebar:isParodyAd ? (item.sidebar || null) : null,
     viewerImage:isParodyAd ? (item.viewerImage || '') : '',
     viewerCaption:isParodyAd ? (item.viewerCaption || '') : '',
-    isCuriosity:articleSections(item).includes('curiosities')
+    isCuriosity:articleSections(item).includes('curiosities'), isBreaking:articleSections(item).includes('breaking')
   };
 }
 /* Seed dispatches are readable BREAKING articles without rewriting manifest.json.
@@ -2336,10 +2354,10 @@ async function loadGithubCatalog() {
   });
   content.articles = records.filter(item => item.mediaKind !== "ad");
   publicGalleries=records.filter(item=>item.type==='gallery').sort((a,b)=>String(b.published||'').localeCompare(String(a.published||'')));
-  const latestTextArticles = records.filter(item => item.type === 'article' && item.mediaKind !== 'ad')
+  const latestTextArticles = records.filter(item => item.type === 'article' && item.mediaKind !== 'ad' && !articleSections(item).includes('breaking'))
     .sort((a,b) => String(b.published || b.date || '').localeCompare(String(a.published || a.date || '')))
     .slice(0, 10).map(item => ({kind:'article', id:item.id, title:item.title, date:item.date || item.published || '',
-      classification:item.classification || '', image:item.directory?.image || '', isCuriosity:articleSections(item).includes('curiosities'),
+      classification:item.classification || '', image:item.directory?.image || '', isCuriosity:articleSections(item).includes('curiosities'), isBreaking:articleSections(item).includes('breaking'),
       href:`#/article/${encodeURIComponent(item.id)}`}));
   const mediaTiles = records.filter(item => item.type === 'media' || item.type === 'pdf').map(manifestMediaToRail);
   publicAds=mediaTiles.filter(item=>item.kind==='ad');
@@ -2428,7 +2446,7 @@ function seriesCard(info) {
     <span class="series-card-arrow" aria-hidden="true">↗</span></a>`;
 }
 function seriesPreview() {
-  const homeSeries = publicSeries.filter(info => canonicalSectionId(info.section) !== 'curiosities');
+  const homeSeries = publicSeries.filter(info => !['curiosities', 'breaking'].includes(canonicalSectionId(info.section)));
   if (!homeSeries.length) return '';
   return `<section class="series-home" aria-labelledby="series-front-title">${sectionTitle('Explore series', homeSeries.length).replace('<h2>', '<h2 id="series-front-title">')}
     <div class="series-card-list">${homeSeries.slice(0,2).map(seriesCard).join('')}</div>
