@@ -16,9 +16,9 @@
     "remark",
     "resemble"
   ],
-  "section": "humor",
+  "section": "curiosities",
   "sections": [
-    "humor"
+    "curiosities"
   ],
   "date": "2026-11-03",
   "published": "2026-11-03",
@@ -26,10 +26,11 @@
   "image": "images/media/hey-i-resemble-that-remark-c64ae802.png",
   "pdf": "",
   "file": "images/media/hey-i-resemble-that-remark-c64ae802.png",
-  "originalFilename": "i-resemble-that-remark.png",
+  "originalFilename": "legacy-i-resemble-that-remark.png",
   "mimeType": "image/png",
   "directory": {
     "style": "thumbnail",
     "image": "images/media/hey-i-resemble-that-remark-c64ae802.png"
-  }
+  },
+  "galleryId": ""
 }

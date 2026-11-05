@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-05T21:59:07.006Z",
+  "updatedAt": "2026-11-05T22:06:15.644Z",
   "items": [
     {
       "id": "gallery-heartbaby-38e2bd1b",
@@ -471,9 +471,9 @@
         "remark",
         "resemble"
       ],
-      "section": "humor",
+      "section": "curiosities",
       "sections": [
-        "humor"
+        "curiosities"
       ],
       "date": "2026-11-03",
       "published": "2026-11-03",
@@ -481,12 +481,13 @@
       "image": "images/media/hey-i-resemble-that-remark-c64ae802.png",
       "pdf": "",
       "file": "images/media/hey-i-resemble-that-remark-c64ae802.png",
-      "originalFilename": "i-resemble-that-remark.png",
+      "originalFilename": "legacy-i-resemble-that-remark.png",
       "mimeType": "image/png",
       "directory": {
         "style": "thumbnail",
         "image": "images/media/hey-i-resemble-that-remark-c64ae802.png"
-      }
+      },
+      "galleryId": ""
     },
     {
       "id": "manufacturing-distraction-federal-elections-and-the-compute-cartel",
