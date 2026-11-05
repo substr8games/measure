@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-05T17:29:20.499Z",
+  "updatedAt": "2026-11-05T20:34:56.915Z",
   "items": [
     {
       "id": "gallery-heartbaby-38e2bd1b",
@@ -635,7 +635,7 @@
       "summary": "",
       "blurb": "",
       "tags": [],
-      "section": "humor",
+      "section": "curiosities",
       "sections": [],
       "date": "2026-11-03",
       "published": "2026-11-03",
@@ -664,7 +664,8 @@
           "y": 100,
           "zoom": 1
         }
-      }
+      },
+      "galleryId": "gallery-heartbaby-38e2bd1b"
     },
     {
       "schema": "phi-labs.media.v1",
