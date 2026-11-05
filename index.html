@@ -1805,8 +1805,11 @@ const monthLabel = a => {
   }
   return a.date?.slice(3) || 'OTHER';
 };
+const visibleArticleSections = a => [...new Set([...articleSections(a), ...(isSpecial(a) ? ['special-reports'] : [])])].filter(id => section(id));
+const articleSectionNames = a => visibleArticleSections(a).map(id => section(id).name);
+const articleSectionLinks = a => visibleArticleSections(a).length ? visibleArticleSections(a).map(id => `<a href="${sectionUrl(id)}"${id === 'special-reports' ? ' class="classification-special"' : ''}>${escapeHTML(section(id).name)}</a>`).join(' <span>/</span> ') : escapeHTML(categoryLabel(a));
 const categoryLabel = a => section(articleSections(a)[0])?.name || a.category || 'Unclassified';
-const meta = a => `${escapeHTML(categoryLabel(a))} <span aria-hidden="true">/</span> ${formatDate(a)}${isSpecial(a) ? ' <span class="report-inline">/ SPECIAL REPORT</span>' : ''}`;
+const meta = a => `${escapeHTML(articleSectionNames(a).join(' / ') || categoryLabel(a))} <span aria-hidden="true">/</span> ${formatDate(a)}`;
 function row(a) {
   const thumb = safeResource(a.directory?.image);
   const cls = classificationFor(a);
@@ -1950,7 +1953,7 @@ function singleArticle(a) {
     ${a.title ? `<h1>${escapeHTML(a.title)}<span style="color:var(--gold)">.</span></h1>` : ''}
     ${a.subtitle || (caption && !picture) ? `<p class="article-deck">${escapeHTML(a.subtitle || caption)}</p>` : ''}
     <div class="byline"><span>BY <strong>${escapeHTML(a.author || 'Phi Labs')}</strong></span><span>${formatDate(a)}</span>${a.readingMinutes ? `<span>${escapeHTML(a.readingMinutes)} MIN READ</span>` : ''}</div>
-    <div class="article-classification">${cls ? `${depthDot(cls)}` : ''}FILED UNDER <a href="${sectionUrl(primary)}">${escapeHTML(categoryLabel(a))}</a>${special ? ` <span>/</span> <a class="classification-special" href="${sectionUrl('special-reports')}">SPECIAL REPORTS</a>` : ''}</div>
+    <div class="article-classification">${cls ? `${depthDot(cls)}` : ''}FILED UNDER ${articleSectionLinks(a)}</div>
     </header>${articleSeriesContext(a)}<div class="article-body">${body}</div>
     ${pdf ? `<div class="special-feature" style="margin-top:45px"><div class="tag">DOCUMENT / PDF</div><h3>${escapeHTML(a.title)}</h3><p>Open or save the portable edition.</p><div class="report-links"><a href="${escapeHTML(pdf)}" target="_blank" rel="noopener">Open PDF ${arrow}</a><a href="${escapeHTML(pdf)}" download>Download PDF ↓</a></div></div>` : ''}
     <div class="article-end"><a href="${sectionUrl(primary)}">← ${escapeHTML(categoryLabel(a))}</a><button type="button" id="copy-article-link">Copy article link ↗</button></div></article>`;
