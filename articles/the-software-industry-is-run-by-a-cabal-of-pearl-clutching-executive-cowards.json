@@ -8,9 +8,9 @@
   "author": "Phi Labs Staff",
   "date": "2026-11-03",
   "published": "2026-11-03",
-  "section": "thinkpieces",
+  "section": "technology",
   "sections": [
-    "thinkpieces"
+    "technology"
   ],
   "tags": [
     "class war",
@@ -101,9 +101,7 @@
     {
       "name": "the-software-industry-is-run-by-a-cabal-of-pearl-clutching-executive-cowards.pdf",
       "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-software-industry-is-run-by-a-cabal-of-pearl-clutching-executive-cowards/the-software-industry-is-run-by-a-cabal-of-pearl-clutching-executive-cowards-9c6187277f5c1b17.pdf",
-      "mimeType": "application/pdf",
-      "releaseAssetId": 706259329,
-      "releaseTag": "measure-pdf-the-software-industry-is-run-by-a-cabal-of-pearl-clutching-executive-cowards"
+      "mimeType": "application/pdf"
     }
   ],
   "style": {
@@ -126,5 +124,6 @@
     "titleAlign": "left",
     "customCss": ""
   },
-  "updatedAt": "2026-11-03T16:21:29.110Z"
+  "updatedAt": "2026-11-05T17:29:18.089Z",
+  "doi": ""
 }

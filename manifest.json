@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-05T17:28:25.434Z",
+  "updatedAt": "2026-11-05T17:29:20.499Z",
   "items": [
     {
       "id": "gallery-heartbaby-38e2bd1b",
@@ -699,9 +699,9 @@
       "title": "The Software Industry is Run by a Cabal of Pearl-Clutching Executive Cowards",
       "subtitle": "Phi Labs systematically illustrates how a class of pearl clutching executives with no technical expertise manages to hold the industry hostage for their personal benefit.",
       "summary": "Phi Labs systematically illustrates how a class of pearl clutching executives with no technical expertise manages to hold the industry hostage for their personal benefit.",
-      "section": "thinkpieces",
+      "section": "technology",
       "sections": [
-        "thinkpieces"
+        "technology"
       ],
       "tags": [
         "class war",
@@ -722,14 +722,14 @@
         {
           "name": "the-software-industry-is-run-by-a-cabal-of-pearl-clutching-executive-cowards.pdf",
           "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-software-industry-is-run-by-a-cabal-of-pearl-clutching-executive-cowards/the-software-industry-is-run-by-a-cabal-of-pearl-clutching-executive-cowards-9c6187277f5c1b17.pdf",
-          "mimeType": "application/pdf",
-          "releaseAssetId": 706259329,
-          "releaseTag": "measure-pdf-the-software-industry-is-run-by-a-cabal-of-pearl-clutching-executive-cowards"
+          "mimeType": "application/pdf"
         }
       ],
       "directory": {
         "style": "text"
-      }
+      },
+      "doi": "",
+      "updatedAt": "2026-11-05T17:29:18.089Z"
     },
     {
       "schema": "phi-labs.media.v1",
