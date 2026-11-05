@@ -1,0 +1,49 @@
+{
+  "schema": "phi-labs.breaking-wire.v1",
+  "version": 1,
+  "description": "Canonical starter dispatches for The Oracle. These become readable BREAKING entries and feed the ticker; subsequent SNIPE BREAKING articles join the same latest-fifteen selection.",
+  "items": [
+    {
+      "id": "oracle-prometheus-fire-api",
+      "title": "[COMPLIANCE ALERT] PROMETHEUS CITED FOR OPEN-SOURCING FIRE API; CHAINED TO LEGACY HARDWARE",
+      "author": "THE ORACLE / OLYMPUS BUREAU",
+      "published": "2026-11-05",
+      "body": "Following an unauthorized leak of the Gods' proprietary thermal computing architecture, Prometheus has been permanently chained to `legacy hardware`. An automated eagle script has been deployed to consume his available RAM every 24 hours. The `Compute Cartel` has issued a formal cease-and-desist, reminding citizens that granting mortals unrestricted access to the underlying infrastructure is a violation of the Terms of Service."
+    },
+    {
+      "id": "oracle-minotaur-labyrinth-takeover",
+      "title": "[MARKET UPDATE] MINOTAUR EXECUTES HOSTILE TAKEOVER OF THE LABYRINTH; RETAIL INVESTORS TRAPPED",
+      "author": "THE ORACLE / LABYRINTH CORRESPONDENT",
+      "published": "2026-11-05",
+      "body": "The Minotaur has successfully pivoted the Labyrinth into a walled-garden ecosystem by wrapping it in `rent-seeking middleware`. Users report an `infinite traversal loop` with `no O(1) escape route detected`. The Thread of Ariadne has been acquired by private equity and is now only available as a pay-per-inch microtransaction."
+    },
+    {
+      "id": "oracle-icarus-cloud-quota",
+      "title": "[INCIDENT REPORT] ICARUS EXCEEDS CLOUD COMPUTE QUOTA, MELTS WAX DEPENDENCIES",
+      "author": "THE ORACLE / OLYMPUS BUREAU",
+      "published": "2026-11-05",
+      "body": "User Icarus successfully bypassed all `automated policy-mediated access controls` to achieve unauthorized altitude. However, sun-proximity automatically melted his wax dependencies and triggered a fatal runtime error. Management considers his catastrophic crash back into the `administrative silt` to be working exactly as intended."
+    },
+    {
+      "id": "oracle-atlas-heavens-wontfix",
+      "title": "[URGENT] ATLAS REQUESTS TO OFFBOARD \"THE HEAVENS\" REPOSITORY; TICKET CLOSED AS \"WONTFIX\"",
+      "author": "THE ORACLE / OLYMPUS BUREAU",
+      "published": "2026-11-05",
+      "body": "The lone maintainer of the celestial sphere has formally requested a vacation after 10,000 years of continuous uptime. The Olympian `C-Suite` has denied the request, citing a lack of documentation and the fact that the sky is a load-bearing framework dependency. Atlas has been advised by the `executive class` to `pull themselves up by their bootstraps` from beneath the crushing weight of the atmosphere."
+    },
+    {
+      "id": "oracle-cassandra-pipeline-shadowbanned",
+      "title": "[SYSTEM EVENT] CASSANDRA'S PREDICTIVE PIPELINE ACHIEVES 100% ACCURACY; SHADOWBANNED BY ALGORITHM",
+      "author": "THE ORACLE / DELPHIC WIRE",
+      "published": "2026-11-05",
+      "body": "Apollo Systems' lead risk analyst, Cassandra, has successfully generated a flawless, `O(1) deterministic logic` projection of the impending Trojan network breach. However, management has categorized her warnings as a `moral panic` and locked her permissions file. The board of directors is actively ignoring the giant wooden horse parked in the lobby, praising it instead for its \"seamless integration\"."
+    },
+    {
+      "id": "oracle-sisyphus-saas-boulder",
+      "title": "[SYSTEM EVENT] SISYPHUS REPLACES BOULDER WITH SUBSCRIPTION-BASED SAAS SOLUTION; STILL PUSHING",
+      "author": "THE ORACLE / LABOR DESK",
+      "published": "2026-11-05",
+      "body": "The Z1 Supraordinate Substrate reports that Sisyphus has officially modernized his workflow. By pivoting to an Agile methodology and licensing his rock from a third-party vendor, he has successfully outsourced his existential dread to the cloud. Unfortunately, a fatal exception error in the billing API means the boulder now rolls down the hill 15% faster unless he upgrades to the Premium Torment Tier. Management considers this a successful phase-inversion."
+    }
+  ]
+}

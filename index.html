@@ -1593,12 +1593,12 @@ body.breaking-ticker-visible .breaking-ticker { display:flex; }
     opener = null;
   });
 
-  window.mountLowerRegister = data => {
+  window.mountLowerRegister = (data, homeMode = false) => {
     const records = data?.lowerRegister?.items;
-    if (!Array.isArray(records) || !records.length) return;
+    if (!Array.isArray(records)) return;
     // Brand galleries retain manifest order; only the public Lower Register shuffles.
     catalogItems = [...records];
-    items = [...records];
+    items = homeMode ? records.filter(item => item.kind === "ad" || (!item.isCuriosity && item.kind !== "meme")) : [...records];
     for (let i = items.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [items[i], items[j]] = [items[j], items[i]];
@@ -1865,15 +1865,19 @@ function specialCard(a) {
     </div><div class="report-links"><a href="${articleUrl(a)}">Report details ${arrow}</a>${pdf ? `<a href="${escapeHTML(pdf)}" target="_blank" rel="noopener">Open PDF ${arrow}</a><a href="${escapeHTML(pdf)}" download>Download PDF ↓</a>` : ''}</div></div>`;
 }
 function frontPage() {
-  const featured = content.articles.find(a => a.id === content.publication.hero.articleId)
-    || allArticles().find(a => a.type === 'article') || allArticles().find(a => a.title);
+  // Curiosities remains a standalone section, but never supplies homepage hero
+  // or latest-article slots, including explicitly pinned curiosity features.
+  const homeEligible = a => !articleSections(a).includes('curiosities') && !articleSections(a).includes('humor') && a.source !== 'oracle-wire';
+  const eligible = allArticles().filter(homeEligible);
+  const featured = eligible.find(a => a.id === content.publication.hero.articleId)
+    || eligible.find(a => a.type === 'article') || eligible.find(a => a.title);
   if (!featured) return `${edition()}
     <section class="hero" aria-labelledby="hero-title"><span class="eyebrow">THE MEASURE / PHI LABS</span>
     <h1 id="hero-title">An independent<br>measure of things<span class="accent-word">.</span></h1>
-    <p class="hero-summary">Breaking. Science. Technology. Humanities. Politics. Thinkpieces. Curiosities. Special Reports.<br>Independent inquiry, collected in the public record.</p>
+    <p class="hero-summary">Breaking. Science. Technology. Humanities. Politics. Thinkpieces. Special Reports.<br>Independent inquiry, collected in the public record.</p>
     <div class="hero-footer"><a class="inline-link" href="#/about">About the publication ${arrow}</a></div></section>
     ${sectionTitle('Latest articles', 0)}<p class="empty-state">The record is ready for its first publication.</p>${seriesPreview()}`;
-  const latest = regularArticles().filter(a => a.id !== featured.id).slice(0,5);
+  const latest = eligible.filter(a => !isSpecial(a) && a.id !== featured.id).slice(0,5);
   return `${edition()}<section class="hero" aria-labelledby="hero-title"><span class="eyebrow">${escapeHTML(content.publication.hero.label)}</span>
       <h1 id="hero-title">${escapeHTML(featured.title)}<span class="accent-word">.</span></h1>
       <p class="hero-summary">${escapeHTML(featured.subtitle || featured.summary || featured.blurb || '')}</p>
@@ -2134,10 +2138,17 @@ window.addEventListener('scroll', () => {
   requestAnimationFrame(() => { articleTocScrollQueued = false; updateArticleTocPosition(); });
 }, {passive:true});
 let currentRender = 0;
+let lowerRegisterHomeMode = null;
 async function render(preserveScroll = false) {
   if (!content) return;
   const renderId = ++currentRender;
   const r = route();
+  // Curiosities never surface in the homepage register, but remain available on other routes.
+  const homeMode = r.type === 'home';
+  if (homeMode !== lowerRegisterHomeMode) {
+    window.mountLowerRegister(content,homeMode);
+    lowerRegisterHomeMode = homeMode;
+  }
   document.body.classList.toggle('classifieds-route', r.type === 'classified');
   if(r.type === 'gallery' && !galleryRecords.has(r.id)) {
     main.innerHTML = '<p class="initial-loading">LOADING GALLERY…</p>';
@@ -2232,7 +2243,7 @@ searchResults.addEventListener('click', event => {
 });
 
 function manifestMediaToRail(item) {
-  if (item.type === 'gallery') return {id:item.id,kind:'gallery',title:item.title,image:item.image||'',href:`#/gallery/${encodeURIComponent(item.id)}`,label:'PHOTO GALLERY'};
+  if (item.type === 'gallery') return {id:item.id,kind:'gallery',title:item.title,image:item.image||'',href:`#/gallery/${encodeURIComponent(item.id)}`,label:'PHOTO GALLERY',isCuriosity:articleSections(item).includes('curiosities')};
   const pdf = item.type === 'pdf' || item.mediaType === 'pdf';
   const tags = Array.isArray(item.tags) ? item.tags : [];
   const isParodyAd = item.mediaKind === 'ad' || (!item.mediaKind && tags.some(t => /^(?:ad|advert|parody-ad|sponsored)$/i.test(t)));
@@ -2246,8 +2257,33 @@ function manifestMediaToRail(item) {
     lowerRegisterEnabled:isParodyAd ? item.lowerRegisterEnabled !== false : true,
     sidebar:isParodyAd ? (item.sidebar || null) : null,
     viewerImage:isParodyAd ? (item.viewerImage || '') : '',
-    viewerCaption:isParodyAd ? (item.viewerCaption || '') : ''
+    viewerCaption:isParodyAd ? (item.viewerCaption || '') : '',
+    isCuriosity:articleSections(item).includes('curiosities')
   };
+}
+/* Seed dispatches are readable BREAKING articles without rewriting manifest.json.
+   A SNIPE-published manifest entry with the same ID takes precedence. */
+async function loadOracleDispatches() {
+  try {
+    const response = await fetch('resources/breaking-wire.json', {cache:'no-store'});
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const wire = await response.json();
+    if (wire.schema !== 'phi-labs.breaking-wire.v1' || wire.version !== 1 || !Array.isArray(wire.items))
+      throw new Error('Invalid Oracle wire catalog');
+    const published = new Set(content.articles.map(a => a.id));
+    for (const entry of wire.items) {
+      if (!entry || !/^oracle-[a-z0-9-]+$/.test(entry.id) || published.has(entry.id) ||
+          typeof entry.title !== 'string' || !entry.title.trim() || typeof entry.body !== 'string') continue;
+      content.articles.push({
+        id:entry.id, type:'article', section:'breaking', sections:['breaking'],
+        title:entry.title, author:String(entry.author || 'THE ORACLE'),
+        published:String(entry.published || '2026-11-05'),
+        summary:entry.body.slice(0,220), markdown:entry.body,
+        readingMinutes:1, classification:'copy', source:'oracle-wire'
+      });
+      published.add(entry.id);
+    }
+  } catch (error) { console.warn('Oracle wire unavailable:',error.message); }
 }
 async function loadGithubCatalog() {
   const response = await fetch('manifest.json', {cache:'no-store'});
@@ -2267,7 +2303,7 @@ async function loadGithubCatalog() {
   const latestTextArticles = records.filter(item => item.type === 'article' && item.mediaKind !== 'ad')
     .sort((a,b) => String(b.published || b.date || '').localeCompare(String(a.published || a.date || '')))
     .slice(0, 10).map(item => ({kind:'article', id:item.id, title:item.title, date:item.date || item.published || '',
-      classification:item.classification || '', image:item.directory?.image || '',
+      classification:item.classification || '', image:item.directory?.image || '', isCuriosity:articleSections(item).includes('curiosities'),
       href:`#/article/${encodeURIComponent(item.id)}`}));
   const mediaTiles = records.filter(item => item.type === 'media' || item.type === 'pdf').map(manifestMediaToRail);
   publicAds=mediaTiles.filter(item=>item.kind==='ad');
@@ -2356,9 +2392,10 @@ function seriesCard(info) {
     <span class="series-card-arrow" aria-hidden="true">↗</span></a>`;
 }
 function seriesPreview() {
-  if (!publicSeries.length) return '';
-  return `<section class="series-home" aria-labelledby="series-front-title">${sectionTitle('Explore series', publicSeries.length).replace('<h2>', '<h2 id="series-front-title">')}
-    <div class="series-card-list">${publicSeries.slice(0,2).map(seriesCard).join('')}</div>
+  const homeSeries = publicSeries.filter(info => canonicalSectionId(info.section) !== 'curiosities');
+  if (!homeSeries.length) return '';
+  return `<section class="series-home" aria-labelledby="series-front-title">${sectionTitle('Explore series', homeSeries.length).replace('<h2>', '<h2 id="series-front-title">')}
+    <div class="series-card-list">${homeSeries.slice(0,2).map(seriesCard).join('')}</div>
     <p><a class="inline-link" href="#/series">All series ${arrow}</a></p></section>`;
 }
 function seriesListing() {
@@ -2501,10 +2538,10 @@ window.addEventListener('hashchange', () => render());
 (async function initialize() {
   try {
     await loadGithubCatalog();
+    await loadOracleDispatches();
     await loadClassifiedsCatalog();
     sections = content.sections;
     mountSectionNav();
-    window.mountLowerRegister(content);
     loadSeriesCatalog();
     render();
   } catch (err) {
@@ -2688,17 +2725,18 @@ window.addEventListener('hashchange', () => render());
 })();
   </script>
 <script>
-/* Rev41 / fictional Breaking newswire. Reads only the 15 newest article records. */
+/* Rev43 / The Oracle: published BREAKING + standalone seed dispatches.
+   Empty publication manifests must not suppress the wire. */
 (() => {
   'use strict';
   const ticker=document.getElementById('breakingTicker');
   const loop=document.getElementById('breakingTickerLoop');
   const COPY_PATH='resources/phi-labs-copy.json';
+  const WIRE_PATH='resources/breaking-wire.json';
   const fallbackCopy=['Machine assisted. Human centric. Public Interest. Phi Labs.'];
   let copyLines=fallbackCopy;
   let currentItems=[];
   let signature='';
-  let hasLoaded=false;
   const isArticleRoute=() => /^#\/article\//.test(window.location.hash);
   const escapeHtml=text=>String(text??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const dateOf=a=>String(a.published || a.date || a.createdAt || a.updatedAt || '');
@@ -2745,28 +2783,53 @@ window.addEventListener('hashchange', () => render());
       }
     } catch(error) {console.warn('Breaking copy:',error.message);}
   }
-  async function refreshTicker() {
-    if(isArticleRoute())return;
+  async function readManifest() {
     try {
       const response=await fetch('manifest.json',{cache:'no-store'});
-      if(!response.ok)throw new Error(`Manifest HTTP ${response.status}`);
+      if(!response.ok)throw new Error(`HTTP ${response.status}`);
       const catalog=await response.json();
       if(!Array.isArray(catalog.items))throw new Error('Invalid publication manifest');
-      const seen=new Set();
-      const items=catalog.items.filter(a=>isBreaking(a)&&typeof a.id==='string'&&a.id&&typeof a.title==='string'&&a.title.trim())
-        .sort((a,b)=>dateOf(b).localeCompare(dateOf(a)) || String(b.id).localeCompare(String(a.id)))
-        .filter(a=>{if(seen.has(a.id))return false;seen.add(a.id);return true;}).slice(0,15);
-      const next=JSON.stringify(items.map(a=>[a.id,a.title,dateOf(a)]));
-      if(!hasLoaded || next!==signature){signature=next;currentItems=items;hasLoaded=true;buildTicker();}
-      else updateVisibility();
-    } catch(error){console.warn('Breaking ticker:',error.message);updateVisibility();}
+      return catalog.items.filter(isBreaking);
+    } catch(error) {console.warn('Breaking manifest:',error.message);return [];}
+  }
+  async function readWire() {
+    try {
+      const response=await fetch(WIRE_PATH,{cache:'no-store'});
+      if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      const catalog=await response.json();
+      if(catalog?.schema!=='phi-labs.breaking-wire.v1' || !Array.isArray(catalog.items))throw new Error('Invalid wire catalog');
+      return catalog.items.filter(a=>a && /^oracle-[a-z0-9-]+$/.test(a.id) && typeof a.title==='string' && typeof a.body==='string')
+        .map(a=>({...a,type:'article',section:'breaking'}));
+    } catch(error) {console.warn('Breaking seed:',error.message);return [];}
+  }
+  async function refreshTicker() {
+    // Both inputs are independent: new SNIPE BREAKING articles join the six seed
+    // dispatches. Prefer published records when their IDs overlap.
+    const [published,seeds]=await Promise.all([readManifest(),readWire()]);
+    // The ticker refreshes independently of the SPA. Make newly published
+    // BREAKING records navigable without requiring a full page reload.
+    if (typeof content !== 'undefined' && Array.isArray(content.articles)) {
+      const known = new Set(content.articles.map(a=>a.id));
+      for (const article of published) {
+        if (!known.has(article.id) && typeof article.id === 'string') {
+          content.articles.push(article); known.add(article.id);
+        }
+      }
+    }
+    const seen=new Set();
+    const items=[...published,...seeds].filter(a=>typeof a.id==='string' && a.id && typeof a.title==='string' && a.title.trim())
+      .filter(a=>{if(seen.has(a.id))return false;seen.add(a.id);return true;})
+      .sort((a,b)=>dateOf(b).localeCompare(dateOf(a)) || String(a.id).localeCompare(String(b.id)))
+      .slice(0,15);
+    const next=JSON.stringify(items.map(a=>[a.id,a.title,dateOf(a)]));
+    if(next!==signature){signature=next;currentItems=items;buildTicker();}
+    else updateVisibility();
   }
   window.addEventListener('hashchange',()=>{
     updateVisibility();
     if(!isArticleRoute())void refreshTicker();
   });
   (async()=>{await loadCopy();await refreshTicker();})();
-  // Refresh only the BREAKING selection; never reload the page or Lower Register.
   window.setInterval(()=>{if(!isArticleRoute())void refreshTicker();},180000);
 })();
 </script>
