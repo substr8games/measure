@@ -1217,6 +1217,32 @@ body { font-size:16px; }
   }
 }
 
+/* Rev41 / bottom-mounted Breaking wire. Reserve document space so it never covers the Lower Register. */
+:root { --measure-breaking-ticker-height: 42px; }
+body.breaking-ticker-visible { padding-bottom: var(--measure-breaking-ticker-height); }
+.breaking-ticker { position:fixed;left:0;right:0;bottom:0;height:var(--measure-breaking-ticker-height);z-index:45;display:none;
+  align-items:stretch;background:#061019;border-top:1px solid #55c5ff;box-shadow:0 -5px 16px #0008;
+  font:11px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;color:#f1f2f3; }
+body.breaking-ticker-visible .breaking-ticker { display:flex; }
+.breaking-ticker-title { position:relative;z-index:2;display:flex;flex:0 0 auto;align-items:center;gap:8px;
+  padding:0 16px;background:#061019;border-right:1px solid #345467;color:#55c5ff;font-size:10px;font-weight:800;letter-spacing:.09em;white-space:nowrap; }
+.breaking-ticker-title .wire-dot {width:6px;height:6px;flex:none;background:#55c5ff;border-radius:50%;}
+.breaking-ticker-window { flex:1;min-width:0;overflow:hidden;display:flex;align-items:center; }
+.breaking-ticker-loop { display:flex;align-items:center;width:max-content;min-width:0;animation:measure-breaking-scroll var(--breaking-ticker-duration,90s) linear infinite; }
+.breaking-ticker-segment { flex:0 0 auto;display:flex;align-items:center;gap:25px;padding-right:25px;white-space:nowrap; }
+.breaking-ticker-headline { color:#eff7fb;text-decoration:none;white-space:nowrap; }
+.breaking-ticker-headline:hover,.breaking-ticker-headline:focus-visible { color:#55c5ff;text-decoration:underline; }
+.breaking-ticker-headline strong { color:#55c5ff;letter-spacing:.08em; }
+.breaking-ticker-copy { color:#b9c0c2;font-style:italic; }
+.breaking-ticker-separator { color:#a28448;opacity:.9; }
+@keyframes measure-breaking-scroll {from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.breaking-ticker:hover .breaking-ticker-loop,.breaking-ticker:focus-within .breaking-ticker-loop { animation-play-state:paused; }
+@media(max-width:640px) { :root{--measure-breaking-ticker-height:38px;} .breaking-ticker-title{padding:0 9px;font-size:9px;} .breaking-ticker{font-size:10px;} }
+@media(prefers-reduced-motion:reduce) {
+  .breaking-ticker-loop {animation:none;}
+  .breaking-ticker-window {overflow-x:auto;scrollbar-width:thin;}
+  .breaking-ticker-loop .breaking-ticker-segment[aria-hidden="true"] {display:none;}
+}
   </style>
 </head>
 <body>
@@ -1301,6 +1327,10 @@ body { font-size:16px; }
     <div class="image-viewer-stage" id="image-viewer-stage"><img id="image-viewer-image" alt=""></div>
     <div class="image-viewer-caption" id="image-viewer-caption"></div>
   </dialog>
+  <aside id="breakingTicker" class="breaking-ticker" aria-label="The Oracle: latest Breaking headlines" hidden>
+    <div class="breaking-ticker-title"><span class="wire-dot" aria-hidden="true"></span> THE ORACLE / WIRE</div>
+    <div class="breaking-ticker-window"><div id="breakingTickerLoop" class="breaking-ticker-loop"></div></div>
+  </aside>
   <footer class="site-footer" id="site-footer">
     <div><span class="footer-mark">Φ</span> THE MEASURE <span class="footer-separator">&#60;/3</span> BUILD GAMES. MAKE ART.<span class="footer-separator"> ;] </span> PHI LABS. </div>
     <div><a href="#/about">ABOUT</a> <span class="footer-separator">/</span> <a href="#/archive">ARCHIVE</a> <span class="footer-separator"></3</span> <a href="read/">HTML EDITIONS</a> <span class="footer-separator">/</span> <a href="#/series">SERIES</a> <span class="footer-separator">/</span> INDEPENDENT INQUIRY. PUBLIC RECORD.</div>
@@ -2657,5 +2687,88 @@ window.addEventListener('hashchange', () => render());
   }
 })();
   </script>
+<script>
+/* Rev41 / fictional Breaking newswire. Reads only the 15 newest article records. */
+(() => {
+  'use strict';
+  const ticker=document.getElementById('breakingTicker');
+  const loop=document.getElementById('breakingTickerLoop');
+  const COPY_PATH='resources/phi-labs-copy.json';
+  const fallbackCopy=['Machine assisted. Human centric. Public Interest. Phi Labs.'];
+  let copyLines=fallbackCopy;
+  let currentItems=[];
+  let signature='';
+  let hasLoaded=false;
+  const isArticleRoute=() => /^#\/article\//.test(window.location.hash);
+  const escapeHtml=text=>String(text??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const dateOf=a=>String(a.published || a.date || a.createdAt || a.updatedAt || '');
+  const isBreaking=a=>a?.type==='article' &&
+    (a.section==='breaking' || (Array.isArray(a.sections)&&a.sections.includes('breaking')));
+  function shuffle(lines) {
+    const result=lines.slice();
+    for(let i=result.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}
+    return result;
+  }
+  function updateVisibility() {
+    const visible=!isArticleRoute() && currentItems.length>0;
+    ticker.hidden=!visible;
+    document.body.classList.toggle('breaking-ticker-visible',visible);
+  }
+  function buildTicker() {
+    loop.replaceChildren();
+    if(!currentItems.length){updateVisibility();return;}
+    const copy=shuffle(copyLines.length?copyLines:fallbackCopy);
+    const parts=[];
+    currentItems.forEach((item,i)=>{
+      const href='#/article/'+encodeURIComponent(item.id);
+      parts.push(`<a class="breaking-ticker-headline" href="${href}"><strong>BREAKING:</strong> ${escapeHtml(item.title)}</a>`);
+      parts.push('<span class="breaking-ticker-separator" aria-hidden="true">✳</span>');
+      parts.push(`<span class="breaking-ticker-copy">${escapeHtml(copy[i % copy.length])}</span>`);
+      parts.push('<span class="breaking-ticker-separator" aria-hidden="true">◆</span>');
+    });
+    const segment=document.createElement('div');
+    segment.className='breaking-ticker-segment';segment.innerHTML=parts.join('');
+    const duplicate=segment.cloneNode(true);duplicate.setAttribute('aria-hidden','true');
+    duplicate.querySelectorAll('a').forEach(link=>{link.tabIndex=-1;});
+    loop.append(segment,duplicate);
+    loop.style.setProperty('--breaking-ticker-duration',`${Math.max(60,currentItems.length*14)}s`);
+    updateVisibility();
+  }
+  async function loadCopy() {
+    try {
+      const response=await fetch(COPY_PATH,{cache:'no-store'});
+      if(!response.ok)throw new Error('Copy catalog unavailable');
+      const catalog=await response.json();
+      if(catalog?.schema==='phi-labs.copy-lines.v1' && Array.isArray(catalog.lines)) {
+        const lines=catalog.lines.filter(s=>typeof s==='string' && s.trim()).map(s=>s.trim());
+        if(lines.length)copyLines=lines;
+      }
+    } catch(error) {console.warn('Breaking copy:',error.message);}
+  }
+  async function refreshTicker() {
+    if(isArticleRoute())return;
+    try {
+      const response=await fetch('manifest.json',{cache:'no-store'});
+      if(!response.ok)throw new Error(`Manifest HTTP ${response.status}`);
+      const catalog=await response.json();
+      if(!Array.isArray(catalog.items))throw new Error('Invalid publication manifest');
+      const seen=new Set();
+      const items=catalog.items.filter(a=>isBreaking(a)&&typeof a.id==='string'&&a.id&&typeof a.title==='string'&&a.title.trim())
+        .sort((a,b)=>dateOf(b).localeCompare(dateOf(a)) || String(b.id).localeCompare(String(a.id)))
+        .filter(a=>{if(seen.has(a.id))return false;seen.add(a.id);return true;}).slice(0,15);
+      const next=JSON.stringify(items.map(a=>[a.id,a.title,dateOf(a)]));
+      if(!hasLoaded || next!==signature){signature=next;currentItems=items;hasLoaded=true;buildTicker();}
+      else updateVisibility();
+    } catch(error){console.warn('Breaking ticker:',error.message);updateVisibility();}
+  }
+  window.addEventListener('hashchange',()=>{
+    updateVisibility();
+    if(!isArticleRoute())void refreshTicker();
+  });
+  (async()=>{await loadCopy();await refreshTicker();})();
+  // Refresh only the BREAKING selection; never reload the page or Lower Register.
+  window.setInterval(()=>{if(!isArticleRoute())void refreshTicker();},180000);
+})();
+</script>
 </body>
 </html>
