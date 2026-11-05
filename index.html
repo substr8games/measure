@@ -1144,6 +1144,61 @@ body { font-size:16px; }
 .section-bar a { font-size: 10px; padding: 10px 2px 10px; letter-spacing: .005em; }
 @media (max-width: 1140px) { .section-bar { gap: 18px; } }
 @media (max-width: 700px) { .masthead { grid-column: 2; } .section-bar a { flex-shrink: 0; font-size: 11px; padding: 12px 2px; } }
+/* REV36 / Full publication-frame masthead and section navigation.
+   The reading-column remains 800px; the two rail columns are part of the
+   publication frame, not additional width to subtract from the header. */
+.masthead,
+.section-bar {
+  grid-column: 1 / -1;
+  justify-self: center;
+  box-sizing: border-box;
+  width: calc(100% - 38px);
+  max-width: 1240px;
+  min-width: 0;
+}
+.masthead {
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0 14px;
+  margin: 0;
+  border: 0;
+}
+.masthead::before,
+.masthead::after { content: none; display: none; }
+.masthead .brand-link {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.masthead .brand-lockup {
+  display: block;
+  width: min(1040px, 100%);
+  max-width: 100%;
+  max-height: 230px;
+  height: auto;
+  object-fit: contain;
+}
+.section-bar {
+  grid-row: 2;
+  justify-content: space-between;
+}
+@media (max-width: 1199px) {
+  .masthead,
+  .section-bar { grid-column: 1 / -1; }
+  .masthead { padding: 9px 0 12px; }
+  .masthead .brand-lockup { width: min(940px, 100%); max-height: 200px; }
+}
+@media (max-width: 700px) {
+  .masthead,
+  .section-bar { grid-column: 1 / -1; width: calc(100% - 38px); }
+  .masthead { padding: 8px 0 10px; }
+  .masthead .brand-lockup { width: 100%; max-height: none; }
+  .section-bar { overflow-x: auto; justify-content: flex-start; gap: 18px; }
+}
   </style>
 </head>
 <body>
