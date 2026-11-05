@@ -13,6 +13,10 @@
   <meta property="og:title" content="The Measure — A Phi Labs Publication">
   <meta property="og:description" content="Independent research, reporting, essays and editorial work published by Phi Labs.">
   <meta property="og:url" content="https://substr8games.github.io/measure/">
+  <meta property="og:image" content="https://substr8games.github.io/measure/images/social-card.png">
+  <meta property="og:image:alt" content="The Measure, a Phi Labs publication">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://substr8games.github.io/measure/images/social-card.png">
   <title>The Measure — A Phi Labs Publication</title>
   <link rel="icon" type="image/png" href="images/logo.png">
   <style>
@@ -1228,7 +1232,7 @@ body.breaking-ticker-visible .breaking-ticker { display:flex; }
   padding:0 16px;background:#061019;border-right:1px solid #345467;color:#55c5ff;font-size:10px;font-weight:800;letter-spacing:.09em;white-space:nowrap; }
 .breaking-ticker-title .wire-dot {width:6px;height:6px;flex:none;background:#55c5ff;border-radius:50%;}
 .breaking-ticker-window { flex:1;min-width:0;overflow:hidden;display:flex;align-items:center; }
-.breaking-ticker-loop { display:flex;align-items:center;width:max-content;min-width:0;animation:measure-breaking-scroll var(--breaking-ticker-duration,45s) linear infinite; }
+.breaking-ticker-loop { display:flex;align-items:center;width:max-content;min-width:0;animation:measure-breaking-scroll var(--breaking-ticker-duration,90s) linear infinite; }
 .breaking-ticker-segment { flex:0 0 auto;display:flex;align-items:center;gap:25px;padding-right:25px;white-space:nowrap; }
 .breaking-ticker-headline { color:#eff7fb;text-decoration:none;white-space:nowrap; }
 .breaking-ticker-headline:hover,.breaking-ticker-headline:focus-visible { color:#55c5ff;text-decoration:underline; }
@@ -1243,6 +1247,12 @@ body.breaking-ticker-visible .breaking-ticker { display:flex; }
   .breaking-ticker-window {overflow-x:auto;scrollbar-width:thin;}
   .breaking-ticker-loop .breaking-ticker-segment[aria-hidden="true"] {display:none;}
 }
+/* Rev44: article sharing is layout-local; no new public posting system. */
+.article-share{display:flex;align-items:center;flex-wrap:wrap;gap:9px 17px;margin-top:18px}
+.article-share-label{font-size:10px;color:var(--muted);letter-spacing:.13em}
+.article-share :is(a,button){display:inline-flex;align-items:center;min-height:32px;padding:5px 9px;border:1px solid var(--gold-soft);background:transparent;color:var(--paper);font:inherit;font-size:10px;letter-spacing:.06em;text-decoration:none;cursor:pointer}
+.article-share :is(a,button):hover{color:var(--gold);border-color:var(--gold)}
+.article-share [hidden]{display:none!important}
   </style>
 </head>
 <body>
@@ -1975,6 +1985,27 @@ function galleryPage(record){
        <img src="${escapeHTML(path)}" alt="${escapeHTML(image.alt||'')}" loading="lazy"><span><b>${String(index+1).padStart(2,'0')}</b>${image.caption?' / '+escapeHTML(image.caption):''}</span></button>`;
     }).join('')}</section><div class="article-end"><a href="#/section/${encodeURIComponent(canonicalSectionId(record.section||'curiosities'))}">← Back to ${escapeHTML(categoryLabel(record))}</a></div>`;
 }
+function articleShareUrl(a) {
+  const id=String(a?.id||'');
+  // Static, server-rendered editions expose each article's metadata to social crawlers.
+  if(a?.type==='article' && a.source!=='oracle-wire' && /^[a-z0-9][a-z0-9-]*$/.test(id))
+    return new URL('read/'+encodeURIComponent(id)+'/',document.baseURI).href;
+  if(a?.source==='oracle-wire' && /^oracle-[a-z0-9-]+$/.test(id))
+    return new URL('read/'+encodeURIComponent(id)+'/',document.baseURI).href;
+  return new URL(articleUrl(a),document.baseURI).href;
+}
+function articleShareBar(a) {
+  const url=articleShareUrl(a),title=String(a?.title||'The Measure');
+  const composed=title+' — The Measure\n'+url;
+  return `<nav class="article-share" aria-label="Share this article">
+    <span class="article-share-label">SHARE /</span>
+    <button type="button" id="copy-article-link" data-share-url="${escapeHTML(url)}">COPY LINK</button>
+    <button type="button" id="share-native-article" data-share-url="${escapeHTML(url)}" hidden>SHARE…</button>
+    <a href="https://bsky.app/intent/compose?text=${encodeURIComponent(composed)}" target="_blank" rel="noopener noreferrer">BLUESKY ↗</a>
+    <a href="https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}" target="_blank" rel="noopener noreferrer">REDDIT ↗</a>
+    <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title+' — The Measure')}" target="_blank" rel="noopener noreferrer">X ↗</a>
+  </nav>`;
+}
 function singleArticle(a) {
   const special = isSpecial(a), pdf = pdfLink(a), primary = articleSections(a)[0] || 'thinkpieces';
   const picture = a.type === 'media' ? safeResource(a.image || a.url) : '';
@@ -1990,7 +2021,7 @@ function singleArticle(a) {
     <div class="article-classification">${cls ? `${depthDot(cls)}` : ''}FILED UNDER ${articleSectionLinks(a)}</div>
     </header>${articleSeriesContext(a)}<div class="article-body">${body}</div>
     ${pdf ? `<div class="special-feature" style="margin-top:45px"><div class="tag">DOCUMENT / PDF</div><h3>${escapeHTML(a.title)}</h3><p>Open or save the portable edition.</p><div class="report-links"><a href="${escapeHTML(pdf)}" target="_blank" rel="noopener">Open PDF ${arrow}</a><a href="${escapeHTML(pdf)}" download>Download PDF ↓</a></div></div>` : ''}
-    <div class="article-end"><a href="${sectionUrl(primary)}">← ${escapeHTML(categoryLabel(a))}</a><button type="button" id="copy-article-link">Copy article link ↗</button></div></article>`;
+    <div class="article-end"><a href="${sectionUrl(primary)}">← ${escapeHTML(categoryLabel(a))}</a>${articleShareBar(a)}</div></article>`;
 }
 function archive() {
   const items = allArticles();
@@ -2214,10 +2245,15 @@ async function render(preserveScroll = false) {
   const share = document.getElementById('copy-article-link');
   if (share) share.addEventListener('click', async () => {
     const original = share.textContent;
-    try { await navigator.clipboard.writeText(window.location.href); share.textContent = 'Copied ✓'; }
+    try { await navigator.clipboard.writeText(share.dataset.shareUrl || window.location.href); share.textContent = 'Copied ✓'; }
     catch { share.textContent = 'Copy unavailable'; }
     setTimeout(() => { if (share.isConnected) share.textContent = original; }, 2000);
   });
+  const nativeShare=document.getElementById('share-native-article');
+  if(nativeShare && typeof navigator.share==='function') {
+    nativeShare.hidden=false;
+    nativeShare.addEventListener('click',()=>navigator.share({title:a?.title||'The Measure',url:nativeShare.dataset.shareUrl}).catch(()=>{}));
+  }
   if (!preserveScroll) window.scrollTo({top:0,behavior:'instant'});
 }
 function renderSearch() {
