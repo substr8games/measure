@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-05T22:31:06.905Z",
+  "updatedAt": "2026-11-05T22:44:37.829Z",
   "items": [
     {
       "id": "gallery-heartbaby-38e2bd1b",
@@ -23,6 +23,37 @@
       "directory": {
         "style": "thumbnail",
         "image": "images/galleries/gallery-heartbaby-38e2bd1b/4ca58d4d-0ad2-4fef-ac62-41729f0bb885.png"
+      }
+    },
+    {
+      "id": "market-update-midas-inc-accidentally-financializes-entire-food-supply-board-cele",
+      "type": "article",
+      "title": "[MARKET UPDATE] MIDAS INC. ACCIDENTALLY FINANCIALIZES ENTIRE FOOD SUPPLY; BOARD CELEBRATES RECORD VALUATION",
+      "subtitle": "",
+      "summary": "After deploying a proprietary \"Golden Touch\" algorithm designed to maximize shareholder value, CEO Midas has successfully bricked the biological sustenance layer. All consumable assets are now trapped in a hard-coded, read-only metallic state. When informed that users are starving due to the sudden lack of nutritional runtime, the executive class issued a statement praising the resulting 10,000% increase in localized market capitalization and suggested citizens simply pivot to digesting raw bullion.",
+      "section": "breaking",
+      "sections": [
+        "breaking"
+      ],
+      "tags": [
+        "economy",
+        "capital",
+        "private",
+        "investment"
+      ],
+      "doi": "",
+      "author": "THE ORACLE / UNDERWORLD DESK",
+      "published": "2026-11-05",
+      "date": "2026-11-05",
+      "updatedAt": "2026-11-05T22:44:35.574Z",
+      "readingMinutes": 1,
+      "classification": "",
+      "content": "articles/market-update-midas-inc-accidentally-financializes-entire-food-supply-board-cele.json",
+      "url": "#/article/market-update-midas-inc-accidentally-financializes-entire-food-supply-board-cele",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
       }
     },
     {
