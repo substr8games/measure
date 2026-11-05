@@ -834,31 +834,16 @@ body { font-size:16px; }
 .poster-dialog--ad .poster-dialog-notes h2 {font-size:clamp(15px,2.5vw,24px);}
 @media(max-width:560px){.gallery-public-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.gallery-public-card img{height:145px}.gallery-public-card span{padding:8px;font-size:10px}}
 /* Rev28 / density-first publication grid and accessible article contents. */
-/* The masthead occupies the full editorial span: left notice, article column, directory. */
+/* Rev35 / masthead belongs to the central editorial grid, not the full viewport. */
 .masthead {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 4fr) minmax(0, 1fr);
-  align-items: center;
-  gap: 14px;
-  width: min(100%, 1520px);
-  margin: 0 auto;
-  padding: 9px clamp(19px, 3.4vw, 52px) 11px;
-  border-bottom: 1px solid var(--gold-subtle);
+  grid-column: 2; grid-row: 1;
+  display: flex; justify-content: center; align-items: center;
+  width: 100%; max-width: 800px; margin: 0;
+  padding: 8px 0 12px; border-bottom: 0;
 }
-.masthead::before, .masthead::after {
-  display: block;
-  padding-top: 9px;
-  border-top: 1px solid var(--gold-soft);
-  color: var(--gold);
-  font-size: clamp(8px, .75vw, 10px);
-  line-height: 1.65;
-  letter-spacing: .07em;
-}
-.masthead::before { content: 'PHI LABS / PUBLIC INTEREST'; text-align: right; }
-.masthead::after { content: 'THE PUBLICATION RECORD / EST. 2026'; text-align: left; }
-.masthead .brand-link { grid-column: 2; justify-content: center; min-width: 0; width: 100%; }
-.masthead .brand-lockup { display: block; width: 100%; max-width: none; max-height: 218px; height: auto; object-fit: contain; }
+.masthead::before, .masthead::after { content: none; display: none; }
+.masthead .brand-link { display: flex; justify-content: center; align-items: center; width: 100%; min-width: 0; }
+.masthead .brand-lockup { display: block; width: min(760px,100%); max-width: 100%; max-height: 218px; height: auto; object-fit: contain; }
 .section-bar a { font-size: 11px; padding: 10px 4px 10px; letter-spacing: .025em; }
 .reading-column { padding-top: 16px; padding-bottom: 57px; }
 .edition-marker { padding-bottom: 9px; font-size: 9px; line-height: 1.5; }
@@ -946,15 +931,15 @@ body { font-size:16px; }
   .article-inline-toc { display: none; }
 }
 @media (max-width: 1199px) {
-  .masthead { grid-template-columns: minmax(0,1fr); padding: 10px 25px 7px; }
+  .masthead { grid-column: 2; padding: 8px 0 10px; }
   .masthead::before, .masthead::after { display: none; }
-  .masthead .brand-link { grid-column: 1; max-width: min(680px, 95%); justify-self: center; }
+  .masthead .brand-link { width: 100%; justify-content: center; }
   .masthead .brand-lockup { max-height: 183px; }
   .right-rail { margin-top: 14px; }
 }
 @media (max-width: 700px) {
-  .masthead { padding: 9px 19px; }
-  .masthead .brand-link { justify-self: start; max-width: min(480px, 100%); }
+  .masthead { grid-column: 2; padding: 7px 0 10px; }
+  .masthead .brand-link { width: 100%; justify-content: center; }
   .masthead .brand-lockup { max-height: none; }
   .section-bar a { font-size: 11px; padding: 12px 0; }
   .reading-column { padding: 17px 0 45px; }
@@ -1147,6 +1132,18 @@ body { font-size:16px; }
 @media(max-width:590px) {
   .image-viewer-stage {padding:8px;}
 }
+/* Rev35 / cyan breaking bookend; Special Reports remains red at the opposite edge. */
+:root { --breaking-cyan: #55c5ff; }
+.section-bar a.nav-breaking { color: var(--breaking-cyan); }
+.section-bar a.nav-breaking:hover { color: #a6e7ff; }
+.section-bar a.nav-breaking[aria-current="page"]::after { background: var(--breaking-cyan); }
+.breaking-page .eyebrow, .breaking-page h1 .accent-word, .breaking-content .article-head .eyebrow { color: var(--breaking-cyan); }
+.breaking-page .eyebrow::before, .breaking-content .article-head .eyebrow::before { background: var(--breaking-cyan); }
+.breaking-content .article-classification a:first-child { color: var(--breaking-cyan); border-color: var(--breaking-cyan); }
+.section-bar { min-width: 0; }
+.section-bar a { font-size: 10px; padding: 10px 2px 10px; letter-spacing: .005em; }
+@media (max-width: 1140px) { .section-bar { gap: 18px; } }
+@media (max-width: 700px) { .masthead { grid-column: 2; } .section-bar a { flex-shrink: 0; font-size: 11px; padding: 12px 2px; } }
   </style>
 </head>
 <body>
@@ -1689,6 +1686,7 @@ let content = {
     hero: { articleId: '', label: 'RESEARCH / EDITORIAL / PUBLIC INTEREST' }
   },
   sections: [
+    {id:'breaking',name:'Breaking',summary:'Fictional dispatches from the Oracle: mythological breaking news about the world that never existed, reporting on the one that does.'},
     {id:'science',name:'Science',summary:'Original research, mathematics, physics, biology and the experimental record.'},
     {id:'technology',name:'Technology',summary:'Engineering, computing, AI, tools and the systems we build.'},
     {id:'humanities',name:'Humanities',summary:'Philosophy, culture, history and human experience.'},
@@ -1766,7 +1764,7 @@ function frontPage() {
   if (!featured) return `${edition()}
     <section class="hero" aria-labelledby="hero-title"><span class="eyebrow">THE MEASURE / PHI LABS</span>
     <h1 id="hero-title">An independent<br>measure of things<span class="accent-word">.</span></h1>
-    <p class="hero-summary">Science. Technology. Humanities. Politics. Thinkpieces. Curiosities. Special Reports.<br>Independent inquiry, collected in the public record.</p>
+    <p class="hero-summary">Breaking. Science. Technology. Humanities. Politics. Thinkpieces. Curiosities. Special Reports.<br>Independent inquiry, collected in the public record.</p>
     <div class="hero-footer"><a class="inline-link" href="#/about">About the publication ${arrow}</a></div></section>
     ${sectionTitle('Latest articles', 0)}<p class="empty-state">The record is ready for its first publication.</p>${seriesPreview()}`;
   const latest = regularArticles().filter(a => a.id !== featured.id).slice(0,5);
@@ -1782,8 +1780,8 @@ function frontPage() {
 function sectionListing(id) {
   const s = section(id); if (!s) return notFound();
   const items = inSection(id), special = id === 'special-reports';
-  return `${edition()}<header class="page-head ${special ? 'special-page' : ''}">
-      <span class="eyebrow">${special ? 'LONGFORM / THE RECORD' : 'EDITORIAL SECTION / THE MEASURE'}</span>
+  return `${edition()}<header class="page-head ${special ? 'special-page' : id === 'breaking' ? 'breaking-page' : ''}">
+      <span class="eyebrow">${special ? 'LONGFORM / THE RECORD' : id === 'breaking' ? 'THE ORACLE / MYTHOLOGICAL NEWSWIRE' : 'EDITORIAL SECTION / THE MEASURE'}</span>
       <h1>${escapeHTML(s.name)}<span class="accent-word">.</span></h1><p>${escapeHTML(s.summary)}</p></header>
     ${sectionTitle(special ? 'PDF editions' : 'The latest', items.length)}
     ${items.length ? special ? items.map(specialCard).join('') : `<div class="article-list">${items.map(row).join('')}</div>` : `<div class="empty-state">No entries are filed under ${escapeHTML(s.name)} yet. The section is ready for its first publication.</div>`}
@@ -1875,7 +1873,7 @@ function singleArticle(a) {
   const body = picture
     ? `<figure class="media-figure"><img src="${escapeHTML(picture)}" alt="${escapeHTML(a.title || 'Visual artwork')}" loading="eager">${caption ? `<figcaption>${escapeHTML(caption)}</figcaption>` : ''}</figure>`
     : typeof a.markdown === 'string' && typeof renderMarkdown === 'function' ? renderMarkdown(a.markdown) : renderBlocks(a.blocks);
-  return `${edition()}<article class="article-content" ${cls ? `data-classification="${cls}"` : ''}><header class="article-head"><span class="eyebrow">${special ? 'SPECIAL REPORT / PDF EDITION' : a.type === 'media' ? 'VISUAL COMMENTARY / THE MEASURE' : 'ARTICLE / THE MEASURE'}</span>
+  return `${edition()}<article class="article-content ${primary === 'breaking' ? 'breaking-content' : ''}" ${cls ? `data-classification="${cls}"` : ''}><header class="article-head"><span class="eyebrow">${special ? 'SPECIAL REPORT / PDF EDITION' : primary === 'breaking' ? 'BREAKING / THE ORACLE' : a.type === 'media' ? 'VISUAL COMMENTARY / THE MEASURE' : 'ARTICLE / THE MEASURE'}</span>
     ${a.title ? `<h1>${escapeHTML(a.title)}<span style="color:var(--gold)">.</span></h1>` : ''}
     ${a.subtitle || (caption && !picture) ? `<p class="article-deck">${escapeHTML(a.subtitle || caption)}</p>` : ''}
     <div class="byline"><span>BY <strong>${escapeHTML(a.author || 'Phi Labs')}</strong></span><span>${formatDate(a)}</span>${a.readingMinutes ? `<span>${escapeHTML(a.readingMinutes)} MIN READ</span>` : ''}</div>
@@ -1892,7 +1890,7 @@ function about() {
   return `${edition()}<header class="page-head"><span class="eyebrow">ABOUT THE PUBLICATION</span><h1>An independent<br>measure of things<span class="accent-word">.</span></h1><p>The Measure is the editorial and research publication of Phi Labs.</p></header>
     <div class="about-copy"><p>The Measure provides a home for exploratory research, scientific and philosophical inquiry, technical analysis, and work undertaken in the public interest.</p>
     <p>Articles are rendered directly from JSON. Special Reports also have portable PDF editions, and appear both in their subject section and the Special Reports catalog.</p></div>
-    <dl><div class="info-pair"><dt>Published by</dt><dd>Phi Labs</dd></div><div class="info-pair"><dt>Founded</dt><dd>28 October 2026</dd></div><div class="info-pair"><dt>Formats</dt><dd>Online articles / longform PDFs</dd></div><div class="info-pair"><dt>Sections</dt><dd>Science / Technology / Humanities / Politics / Thinkpieces / Curiosities / Special Reports</dd></div></dl>${previewNotice()}`;
+    <dl><div class="info-pair"><dt>Published by</dt><dd>Phi Labs</dd></div><div class="info-pair"><dt>Founded</dt><dd>28 October 2026</dd></div><div class="info-pair"><dt>Formats</dt><dd>Online articles / longform PDFs</dd></div><div class="info-pair"><dt>Sections</dt><dd>Breaking / Science / Technology / Humanities / Politics / Thinkpieces / Curiosities / Special Reports</dd></div></dl>${previewNotice()}`;
 }
 function notFound() {
   return `${edition()}<header class="page-head"><span class="eyebrow">RECORD NOT FOUND</span><h1>Nothing at this address<span class="accent-word">.</span></h1><p>The requested article or section does not exist in the current publication index.</p></header><div class="article-end"><a href="#/">← Return to front page</a></div>`;
@@ -1939,10 +1937,14 @@ function renderDirectory(r) {
   }).join('') : `<p class="search-help">No entries in this section yet.</p>`;
 }
 function mountSectionNav() {
-  nav.innerHTML = sections.map(s =>
-    `<a href="${sectionUrl(s.id)}" data-nav="${escapeHTML(s.id)}" class="${s.id === 'special-reports' ? 'nav-special' : ''}">${escapeHTML(s.name)}</a>`
-  ).join('');
-  nav.insertAdjacentHTML("beforeend", `<a href="#/classifieds" data-nav="classifieds">Classifieds</a>`);
+  const editorial = sections.filter(s => s.id !== 'special-reports');
+  const specials = sections.filter(s => s.id === 'special-reports');
+  const links = editorial.map(s =>
+    `<a href="${sectionUrl(s.id)}" data-nav="${escapeHTML(s.id)}" class="${s.id === 'breaking' ? 'nav-breaking' : ''}">${escapeHTML(s.name)}</a>`
+  );
+  links.push(`<a href="#/classifieds" data-nav="classifieds">Classifieds</a>`);
+  links.push(...specials.map(s => `<a href="${sectionUrl(s.id)}" data-nav="${escapeHTML(s.id)}" class="nav-special">${escapeHTML(s.name)}</a>`));
+  nav.innerHTML = links.join('');
 }
 function updateNavigation(r) {
   let active = r.type === 'section' ? r.id : r.type === 'classified' ? 'classifieds' : null;
