@@ -1,8 +1,30 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-05T17:10:08.937Z",
+  "updatedAt": "2026-11-05T17:14:54.586Z",
   "items": [
+    {
+      "id": "gallery-heartbaby-38e2bd1b",
+      "type": "gallery",
+      "title": "heartBaby",
+      "summary": "dangerously deceptive",
+      "advertiser": "<3baby",
+      "section": "curiosities",
+      "sections": [
+        "curiosities"
+      ],
+      "date": "2026-11-05",
+      "published": "2026-11-05",
+      "tags": [],
+      "image": "images/galleries/gallery-heartbaby-38e2bd1b/4ca58d4d-0ad2-4fef-ac62-41729f0bb885.png",
+      "imageCount": 2,
+      "content": "galleries/gallery-heartbaby-38e2bd1b.json",
+      "url": "#/gallery/gallery-heartbaby-38e2bd1b",
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/galleries/gallery-heartbaby-38e2bd1b/4ca58d4d-0ad2-4fef-ac62-41729f0bb885.png"
+      }
+    },
     {
       "id": "the-example-is-the-argument",
       "type": "article",

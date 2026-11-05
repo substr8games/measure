@@ -1,0 +1,34 @@
+{
+  "schema": "phi-labs.gallery.v1",
+  "id": "gallery-heartbaby-38e2bd1b",
+  "type": "gallery",
+  "title": "heartBaby",
+  "description": "dangerously deceptive",
+  "advertiser": "<3baby",
+  "section": "curiosities",
+  "sections": [
+    "curiosities"
+  ],
+  "date": "2026-11-05",
+  "published": "2026-11-05",
+  "tags": [],
+  "coverId": "4ca58d4d-0ad2-4fef-ac62-41729f0bb885",
+  "coverImage": "images/galleries/gallery-heartbaby-38e2bd1b/4ca58d4d-0ad2-4fef-ac62-41729f0bb885.png",
+  "images": [
+    {
+      "id": "4ca58d4d-0ad2-4fef-ac62-41729f0bb885",
+      "path": "images/galleries/gallery-heartbaby-38e2bd1b/4ca58d4d-0ad2-4fef-ac62-41729f0bb885.png",
+      "originalFilename": "Neon Cat-Burglar Sunset Poster.png",
+      "caption": "",
+      "alt": "Neon Cat Burglar Sunset Poster"
+    },
+    {
+      "id": "113ae6f1-6651-4003-b9a0-736ae3770482",
+      "path": "images/galleries/gallery-heartbaby-38e2bd1b/113ae6f1-6651-4003-b9a0-736ae3770482.png",
+      "originalFilename": "Sunset Neon Rooftop Heist.png",
+      "caption": "",
+      "alt": "Sunset Neon Rooftop Heist"
+    }
+  ],
+  "updatedAt": "2026-11-05T17:14:47.323Z"
+}
