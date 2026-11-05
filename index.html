@@ -1199,6 +1199,24 @@ body { font-size:16px; }
   .masthead .brand-lockup { width: 100%; max-height: none; }
   .section-bar { overflow-x: auto; justify-content: flex-start; gap: 18px; }
 }
+/* Rev37 / Outside rails register with the navigation bookends.
+   BREAKING -> left advertising edge; SPECIAL REPORTS -> right timeline edge.
+   The rail positions use the same 1240px centered publication frame as Rev36. */
+:root { --tm-publication-frame-edge: max(19px, calc((100vw - 1240px) / 2)); }
+@media (min-width: 1200px) {
+  .site-shell .left-rail-ad {
+    justify-self: start;
+    margin-left: var(--tm-publication-frame-edge);
+    margin-right: 0;
+  }
+  .site-shell .right-rail {
+    justify-self: end;
+    margin-left: 0;
+    margin-right: var(--tm-publication-frame-edge);
+    width: min(185px, calc(100% - var(--tm-publication-frame-edge)));
+  }
+}
+
   </style>
 </head>
 <body>
