@@ -968,12 +968,12 @@ body { font-size:16px; }
 }
 /* THE MEASURE / Curated Classifieds — newsgroup reader, editorial-only threads. */
 .classifieds-route .right-rail { display:none; }
-.classifieds-route .reading-column { width:min(1100px,calc(100% - 320px));max-width:1100px; }
+.classifieds-route .reading-column { grid-column: 2 / -1; width: min(1100px, calc(100% - 32px)); max-width: 1100px; margin: 0; }
 .classifieds-legend {font:700 9px/1.6 ui-monospace,monospace;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;}
 .classifieds-head {padding:22px 0 20px;border-bottom:1px solid var(--gold-soft);}
 .classifieds-head h1 {margin:7px 0 8px;font-size:clamp(27px,3.1vw,43px);letter-spacing:-.045em;color:var(--white);}
 .classifieds-head p {margin:0;font-size:11px;line-height:1.8;color:var(--muted);}
-.class-browser {display:grid;grid-template-columns:minmax(235px,32%) minmax(0,1fr);border:1px solid var(--gold-soft);margin-top:22px;min-height:500px;background:rgba(8,13,17,.55);}
+.class-browser {display:grid;grid-template-columns:minmax(260px,30%) minmax(0,1fr);border:1px solid var(--gold-soft);margin-top:22px;min-height:500px;background:rgba(8,13,17,.55);}
 .class-index {border-right:1px solid var(--gold-soft);min-width:0;}
 .class-panel-head {padding:14px 15px 11px;border-bottom:1px solid var(--gold-soft);display:flex;align-items:center;justify-content:space-between;gap:9px;color:var(--gold);font:700 9px/1.4 ui-monospace,monospace;letter-spacing:.1em;}
 .class-panel-head small {color:var(--muted);letter-spacing:.04em;font-weight:normal;}
@@ -1017,8 +1017,8 @@ body { font-size:16px; }
 .class-signup-dialog .class-dialog-head {display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--gold-soft);color:var(--gold);font:700 10px ui-monospace,monospace;letter-spacing:.12em;}
 .class-signup-dialog p {font:13px/1.9 ui-monospace,monospace;padding:17px 20px 24px;margin:0;}
 .class-signup-dialog .class-dialog-close {border:0;background:transparent;color:var(--gold);font-size:20px;cursor:pointer;}
-@media (max-width:1190px) { .classifieds-route .reading-column {width:min(930px,calc(100% - 70px));} }
-@media (max-width:760px) { .classifieds-route .reading-column {width:calc(100% - 38px);} .class-browser {grid-template-columns:1fr;} .class-index {border-right:0;border-bottom:1px solid var(--gold-soft);} .class-index-list {max-height:210px;} .class-reader {padding:0 16px 28px;} .class-category-list {display:grid;grid-template-columns:1fr 1fr;} .class-comment-children {padding-left:11px;} }
+@media (max-width:1190px) { .classifieds-route .reading-column { width: min(1100px, calc(100% - 20px)); } }
+@media (max-width:760px) { .classifieds-route .reading-column { grid-column: 2; width: 100%; } .class-browser {grid-template-columns:1fr;} .class-index {border-right:0;border-bottom:1px solid var(--gold-soft);} .class-index-list {max-height:210px;} .class-reader {padding:0 16px 28px;} .class-category-list {display:grid;grid-template-columns:1fr 1fr;} .class-comment-children {padding-left:11px;} }
 /* REV32 / consistent artwork sizing and full-resolution inspection. */
 :root { --measure-image-width: 1080px; }
 /* Images remain inside the publication grid; the lightbox owns full resolution. */
@@ -1107,6 +1107,44 @@ body { font-size:16px; }
   .image-viewer-name {max-width:100%;width:100%;}
   .image-viewer-actions {margin-left:0;gap:6px;}
   .image-viewer-toolbar button,.image-viewer-toolbar a {padding:6px 8px;font-size:9px;}
+  .image-viewer-stage {padding:8px;}
+}
+/* REV33 / Size the inspection dialog to its image, rather than the viewport. */
+.image-viewer {
+  box-sizing:border-box;
+  width:min(420px, calc(100vw - 32px));
+  height:auto;
+  max-width:calc(100vw - 32px);
+  max-height:calc(100dvh - 32px);
+  overflow:hidden;
+  margin:auto;
+}
+.image-viewer[open] { display:flex; flex-direction:column; }
+.image-viewer::backdrop { background:rgba(2,5,10,.76); }
+.image-viewer-toolbar { box-sizing:border-box; width:100%; }
+.image-viewer-stage {
+  box-sizing:border-box;
+  flex:0 1 auto;
+  width:100%;
+  height:auto;
+  min-height:0;
+  padding:12px;
+  display:block;
+  overflow:auto;
+  scrollbar-width:thin;
+}
+.image-viewer-stage img {
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:none;
+  max-height:none;
+  margin:0 auto;
+  object-fit:contain;
+}
+.image-viewer-stage.is-actual { display:block; text-align:left; }
+.image-viewer-stage.is-actual img { margin:0; max-width:none; max-height:none; }
+@media(max-width:590px) {
   .image-viewer-stage {padding:8px;}
 }
   </style>
@@ -2386,11 +2424,46 @@ window.addEventListener('hashchange', () => render());
   const main = document.getElementById('main');
   let opener = null;
 
+  // REV33 / The dialog follows natural image dimensions and only uses the
+  // available viewport when the actual image requires that much room.
+  function layoutImageViewer() {
+    if (!viewer.open || !art.complete || !art.naturalWidth || !art.naturalHeight) return;
+    const viewportWidth = Math.max(200, window.innerWidth - 32);
+    const viewportHeight = Math.max(200, window.innerHeight - 32);
+    const stagePadding = window.innerWidth <= 590 ? 16 : 24;
+    const naturalWidth = art.naturalWidth;
+    const naturalHeight = art.naturalHeight;
+    const isActual = stage.classList.contains('is-actual');
+    const minChromeWidth = Math.min(340, viewportWidth);
+    let width = Math.min(viewportWidth, Math.max(minChromeWidth,
+      Math.min(naturalWidth, viewportWidth - stagePadding) + stagePadding + 2));
+    let renderWidth = naturalWidth;
+    let renderHeight = naturalHeight;
+    let availableHeight = viewportHeight;
+    for (let pass = 0; pass < 3; pass++) {
+      viewer.style.width = `${Math.round(width)}px`;
+      const toolbarHeight = viewer.querySelector('.image-viewer-toolbar').getBoundingClientRect().height;
+      const captionHeight = caption.textContent ? caption.getBoundingClientRect().height : 0;
+      availableHeight = Math.max(60, viewportHeight - toolbarHeight - captionHeight - stagePadding - 2);
+      const availableWidth = Math.max(60, width - stagePadding - 2);
+      const scale = isActual ? 1 : Math.min(1, availableWidth / naturalWidth, availableHeight / naturalHeight);
+      renderWidth = Math.max(1, Math.floor(naturalWidth * scale));
+      renderHeight = Math.max(1, Math.floor(naturalHeight * scale));
+      const adjustedWidth = Math.min(viewportWidth, Math.max(minChromeWidth,
+        (isActual ? naturalWidth : renderWidth) + stagePadding + 2));
+      if (Math.abs(adjustedWidth - width) < 2) break;
+      width = adjustedWidth;
+    }
+    art.style.width = `${renderWidth}px`;
+    art.style.height = `${renderHeight}px`;
+    stage.style.height = `${Math.min(renderHeight + stagePadding, availableHeight + stagePadding)}px`;
+  }
   function setActual(enabled) {
     stage.classList.toggle('is-actual',enabled);
     fit.setAttribute('aria-pressed',String(!enabled));
     actual.setAttribute('aria-pressed',String(enabled));
     stage.scrollTo(0,0);
+    layoutImageViewer();
   }
   // Only same-origin published art is admitted, never arbitrary external URLs.
   function openImage(src, title = '', description = '', source = null) {
@@ -2407,6 +2480,7 @@ window.addEventListener('hashchange', () => render());
     original.href = url.href;
     setActual(false);
     if (!viewer.open) viewer.showModal();
+    requestAnimationFrame(layoutImageViewer);
     return true;
   }
   window.measureOpenImageViewer = openImage;
@@ -2421,6 +2495,8 @@ window.addEventListener('hashchange', () => render());
     opener = null;
   });
   art.addEventListener('error', () => { caption.textContent = 'Image unavailable.'; });
+  art.addEventListener('load', layoutImageViewer);
+  window.addEventListener('resize', layoutImageViewer);
 
   function imageTitle(img) {
     const classified = img.closest('.class-reader');
