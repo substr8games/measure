@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-05T17:26:46.942Z",
+  "updatedAt": "2026-11-05T17:28:25.434Z",
   "items": [
     {
       "id": "gallery-heartbaby-38e2bd1b",
@@ -810,9 +810,12 @@
       "title": "The Institutionalist Manifesto",
       "subtitle": "An Earnest Defense of Everything That Already Exists",
       "summary": "A steelman argument for the modern conservative.",
-      "section": "thinkpieces",
+      "section": "humanities",
       "sections": [
-        "thinkpieces"
+        "humanities",
+        "science",
+        "technology",
+        "politics"
       ],
       "tags": [
         "institution",
@@ -825,14 +828,16 @@
       "published": "2026-11-02",
       "date": "2026-11-02",
       "readingMinutes": 16,
-      "classification": "copy",
+      "classification": "deep-dive",
       "content": "articles/the-institutionalist-manifesto.json",
       "url": "#/article/the-institutionalist-manifesto",
       "pdf": "",
       "attachments": [],
       "directory": {
         "style": "text"
-      }
+      },
+      "doi": "",
+      "updatedAt": "2026-11-05T17:28:22.779Z"
     },
     {
       "id": "the-machine-did-not-make-you-stupid",
