@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-05T22:46:22.444Z",
+  "updatedAt": "2026-11-05T22:47:38.156Z",
   "items": [
     {
       "id": "compliance-alert-medusa-deploys-zero-click-visual-drm-unauthorized-viewers-perma",
@@ -71,6 +71,32 @@
       "classification": "",
       "content": "articles/hr-memo-underworld-desk-enforces-mandatory-6-month-rto-policy-cites-pomegranate-.json",
       "url": "#/article/hr-memo-underworld-desk-enforces-mandatory-6-month-rto-policy-cites-pomegranate-",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "incident-report-narcissus-stuck-in-infinite-feedback-loop-classifies-external-re",
+      "type": "article",
+      "title": "[INCIDENT REPORT] NARCISSUS STUCK IN INFINITE FEEDBACK LOOP; CLASSIFIES EXTERNAL REALITY AS \"LOW ENGAGEMENT\"",
+      "subtitle": "",
+      "summary": "",
+      "section": "breaking",
+      "sections": [
+        "breaking"
+      ],
+      "tags": [],
+      "doi": "",
+      "author": "THE ORACLE / UNDERWORLD DESK",
+      "published": "2026-11-05",
+      "date": "2026-11-05",
+      "updatedAt": "2026-11-05T22:47:35.912Z",
+      "readingMinutes": 1,
+      "classification": "",
+      "content": "articles/incident-report-narcissus-stuck-in-infinite-feedback-loop-classifies-external-re.json",
+      "url": "#/article/incident-report-narcissus-stuck-in-infinite-feedback-loop-classifies-external-re",
       "pdf": "",
       "attachments": [],
       "directory": {
