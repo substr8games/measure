@@ -2,8 +2,8 @@
   "schema": "phi-labs.gallery.v1",
   "id": "gallery-heartbaby-38e2bd1b",
   "type": "gallery",
-  "title": "dangerously deceptive",
-  "description": "dangerously deceptive",
+  "title": "deceptively dangerous",
+  "description": "deceptively dangerous",
   "advertiser": "<3baby",
   "section": "curiosities",
   "sections": [
@@ -30,5 +30,5 @@
       "alt": "Sunset Neon Rooftop Heist"
     }
   ],
-  "updatedAt": "2026-11-05T21:57:20.374Z"
+  "updatedAt": "2026-11-05T21:57:51.253Z"
 }
