@@ -2773,6 +2773,7 @@ window.addEventListener('hashchange', () => render());
   let copyLines=fallbackCopy;
   let currentItems=[];
   let signature='';
+  let lastDisplayIds=[];
   const isArticleRoute=() => /^#\/article\//.test(window.location.hash);
   const escapeHtml=text=>String(text??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const dateOf=a=>String(a.published || a.date || a.createdAt || a.updatedAt || '');
@@ -2791,9 +2792,14 @@ window.addEventListener('hashchange', () => render());
   function buildTicker() {
     loop.replaceChildren();
     if(!currentItems.length){updateVisibility();return;}
+    const ordered=shuffle(currentItems);
+    if (ordered.length > 1 && ordered.every((item,i)=>item.id===lastDisplayIds[i])) {
+      ordered.push(ordered.shift());
+    }
+    lastDisplayIds=ordered.map(item=>item.id);
     const copy=shuffle(copyLines.length?copyLines:fallbackCopy);
     const parts=[];
-    currentItems.forEach((item,i)=>{
+    ordered.forEach((item,i)=>{
       const href='#/article/'+encodeURIComponent(item.id);
       parts.push(`<a class="breaking-ticker-headline" href="${href}"><strong>BREAKING:</strong> ${escapeHtml(item.title)}</a>`);
       parts.push('<span class="breaking-ticker-separator" aria-hidden="true">✳</span>');
@@ -2861,6 +2867,11 @@ window.addEventListener('hashchange', () => render());
     if(next!==signature){signature=next;currentItems=items;buildTicker();}
     else updateVisibility();
   }
+  // Reorder the same 15 newest stories after each complete scroll, without
+  // interrupting a ticker cycle when its 3-minute manifest check is unchanged.
+  loop.addEventListener('animationiteration',event=>{
+    if(event.target===loop && !isArticleRoute() && currentItems.length>1)buildTicker();
+  });
   window.addEventListener('hashchange',()=>{
     updateVisibility();
     if(!isArticleRoute())void refreshTicker();
