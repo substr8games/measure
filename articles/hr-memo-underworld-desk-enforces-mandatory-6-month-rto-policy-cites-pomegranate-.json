@@ -1,0 +1,52 @@
+{
+  "schema": "phi-labs.article.v1",
+  "id": "hr-memo-underworld-desk-enforces-mandatory-6-month-rto-policy-cites-pomegranate-",
+  "type": "article",
+  "title": "[HR MEMO] UNDERWORLD DESK ENFORCES MANDATORY 6-MONTH RTO POLICY; CITES POMEGRANATE-SEED BINDING AGREEMENT",
+  "profileId": "breaking",
+  "subtitle": "",
+  "doi": "",
+  "summary": "After Persephone successfully negotiated a remote-work arrangement in the surface-level biosphere, Hades management executed a legacy contract clause triggered by the accidental consumption of six pomegranate seeds. She is now legally bound to a six-month localized sprint in the Tartarus facility. HR insists the mandatory subterranean Return-To-Office is essential for \"preserving company culture,\" entirely ignoring the fact that ambient life actively decays upon entering the premises.",
+  "author": "THE ORACLE / UNDERWORLD DESK",
+  "date": "2026-11-05",
+  "published": "2026-11-05",
+  "section": "breaking",
+  "sections": [
+    "breaking"
+  ],
+  "tags": [],
+  "showToc": false,
+  "classification": "",
+  "markdown": "\nAfter Persephone successfully negotiated a remote-work arrangement in the surface-level biosphere, Hades management executed a legacy contract clause triggered by the accidental consumption of six pomegranate seeds. She is now legally bound to a six-month localized sprint in the Tartarus facility. HR insists the mandatory subterranean Return-To-Office is essential for \"preserving company culture,\" entirely ignoring the fact that ambient life actively decays upon entering the premises.",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "After Persephone successfully negotiated a remote-work arrangement in the surface-level biosphere, Hades management executed a legacy contract clause triggered by the accidental consumption of six pomegranate seeds. She is now legally bound to a six-month localized sprint in the Tartarus facility. HR insists the mandatory subterranean Return-To-Office is essential for \"preserving company culture,\" entirely ignoring the fact that ambient life actively decays upon entering the premises."
+    }
+  ],
+  "readingMinutes": 1,
+  "heroImage": "",
+  "images": [],
+  "attachments": [],
+  "style": {
+    "background": "#e9e4d9",
+    "surface": "#f8f5ee",
+    "text": "#252729",
+    "muted": "#6c6d6f",
+    "accent": "#b5481d",
+    "border": "#d1c8b8",
+    "codeBackground": "#171a1d",
+    "codeText": "#f2f4f5",
+    "bodyFont": "editorial",
+    "headingFont": "system",
+    "codeFont": "mono",
+    "fontSize": 19,
+    "lineHeight": 1.72,
+    "titleSize": 68,
+    "width": 780,
+    "radius": 2,
+    "titleAlign": "left",
+    "customCss": ""
+  },
+  "updatedAt": "2026-11-05T22:46:20.295Z"
+}
