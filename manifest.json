@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-05T17:14:54.586Z",
+  "updatedAt": "2026-11-05T17:17:22.366Z",
   "items": [
     {
       "id": "gallery-heartbaby-38e2bd1b",
@@ -23,6 +23,48 @@
       "directory": {
         "style": "thumbnail",
         "image": "images/galleries/gallery-heartbaby-38e2bd1b/4ca58d4d-0ad2-4fef-ac62-41729f0bb885.png"
+      }
+    },
+    {
+      "schema": "phi-labs.media.v1",
+      "id": "neon-cat-burglar-sunset-poster-fcaaaded",
+      "type": "media",
+      "mediaType": "image",
+      "mediaKind": "ad",
+      "title": "",
+      "summary": "",
+      "blurb": "",
+      "advertiser": "<3baby",
+      "galleryId": "gallery-heartbaby-38e2bd1b",
+      "viewerImage": "",
+      "viewerCaption": "deceptively dangerous",
+      "lowerRegisterEnabled": true,
+      "thumbnail": {
+        "x": 44.59213445216049,
+        "y": 58.25351115844258,
+        "zoom": 1.65
+      },
+      "sidebar": {
+        "enabled": true,
+        "thumbnail": {
+          "x": 95.65515666953819,
+          "y": 0,
+          "zoom": 1.25
+        }
+      },
+      "tags": [],
+      "section": "curiosities",
+      "sections": [],
+      "date": "2026-11-05",
+      "published": "2026-11-05",
+      "url": "images/media/neon-cat-burglar-sunset-poster-fcaaaded.png",
+      "image": "images/media/neon-cat-burglar-sunset-poster-fcaaaded.png",
+      "pdf": "",
+      "file": "images/media/neon-cat-burglar-sunset-poster-fcaaaded.png",
+      "originalFilename": "Neon Cat-Burglar Sunset Poster.png",
+      "mimeType": "image/png",
+      "directory": {
+        "style": "none"
       }
     },
     {
