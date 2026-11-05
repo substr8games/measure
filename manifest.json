@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-05T17:25:59.709Z",
+  "updatedAt": "2026-11-05T17:26:46.942Z",
   "items": [
     {
       "id": "gallery-heartbaby-38e2bd1b",
@@ -840,9 +840,10 @@
       "title": "The Machine Did Not Make You Stupid",
       "subtitle": "On artificial intelligence, intellectual insecurity, and the cult of difficulty",
       "summary": "On artificial intelligence, intellectual insecurity, and the cult of difficulty",
-      "section": "thinkpieces",
+      "section": "technology",
       "sections": [
-        "thinkpieces"
+        "technology",
+        "humanities"
       ],
       "tags": [
         "llm",
@@ -862,7 +863,9 @@
       "attachments": [],
       "directory": {
         "style": "text"
-      }
+      },
+      "doi": "",
+      "updatedAt": "2026-11-05T17:26:44.537Z"
     },
     {
       "id": "case-report-institutional-boundary-enforcement-and-logical-misdirection",

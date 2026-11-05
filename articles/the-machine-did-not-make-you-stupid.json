@@ -8,9 +8,10 @@
   "author": "Phi Labs Staff",
   "date": "2026-11-02",
   "published": "2026-11-02",
-  "section": "thinkpieces",
+  "section": "technology",
   "sections": [
-    "thinkpieces"
+    "technology",
+    "humanities"
   ],
   "tags": [
     "llm",
@@ -485,5 +486,8 @@
     "titleAlign": "left",
     "customCss": ""
   },
-  "updatedAt": "2026-11-02T16:06:14.039Z"
+  "updatedAt": "2026-11-05T17:26:44.537Z",
+  "doi": "",
+  "showToc": true,
+  "heroImage": ""
 }
