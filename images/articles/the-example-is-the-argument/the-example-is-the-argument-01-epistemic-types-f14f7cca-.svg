@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="478" viewBox="0 0 1160 478" role="img" aria-labelledby="title desc">
+  <title id="title">The epistemic type mismatch</title>
+  <desc id="desc">Four stages of a communication system, from research to institution to media to public. As the topic moves between stages, epistemic status can shift from an exploratory framework to an expected empirical breakthrough. The diagram asks what authorizes each transformation.</desc>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#55C5FF" stroke-width="1.4"/></marker>
+  </defs>
+  <rect width="1160" height="478" fill="#000000"/>
+  <rect x="1" y="1" width="1158" height="476" fill="none" stroke="#33343C" stroke-width="2"/>
+  <text x="42" y="57" fill="#CB97FF" font-family="Anonymouse,Hack,DejaVu Sans Mono,monospace" font-size="18" letter-spacing="2">FIG 01 / INTERFACE ANALYSIS</text>
+  <text x="42" y="101" fill="#F7F7F7" font-family="Anonymouse,Hack,DejaVu Sans Mono,monospace" font-size="28" font-weight="700">THE EPISTEMIC TYPE MISMATCH</text>
+  <g font-family="Anonymouse,Hack,DejaVu Sans Mono,monospace">
+    <g transform="translate(42 145)">
+      <rect width="236" height="170" fill="#090C0D" stroke="#4BEA91" stroke-width="2"/>
+      <rect width="236" height="38" fill="#4BEA91"/>
+      <text x="14" y="26" fill="#000000" font-size="17" font-weight="700">01 RESEARCH</text>
+      <text x="16" y="77" fill="#E6F7EC" font-size="21">Exploratory</text>
+      <text x="16" y="107" fill="#E6F7EC" font-size="21">mathematical</text>
+      <text x="16" y="137" fill="#E6F7EC" font-size="21">framework</text>
+    </g>
+    <g transform="translate(322 145)">
+      <rect width="236" height="170" fill="#0A0C10" stroke="#55C5FF" stroke-width="2"/>
+      <rect width="236" height="38" fill="#55C5FF"/>
+      <text x="14" y="26" fill="#000000" font-size="17" font-weight="700">02 INSTITUTION</text>
+      <text x="16" y="77" fill="#EBF7FF" font-size="21">Promising</text>
+      <text x="16" y="107" fill="#EBF7FF" font-size="21">research</text>
+      <text x="16" y="137" fill="#EBF7FF" font-size="21">program</text>
+    </g>
+    <g transform="translate(602 145)">
+      <rect width="236" height="170" fill="#100C0B" stroke="#F4B568" stroke-width="2"/>
+      <rect width="236" height="38" fill="#F4B568"/>
+      <text x="14" y="26" fill="#000000" font-size="17" font-weight="700">03 MEDIA</text>
+      <text x="16" y="77" fill="#FFF2E3" font-size="21">Breakthrough</text>
+      <text x="16" y="107" fill="#FFF2E3" font-size="21">narrative</text>
+      <text x="16" y="137" fill="#8D8F98" font-size="17">[possible framing]</text>
+    </g>
+    <g transform="translate(882 145)">
+      <rect width="236" height="170" fill="#120A0D" stroke="#F18A99" stroke-width="2"/>
+      <rect width="236" height="38" fill="#F18A99"/>
+      <text x="14" y="26" fill="#000000" font-size="17" font-weight="700">04 PUBLIC</text>
+      <text x="16" y="77" fill="#FFF0F2" font-size="21">Expectation</text>
+      <text x="16" y="107" fill="#FFF0F2" font-size="21">of empirical</text>
+      <text x="16" y="137" fill="#FFF0F2" font-size="21">confirmation</text>
+    </g>
+    <path d="M280 230 H316" stroke="#55C5FF" stroke-width="3" marker-end="url(#arr)"/>
+    <path d="M560 230 H596" stroke="#55C5FF" stroke-width="3" marker-end="url(#arr)"/>
+    <path d="M840 230 H876" stroke="#55C5FF" stroke-width="3" marker-end="url(#arr)"/>
+    <g fill="#F18A99" font-size="15" font-weight="700" text-anchor="middle"><text x="298" y="208">?</text><text x="578" y="208">?</text><text x="858" y="208">?</text></g>
+    <path d="M42 342 H1118" stroke="#35363A" stroke-width="2"/>
+    <rect x="42" y="362" width="248" height="45" fill="#0B1C15" stroke="#4BEA91"/>
+    <text x="56" y="390" font-size="17" font-weight="700" fill="#4BEA91">TOPIC: SAME SUBJECT</text>
+    <rect x="310" y="362" width="808" height="45" fill="#231216" stroke="#F18A99"/>
+    <text x="325" y="390" font-size="18" font-weight="700" fill="#F18A99">STATUS: MAY SHIFT WITHOUT AN EXPLICIT JUSTIFICATION</text>
+    <text x="42" y="447" font-size="16" fill="#B1B4BC">At each boundary: what evidence licenses the new claim type?</text>
+  </g>
+</svg>

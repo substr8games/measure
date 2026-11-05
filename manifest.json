@@ -1,8 +1,48 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-04T21:26:07.374Z",
+  "updatedAt": "2026-11-05T16:54:40.196Z",
   "items": [
+    {
+      "id": "the-example-is-the-argument",
+      "type": "article",
+      "title": "The Example Is the Argument",
+      "subtitle": "How Angela Collier's video about string theory demonstrates structuralist reasoning without needing to name it.",
+      "summary": "How Angela Collier's video about string theory demonstrates structuralist reasoning without needing to name it.",
+      "section": "science",
+      "sections": [
+        "science",
+        "humanities"
+      ],
+      "tags": [
+        "science",
+        "communication",
+        "structuralism",
+        "progress"
+      ],
+      "doi": "",
+      "author": "Phi Labs Research Staff",
+      "published": "2026-11-05",
+      "date": "2026-11-05",
+      "updatedAt": "2026-11-05T16:54:29.972Z",
+      "readingMinutes": 7,
+      "classification": "explainer",
+      "content": "articles/the-example-is-the-argument.json",
+      "url": "#/article/the-example-is-the-argument",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-example-is-the-argument/the-example-is-the-argument-93873043bde7a005.pdf",
+      "attachments": [
+        {
+          "name": "the-example-is-the-argument.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-example-is-the-argument/the-example-is-the-argument-93873043bde7a005.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 714115250,
+          "releaseTag": "measure-pdf-the-example-is-the-argument"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "id": "gallery-noxs-ad-department-6288eece",
       "type": "gallery",

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="608" viewBox="0 0 1160 608" role="img" aria-labelledby="title desc">
+  <title id="title">Local replacement versus structural intervention</title>
+  <desc id="desc">Two parallel panels. The left shows replacing a communicator without altering the interfaces; an unsupported certainty can still reach the public. The right changes the interfaces to carry both the claim and its evidential status; tentative research remains tentative in public presentation.</desc>
+  <defs>
+    <marker id="redarr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9" fill="none" stroke="#F18A99" stroke-width="1.4"/></marker>
+    <marker id="greenarr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9" fill="none" stroke="#4BEA91" stroke-width="1.4"/></marker>
+  </defs>
+  <rect width="1160" height="608" fill="#000"/>
+  <rect x="1" y="1" width="1158" height="606" fill="none" stroke="#33343C" stroke-width="2"/>
+  <g font-family="Anonymouse,Hack,DejaVu Sans Mono,monospace">
+    <text x="42" y="53" font-size="18" fill="#CB97FF" letter-spacing="2">FIG 02 / STRUCTURAL INTERVENTION</text>
+    <text x="42" y="97" font-size="28" fill="#F7F7F7" font-weight="700">CHANGE THE ACTOR, OR CHANGE THE INTERFACE?</text>
+    <rect x="42" y="126" width="518" height="426" fill="#080709" stroke="#F18A99" stroke-width="2"/>
+    <rect x="600" y="126" width="518" height="426" fill="#070B08" stroke="#4BEA91" stroke-width="2"/>
+    <rect x="42" y="126" width="518" height="50" fill="#F18A99"/>
+    <rect x="600" y="126" width="518" height="50" fill="#4BEA91"/>
+    <text x="60" y="159" font-size="21" font-weight="700" fill="#000">A / LOCAL REPLACEMENT</text>
+    <text x="618" y="159" font-size="21" font-weight="700" fill="#000">B / STRUCTURAL REPAIR</text>
+
+    <rect x="78" y="213" width="195" height="65" stroke="#B5B8C0" fill="#101114"/>
+    <text x="95" y="240" font-size="18" fill="#F7F7F7">RESEARCH</text>
+    <text x="95" y="264" font-size="15" fill="#4BEA91">tentative claim</text>
+    <path d="M282 245 H320" stroke="#F18A99" stroke-width="3" marker-end="url(#redarr)"/>
+    <rect x="328" y="213" width="196" height="65" stroke="#F18A99" fill="#171013"/>
+    <text x="345" y="240" font-size="18" fill="#F7F7F7">NEW PERSON</text>
+    <text x="345" y="264" font-size="15" fill="#F18A99">same incentive</text>
+    <path d="M425 280 V312" stroke="#F18A99" stroke-width="3" marker-end="url(#redarr)"/>
+    <rect x="78" y="321" width="446" height="66" fill="#171013" stroke="#F18A99"/>
+    <text x="95" y="347" font-size="18" fill="#FFFFFF">UNCHANGED HANDOFF</text>
+    <text x="95" y="372" font-size="16" fill="#D8ADB5">qualification may still disappear</text>
+    <path d="M300 390 V422" stroke="#F18A99" stroke-width="3" marker-end="url(#redarr)"/>
+    <rect x="78" y="430" width="446" height="69" fill="#241216" stroke="#F18A99"/>
+    <text x="95" y="457" font-size="18" fill="#FFFFFF">PUBLIC OUTPUT</text>
+    <text x="95" y="482" font-size="17" fill="#F18A99">certainty still overstated</text>
+
+    <rect x="636" y="213" width="195" height="65" stroke="#B5B8C0" fill="#101114"/>
+    <text x="653" y="240" font-size="18" fill="#F7F7F7">RESEARCH</text>
+    <text x="653" y="264" font-size="15" fill="#4BEA91">tentative claim</text>
+    <path d="M840 245 H878" stroke="#4BEA91" stroke-width="3" marker-end="url(#greenarr)"/>
+    <rect x="886" y="213" width="196" height="65" stroke="#4BEA91" fill="#0A1B13"/>
+    <text x="903" y="240" font-size="18" fill="#F7F7F7">TYPE CHECK</text>
+    <text x="903" y="264" font-size="15" fill="#4BEA91">status explicit</text>
+    <path d="M983 280 V312" stroke="#4BEA91" stroke-width="3" marker-end="url(#greenarr)"/>
+    <rect x="636" y="321" width="446" height="66" fill="#0A1B13" stroke="#4BEA91"/>
+    <text x="653" y="347" font-size="18" fill="#FFFFFF">VALIDATED HANDOFF</text>
+    <text x="653" y="372" font-size="16" fill="#B1E6CB">uncertainty carried with claim</text>
+    <path d="M858 390 V422" stroke="#4BEA91" stroke-width="3" marker-end="url(#greenarr)"/>
+    <rect x="636" y="430" width="446" height="69" fill="#0A1B13" stroke="#4BEA91"/>
+    <text x="653" y="457" font-size="18" fill="#FFFFFF">PUBLIC OUTPUT</text>
+    <text x="653" y="482" font-size="17" fill="#4BEA91">tentative remains tentative</text>
+    <text x="42" y="584" font-size="16" fill="#ACAFB8">Intervention targets the repeatable transfer rule, not merely the current occupant of a role.</text>
+  </g>
+</svg>
