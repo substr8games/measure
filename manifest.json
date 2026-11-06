@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-06T16:11:38.391Z",
+  "updatedAt": "2026-11-06T16:23:16.964Z",
   "items": [
     {
       "id": "open-letter-arch-is-bad-alpine-linux-is-a-pile-of-dark-patterns-maintained-by-an",
@@ -23,6 +23,33 @@
       "classification": "explainer",
       "content": "articles/open-letter-arch-is-bad-alpine-linux-is-a-pile-of-dark-patterns-maintained-by-an.json",
       "url": "#/article/open-letter-arch-is-bad-alpine-linux-is-a-pile-of-dark-patterns-maintained-by-an",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "structuralism-an-introduction-and-deep-dive",
+      "type": "article",
+      "title": "Structuralism: An Introduction and Deep Dive",
+      "subtitle": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
+      "summary": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "science"
+      ],
+      "tags": [],
+      "doi": "",
+      "author": "Phi Labs Research",
+      "published": "2026-11-06",
+      "date": "2026-11-06",
+      "updatedAt": "2026-11-06T16:23:13.083Z",
+      "readingMinutes": 6,
+      "classification": "deep-dive",
+      "content": "articles/structuralism-an-introduction-and-deep-dive.json",
+      "url": "#/article/structuralism-an-introduction-and-deep-dive",
       "pdf": "",
       "attachments": [],
       "directory": {
