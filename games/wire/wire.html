@@ -1,0 +1,59 @@
+  <div class="universe" aria-hidden="true">
+    <canvas id="hexstorm"></canvas>
+    <div class="scanlines"></div>
+    <div class="edge-vignette"></div>
+  </div>
+  <div class="app-shell" id="appShell">
+    <header class="masthead">
+      <div class="masthead-left"><div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 44"><polygon points="22,3 40,13 40,31 22,41 4,31 4,13"/><path d="M11 31V13l11 13 11-13v18"/></svg></div><div><div class="brand-name">THE MEASURE<span class="brand-dot">.</span></div><div class="brand-subtitle">A PHI LABS PUBLICATION</div></div></div>
+      <div class="masthead-center"><span class="mini-led"></span> GAMES <span class="slash">/</span> THE WIRE <span class="issue-tag">DAILY EDITION</span></div>
+      <div class="masthead-actions"><button id="wireArchiveButton" type="button" class="icon-button" aria-label="Browse solved puzzle archive">ARCHIVE</button><button id="wireClose" type="button" class="icon-button" aria-label="Close The Wire">CLOSE ×</button><button id="soundButton" type="button" class="icon-button" aria-label="Toggle sound" aria-pressed="false" title="Toggle sound">♪ <span id="soundState">OFF</span></button><button id="helpButton" type="button" class="icon-button" aria-label="How to play" title="How to play">[ ? ]</button></div>
+    </header>
+
+    <section class="title-strip" aria-label="Game header">
+      <div><div class="eyebrow">TODAY'S ACCOUNTABILITY EXERCISE <span class="eyebrow-line"></span> <span class="fiction-flag">FICTIONAL CASE</span></div><h1>the wire<span class="title-period">.</span></h1><p class="tagline">CONNECT THE DOTS. <span>FOLLOW THE MONEY.</span></p></div>
+      <div class="top-stats"><div class="stat-block"><span>INVESTIGATION TIME</span><strong id="topClock" class="clock">00:00</strong></div><div class="stat-block"><span>LINKS VERIFIED</span><strong id="topProgress">00 <small>/ 05</small></strong></div><div class="phase-signal"><i id="phaseLamp"></i><span id="phaseName">AWAITING INPUT</span></div></div>
+    </section>
+
+    <main class="game-layout">
+      <aside class="outrage-panel panel" aria-label="Institutional Outrage meter">
+        <div class="panel-heading"><span class="section-index">01 /</span> INSTITUTIONAL <span class="heading-break">OUTRAGE</span></div>
+        <div class="thermo-wrap"><span class="thermo-top">100</span><div class="thermo-frame"><div class="thermo-ticks" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><div id="thermoFill" class="thermo-fill"></div><div class="thermo-glint"></div></div><div class="thermo-bulb"><div class="thermo-core"></div></div><span class="thermo-bottom">0</span></div>
+        <div class="outrage-number"><strong id="outrageNumber">00</strong><span>/100</span></div>
+        <div id="outrageLabel" class="outrage-label">COMPLACENCY</div>
+        <div class="meter-foot">MEASUREMENT<br>OF INSTITUTIONAL<br>DISCOMFORT</div>
+      </aside>
+
+      <section class="board-panel panel" id="boardPanel" aria-label="Connect the dots puzzle">
+        <div class="board-heading"><div><span class="section-index">02 /</span> RECONSTRUCT THE STRUCTURE</div><span class="board-status"><span class="signal-tick">●</span> <span id="instruction">PRESS BEGIN TO INVESTIGATE</span></span></div>
+        <div class="board-inner" id="boardInner">
+          <div class="board-column left-column"><div class="column-caption">STRUCTURAL ROLE <span class="column-end">L / 05</span></div><div id="leftNodes" class="node-stack"></div></div>
+          <div class="wire-plane" aria-hidden="true"><svg id="wireSvg" class="wire-svg" xmlns="http://www.w3.org/2000/svg"><defs><filter id="wireGlow"><feGaussianBlur stdDeviation="4"/></filter></defs><path id="wireHalo" class="wire-halo"/><path id="wirePath" class="wire-stroke"/><path id="wireHighlight" class="wire-highlight"/><path id="wirePreview" class="wire-preview"/></svg><div class="wire-watermark">TRACE<br>THE<br>PATH</div></div>
+          <div class="board-column right-column"><div class="column-caption">CONCRETE ANSWER <span class="column-end">R / 05</span></div><div id="rightNodes" class="node-stack"></div></div>
+          <div id="burstLabel" class="burst-label" aria-live="polite"></div>
+          <div id="accountability" class="accountability" aria-hidden="true"><span>STRUCTURE EXPOSED</span><strong>ACCOUNTABILITY!</strong><em>CRITICAL THINKING HAS BREACHED CONTAINMENT</em></div>
+        </div>
+        <footer class="board-footer"><div class="stage-dots" id="stageDots" aria-label="Five stages"><span></span><span></span><span></span><span></span><span></span></div><div class="board-tip" id="boardTip">SELECT THE ENTITY TO BEGIN THE TRACE</div><div class="serial">WIRE // 001</div></footer>
+      </section>
+
+      <aside class="case-panel panel" id="casePanel">
+        <div class="panel-heading"><span class="section-index">03 /</span> CASE FILE <span class="case-file-number">#001</span></div>
+        <div class="case-open" id="caseOpen"><div class="case-topline"><span class="classification-dot"></span> DAILY CASE FILE</div><h2>WHO PROFITS<br>FROM<br><span>DISPLACEMENT?</span></h2><p>Five parts of one underlying structure. Two shuffled columns. One continuous wire.</p><div class="mission-divider"></div><div class="mission-title">THE MISSION</div><p class="mission-copy">Start at <b>ENTITY</b>. Trace each role to its real-world counterpart, then continue to the next role.</p><div class="chain-list"><span>ENTITY</span><i></i><span>AUTHORITY</span><i></i><span>ACTION</span><i></i><span>CONSEQUENCE</span><i></i><span>BENEFICIARY</span></div><div class="case-note">The wire isn't a matching set. It's a single path through all ten nodes.</div></div>
+        <div class="case-complete" id="caseComplete" hidden><div class="complete-ribbon">CASE CLOSED // THE WIRE</div><h2>YOU FOLLOWED<br>THE MONEY<span>.</span></h2><div class="result-grid"><div><span>FINAL TIME</span><strong id="finalTime">00:00.000</strong></div><div><span>OUTRAGE</span><strong id="finalOutrage">00/100</strong></div></div><div class="mission-divider"></div><div class="mission-title">THE RECONSTRUCTED ACCOUNT</div><p class="reveal-text" id="revealText"></p><div id="outrageFinal" class="end-quote"></div><div class="demo-warning" id="resultStatus">RESULT STATUS PENDING</div><div class="wire-publication" id="wirePublication" hidden></div><div class="wire-ranking" id="wireRanking" hidden></div><button type="button" class="replay-button" id="replayButton">↻ PLAY AGAIN <span>NEW SHUFFLE</span></button></div>
+      </aside>
+    </main>
+
+    <footer class="global-footer"><span>THE MEASURE <b>×</b> PHI LABS</span><span class="footer-center">BUILD GAMES. MAKE ART. ;]</span><span>DAILY INVESTIGATION <span class="footer-muted" id="wireServiceStatus">/ PRACTICE MODE</span></span></footer>
+  </div>
+
+  <div class="welcome-layer" id="welcomeLayer" role="group" aria-labelledby="welcomeTitle"><div class="welcome-backdrop"></div><div class="welcome-panel"><div class="welcome-kicker"><span class="mini-led"></span> UNAUTHORIZED CLARITY DETECTED <span>///</span> DAILY INVESTIGATION</div><div class="welcome-hex" aria-hidden="true"><svg viewBox="0 0 240 195"><polygon points="120,6 208,54 208,141 120,189 32,141 32,54"/><polygon points="120,27 190,65 190,130 120,168 50,130 50,65"/><path d="M50 98 H190 M120 27 V168 M50 65 L190 130 M190 65 L50 130"/><circle cx="120" cy="98" r="12"/></svg></div><div class="welcome-overline">A FIVE-PART EXERCISE IN STRUCTURAL ACCOUNTABILITY</div><h2 id="welcomeTitle">THE<br><span>WIRE</span><i>.</i></h2><p>Connect the dots. Follow the money.<br>Try not to cause an institutional incident.</p><div class="welcome-steps"><span>01 ENTITY</span><span>02 AUTHORITY</span><span>03 ACTION</span><span>04 CONSEQUENCE</span><span>05 BENEFICIARY</span></div><button class="begin-button" type="button" id="beginButton">BEGIN INVESTIGATION <span>→</span></button><button type="button" class="replay-button" id="practiceButton" hidden>PLAY UNRANKED PRACTICE →</button><div class="welcome-foot"><span>FICTIONAL CASE STUDY</span><span>ANONYMOUS · DAILY CHALLENGE</span></div></div></div>
+
+  <section id="wireArchiveLayer" class="wire-archive-layer" aria-label="THE WIRE archive" hidden>
+    <div class="wire-archive-card"><div class="wire-archive-header"><h2>THE WIRE / ARCHIVE</h2><button id="wireArchiveClose" type="button">CLOSE ×</button></div>
+      <p>Completed daily investigations become available after the Pacific day closes. Opening the archive does not pause an active run.</p>
+      <div class="wire-archive-controls"><label>DATE <input id="wireArchiveDate" type="date"></label><button id="wireArchiveLoad" type="button">LOAD ARCHIVE</button></div>
+      <div id="wireArchiveContent" class="wire-archive-content" role="status" aria-live="polite"></div>
+    </div>
+  </section>
+  <div class="help-layer" id="helpLayer" role="group" aria-labelledby="helpTitle" hidden><div class="help-card"><button type="button" class="help-close" id="helpClose" aria-label="Close instructions">×</button><div class="eyebrow">OPERATING PROCEDURE / 001</div><h2 id="helpTitle">HOW TO TRACE THE WIRE</h2><p>Start with <b>ENTITY</b> in the left column. Connect it to the corresponding answer on the right. Then connect that answer to <b>AUTHORITY</b> on the left. Continue alternating sides until you complete all five roles.</p><p>Both columns shuffle. The final line should be one glorious golden tangle: <b>10 nodes, 9 segments, 5 verified matches.</b></p><p>Click or tap nodes in order; drag from the last connected node to the next; or use Tab and Enter. Wrong selections don't lock. The investigation clock continues while the game is open or closed.</p><p>The background is a completely static hex grid throughout. At two matches, connection effects intensify; at four they become absurd. The fifth match is an incident.</p><button type="button" class="replay-button" id="helpDone">UNDERSTOOD →</button></div></div>
+

@@ -8,6 +8,8 @@
   <meta name="description" content="The Measure — an independent publication of Phi Labs.">
   <link rel="canonical" href="https://substr8games.github.io/measure/">
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <link rel="alternate" type="application/rss+xml" title="The Measure — RSS" href="feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="The Measure — Research & Editorial" href="feed-heavy.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Measure">
   <meta property="og:title" content="The Measure — A Phi Labs Publication">
@@ -1291,6 +1293,17 @@ body.breaking-ticker-visible .breaking-ticker { display:flex; }
 @media (prefers-reduced-motion: reduce) {
   .section-bar a.nav-play { animation: none; text-shadow: 0 0 5px rgba(75,234,145,.45); }
 }
+  /* THE WIRE — Rev53 modal. The game itself is Shadow DOM scoped. */
+  .measure-wire-dialog{box-sizing:border-box;position:fixed;width:min(94vw,1680px);height:min(90dvh,980px);max-width:none;max-height:none;margin:auto;padding:0;border:1px solid #6e593b;background:#050609;color:#e5e9ee;box-shadow:0 26px 110px #000e;overflow:hidden;color-scheme:dark;}
+  .measure-wire-dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(3px)}
+  .measure-wire-host{display:block;width:100%;height:100%;position:relative;overflow:hidden}
+  body.measure-wire-active .breaking-ticker{display:none!important}
+  .section-bar .nav-wire{color:#f1bd64;font-weight:800;letter-spacing:.08em;text-shadow:0 0 5px #96703866}
+  .section-bar .nav-wire:hover{color:#ffe0a7}
+  .wire-launch-card{background:#0b1014;border:1px solid #5a4b39;padding:22px;margin:20px 0;display:grid;gap:13px}
+  .wire-launch-card h2{font-size:22px;color:#f1bd64;margin:0}.wire-launch-card p{font-size:12px;line-height:1.75;margin:0}
+  .wire-launch-card button{justify-self:start;padding:12px 18px;border:1px solid #f1bd64;background:#231b11;color:#ffe2a6;font:700 12px ui-monospace,monospace;cursor:pointer}
+  @media(max-width:760px){.measure-wire-dialog{width:100vw;height:100dvh;border:0}.wire-launch-card{padding:16px}}
   </style>
 </head>
 <body>
@@ -1340,6 +1353,9 @@ body.breaking-ticker-visible .breaking-ticker { display:flex; }
       <div class="initial-loading" aria-live="polite">LOADING THE RECORD<span class="loading-dots">…</span></div>
     </main>
   </div>
+  <dialog id="measureWireDialog" class="measure-wire-dialog" aria-label="THE WIRE — daily accountability puzzle">
+    <div id="measureWireHost" class="measure-wire-host"></div>
+  </dialog>
     <dialog id="class-signup-dialog" class="class-signup-dialog" aria-labelledby="class-dialog-title">
       <div class="class-dialog-head"><span id="class-dialog-title">ACCOUNT ELIGIBILITY</span><button class="class-dialog-close" type="button" aria-label="Close" onclick="this.closest('dialog').close()">×</button></div>
       <p>Our engagement metrics show you have not participated enough yet to Sign Up. Come back when you're a little ... richer.</p>
@@ -1381,7 +1397,7 @@ body.breaking-ticker-visible .breaking-ticker { display:flex; }
   </aside>
   <footer class="site-footer" id="site-footer">
     <div><span class="footer-mark">Φ</span> THE MEASURE <span class="footer-separator">&#60;/3</span> BUILD GAMES. MAKE ART.<span class="footer-separator"> ;] </span> PHI LABS. </div>
-    <div><a href="#/about">ABOUT</a> <span class="footer-separator">/</span> <a href="#/archive">ARCHIVE</a> <span class="footer-separator"></3</span> <a href="read/">HTML EDITIONS</a> <span class="footer-separator">/</span> <a href="#/series">SERIES</a> <span class="footer-separator">/</span> INDEPENDENT INQUIRY. PUBLIC RECORD.</div>
+    <div><a href="#/about">ABOUT</a> <span class="footer-separator">/</span> <a href="#/archive">ARCHIVE</a> <span class="footer-separator"></3</span> <a href="read/">HTML EDITIONS</a> <span class="footer-separator">/</span> <a href="feed.xml" type="application/rss+xml">RSS: ALL</a> <span class="footer-separator">/</span> <a href="feed-heavy.xml" type="application/rss+xml">RSS: RESEARCH</a> <span class="footer-separator">/</span> <a href="#/series">SERIES</a> <span class="footer-separator">/</span> INDEPENDENT INQUIRY. PUBLIC RECORD.</div>
     <div>© 2026 PHI LABS</div>
   </footer>
   <dialog class="content-warning" id="content-warning" aria-label="Adult content warning">
@@ -1849,6 +1865,7 @@ let content = {
   articles: [], lowerRegister: {items:[]}
 };
 
+window.measureWireArticleAvailable = id => Array.isArray(content?.articles) && content.articles.some(article => article.id === id && article.type === 'article');
 const escapeHTML = (value = '') => String(value ?? '').replace(/[&<>"']/g, ch => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
 })[ch]);
@@ -1942,7 +1959,7 @@ function sectionListing(id) {
   return `${edition()}<header class="page-head ${special ? 'special-page' : id === 'breaking' ? 'breaking-page' : id === 'play' ? 'play-page' : ''}">
       <span class="eyebrow">${special ? 'LONGFORM / THE RECORD' : id === 'breaking' ? 'THE ORACLE / MYTHOLOGICAL NEWSWIRE' : 'EDITORIAL SECTION / THE MEASURE'}</span>
       <h1>${escapeHTML(s.name)}<span class="accent-word">.</span></h1><p>${escapeHTML(s.summary)}</p></header>
-    ${sectionTitle(special ? 'PDF editions' : 'The latest', items.length)}
+    ${id === 'play' ? '<div class="wire-launch-card"><h2>THE WIRE</h2><p>Connect the dots. Follow the money. A five-part daily accountability puzzle.</p><button type="button" data-open-wire>BEGIN THE DAILY INVESTIGATION →</button></div>' : ''}${sectionTitle(special ? 'PDF editions' : 'The latest', items.length)}
     ${items.length ? special ? items.map(specialCard).join('') : `<div class="article-list">${items.map(row).join('')}</div>` : `<div class="empty-state">No entries are filed under ${escapeHTML(s.name)} yet. The section is ready for its first publication.</div>`}
     ${previewNotice()}`;
 }
@@ -2122,6 +2139,7 @@ function mountSectionNav() {
   const links = editorial.map(s =>
     `<a href="${sectionUrl(s.id)}" data-nav="${escapeHTML(s.id)}" class="${s.id === 'breaking' ? 'nav-breaking' : s.id === 'play' ? 'nav-play' : ''}">${escapeHTML(s.name)}</a>`
   );
+  links.splice(links.findIndex(link => link.includes('data-nav="play"'))+1,0,'<a href="#/section/play" class="nav-wire" data-open-wire type="button" aria-haspopup="dialog">THE WIRE</a>');
   links.push(`<a href="#/classifieds" data-nav="classifieds">Classifieds</a>`);
   links.push(...specials.map(s => `<a href="${sectionUrl(s.id)}" data-nav="${escapeHTML(s.id)}" class="nav-special">${escapeHTML(s.name)}</a>`));
   nav.innerHTML = links.join('');
@@ -2919,5 +2937,6 @@ window.addEventListener('hashchange', () => render());
   window.setInterval(()=>{if(!isArticleRoute())void refreshTicker();},180000);
 })();
 </script>
+  <script src="games/wire/wire.js" defer></script>
 </body>
 </html>

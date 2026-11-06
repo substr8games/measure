@@ -1,0 +1,33 @@
+{
+  "game": {
+    "title": "THE WIRE",
+    "tagline": "CONNECT THE DOTS. FOLLOW THE MONEY.",
+    "instructions_start": "PRESS BEGIN TO INVESTIGATE",
+    "instructions_entity": "FIND ENTITY IN THE LEFT COLUMN",
+    "instructions_answer": "CONNECT TO THE ANSWER FOR {role}",
+    "instructions_next": "TRACE BACK TO {role}",
+    "instructions_finished": "STRUCTURE EXPOSED // INVESTIGATION COMPLETE",
+    "tip_start": "SELECT ENTITY TO BEGIN THE TRACE",
+    "tip_match": "{count} OF 5 RELATIONSHIPS VERIFIED",
+    "tip_finished": "THE COMPLETED WIRE IS YOUR ARTIFACT",
+    "phase_0": "NORMAL",
+    "phase_1": "EXCESSIVE",
+    "phase_2": "ABSURD",
+    "phase_3": "ACCOUNTABILITY EVENT",
+    "feedback_wrong": "NOT QUITE! THE COMMITTEE DELAYS!",
+    "feedback_start": "FOLLOW THE MONEY!",
+    "feedback_correct_1": "GOOD!",
+    "feedback_correct_2": "NAILED IT!",
+    "feedback_correct_3": "BIG BRAIN!",
+    "feedback_correct_4": "YOU UNDERSTAND POWER!",
+    "feedback_correct_5": "STRUCTURE EXPOSED!",
+    "outrage_0": "COMPLACENCY",
+    "outrage_20": "MILD CONCERN",
+    "outrage_40": "SUSPICION",
+    "outrage_60": "PUBLIC DISCONTENT",
+    "outrage_80": "INSTITUTIONAL PANIC",
+    "outrage_100": "MAXIMUM OUTRAGE",
+    "outrage_threat": "YOU ARE NOW CONSIDERED A THREAT TO BUSINESS AS USUAL.",
+    "demo_notice": "LOCAL DEMO // NOT AN OFFICIAL RESULT"
+  }
+}

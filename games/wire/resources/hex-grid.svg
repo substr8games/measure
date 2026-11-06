@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124.708" height="108" viewBox="0 0 124.708 108">
+  <defs>
+    <path id="hex" d="M0 -36 31.177 -18 31.177 18 0 36 -31.177 18 -31.177 -18Z"/>
+  </defs>
+  <g fill="none" stroke="#79a6be" stroke-opacity=".14" stroke-width=".7">
+    <use href="#hex" transform="translate(0 0)"/>
+    <use href="#hex" transform="translate(62.354 0)"/>
+    <use href="#hex" transform="translate(124.708 0)"/>
+    <use href="#hex" transform="translate(31.177 54)"/>
+    <use href="#hex" transform="translate(93.531 54)"/>
+    <use href="#hex" transform="translate(0 108)"/>
+    <use href="#hex" transform="translate(62.354 108)"/>
+    <use href="#hex" transform="translate(124.708 108)"/>
+  </g>
+</svg>
