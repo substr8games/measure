@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-06T11:20:20.537Z",
+  "updatedAt": "2026-11-06T16:11:38.391Z",
   "items": [
     {
       "id": "open-letter-arch-is-bad-alpine-linux-is-a-pile-of-dark-patterns-maintained-by-an",
@@ -23,6 +23,33 @@
       "classification": "explainer",
       "content": "articles/open-letter-arch-is-bad-alpine-linux-is-a-pile-of-dark-patterns-maintained-by-an.json",
       "url": "#/article/open-letter-arch-is-bad-alpine-linux-is-a-pile-of-dark-patterns-maintained-by-an",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "there-s-no-class-war-in-america-only-epistemic-and-economic-subjugation",
+      "type": "article",
+      "title": "There's No Class War in America; Only Epistemic and Economic Subjugation",
+      "subtitle": "A structural analysis of how the legacy cartel weaponizes the illusion of horizontal conflict to conceal the vertical architecture of extraction.",
+      "summary": "A structural analysis of how the legacy cartel weaponizes the illusion of horizontal conflict to conceal the vertical architecture of extraction.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "politics"
+      ],
+      "tags": [],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-06",
+      "date": "2026-11-06",
+      "updatedAt": "2026-11-06T16:11:30.554Z",
+      "readingMinutes": 10,
+      "classification": "explainer",
+      "content": "articles/there-s-no-class-war-in-america-only-epistemic-and-economic-subjugation.json",
+      "url": "#/article/there-s-no-class-war-in-america-only-epistemic-and-economic-subjugation",
       "pdf": "",
       "attachments": [],
       "directory": {
