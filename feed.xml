@@ -6,7 +6,7 @@
   <description>All published articles, including editorials, satire, Breaking, Play, and Special Reports.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Fri, 06 Nov 2026 22:43:02 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 07 Nov 2026 04:32:46 GMT</lastBuildDate>
   <item>
     <title>There&#39;s No Class War in America; Only Epistemic and Economic Subjugation</title>
     <link>https://philabsresearch.io/read/there-s-no-class-war-in-america-only-epistemic-and-economic-subjugation/</link>
@@ -34,6 +34,16 @@
     <description>Formal Notice of Systemic Obstruction and Administrative Malpractice: communication serves as a formal, unvarnished record regarding the current state of Alpine Linux distribution infrastructure and maintainer policy.</description>
     <pubDate>Fri, 06 Nov 2026 12:00:00 GMT</pubDate>
     <category>technology</category>
+    <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
+  </item>
+  <item>
+    <title>No Reasonable Person Would Take This Publication Seriously</title>
+    <link>https://philabsresearch.io/read/no-reasonable-person-would-take-this-publication-seriously/</link>
+    <guid isPermaLink="true">https://philabsresearch.io/read/no-reasonable-person-would-take-this-publication-seriously/</guid>
+    <description>An open letter and formal grievance from Phi Labs Research.</description>
+    <pubDate>Fri, 06 Nov 2026 12:00:00 GMT</pubDate>
+    <category>curiosities</category>
+    <category>breaking</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>

@@ -1,8 +1,35 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-06T16:57:59.991Z",
+  "updatedAt": "2026-11-07T04:32:45.767Z",
   "items": [
+    {
+      "id": "no-reasonable-person-would-take-this-publication-seriously",
+      "type": "article",
+      "title": "No Reasonable Person Would Take This Publication Seriously",
+      "subtitle": "Seriously, why won't anyone take us seriously?",
+      "summary": "An open letter and formal grievance from Phi Labs Research.",
+      "section": "curiosities",
+      "sections": [
+        "curiosities",
+        "breaking"
+      ],
+      "tags": [],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-06",
+      "date": "2026-11-06",
+      "updatedAt": "2026-11-07T04:32:43.515Z",
+      "readingMinutes": 2,
+      "classification": "copy",
+      "content": "articles/no-reasonable-person-would-take-this-publication-seriously.json",
+      "url": "#/article/no-reasonable-person-would-take-this-publication-seriously",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "id": "open-letter-arch-is-bad-alpine-linux-is-a-pile-of-dark-patterns-maintained-by-an",
       "type": "article",

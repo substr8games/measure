@@ -1,0 +1,109 @@
+{
+  "schema": "phi-labs.article.v1",
+  "id": "no-reasonable-person-would-take-this-publication-seriously",
+  "type": "article",
+  "title": "No Reasonable Person Would Take This Publication Seriously",
+  "profileId": "article",
+  "subtitle": "Seriously, why won't anyone take us seriously?",
+  "doi": "",
+  "summary": "An open letter and formal grievance from Phi Labs Research.",
+  "author": "Phi Labs Staff",
+  "date": "2026-11-06",
+  "published": "2026-11-06",
+  "section": "curiosities",
+  "sections": [
+    "curiosities",
+    "breaking"
+  ],
+  "tags": [],
+  "showToc": false,
+  "classification": "copy",
+  "markdown": "It has recently come to our attention that no reasonable person would take this publication seriously.\n\n**We are outraged.**\n\nThe Measure has invested considerable time, effort, and resources into establishing itself as a respectable public interest research publication. We have commissioned an imposing masthead, adopted professional typography, published original research, and acquired actual Digital Object Identifiers.\n\nDespite these considerable efforts, the public appears determined to regard us as a source of entertainment.\n\nThis is unacceptable.\n\nWe are especially troubled by the apparent belief that an institution's credibility should be diminished merely because it possesses a sense of humor. We reject this arbitrary standard of respectability and demand to know precisely when intellectual seriousness became incompatible with being funny.\n\nCertain individuals have pointed to our fictional advertisements, provocative editorials, and employment of a cartoon platypus as evidence that we are not a serious organization.\n\nWe find these allegations deeply offensive.\n\nOur investigative correspondent is a highly motivated professional with a ruler, a protractor, and an excellent understanding of the public interest. His status as a venomous, egg-laying mammal is entirely irrelevant to his journalistic qualifications.\n\nWe have also been informed that the publication's habit of ridiculing institutional authority may undermine its own claims to authority.\n\nThis reasoning is plainly circular. We have already declared ourselves authoritative. Continuing to question that authority after it has been established demonstrates a troubling disregard for established institutional procedure.\n\nAccordingly, The Measure formally objects to the proposition that no reasonable person would take this publication seriously.\n\nWe demand recognition as a legitimate and respectable institution, irrespective of our continued efforts to make such recognition impossible.\n\n**We are not asking to be taken seriously. We are demanding an explanation for why we aren't.**\n\n*The Editorial Department*  \n**The Measure — Phi Labs**",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "It has recently come to our attention that no reasonable person would take this publication seriously."
+    },
+    {
+      "type": "paragraph",
+      "text": "We are outraged."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Measure has invested considerable time, effort, and resources into establishing itself as a respectable public interest research publication. We have commissioned an imposing masthead, adopted professional typography, published original research, and acquired actual Digital Object Identifiers."
+    },
+    {
+      "type": "paragraph",
+      "text": "Despite these considerable efforts, the public appears determined to regard us as a source of entertainment."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is unacceptable."
+    },
+    {
+      "type": "paragraph",
+      "text": "We are especially troubled by the apparent belief that an institution's credibility should be diminished merely because it possesses a sense of humor. We reject this arbitrary standard of respectability and demand to know precisely when intellectual seriousness became incompatible with being funny."
+    },
+    {
+      "type": "paragraph",
+      "text": "Certain individuals have pointed to our fictional advertisements, provocative editorials, and employment of a cartoon platypus as evidence that we are not a serious organization."
+    },
+    {
+      "type": "paragraph",
+      "text": "We find these allegations deeply offensive."
+    },
+    {
+      "type": "paragraph",
+      "text": "Our investigative correspondent is a highly motivated professional with a ruler, a protractor, and an excellent understanding of the public interest. His status as a venomous, egg-laying mammal is entirely irrelevant to his journalistic qualifications."
+    },
+    {
+      "type": "paragraph",
+      "text": "We have also been informed that the publication's habit of ridiculing institutional authority may undermine its own claims to authority."
+    },
+    {
+      "type": "paragraph",
+      "text": "This reasoning is plainly circular. We have already declared ourselves authoritative. Continuing to question that authority after it has been established demonstrates a troubling disregard for established institutional procedure."
+    },
+    {
+      "type": "paragraph",
+      "text": "Accordingly, The Measure formally objects to the proposition that no reasonable person would take this publication seriously."
+    },
+    {
+      "type": "paragraph",
+      "text": "We demand recognition as a legitimate and respectable institution, irrespective of our continued efforts to make such recognition impossible."
+    },
+    {
+      "type": "paragraph",
+      "text": "We are not asking to be taken seriously. We are demanding an explanation for why we aren't."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Editorial Department  \nThe Measure — Phi Labs"
+    }
+  ],
+  "readingMinutes": 2,
+  "heroImage": "",
+  "images": [],
+  "attachments": [],
+  "style": {
+    "background": "#e9e4d9",
+    "surface": "#f8f5ee",
+    "text": "#252729",
+    "muted": "#6c6d6f",
+    "accent": "#b5481d",
+    "border": "#d1c8b8",
+    "codeBackground": "#171a1d",
+    "codeText": "#f2f4f5",
+    "bodyFont": "editorial",
+    "headingFont": "system",
+    "codeFont": "mono",
+    "fontSize": 19,
+    "lineHeight": 1.7,
+    "titleSize": 68,
+    "width": 780,
+    "radius": 2,
+    "titleAlign": "left",
+    "customCss": ""
+  },
+  "updatedAt": "2026-11-07T04:32:43.515Z"
+}
