@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-07T19:26:41.354Z",
+  "updatedAt": "2026-11-07T22:38:00.007Z",
   "items": [
     {
       "id": "canva-s-election-day-layoff-dump",
@@ -74,6 +74,37 @@
           "releaseTag": "measure-pdf-the-capital-strike-taft-hartley-and-the-structural-sabotage-of-the-american-work"
         }
       ],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "the-passion-tax",
+      "type": "article",
+      "title": "The Passion Tax",
+      "subtitle": "How the Restaurant Industry Turns Professional Pride Into an Excuse for Economic Exploitation",
+      "summary": "How the Restaurant Industry Turns Professional Pride Into an Excuse for Economic Exploitation",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "restaurants",
+        "foodservice",
+        "economics",
+        "exploitation"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-07",
+      "date": "2026-11-07",
+      "updatedAt": "2026-11-07T22:37:58.060Z",
+      "readingMinutes": 9,
+      "classification": "deep-dive",
+      "content": "articles/the-passion-tax.json",
+      "url": "#/article/the-passion-tax",
+      "pdf": "",
+      "attachments": [],
       "directory": {
         "style": "text"
       }
