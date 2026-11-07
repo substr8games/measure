@@ -1,8 +1,48 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-07T15:17:33.148Z",
+  "updatedAt": "2026-11-07T19:21:53.844Z",
   "items": [
+    {
+      "id": "canva-s-election-day-layoff-dump",
+      "type": "article",
+      "title": "Canva's Election Day Layoff Dump",
+      "subtitle": "How to bury a corporate crisis beneath a national spectacle—and call it a new beginning.",
+      "summary": "How to bury a corporate crisis beneath a national spectacle—and call it a new beginning.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "technology",
+        "politics"
+      ],
+      "tags": [
+        "deception",
+        "corporation",
+        "omissions"
+      ],
+      "doi": "",
+      "author": "Digger - Phi Labs Staff",
+      "published": "2026-11-07",
+      "date": "2026-11-07",
+      "updatedAt": "2026-11-07T19:21:41.603Z",
+      "readingMinutes": 8,
+      "classification": "investigation",
+      "content": "articles/canva-s-election-day-layoff-dump.json",
+      "url": "#/article/canva-s-election-day-layoff-dump",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-canva-s-election-day-layoff-dump/canva-s-election-day-layoff-dump-f44bdac2ae363d0f.pdf",
+      "attachments": [
+        {
+          "name": "canva-s-election-day-layoff-dump-3.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-canva-s-election-day-layoff-dump/canva-s-election-day-layoff-dump-f44bdac2ae363d0f.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 721689308,
+          "releaseTag": "measure-pdf-canva-s-election-day-layoff-dump"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "id": "the-capital-strike-taft-hartley-and-the-structural-sabotage-of-the-american-work",
       "type": "article",
