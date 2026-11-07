@@ -1,0 +1,37 @@
+{
+  "schema": "phi-labs.media.v1",
+  "id": "the-truth-revealed-c38a9d04",
+  "type": "media",
+  "mediaType": "image",
+  "mediaKind": "funny",
+  "title": "THE TRUTH REVEALED",
+  "summary": "",
+  "blurb": "",
+  "advertiser": "",
+  "galleryId": "",
+  "viewerImage": "",
+  "viewerCaption": "",
+  "tags": [
+    "deception",
+    "corporations",
+    "layoffs",
+    "recession"
+  ],
+  "section": "curiosities",
+  "sections": [
+    "curiosities"
+  ],
+  "date": "2026-11-07",
+  "published": "2026-11-07",
+  "url": "images/media/the-truth-revealed-c38a9d04-ddb01e60a5aaade0.png",
+  "image": "images/media/the-truth-revealed-c38a9d04-ddb01e60a5aaade0.png",
+  "pdf": "",
+  "file": "images/media/the-truth-revealed-c38a9d04-ddb01e60a5aaade0.png",
+  "originalFilename": "the-truth-revealed.png",
+  "mimeType": "image/png",
+  "directory": {
+    "style": "thumbnail",
+    "image": "images/media/the-truth-revealed-c38a9d04-ddb01e60a5aaade0.png"
+  },
+  "updatedAt": "2026-11-07T19:26:35.863Z"
+}
