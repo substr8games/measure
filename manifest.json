@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-07T15:14:25.348Z",
+  "updatedAt": "2026-11-07T15:17:33.148Z",
   "items": [
     {
       "id": "the-capital-strike-taft-hartley-and-the-structural-sabotage-of-the-american-work",
@@ -19,13 +19,21 @@
       "author": "Phi Labs Staff",
       "published": "2026-11-07",
       "date": "2026-11-07",
-      "updatedAt": "2026-11-07T15:14:17.882Z",
+      "updatedAt": "2026-11-07T15:17:21.458Z",
       "readingMinutes": 8,
       "classification": "explainer",
       "content": "articles/the-capital-strike-taft-hartley-and-the-structural-sabotage-of-the-american-work.json",
       "url": "#/article/the-capital-strike-taft-hartley-and-the-structural-sabotage-of-the-american-work",
-      "pdf": "",
-      "attachments": [],
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-capital-strike-taft-hartley-and-the-structural-sabotage-of-the-american-work/the-capital-strike-taft-hartley-and-the-structural-sabotage-of-the-american-work-4366be1263b5f8c3.pdf",
+      "attachments": [
+        {
+          "name": "the-capital-strike-taft-hartley-and-the-structural-sabotage-of-the-american-work.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-capital-strike-taft-hartley-and-the-structural-sabotage-of-the-american-work/the-capital-strike-taft-hartley-and-the-structural-sabotage-of-the-american-work-4366be1263b5f8c3.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 721055262,
+          "releaseTag": "measure-pdf-the-capital-strike-taft-hartley-and-the-structural-sabotage-of-the-american-work"
+        }
+      ],
       "directory": {
         "style": "text"
       }
