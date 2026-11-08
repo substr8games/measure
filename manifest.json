@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-08T08:59:20.250Z",
+  "updatedAt": "2026-11-08T09:01:54.471Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -575,7 +575,7 @@
       "author": "Phi Labs Research Staff",
       "published": "2026-11-05",
       "date": "2026-11-05",
-      "updatedAt": "2026-11-05T17:10:06.483Z",
+      "updatedAt": "2026-11-08T09:01:52.285Z",
       "readingMinutes": 7,
       "classification": "explainer",
       "content": "articles/the-example-is-the-argument.json",
