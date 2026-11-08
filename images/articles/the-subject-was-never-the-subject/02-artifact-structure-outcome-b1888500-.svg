@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="890" viewBox="0 0 1600 890" role="img" aria-labelledby="title desc">
+  <title id="title">From observable artifact to operating relationships to system-level outcome</title>
+  <desc id="desc">Three horizontal rows show Dan Olson's documentaries as examples of a general method: start with an observed artifact, trace its relevant interfaces and incentives, and investigate the resulting system behavior. The rows are not claims of equivalence between the domains.</desc>
+  <defs>
+    <style><![CDATA[
+      .base{fill:#000000}.kicker{fill:#9294a4;font:600 18px 'AnonymicePro Nerd Font','Hack',monospace;letter-spacing:3px}
+      .heading{fill:#F3F5FB;font:700 54px 'AnonymicePro Nerd Font','Hack',monospace;letter-spacing:-1px}
+      .sub{fill:#B5B9C7;font:400 21px 'AnonymicePro Nerd Font','Hack',monospace}
+      .col1{fill:#4BEA91;font:700 21px 'AnonymicePro Nerd Font','Hack',monospace;letter-spacing:1.5px}
+      .col2{fill:#CB97FF;font:700 21px 'AnonymicePro Nerd Font','Hack',monospace;letter-spacing:1.5px}
+      .col3{fill:#55C5FF;font:700 21px 'AnonymicePro Nerd Font','Hack',monospace;letter-spacing:1.5px}
+      .tag{fill:#898D9E;font:600 17px 'AnonymicePro Nerd Font','Hack',monospace}
+      .main{fill:#F5F6FB;font:700 24px 'AnonymicePro Nerd Font','Hack',monospace}
+      .detail{fill:#B5B8C6;font:400 19px 'AnonymicePro Nerd Font','Hack',monospace}
+      .bottom{fill:#F5F6FB;font:700 24px 'AnonymicePro Nerd Font','Hack',monospace}
+      .fine{fill:#8E91A2;font:400 17px 'AnonymicePro Nerd Font','Hack',monospace}
+      .a{fill:#0A1712;stroke:#2C7853;stroke-width:2}.b{fill:#160D1E;stroke:#78569B;stroke-width:2}.c{fill:#0B1620;stroke:#37799E;stroke-width:2}
+      .route{fill:none;stroke:#9498AA;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+    ]]></style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9CA0B2"/></marker>
+    <pattern id="grid" width="45" height="45" patternUnits="userSpaceOnUse"><path d="M45 0H0V45" fill="none" stroke="#1E2230" stroke-width="1"/></pattern>
+  </defs>
+  <rect class="base" width="1600" height="890"/>
+  <rect width="1600" height="890" fill="url(#grid)" opacity=".5"/>
+  <rect x="66" y="40" width="8" height="58" fill="#CB97FF"/>
+  <text x="98" y="63" class="kicker">THE MEASURE / FEATURED FIGURES 02</text>
+  <text x="98" y="125" class="heading">THE SUBJECT IS AN ENTRY POINT.</text>
+  <text x="98" y="168" class="sub">Observe the artifact. Trace the relationships. Test the explanation against the outcome.</text>
+  <path d="M98 194H1502" stroke="#37394A" stroke-width="2"/>
+
+  <text x="110" y="251" class="col1">01 / WHAT WE SEE</text>
+  <text x="505" y="251" class="col2">02 / WHAT CONNECTS IT</text>
+  <text x="1150" y="251" class="col3">03 / WHAT EMERGES</text>
+
+  <!-- DEAD MALL -->
+  <text x="110" y="307" class="tag">DEAD MALL</text>
+  <rect x="100" y="330" width="325" height="125" rx="12" class="a"/>
+  <text x="126" y="377" class="main">EMPTY VIRTUAL</text><text x="126" y="407" class="main">PLAZAS</text>
+  <path d="M431 394H476" class="route" marker-end="url(#arrow)"/>
+  <rect x="491" y="330" width="580" height="125" rx="12" class="b"/>
+  <text x="521" y="375" class="main">LAND MARKETS + ASSET-WEIGHTED</text><text x="521" y="405" class="main">GOVERNANCE</text>
+  <path d="M1077 394H1120" class="route" marker-end="url(#arrow)"/>
+  <rect x="1135" y="330" width="365" height="125" rx="12" class="c"/>
+  <text x="1160" y="375" class="main">SPECULATION AND</text><text x="1160" y="405" class="main">ENGAGEMENT DIVERGE</text>
+
+  <!-- LINE GOES UP -->
+  <text x="110" y="501" class="tag">LINE GOES UP</text>
+  <rect x="100" y="523" width="325" height="125" rx="12" class="a"/>
+  <text x="126" y="571" class="main">NFT</text><text x="126" y="601" class="main">COLLECTIBLE</text>
+  <path d="M431 587H476" class="route" marker-end="url(#arrow)"/>
+  <rect x="491" y="523" width="580" height="125" rx="12" class="b"/>
+  <text x="521" y="569" class="main">CRYPTO PURCHASE + LIQUIDITY</text><text x="521" y="599" class="main">+ RESALE EXPECTATIONS</text>
+  <path d="M1077 587H1120" class="route" marker-end="url(#arrow)"/>
+  <rect x="1135" y="523" width="365" height="125" rx="12" class="c"/>
+  <text x="1160" y="568" class="main">PRODUCT RECRUITS</text><text x="1160" y="598" class="main">MARKET PARTICIPANTS</text>
+
+  <!-- FLAT EARTH -->
+  <text x="110" y="694" class="tag">FLAT EARTH</text>
+  <rect x="100" y="716" width="325" height="108" rx="12" class="a"/>
+  <text x="126" y="760" class="main">FALSE FACTUAL</text><text x="126" y="790" class="main">CLAIM</text>
+  <path d="M431 772H476" class="route" marker-end="url(#arrow)"/>
+  <rect x="491" y="716" width="580" height="108" rx="12" class="b"/>
+  <text x="521" y="758" class="main">BELONGING + GROUP BOUNDARIES</text><text x="521" y="788" class="main">+ SHARED EXPLANATIONS</text>
+  <path d="M1077 772H1120" class="route" marker-end="url(#arrow)"/>
+  <rect x="1135" y="716" width="365" height="108" rx="12" class="c"/>
+  <text x="1160" y="758" class="main">BELIEF CAN OUTLAST</text><text x="1160" y="788" class="main">CORRECTION</text>
+
+  <text x="100" y="864" class="fine">PHI LABS ANALYTICAL MODEL  /  A SHARED INVESTIGATIVE METHOD DOES NOT MAKE THESE DOMAINS EQUIVALENT.</text>
+</svg>

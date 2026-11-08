@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">One world, two loops: declared participation and speculative asset incentives</title>
+  <desc id="desc">Two closed, four-step feedback loops compare an engaging virtual community with a market driven by expectations of future adoption. The comparison distinguishes participation from speculative valuation and is an illustrative structural model.</desc>
+  <defs>
+    <style><![CDATA[
+      .base { fill:#000000; }
+      .panel { fill:#08090e; stroke:#272934; stroke-width:2; }
+      .kicker { fill:#9294a4; font:600 18px 'AnonymicePro Nerd Font','Hack',monospace; letter-spacing:3px; }
+      .heading { fill:#F1F3FA; font:700 56px 'AnonymicePro Nerd Font','Hack',monospace; letter-spacing:-1px; }
+      .sub { fill:#b4b5c3; font:400 22px 'AnonymicePro Nerd Font','Hack',monospace; }
+      .headleft { fill:#4BEA91; font:700 25px 'AnonymicePro Nerd Font','Hack',monospace; letter-spacing:1.2px; }
+      .headright { fill:#FF7888; font:700 25px 'AnonymicePro Nerd Font','Hack',monospace; letter-spacing:1.2px; }
+      .numgreen { fill:#4BEA91; font:700 19px 'AnonymicePro Nerd Font','Hack',monospace; }
+      .numred { fill:#FF7888; font:700 19px 'AnonymicePro Nerd Font','Hack',monospace; }
+      .nodeTitle { fill:#F6F7FB; font:700 24px 'AnonymicePro Nerd Font','Hack',monospace; }
+      .nodeDesc { fill:#b7bac7; font:400 19px 'AnonymicePro Nerd Font','Hack',monospace; }
+      .footer { fill:#CACDD9; font:500 19px 'AnonymicePro Nerd Font','Hack',monospace; }
+      .footSmall { fill:#86899D; font:400 15px 'AnonymicePro Nerd Font','Hack',monospace; }
+      .gbox { fill:#091810; stroke:#327C58; stroke-width:2; }
+      .rbox { fill:#1B0B11; stroke:#874554; stroke-width:2; }
+      .gline { stroke:#4BEA91; fill:none; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+      .rline { stroke:#FF7888; fill:none; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+    ]]></style>
+    <marker id="green-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#4BEA91"/></marker>
+    <marker id="red-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#FF7888"/></marker>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#181B27" stroke-width="1" opacity=".6"/></pattern>
+  </defs>
+  <rect class="base" width="1600" height="960"/>
+  <rect width="1600" height="960" fill="url(#grid)" opacity=".55"/>
+  <rect x="62" y="43" width="8" height="58" fill="#CB97FF"/>
+  <text x="90" y="65" class="kicker">THE MEASURE / FEATURED FIGURES 02</text>
+  <text x="90" y="128" class="heading">ONE WORLD. TWO LOOPS.</text>
+  <text x="90" y="166" class="sub">Decentraland: the promised experience and the incentives that can operate beside it</text>
+  <path d="M90 189H1510" stroke="#353647" stroke-width="2"/>
+
+  <rect x="72" y="208" width="694" height="634" rx="16" class="panel"/>
+  <rect x="834" y="208" width="694" height="634" rx="16" class="panel"/>
+  <rect x="72" y="208" width="694" height="6" rx="3" fill="#4BEA91"/>
+  <rect x="834" y="208" width="694" height="6" rx="3" fill="#FF7888"/>
+  <text x="134" y="263" class="headleft">ADVERTISED USER LOOP</text>
+  <text x="896" y="263" class="headright">SPECULATIVE ASSET LOOP</text>
+
+  <!-- Green, closed feedback loop: nodes, descending arrows, returning left-side wire -->
+  <rect x="143" y="293" width="557" height="94" rx="10" class="gbox"/>
+  <text x="168" y="330" class="numgreen">01</text><text x="220" y="330" class="nodeTitle">A WORLD WORTH VISITING</text>
+  <text x="220" y="360" class="nodeDesc">Places and experiences with intrinsic use</text>
+  <path d="M422 388V419" class="gline" marker-end="url(#green-arrow)"/>
+  <rect x="143" y="428" width="557" height="94" rx="10" class="gbox"/>
+  <text x="168" y="466" class="numgreen">02</text><text x="220" y="466" class="nodeTitle">PEOPLE PARTICIPATE</text>
+  <text x="220" y="496" class="nodeDesc">Visitors become active users</text>
+  <path d="M422 523V554" class="gline" marker-end="url(#green-arrow)"/>
+  <rect x="143" y="563" width="557" height="94" rx="10" class="gbox"/>
+  <text x="168" y="601" class="numgreen">03</text><text x="220" y="601" class="nodeTitle">COMMUNITY BUILDS CONTENT</text>
+  <text x="220" y="631" class="nodeDesc">Creators add value for future visitors</text>
+  <path d="M422 658V689" class="gline" marker-end="url(#green-arrow)"/>
+  <rect x="143" y="698" width="557" height="94" rx="10" class="gbox"/>
+  <text x="168" y="736" class="numgreen">04</text><text x="220" y="736" class="nodeTitle">RETURN VISITS SUSTAIN IT</text>
+  <text x="220" y="766" class="nodeDesc">Engagement justifies more experiences</text>
+  <path d="M143 745H123Q101 745 101 720V343Q101 340 105 340H140" class="gline" marker-end="url(#green-arrow)" opacity=".82"/>
+
+  <!-- Red, closed feedback loop: nodes, descending arrows, returning right-side wire -->
+  <rect x="896" y="293" width="557" height="94" rx="10" class="rbox"/>
+  <text x="920" y="330" class="numred">01</text><text x="974" y="330" class="nodeTitle">PROMISE OF FUTURE ADOPTION</text>
+  <text x="974" y="360" class="nodeDesc">The metaverse as a coming destination</text>
+  <path d="M1174 388V419" class="rline" marker-end="url(#red-arrow)"/>
+  <rect x="896" y="428" width="557" height="94" rx="10" class="rbox"/>
+  <text x="920" y="466" class="numred">02</text><text x="974" y="466" class="nodeTitle">SCARCE LAND HAS A PRICE</text>
+  <text x="974" y="496" class="nodeDesc">Tokenized assets can be traded</text>
+  <path d="M1174 523V554" class="rline" marker-end="url(#red-arrow)"/>
+  <rect x="896" y="563" width="557" height="94" rx="10" class="rbox"/>
+  <text x="920" y="601" class="numred">03</text><text x="974" y="601" class="nodeTitle">ASSETS CHANGE HANDS</text>
+  <text x="974" y="631" class="nodeDesc">Buy, sell, hold or expect rental value</text>
+  <path d="M1174 658V689" class="rline" marker-end="url(#red-arrow)"/>
+  <rect x="896" y="698" width="557" height="94" rx="10" class="rbox"/>
+  <text x="920" y="736" class="numred">04</text><text x="974" y="736" class="nodeTitle">HOLDERS PROMOTE GROWTH</text>
+  <text x="974" y="766" class="nodeDesc">Renewed expectations support demand</text>
+  <path d="M1453 745H1470Q1497 745 1497 720V342Q1497 340 1492 340H1457" class="rline" marker-end="url(#red-arrow)" opacity=".82"/>
+
+  <path d="M90 866H1510" stroke="#353647" stroke-width="2"/>
+  <text x="90" y="902" class="footer">The user loop needs participation. The asset loop can circulate expectations before it arrives.</text>
+  <text x="90" y="934" class="footSmall">PHI LABS ANALYTICAL MODEL  /  CONCEPTUAL FEEDBACK LOOPS, NOT LITERAL SOFTWARE PIPELINES</text>
+</svg>
