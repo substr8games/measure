@@ -42,6 +42,30 @@
     let id=localStorage.getItem('measure-wire-anonymous-id-v1');
     if(!id||!/^[a-zA-Z0-9-]{20,120}$/.test(id)){id=crypto.randomUUID();localStorage.setItem('measure-wire-anonymous-id-v1',id);}return id;
   }catch{return crypto.randomUUID();}}
+  // THE WIRE / investigator aliases. Keep these two arrays synchronized with the Worker.
+  const HANDLE_STORAGE_KEY='measure-wire-investigator-handle-v1';
+  const HANDLE_PREFIXES=['Suspicious','Bureaucratic','Unlicensed','Rogue','Tax-Exempt','Institutional','Unauthorized','Procedural','Executive','Accidental','Subversive','Disgruntled','Regulatory','Structural','Ferocious','Contrarian','Clandestine','Unscheduled','Rebellious','Noncompliant','Anonymous','Unreasonable','Perpetual','Uninvited','Corporate','Forbidden'];
+  const HANDLE_NOUNS=['Turnip','Menace','Philosopher','Accountant','Goblin','Nightmare','Auditor','Intern','Potato','Detective','Footnote','Committee','Algorithm','Rebel','Taxpayer','Researcher','Gremlin','Overlord','Observer','Specter','Mechanism','Paradox','Insurgent','Economist','Archivist','Raccoon'];
+  const HANDLE_POOL=HANDLE_PREFIXES.flatMap(prefix=>HANDLE_NOUNS.map(noun=>prefix+' '+noun).filter(name=>name.length<=22));
+  let investigatorHandle='';
+  const validHandle=name=>typeof name==='string'&&HANDLE_POOL.includes(name);
+  function randomHandle(previous=''){
+    const candidates=HANDLE_POOL.filter(name=>name!==previous);
+    const bytes=new Uint32Array(1);crypto.getRandomValues(bytes);
+    return candidates[bytes[0]%candidates.length];
+  }
+  function savedHandle(){
+    if(validHandle(investigatorHandle))return investigatorHandle;
+    let stored='';try{stored=localStorage.getItem(HANDLE_STORAGE_KEY)||'';}catch{}
+    investigatorHandle=validHandle(stored)?stored:randomHandle();
+    try{localStorage.setItem(HANDLE_STORAGE_KEY,investigatorHandle);}catch{}
+    return investigatorHandle;
+  }
+  function rerollHandle(){
+    investigatorHandle=randomHandle(savedHandle());
+    try{localStorage.setItem(HANDLE_STORAGE_KEY,investigatorHandle);}catch{}
+    controlValue($('wireHandleValue'),investigatorHandle);
+  }
   function auth(){return {'Authorization':'Bearer '+token};}
   const msfmt=(ms,detail=false)=>{const seconds=Math.floor(Math.max(0,ms)/1000);return `${String(Math.floor(seconds/60)).padStart(2,'0')}:${String(seconds%60).padStart(2,'0')}${detail?'.'+String(Math.max(0,ms)%1000).padStart(3,'0'):''}`;};
   const inRun=()=>state&&state.status==='active'&&!waiting;
@@ -146,25 +170,25 @@
       references.forEach(src=>{if(typeof src.url!=='string'||!src.url.startsWith('https://'))return;
         const link=document.createElement('a');link.dataset.wireSource='1';link.href=src.url;link.textContent=src.label||'Source';link.target='_blank';link.rel='noopener noreferrer';box.append(link);});}
   }
-  async function rankings(serverBoard=null,sort='fastest'){
+  async function rankings(serverBoard=null){
     const box=$('wireRanking');if(!box||state?.status!=='complete')return;
     box.replaceChildren();box.hidden=false;
-    const title=document.createElement('h3');title.textContent='DAILY LEADERBOARD';box.append(title);
-    if(mode==='ranked'){const controls=document.createElement('div');for(const v of ['fastest','outrage']){const b=document.createElement('button');b.type='button';b.textContent=v==='fastest'?'FASTEST':'MOST OUTRAGE';b.disabled=sort===v;b.addEventListener('click',()=>void rankings(null,v));controls.append(b);}box.append(controls);}
-    if(mode!=='ranked'){const text=document.createElement('p');text.textContent='Practice run — no leaderboard entry.';box.append(text);return;}
+    const title=document.createElement('h3');title.textContent=getStr('game.leaderboard_title');box.append(title);
+    if(mode!=='ranked'){
+      const text=document.createElement('p');text.textContent='Local practice run — no public score.';box.append(text);return;
+    }
+    const status=document.createElement('div');status.textContent=state.ranked?'LOADING YOUR RANK…':'YOUR TIME WAS NOT SUBMITTED';box.append(status);
     let board=serverBoard;
-    if(!board){try{board=await json('/wire/leaderboard?date='+encodeURIComponent(puzzle.date)+'&sort='+sort);}catch(e){const p=document.createElement('p');p.textContent='Leaderboard unavailable: '+e.message;box.append(p);return;}}
-    const status=document.createElement('div');status.textContent=board.my_rank?'YOUR RANK: #'+board.my_rank:'TOP SCORES';box.append(status);
-    const table=document.createElement('table');for(const row of (board.rows||[]).slice(0,10)){
+    if(!board){try{board=await json('/wire/leaderboard?date='+encodeURIComponent(puzzle.date));}catch(e){const p=document.createElement('p');p.textContent='Leaderboard unavailable: '+e.message;box.append(p);return;}}
+    status.textContent=state.ranked?(board.my_rank?'YOUR RANK: #'+board.my_rank:'YOUR RANK IS UPDATING'):getStr('game.leaderboard_unlisted');
+    const table=document.createElement('table');table.setAttribute('aria-label','Daily times sorted fastest first');
+    const header=document.createElement('tr');for(const t of ['RANK','INVESTIGATOR','TIME','OUTRAGE']){const th=document.createElement('th');th.textContent=t;th.scope='col';header.append(th);}table.append(header);
+    for(const row of (board.rows||[])){
       const tr=document.createElement('tr');if(row.me)tr.className='self';
       [row.rank,row.handle,msfmt(row.time_ms,true),row.outrage].forEach(v=>{const td=document.createElement('td');td.textContent=String(v);tr.append(td);});table.append(tr);
-    }box.append(table);
-    const form=document.createElement('form');const input=document.createElement('input');input.maxLength=22;input.placeholder='ANONYMOUS INVESTIGATOR';input.setAttribute('aria-label','Leaderboard handle');
-    const submit=document.createElement('button');submit.textContent='SET HANDLE';submit.type='submit';
-    form.append(input,submit);form.addEventListener('submit',async e=>{e.preventDefault();submit.disabled=true;
-      try{await json('/wire/handle',{method:'POST',headers:auth(),body:JSON.stringify({handle:input.value})});await rankings();}
-      catch(err){status.textContent='Handle error: '+err.message;}finally{submit.disabled=false;}
-    });box.append(form);
+    }
+    if(!(board.rows||[]).length){const empty=document.createElement('p');empty.textContent=getStr('game.leaderboard_no_scores');box.append(empty);}
+    else box.append(table);
   }
   function linkArticle(){
     const box=$('wirePublication');if(!box)return;
@@ -181,10 +205,12 @@
     const elapsed=result?.elapsed_ms??Math.max(0,state.finished_at_ms-state.started_at_ms);
     controlValue($('topClock'),msfmt(elapsed,false));controlValue($('finalTime'),msfmt(elapsed,true));
     controlValue($('finalOutrage'),state.outrage+'/100');
-    controlValue($('resultStatus'),mode==='ranked'?'WORKER VERIFIED · OFFICIAL MILLISECONDS':'LOCAL PRACTICE · NOT RANKED');
+    const status=mode==='ranked'?(state.ranked?'WORKER VERIFIED · LEADERBOARD ENTRY':'WORKER VERIFIED · TIME NOT SUBMITTED'):'LOCAL PRACTICE · NOT RANKED';
+    controlValue($('resultStatus'),status);
     controlValue($('outrageFinal'),state.outrage>=100?getStr('game.outrage_threat'):'INSTITUTIONAL RESPONSE PENDING');
     linkArticle();makeReveal(reveal);
     updateInstructions();refreshNodes();drawWire();
+    out(`${state.progress} / 5 VERIFIED CONNECTIONS`);
     await rankings(board);
     if(animate){
       $('accountability').classList.remove('active','settled');void $('accountability').offsetWidth;
@@ -230,27 +256,39 @@
     const label=root.querySelector('.case-topline');if(label)label.textContent=puzzle.classification==='documented'?'SOURCE-BACKED INVESTIGATION':'FICTIONAL CASE STUDY';
   }
   function presentIntro(){
-    controlValue($("wireServiceStatus"),mode==="ranked"?"/ CLOUDFLARE VERIFIED":"/ PRACTICE MODE");
+    controlValue($('wireServiceStatus'),mode==='ranked'?'/ CLOUDFLARE VERIFIED':'/ PRACTICE MODE');
     $('welcomeLayer').hidden=false;$('caseOpen').hidden=false;$('caseComplete').hidden=true;
     $('accountability').setAttribute('aria-hidden','true');$('accountability').classList.remove('active','settled');
     $('boardPanel').classList.remove('is-finished');$('wireRanking').hidden=true;
     $('topClock').textContent='00:00';state=localPractice();if(mode==='ranked')state.nodes=[];
     $('beginButton').disabled=false;
+    $('wireOptInPanel').hidden=mode!=='ranked';
+    $('wireOptIn').checked=false;$('wireHandleWrap').hidden=true;
+    controlValue($('wireHandleValue'),savedHandle());
+    $('wireOptStatus').hidden=true;$('wireOptStatus').textContent='';
     if($('practiceButton'))$('practiceButton').hidden=true;
     renderBoard();updateInstructions();
     $('beginButton').focus({preventScroll:true});
   }
   async function start(){
-    if(waiting)return;waiting=true;$('beginButton').disabled=true;
+    if(waiting)return;
+    const optIn=mode==='ranked'&&$('wireOptIn').checked;
+    const name=optIn?savedHandle():'';
+    const error=$('wireOptStatus');error.hidden=true;error.textContent='';
+    if(optIn&&!validHandle(name)){
+      error.textContent=getStr('game.leaderboard_handle_error');error.hidden=false;
+      $('wireHandleReroll').focus();return;
+    }
+    waiting=true;$('beginButton').disabled=true;
     out(mode==='ranked'?'REQUESTING VERIFIED SESSION…':'LOCAL PRACTICE MODE');
     try{
       if(mode==='ranked'){
-        const data=await json('/wire/start',{method:'POST',headers:{'X-Wire-Visitor':visitor()},body:'{}'});
+        const data=await json('/wire/start',{method:'POST',headers:{'X-Wire-Visitor':visitor()},body:JSON.stringify({ranked:optIn,handle:name})});
         token=data.token;storeToken(token);puzzle=data.puzzle;state=data.session;
       }else{state=localPractice();state.status='active';state.started_at_ms=Date.now();state.lastStageMs=state.started_at_ms;}
       setPuzzle(puzzle);$('welcomeLayer').hidden=true;renderBoard();updateInstructions();startClock();
       boardNodes().find(n=>n.textContent.includes('ENTITY'))?.focus({preventScroll:true});
-    }catch(err){out(err.message,true);$('beginButton').disabled=false;}
+    }catch(err){out(err.message,true);error.textContent=err.message;error.hidden=false;$('beginButton').disabled=false;}
     finally{waiting=false;refreshNodes();if(pendingDrag){const next=pendingDrag;pendingDrag=null;queueMicrotask(()=>void choose(next));}}
   }
   function startClock(){clearInterval(clockJob);clockJob=setInterval(()=>{
@@ -262,26 +300,27 @@
     token=saved;
     try{
       const response=await json('/wire/session',{headers:auth()});
-      if(response.puzzle?.date!==pacificToday() && (response.session?.status==="complete"||response.session?.status==="expired")){storeToken("");token="";return false;}
+      if(response.puzzle?.date!==pacificToday() && (response.session?.status==='complete'||response.session?.status==='expired')){storeToken('');token='';return false;}
       if(!response.session?.nodes?.length){storeToken('');return false;}
       mode='ranked';state=response.session;puzzle=response.puzzle||puzzle;setPuzzle(puzzle);
       $('welcomeLayer').hidden=state.status!=='expired';
       renderBoard();updateInstructions();
       if(state.status==='complete')await finish(response.result,response.reveal,response.leaderboard,false);
-      else if(state.status==='expired'){out('RANKED SESSION EXPIRED — NEW SESSIONS ARE NOT A RESTART',true);$('beginButton').disabled=true;$('practiceButton').hidden=false;}
-      else{startClock();out('RANKED SESSION RESTORED');}
+      else if(state.status==='expired'){out('SESSION EXPIRED — START A NEW UNLISTED RUN OR PRACTICE',true);$('beginButton').disabled=true;$('practiceButton').hidden=false;}
+      else{startClock();out(state.ranked?'LEADERBOARD SESSION RESTORED':'UNLISTED SESSION RESTORED');}
       return true;
-    }catch(err){console.warn('WIRE resume failed:',err);out('Unable to recover ranked session. Original token retained.',true);return 'unavailable';}
+    }catch(err){console.warn('WIRE resume failed:',err);out('Unable to recover session. Original token retained.',true);return 'unavailable';}
   }
   async function configure(){
     mode='practice';puzzle={...SAMPLE};
     try{const config=await fetch(BASE+'config.json',{cache:'no-store'}).then(r=>r.ok?r.json():{});
       api=typeof config.workerUrl==='string'&&/^https:\/\//.test(config.workerUrl)?config.workerUrl.replace(/\/$/,''):'';
       if(api){const response=await json('/wire/today');puzzle=response.puzzle;mode='ranked';}
-    }catch(err){console.warn('THE WIRE: ranked service not available; using explicitly unranked practice.',err);}
+    }catch(err){console.warn('THE WIRE: verified service unavailable; using unranked local practice.',err);}
     setPuzzle(puzzle);
-    const tag=root.querySelector('.welcome-foot span:last-child');if(tag)tag.textContent=mode==='ranked'?'OFFICIAL DAILY ATTEMPT · MILLISECOND RANKING':'PRACTICE / UNRANKED';
-    const ribbon=root.querySelector('.welcome-kicker');if(ribbon)ribbon.textContent=mode==='ranked'?'THE MEASURE / VERIFIED DAILY INVESTIGATION':'THE MEASURE / UNRANKED PRACTICE';
+    const tag=root.querySelector('.welcome-foot span:last-child');if(tag)tag.textContent=mode==='ranked'?'PUBLIC LEADERBOARD OPTIONAL · VERIFIED TIMER':'PRACTICE / UNRANKED';
+    const ribbon=root.querySelector('.welcome-kicker');if(ribbon)ribbon.textContent=mode==='ranked'?'THE MEASURE / DAILY VERIFIED INVESTIGATION':'THE MEASURE / UNRANKED PRACTICE';
+    $('wireOptInPanel').hidden=mode!=='ranked';
     controlValue($('wireServiceStatus'),mode==='ranked'?'/ CLOUDFLARE VERIFIED':'/ PRACTICE MODE');
   }
   let archiveReturnFocus=null;
@@ -345,11 +384,15 @@
     const surface=document.createElement('div');surface.innerHTML=fragment;while(surface.firstChild)root.append(surface.firstChild);
     try{strings=await fetch(BASE+'resources/strings.json',{cache:'no-store'}).then(r=>r.ok?r.json():strings);}catch{}
     fx=createEffects();
+    $('wireOptInLabel').textContent=getStr('game.leaderboard_opt_in');$('wireHandleLabel').textContent=getStr('game.leaderboard_handle');$('wireHandleHint').textContent=getStr('game.leaderboard_handle_hint');$('wireHandleReroll').textContent=getStr('game.leaderboard_reroll');
+    controlValue($('wireHandleValue'),savedHandle());
+    $('wireOptIn').addEventListener('change',()=>{const on=$('wireOptIn').checked;$('wireHandleWrap').hidden=!on;$('wireOptStatus').hidden=true;if(on){controlValue($('wireHandleValue'),savedHandle());$('wireHandleReroll').focus();}});
+    $('wireHandleReroll').addEventListener('click',rerollHandle);
     $('beginButton').addEventListener('click',()=>void start());
     $('practiceButton').addEventListener('click',()=>{mode='practice';puzzle={...SAMPLE};setPuzzle(puzzle);$('practiceButton').hidden=true;presentIntro();out('UNRANKED PRACTICE — NO OFFICIAL SCORE');});
     $('replayButton').addEventListener('click',()=>{
-      if(mode==='ranked'){mode='practice';puzzle={...SAMPLE};setPuzzle(puzzle);}
-      presentIntro();out('REPLAY IS PRACTICE / UNRANKED');
+      if(mode==='ranked'&&state?.ranked){mode='practice';puzzle={...SAMPLE};setPuzzle(puzzle);}else if(mode==='ranked'){storeToken('');token='';}
+      presentIntro();out(mode==='ranked'?'NEW VERIFIED RUN · LEADERBOARD OPTIONAL':'REPLAY IS PRACTICE / UNRANKED');
     });
     $('wireClose').addEventListener('click',close);
     $('wireArchiveButton').addEventListener('click',openArchive);$('wireArchiveClose').addEventListener('click',closeArchive);$('wireArchiveLoad').addEventListener('click',()=>void loadArchive());
