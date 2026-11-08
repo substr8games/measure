@@ -1,8 +1,40 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-07T22:38:00.007Z",
+  "updatedAt": "2026-11-08T03:51:35.637Z",
   "items": [
+    {
+      "schema": "phi-labs.media.v1",
+      "id": "he-always-be-trippin-fb081bb3",
+      "type": "media",
+      "mediaType": "image",
+      "mediaKind": "funny",
+      "title": "he always be trippin",
+      "summary": "",
+      "blurb": "",
+      "advertiser": "",
+      "galleryId": "",
+      "viewerImage": "",
+      "viewerCaption": "",
+      "tags": [],
+      "section": "curiosities",
+      "sections": [
+        "curiosities"
+      ],
+      "date": "2026-11-08",
+      "published": "2026-11-08",
+      "url": "images/media/he-always-be-trippin-fb081bb3-5bdb63c1086c4483.png",
+      "image": "images/media/he-always-be-trippin-fb081bb3-5bdb63c1086c4483.png",
+      "pdf": "",
+      "file": "images/media/he-always-be-trippin-fb081bb3-5bdb63c1086c4483.png",
+      "originalFilename": "diaper-donnie-trippin-balls.png",
+      "mimeType": "image/png",
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/media/he-always-be-trippin-fb081bb3-5bdb63c1086c4483.png"
+      },
+      "updatedAt": "2026-11-08T03:51:33.070Z"
+    },
     {
       "id": "canva-s-election-day-layoff-dump",
       "type": "article",
