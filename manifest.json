@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-08T09:01:54.471Z",
+  "updatedAt": "2026-11-08T09:03:39.875Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -44,8 +44,7 @@
       "section": "humanities",
       "sections": [
         "humanities",
-        "technology",
-        "curiosities"
+        "technology"
       ],
       "tags": [
         "documentary",
@@ -57,7 +56,7 @@
       "author": "Phi Labs Staff",
       "published": "2026-11-08",
       "date": "2026-11-08",
-      "updatedAt": "2026-11-08T08:59:11.700Z",
+      "updatedAt": "2026-11-08T09:03:37.384Z",
       "readingMinutes": 12,
       "classification": "explainer",
       "content": "articles/the-subject-was-never-the-subject.json",
@@ -67,9 +66,7 @@
         {
           "name": "the-subject-was-never-the-subject-1.pdf",
           "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-subject-was-never-the-subject/the-subject-was-never-the-subject-f36178a486846d94.pdf",
-          "mimeType": "application/pdf",
-          "releaseAssetId": 723436697,
-          "releaseTag": "measure-pdf-the-subject-was-never-the-subject"
+          "mimeType": "application/pdf"
         }
       ],
       "directory": {
