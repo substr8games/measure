@@ -1,8 +1,37 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-08T09:03:39.875Z",
+  "updatedAt": "2026-11-08T09:15:41.634Z",
   "items": [
+    {
+      "id": "2-6-the-structure-of-things-the-connections-have-rules",
+      "type": "article",
+      "title": "[2/6] The Structure of Things - The Connections Have Rules",
+      "subtitle": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
+      "summary": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, The Structure of Things introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "structuralism",
+        "methodology"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-08",
+      "date": "2026-11-08",
+      "updatedAt": "2026-11-08T09:15:37.905Z",
+      "readingMinutes": 6,
+      "classification": "deep-dive",
+      "content": "articles/2-6-the-structure-of-things-the-connections-have-rules.json",
+      "url": "#/article/2-6-the-structure-of-things-the-connections-have-rules",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "schema": "phi-labs.media.v1",
       "id": "he-always-be-trippin-fb081bb3",
