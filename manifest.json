@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-09T05:15:18.420Z",
+  "updatedAt": "2026-11-09T05:16:48.311Z",
   "items": [
     {
       "id": "2-6-the-structure-of-things-the-connections-have-rules",
@@ -55,6 +55,35 @@
       "classification": "deep-dive",
       "content": "articles/3-6-the-structure-of-things-when-the-parts-become-a-whole.json",
       "url": "#/article/3-6-the-structure-of-things-when-the-parts-become-a-whole",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "4-6-the-structure-of-things-who-gets-to-decide",
+      "type": "article",
+      "title": "[4/6] The Structure of Things: Who Gets to Decide?",
+      "subtitle": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
+      "summary": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "science"
+      ],
+      "tags": [
+        "structuralism"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-08",
+      "date": "2026-11-08",
+      "updatedAt": "2026-11-09T05:16:44.333Z",
+      "readingMinutes": 7,
+      "classification": "deep-dive",
+      "content": "articles/4-6-the-structure-of-things-who-gets-to-decide.json",
+      "url": "#/article/4-6-the-structure-of-things-who-gets-to-decide",
       "pdf": "",
       "attachments": [],
       "directory": {
