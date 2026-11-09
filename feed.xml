@@ -6,7 +6,7 @@
   <description>All published articles, including editorials, satire, Breaking, Play, and Special Reports.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Mon, 09 Nov 2026 05:16:49 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 09 Nov 2026 05:18:50 GMT</lastBuildDate>
   <item>
     <title>The Subject Was Never the Subject</title>
     <link>https://philabsresearch.io/read/the-subject-was-never-the-subject/</link>
@@ -15,6 +15,16 @@
     <pubDate>Sun, 08 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
     <category>technology</category>
+    <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
+  </item>
+  <item>
+    <title>[5/6] The Structure of Things: When Different Things Work the Same Way</title>
+    <link>https://philabsresearch.io/read/5-6-the-structure-of-things-when-different-things-work-the-same-way/</link>
+    <guid isPermaLink="true">https://philabsresearch.io/read/5-6-the-structure-of-things-when-different-things-work-the-same-way/</guid>
+    <description>Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.</description>
+    <pubDate>Sun, 08 Nov 2026 12:00:00 GMT</pubDate>
+    <category>humanities</category>
+    <category>science</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>

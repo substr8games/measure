@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-09T05:16:48.311Z",
+  "updatedAt": "2026-11-09T05:18:49.674Z",
   "items": [
     {
       "id": "2-6-the-structure-of-things-the-connections-have-rules",
@@ -84,6 +84,35 @@
       "classification": "deep-dive",
       "content": "articles/4-6-the-structure-of-things-who-gets-to-decide.json",
       "url": "#/article/4-6-the-structure-of-things-who-gets-to-decide",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "5-6-the-structure-of-things-when-different-things-work-the-same-way",
+      "type": "article",
+      "title": "[5/6] The Structure of Things: When Different Things Work the Same Way",
+      "subtitle": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
+      "summary": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "science"
+      ],
+      "tags": [
+        "structuralism"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-08",
+      "date": "2026-11-08",
+      "updatedAt": "2026-11-09T05:18:46.204Z",
+      "readingMinutes": 7,
+      "classification": "deep-dive",
+      "content": "articles/5-6-the-structure-of-things-when-different-things-work-the-same-way.json",
+      "url": "#/article/5-6-the-structure-of-things-when-different-things-work-the-same-way",
       "pdf": "",
       "attachments": [],
       "directory": {
