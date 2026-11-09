@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-08T09:17:29.953Z",
+  "updatedAt": "2026-11-09T05:15:18.420Z",
   "items": [
     {
       "id": "2-6-the-structure-of-things-the-connections-have-rules",
@@ -26,6 +26,35 @@
       "classification": "deep-dive",
       "content": "articles/2-6-the-structure-of-things-the-connections-have-rules.json",
       "url": "#/article/2-6-the-structure-of-things-the-connections-have-rules",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "3-6-the-structure-of-things-when-the-parts-become-a-whole",
+      "type": "article",
+      "title": "[3/6] The Structure of Things: When the Parts Become a Whole",
+      "subtitle": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
+      "summary": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "science"
+      ],
+      "tags": [
+        "structuralism"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-08",
+      "date": "2026-11-08",
+      "updatedAt": "2026-11-09T05:15:13.652Z",
+      "readingMinutes": 6,
+      "classification": "deep-dive",
+      "content": "articles/3-6-the-structure-of-things-when-the-parts-become-a-whole.json",
+      "url": "#/article/3-6-the-structure-of-things-when-the-parts-become-a-whole",
       "pdf": "",
       "attachments": [],
       "directory": {
