@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-10T17:52:04.350Z",
+  "updatedAt": "2026-11-10T18:09:17.369Z",
   "items": [
     {
       "id": "blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
@@ -28,6 +28,36 @@
       "classification": "",
       "content": "articles/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up.json",
       "url": "#/article/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "the-public-domain-is-not-a-graveyard",
+      "type": "article",
+      "title": "THE PUBLIC DOMAIN IS NOT A GRAVEYARD",
+      "subtitle": "Fifteen years of copyright. The rest of history belongs to everyone.",
+      "summary": "Copyright was never supposed to give people permanent authority over culture. It was supposed to encourage creation by granting temporary exclusive rights, after which the public would receive the freedom to reproduce, preserve, reinterpret, and build upon the work. That exchange is the foundation of the copyright bargain. The creator receives protection. The public eventually receives the work. But the bargain has changed.",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "copyright",
+        "intellectual",
+        "property"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-10",
+      "date": "2026-11-10",
+      "updatedAt": "2026-11-10T18:09:14.658Z",
+      "readingMinutes": 14,
+      "classification": "copy",
+      "content": "articles/the-public-domain-is-not-a-graveyard.json",
+      "url": "#/article/the-public-domain-is-not-a-graveyard",
       "pdf": "",
       "attachments": [],
       "directory": {
