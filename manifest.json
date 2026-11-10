@@ -1,8 +1,39 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-09T15:55:23.074Z",
+  "updatedAt": "2026-11-10T17:35:46.918Z",
   "items": [
+    {
+      "id": "blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
+      "type": "article",
+      "title": "Blacklisted: How Immortal Technique Built a Bare Metal Machine from the Ground Up",
+      "subtitle": "In the early 2000s, one underground hip-hop artist bypassed the institutional gateways and built a sovereign bare-metal machine. Operating outside of the major-label ecosystem, he built a massive, self-sustaining cultural presence without corporate radio support, television rotation, or institutional endorsement. A structural take on the career of Immortal Technique.",
+      "summary": "In the early 2000s, underground hip-hop artist Immortal Technique bypassed the institutional gateways and built a sovereign bare-metal machine. Operating outside of the major-label ecosystem, he built a massive, self-sustaining cultural presence without corporate radio support, television rotation, or institutional endorsement.",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "Culture",
+        "influence",
+        "independent",
+        "infrastructure"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staffff",
+      "published": "2026-11-10",
+      "date": "2026-11-10",
+      "updatedAt": "2026-11-10T17:35:43.588Z",
+      "readingMinutes": 4,
+      "classification": "",
+      "content": "articles/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up.json",
+      "url": "#/article/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "schema": "phi-labs.media.v1",
       "id": "utter-despair-45e73d30",
