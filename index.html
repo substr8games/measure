@@ -1272,27 +1272,6 @@ body.breaking-ticker-visible .breaking-ticker { display:flex; }
     max-height: none;
   }
 }
-/* REV49 / PLAY: green, gently pulsing editorial navigation. */
-:root { --measure-play-green: #4bea91; }
-.section-bar a.nav-play {
-  color: var(--measure-play-green);
-  animation: measure-play-pulse 2.8s ease-in-out infinite;
-}
-.section-bar a.nav-play:hover,
-.section-bar a.nav-play[aria-current="page"] { color: #a7ffd1; }
-.section-bar a.nav-play[aria-current="page"]::after {
-  background: var(--measure-play-green);
-  box-shadow: 0 0 9px rgba(75,234,145,.66);
-}
-.play-page .eyebrow,
-.play-page h1 .accent-word { color: var(--measure-play-green); }
-@keyframes measure-play-pulse {
-  0%, 100% { text-shadow: 0 0 3px rgba(75,234,145,.22); }
-  50% { text-shadow: 0 0 8px rgba(75,234,145,.85), 0 0 18px rgba(75,234,145,.36); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .section-bar a.nav-play { animation: none; text-shadow: 0 0 5px rgba(75,234,145,.45); }
-}
   /* THE WIRE — Rev53 modal. The game itself is Shadow DOM scoped. */
   .measure-wire-dialog{box-sizing:border-box;position:fixed;width:min(94vw,1680px);height:min(90dvh,980px);max-width:none;max-height:none;margin:auto;padding:0;border:1px solid #6e593b;background:#050609;color:#e5e9ee;box-shadow:0 26px 110px #000e;overflow:hidden;color-scheme:dark;}
   .measure-wire-dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(3px)}
@@ -1300,10 +1279,6 @@ body.breaking-ticker-visible .breaking-ticker { display:flex; }
   body.measure-wire-active .breaking-ticker{display:none!important}
   .section-bar .nav-wire{color:#f1bd64;font-weight:800;letter-spacing:.08em;text-shadow:0 0 5px #96703866}
   .section-bar .nav-wire:hover{color:#ffe0a7}
-  .wire-launch-card{background:#0b1014;border:1px solid #5a4b39;padding:22px;margin:20px 0;display:grid;gap:13px}
-  .wire-launch-card h2{font-size:22px;color:#f1bd64;margin:0}.wire-launch-card p{font-size:12px;line-height:1.75;margin:0}
-  .wire-launch-card button{justify-self:start;padding:12px 18px;border:1px solid #f1bd64;background:#231b11;color:#ffe2a6;font:700 12px ui-monospace,monospace;cursor:pointer}
-  @media(max-width:760px){.measure-wire-dialog{width:100vw;height:100dvh;border:0}.wire-launch-card{padding:16px}}
   </style>
 </head>
 <body>
@@ -1834,7 +1809,7 @@ const Prism = {languages:Object.create(null),highlight:(text)=>esc(text)};
 
   </script>
   <script>
-/* THE MEASURE / JSON-only editorial record, seven-section navigation and timeline. */
+/* THE MEASURE / JSON-only editorial record and publication timeline. */
 'use strict';
 
 const main = document.getElementById('main');
@@ -1854,11 +1829,9 @@ let content = {
   },
   sections: [
     {id:'breaking',name:'Breaking',summary:'Fictional dispatches from the Oracle: mythological breaking news about the world that never existed, reporting on the one that does.'},
-    {id:'science',name:'Science',summary:'Original research, mathematics, physics, biology and the experimental record.'},
     {id:'technology',name:'Technology',summary:'Engineering, computing, AI, tools and the systems we build.'},
-    {id:'humanities',name:'Humanities',summary:'Philosophy, culture, history and human experience.'},
+    {id:'structuralism',name:'Structuralism',summary:'Structural relationships, authority, systems, causality, and the methods of understanding them.'},
     {id:'politics',name:'Politics',summary:'Institutions, governance, policy and civic life.'},
-    {id:'play',name:'Play',summary:'Games, daily puzzles, interactive experiments, and other invitations to play.'},
     {id:'curiosities',name:'Curiosities',summary:'Art, memes, educational material, visual experiments and other curiosities.'},
     {id:'special-reports',name:'Special Reports',summary:'Major research papers and portable PDF editions.'}
   ],
@@ -1870,8 +1843,8 @@ const escapeHTML = (value = '') => String(value ?? '').replace(/[&<>"']/g, ch =>
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
 })[ch]);
 let sections = [];
-// Historic publications filed as humor remain visible under Curiosities.
-const canonicalSectionId = id => id === 'humor' ? 'curiosities' : id;
+// Legacy section IDs remain readable while repository records are retagged.
+const canonicalSectionId = id => id === 'humor' ? 'curiosities' : (id === 'science' || id === 'humanities') ? 'structuralism' : id;
 const section = id => sections.find(s => s.id === canonicalSectionId(id));
 const arrow = '<svg viewBox="0 0 22 22" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M3 11h15m-6-6 6 6-6 6"/></svg>';
 const articleUrl = a => a.type === 'gallery' ? `#/gallery/${encodeURIComponent(String(a.id))}` : `#/article/${encodeURIComponent(String(a.id))}`;
@@ -1930,7 +1903,7 @@ function specialCard(a) {
     </div><div class="report-links"><a href="${articleUrl(a)}">Report details ${arrow}</a>${pdf ? `<a href="${escapeHTML(pdf)}" target="_blank" rel="noopener">Open PDF ${arrow}</a><a href="${escapeHTML(pdf)}" download>Download PDF ↓</a>` : ''}</div></div>`;
 }
 function frontPage() {
-  // Curiosities, Breaking and Play remain standalone sections, but never supply homepage hero
+  // Curiosities and Breaking never supply homepage hero
   // or latest-article slots, including explicitly pinned items and cross-listed entries.
   const homeEligible = a => !articleSections(a).some(id => id === 'curiosities' || id === 'breaking' || id === 'play') && a.source !== 'oracle-wire';
   const eligible = allArticles().filter(homeEligible);
@@ -1940,7 +1913,7 @@ function frontPage() {
   if (!featured) return `${edition()}
     <section class="hero" aria-labelledby="hero-title"><span class="eyebrow">THE MEASURE / PHI LABS</span>
     <h1 id="hero-title">An independent<br>measure of things<span class="accent-word">.</span></h1>
-    <p class="hero-summary">Science. Technology. Humanities. Politics. Play. Special Reports.<br>Independent inquiry, collected in the public record.</p>
+    <p class="hero-summary">Technology. Structuralism. Politics. Curiosities. Special Reports.<br>Independent inquiry, collected in the public record.</p>
     <div class="hero-footer"><a class="inline-link" href="#/about">About the publication ${arrow}</a></div></section>
     ${sectionTitle('Latest articles', 0)}<p class="empty-state">The record is ready for its first publication.</p>${seriesPreview()}`;
   const latest = eligible.filter(a => !isSpecial(a) && a.id !== featured.id).slice(0,5);
@@ -1956,10 +1929,10 @@ function frontPage() {
 function sectionListing(id) {
   const s = section(id); if (!s) return notFound();
   const items = inSection(id), special = id === 'special-reports';
-  return `${edition()}<header class="page-head ${special ? 'special-page' : id === 'breaking' ? 'breaking-page' : id === 'play' ? 'play-page' : ''}">
+  return `${edition()}<header class="page-head ${special ? 'special-page' : id === 'breaking' ? 'breaking-page' : ''}">
       <span class="eyebrow">${special ? 'LONGFORM / THE RECORD' : id === 'breaking' ? 'THE ORACLE / MYTHOLOGICAL NEWSWIRE' : 'EDITORIAL SECTION / THE MEASURE'}</span>
       <h1>${escapeHTML(s.name)}<span class="accent-word">.</span></h1><p>${escapeHTML(s.summary)}</p></header>
-    ${id === 'play' ? '<div class="wire-launch-card"><h2>THE WIRE</h2><p>Connect the dots. Follow the money. A five-part daily accountability puzzle.</p><button type="button" data-open-wire>BEGIN THE DAILY INVESTIGATION →</button></div>' : ''}${sectionTitle(special ? 'PDF editions' : 'The latest', items.length)}
+    ${sectionTitle(special ? 'PDF editions' : 'The latest', items.length)}
     ${items.length ? special ? items.map(specialCard).join('') : `<div class="article-list">${items.map(row).join('')}</div>` : `<div class="empty-state">No entries are filed under ${escapeHTML(s.name)} yet. The section is ready for its first publication.</div>`}
     ${previewNotice()}`;
 }
@@ -2063,7 +2036,7 @@ function articleShareBar(a) {
   </nav>`;
 }
 function singleArticle(a) {
-  const special = isSpecial(a), pdf = pdfLink(a), primary = articleSections(a)[0] || 'humanities';
+  const special = isSpecial(a), pdf = pdfLink(a), primary = articleSections(a)[0] || 'structuralism';
   const picture = a.type === 'media' ? safeResource(a.image || a.url) : '';
   const caption = a.blurb || a.summary || '';
   const cls = classificationFor(a);
@@ -2087,7 +2060,7 @@ function about() {
   return `${edition()}<header class="page-head"><span class="eyebrow">ABOUT THE PUBLICATION</span><h1>An independent<br>measure of things<span class="accent-word">.</span></h1><p>The Measure is the editorial and research publication of Phi Labs.</p></header>
     <div class="about-copy"><p>The Measure provides a home for exploratory research, scientific and philosophical inquiry, technical analysis, and work undertaken in the public interest.</p>
     <p>Articles are rendered directly from JSON. Special Reports also have portable PDF editions, and appear both in their subject section and the Special Reports catalog.</p></div>
-    <dl><div class="info-pair"><dt>Published by</dt><dd>Phi Labs</dd></div><div class="info-pair"><dt>Founded</dt><dd>28 October 2026</dd></div><div class="info-pair"><dt>Formats</dt><dd>Online articles / longform PDFs</dd></div><div class="info-pair"><dt>Sections</dt><dd>Breaking / Science / Technology / Humanities / Politics / Play / Curiosities / Special Reports</dd></div></dl>${previewNotice()}`;
+    <dl><div class="info-pair"><dt>Published by</dt><dd>Phi Labs</dd></div><div class="info-pair"><dt>Founded</dt><dd>28 October 2026</dd></div><div class="info-pair"><dt>Formats</dt><dd>Online articles / longform PDFs</dd></div><div class="info-pair"><dt>Sections</dt><dd>Breaking / Technology / Structuralism / Politics / Curiosities / Special Reports</dd></div></dl>${previewNotice()}`;
 }
 function notFound() {
   return `${edition()}<header class="page-head"><span class="eyebrow">RECORD NOT FOUND</span><h1>Nothing at this address<span class="accent-word">.</span></h1><p>The requested article or section does not exist in the current publication index.</p></header><div class="article-end"><a href="#/">← Return to front page</a></div>`;
@@ -2137,9 +2110,9 @@ function mountSectionNav() {
   const editorial = sections.filter(s => s.id !== 'special-reports');
   const specials = sections.filter(s => s.id === 'special-reports');
   const links = editorial.map(s =>
-    `<a href="${sectionUrl(s.id)}" data-nav="${escapeHTML(s.id)}" class="${s.id === 'breaking' ? 'nav-breaking' : s.id === 'play' ? 'nav-play' : ''}">${escapeHTML(s.name)}</a>`
+    `<a href="${sectionUrl(s.id)}" data-nav="${escapeHTML(s.id)}" class="${s.id === 'breaking' ? 'nav-breaking' : ''}">${escapeHTML(s.name)}</a>`
   );
-  links.splice(links.findIndex(link => link.includes('data-nav="play"'))+1,0,'<a href="#/section/play" class="nav-wire" data-open-wire type="button" aria-haspopup="dialog">THE WIRE</a>');
+  links.push('<a href="#/" class="nav-wire" data-open-wire aria-haspopup="dialog">THE WIRE</a>');
   links.push(`<a href="#/classifieds" data-nav="classifieds">Classifieds</a>`);
   links.push(...specials.map(s => `<a href="${sectionUrl(s.id)}" data-nav="${escapeHTML(s.id)}" class="nav-special">${escapeHTML(s.name)}</a>`));
   nav.innerHTML = links.join('');
@@ -2480,7 +2453,7 @@ function seriesCard(info) {
   const cover = seriesCoverSafe(info.cover);
   return `<a class="series-card" href="${seriesUrl(info.id)}">
     ${cover ? `<img class="series-card-cover" src="${escapeHTML(cover)}" alt="" loading="lazy">` : ''}
-    <div><div class="series-card-meta">SERIES / ${escapeHTML(info.section || 'The Measure')} / ${Number.isFinite(info.installments) ? info.installments : '—'} INSTALLMENTS</div>
+    <div><div class="series-card-meta">SERIES / ${escapeHTML(section(info.section)?.name || info.section || 'The Measure')} / ${Number.isFinite(info.installments) ? info.installments : '—'} INSTALLMENTS</div>
     <h2>${escapeHTML(info.title || info.id)}</h2>${info.subtitle ? `<p>${escapeHTML(info.subtitle)}</p>` : ''}</div>
     <span class="series-card-arrow" aria-hidden="true">↗</span></a>`;
 }
