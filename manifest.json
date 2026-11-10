@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-10T18:09:17.369Z",
+  "updatedAt": "2026-11-10T18:13:56.482Z",
   "items": [
     {
       "id": "blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
@@ -53,7 +53,7 @@
       "author": "Phi Labs Staff",
       "published": "2026-11-10",
       "date": "2026-11-10",
-      "updatedAt": "2026-11-10T18:09:14.658Z",
+      "updatedAt": "2026-11-10T18:13:52.551Z",
       "readingMinutes": 14,
       "classification": "copy",
       "content": "articles/the-public-domain-is-not-a-graveyard.json",
