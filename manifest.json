@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-10T17:35:46.918Z",
+  "updatedAt": "2026-11-10T17:52:04.350Z",
   "items": [
     {
       "id": "blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
@@ -28,6 +28,37 @@
       "classification": "",
       "content": "articles/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up.json",
       "url": "#/article/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "the-universe-has-a-recurring-punchline",
+      "type": "article",
+      "title": "The Universe Has a Recurring Punchline",
+      "subtitle": "On the structural absurdity of existence, the reliability of irony, and why we keep asking questions that have already been answered.",
+      "summary": "On the structural absurdity of existence, the reliability of irony, and why we keep asking questions that have already been answered.",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "comedy",
+        "structure",
+        "jokes",
+        "humor"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-10",
+      "date": "2026-11-10",
+      "updatedAt": "2026-11-10T17:52:01.691Z",
+      "readingMinutes": 4,
+      "classification": "copy",
+      "content": "articles/the-universe-has-a-recurring-punchline.json",
+      "url": "#/article/the-universe-has-a-recurring-punchline",
       "pdf": "",
       "attachments": [],
       "directory": {
