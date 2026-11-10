@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-10T18:13:56.482Z",
+  "updatedAt": "2026-11-10T18:31:32.998Z",
   "items": [
     {
       "id": "blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
@@ -28,6 +28,32 @@
       "classification": "",
       "content": "articles/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up.json",
       "url": "#/article/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "punching-up-aesop-rock-and-the-art-of-feeding-off-your-oppressor",
+      "type": "article",
+      "title": "Punching Up: Aesop Rock and the Art of Feeding Off Your Oppressor",
+      "subtitle": "",
+      "summary": "",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [],
+      "doi": "",
+      "author": "Phi Labs",
+      "published": "2026-11-10",
+      "date": "2026-11-10",
+      "updatedAt": "2026-11-10T18:31:29.515Z",
+      "readingMinutes": 6,
+      "classification": "",
+      "content": "articles/punching-up-aesop-rock-and-the-art-of-feeding-off-your-oppressor.json",
+      "url": "#/article/punching-up-aesop-rock-and-the-art-of-feeding-off-your-oppressor",
       "pdf": "",
       "attachments": [],
       "directory": {

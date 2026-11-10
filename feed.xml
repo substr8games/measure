@@ -6,7 +6,7 @@
   <description>All published articles, including editorials, satire, Breaking, Play, and Special Reports.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Tue, 10 Nov 2026 18:13:57 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 10 Nov 2026 18:31:33 GMT</lastBuildDate>
   <item>
     <title>The Universe Has a Recurring Punchline</title>
     <link>https://philabsresearch.io/read/the-universe-has-a-recurring-punchline/</link>
@@ -21,6 +21,15 @@
     <link>https://philabsresearch.io/read/the-public-domain-is-not-a-graveyard/</link>
     <guid isPermaLink="true">https://philabsresearch.io/read/the-public-domain-is-not-a-graveyard/</guid>
     <description>Copyright was never supposed to give people permanent authority over culture. It was supposed to encourage creation by granting temporary exclusive rights, after which the public would receive the freedom to reproduce, preserve, reinterpret, and build upon the work. That exchange is the foundation of the copyright bargain. The creator receives protection. The public eventually receives the work. But the bargain has changed.</description>
+    <pubDate>Tue, 10 Nov 2026 12:00:00 GMT</pubDate>
+    <category>humanities</category>
+    <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
+  </item>
+  <item>
+    <title>Punching Up: Aesop Rock and the Art of Feeding Off Your Oppressor</title>
+    <link>https://philabsresearch.io/read/punching-up-aesop-rock-and-the-art-of-feeding-off-your-oppressor/</link>
+    <guid isPermaLink="true">https://philabsresearch.io/read/punching-up-aesop-rock-and-the-art-of-feeding-off-your-oppressor/</guid>
+    <description>Punching Up: Aesop Rock and the Art of Feeding Off Your Oppressor</description>
     <pubDate>Tue, 10 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
