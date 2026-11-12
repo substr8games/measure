@@ -1,8 +1,49 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-10T18:35:54.542Z",
+  "updatedAt": "2026-11-12T20:38:06.343Z",
   "items": [
+    {
+      "id": "the-complaint-is-permitted-the-remedy-is-not",
+      "type": "article",
+      "title": "The Complaint Is Permitted. The Remedy Is Not.",
+      "subtitle": "How institutions turn professional boundaries into barriers against correction—and why accountability cannot depend on their permission.",
+      "summary": "How institutions turn professional boundaries into barriers against correction—and why accountability cannot depend on their permission.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "technology",
+        "politics"
+      ],
+      "tags": [
+        "institutionalism",
+        "systems",
+        "engineering",
+        "remedy"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-12",
+      "date": "2026-11-12",
+      "updatedAt": "2026-11-12T20:38:00.412Z",
+      "readingMinutes": 23,
+      "classification": "deep-dive",
+      "content": "articles/the-complaint-is-permitted-the-remedy-is-not.json",
+      "url": "#/article/the-complaint-is-permitted-the-remedy-is-not",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-complaint-is-permitted-the-remedy-is-not/the-complaint-is-permitted-the-remedy-is-not-4d13f271fa9767b5.pdf",
+      "attachments": [
+        {
+          "name": "the-complaint-is-permitted-the-remedy-is-not.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-complaint-is-permitted-the-remedy-is-not/the-complaint-is-permitted-the-remedy-is-not-4d13f271fa9767b5.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 741003911,
+          "releaseTag": "measure-pdf-the-complaint-is-permitted-the-remedy-is-not"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "id": "blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
       "type": "article",

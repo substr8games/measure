@@ -1,0 +1,1043 @@
+{
+  "schema": "phi-labs.article.v1",
+  "id": "the-complaint-is-permitted-the-remedy-is-not",
+  "type": "article",
+  "title": "The Complaint Is Permitted. The Remedy Is Not.",
+  "profileId": "article",
+  "subtitle": "How institutions turn professional boundaries into barriers against correction—and why accountability cannot depend on their permission.",
+  "doi": "",
+  "summary": "How institutions turn professional boundaries into barriers against correction—and why accountability cannot depend on their permission.",
+  "author": "Phi Labs Staff",
+  "date": "2026-11-12",
+  "published": "2026-11-12",
+  "section": "humanities",
+  "sections": [
+    "humanities",
+    "technology",
+    "politics"
+  ],
+  "tags": [
+    "institutionalism",
+    "systems",
+    "engineering",
+    "remedy"
+  ],
+  "showToc": true,
+  "classification": "deep-dive",
+  "markdown": "There is a peculiar ritual performed in workplaces, universities, government agencies, and professional organizations around the world. People gather to discuss what is wrong with the institution. They complain about inefficiency, bureaucracy, outdated methods, poor leadership, and problems that everyone seems to recognize but nobody seems able to correct. The complaints may be entirely justified. They may even be encouraged by the institution itself.\n\nThen someone proposes a solution.\n\nSuddenly, the conversation changes. The proposal is premature, the problem is more complicated than it appears, the person proposing it doesn't understand the field, or the matter belongs to somebody else's department. The institution that freely acknowledged the problem now discovers a remarkable abundance of reasons why nobody should attempt to solve it.\n\nThis raises a question worth taking seriously: **Why can an institution accommodate criticism of its failures while resisting attempts to correct them?**\n\nThe answer cannot simply be that institutions dislike criticism. Evidently, many are quite capable of tolerating it. The more interesting possibility is that criticism and correction interact with institutional authority in fundamentally different ways.\n\nA complaint identifies dissatisfaction. A proposed remedy introduces a decision. If the proposal demonstrates that an existing arrangement is unnecessarily defective, someone may have to explain why that arrangement persists.\n\nBut the explanation may never be required.\n\nThe institution may already possess a procedure for ensuring that the person asking the question never reaches anyone obligated to answer it.\n\n**The problem is not always that institutions fail to recognize defects. Sometimes the mechanisms through which defects must be reported are the very mechanisms that prevent their correction.**\n\n## 1. The Difference Between Complaining and Correcting\n\nA complaint can circulate indefinitely without changing the structure of an institution. Employees can complain to coworkers, professors can criticize their universities, and public officials can acknowledge failures in the organizations they administer. None of these activities necessarily requires a redistribution of authority, a modification of procedure, or a commitment of resources.\n\nA remedy is different. Even a modest proposal asks an institution to compare its current arrangement against an alternative. If the alternative performs better, the institution faces a choice: adopt it, identify a legitimate reason not to, or continue the existing arrangement despite the demonstrated opportunity for improvement.\n\nThat is a consequential change.\n\nIt transforms a general expression of dissatisfaction into a question about institutional decisions. The relevant issue is no longer merely whether the problem exists, but why the people authorized to address it have chosen a particular course of action.\n\nOrganizational research gives us reason to examine this distinction. Elizabeth Morrison and Frances Milliken described *organizational silence* as a collective pattern in which employees withhold information about problems because organizational conditions make speaking up seem unwise. Amy Edmondson's research likewise associated psychological safety with learning behavior in work teams. These findings do not establish that every rejected proposal is an instance of institutional self-protection. They establish that the conditions under which organizations receive, process, and respond to information materially affect their capacity to learn.\n\nThere is an additional problem. Even when information is successfully communicated, the institution may have no effective mechanism for converting that information into corrective action.\n\nAn organization can maintain an elaborate complaints process while leaving its decision-making arrangements entirely untouched.\n\n**Receiving criticism is not the same operation as responding to evidence.**\n\n## 2. When the Gatekeeper Is Part of the Problem\n\nConsider an institution in which a department controls a process, evaluates its performance, determines whether proposed improvements are worth investigating, and decides which outside observations deserve consideration.\n\nThe department's continued authority depends, in part, on the legitimacy of its existing procedures. A proposal arrives demonstrating that one of those procedures may be unnecessary, inefficient, or harmful.\n\nWho evaluates the proposal?\n\nThe department responsible for the procedure.\n\nWho decides whether the evidence is sufficient to justify an investigation?\n\nThe same department.\n\nWho determines whether the investigation requires participation from anyone outside the department?\n\nAgain, the same department.\n\nNothing in this arrangement requires anyone to behave dishonestly. Individual decision-makers may sincerely believe they are protecting legitimate professional standards, controlling costs, and maintaining operational stability.\n\nBut the configuration creates a conflict between two functions: preserving the department's administrative authority and independently evaluating whether that authority is being exercised effectively.\n\nThe institution has placed the authority to examine a possible defect inside the structure that may be responsible for producing it.\n\nUnder those conditions, rejecting an external proposal may be administratively easier than evaluating it. Evaluation consumes resources, introduces uncertainty, and may require changes that disturb established responsibilities. Rejection preserves the current arrangement and may satisfy every existing procedural requirement.\n\nThis does not establish that all institutions maximize self-preservation or that every gatekeeper acts to protect personal power. It identifies a configuration in which **the costs of correction fall on the people authorized to permit it, while the costs of continued failure may fall on someone else**.\n\nThat configuration matters regardless of anyone's intentions.\n\nIf the institution measures compliance with established procedures more readily than improvement in the outcomes those procedures are supposed to produce, employees may be rewarded for preserving an unsuccessful process while being penalized for attempting to replace it.\n\nThe resulting dysfunction can be maintained through entirely ordinary administrative behavior.\n\nChris Argyris's work on organizational learning helps explain why organizations may correct errors without reconsidering the assumptions and governing arrangements that produced them. His distinction between ordinary error correction and *double-loop learning* is especially relevant: an institution can respond to poor results while leaving the underlying rules of operation intact.\n\nThe implication is uncomfortable.\n\n**A system can successfully execute its procedures while repeatedly failing the people those procedures were created to serve.**\n\nThe defect may not be a breakdown in compliance.\n\nIt may be compliance itself.\n\n## 3. The Workplace: That's Not Your Department\n\nConsider a workplace in which an employee notices that a recurring administrative process creates unnecessary delays.\n\nThe employee does not supervise the department responsible for the process. Nevertheless, the delays affect their work, and they can identify the sequence of operations producing them. They document the problem, propose an alternative workflow, and explain how its performance could be evaluated.\n\nTheir supervisor responds: \"That's not your department.\"\n\nThat statement may accurately describe the employee's organizational position. It does not address the substance of the proposal.\n\nThree questions have been collapsed into one.\n\n**Competence:** Does the employee understand the relevant process well enough to analyze it?\n\n**Standing:** Does the employee have a legitimate basis for raising the problem?\n\n**Decision authority:** Is the employee authorized to implement the proposed change?\n\nThe employee might possess the first two without possessing the third. That arrangement is perfectly ordinary. What does not follow is that the absence of decision authority invalidates the analysis.\n\nA manager may have good reasons to decline the proposed change. It may create new dependencies, interfere with another process, violate a regulatory requirement, or cost more than it saves. These objections can be examined because they identify conditions relevant to the proposal.\n\n\"That's not your department\" identifies none of them.\n\nMore importantly, the statement can function as an administrative termination condition. The proposal need not be evaluated because the employee has failed a preliminary test that has nothing to do with the technical merits of the proposal.\n\nThe employee has encountered a boundary between observation and action.\n\nOrganizational boundaries exist for legitimate reasons. Departments coordinate specialized work, allocate responsibility, protect sensitive information, and establish decision authority. But a boundary intended to regulate *who may act* should not automatically determine *whose evidence may be considered*.\n\nWhen the two are conflated, an institution can exclude information without ever formally disputing its accuracy.\n\nAnd the exclusion can be recorded as procedurally correct.\n\nThis is how an organization can manufacture compliance while losing access to opportunities for correction.\n\nThe employee may still submit a complaint. The organization may still record that complaint. A supervisor may even acknowledge that the employee's frustration is understandable.\n\nBut the proposed remedy never reaches the people authorized to evaluate it.\n\n**The complaint has been processed. The defect has not.**\n\n## 4. The Outsider Problem\n\nThe same mechanism appears when an institution receives criticism or assistance from someone outside its professional or organizational boundaries.\n\nImagine a systems engineer examining a hospital's patient scheduling process. The engineer identifies a dependency between appointment allocation, staffing availability, and the time required to prepare treatment rooms. Their analysis suggests that changing the sequence of certain operations could reduce waiting times without increasing staffing requirements.\n\nThe response: \"You're not a healthcare professional.\"\n\nCorrect. But what, precisely, does that establish?\n\nIt may establish that the engineer lacks the clinical expertise necessary to determine appropriate treatment priorities. It may establish that a proposed change requires examination by medical professionals before implementation. It may identify a consequential limitation in the analysis.\n\nWhat it does not establish is that the scheduling dependency does not exist.\n\nSystems engineering is explicitly concerned with the relationships between components, processes, constraints, and operating environments. The International Council on Systems Engineering describes the discipline as transdisciplinary and integrative. Its legitimate scope includes relationships between systems, including systems operating in specialized domains.\n\nCrossing domain boundaries is not an accidental feature of systems engineering. It is fundamental to the discipline.\n\nA systems engineer examining hospital scheduling needs accurate information about clinical constraints. A clinician examining a proposed scheduling model needs to evaluate those constraints and their consequences. Neither profession's expertise automatically invalidates the other's contribution.\n\nThe appropriate response is collaboration between relevant competencies, not the exclusion of one on the grounds that the other already occupies the institution.\n\nPhilosopher Nathan Ballantyne has examined *epistemic trespassing*: experts making judgments beyond their areas of expertise. The concern is legitimate. Outsiders can overlook requirements that domain specialists understand, and unjustified confidence can make such errors consequential.\n\nBut there is a difference between identifying an actual deficiency in an argument and treating professional affiliation as sufficient evidence of deficiency.\n\n**A domain boundary identifies where specialized knowledge is required. It does not determine where valid reasoning is permitted.**\n\nNor does professional affiliation establish ownership of every question involving a discipline's subject matter.\n\nIf an institution provides a service with measurable consequences, those consequences can be examined using methods appropriate to the behavior under investigation. A claim about scheduling performance can be evaluated as a claim about scheduling performance. Clinical expertise becomes necessary wherever clinical constraints materially affect that analysis.\n\nThe distinction is operational, not ceremonial.\n\nAnd the institution's preferred classification of the observer does not change the behavior being observed.\n\n## 5. When Expertise Becomes a Gate\n\nIn 1983, sociologist Thomas Gieryn examined *boundary-work*: the processes through which scientists distinguish their professional activity from other forms of knowledge and establish claims to intellectual authority. His analysis described professional boundaries as serving multiple purposes, including scientific autonomy and the pursuit of professional resources and authority.\n\nThe existence of a boundary is not, by itself, evidence of wrongdoing.\n\nThe question is what the boundary is being used to protect.\n\nA hospital must prevent unqualified personnel from performing clinical procedures. A university must maintain standards for evaluating research. A transit agency must ensure that operational changes do not compromise safety. These restrictions protect identifiable requirements of their respective systems.\n\nBut consider what happens when the same boundaries are invoked to reject observations rather than regulate actions.\n\nAn engineer identifies a reproducible scheduling defect. An employee documents a recurring workflow failure. A researcher demonstrates that an established institutional explanation does not account for available evidence.\n\nIf the response consists only of identifying the critic's professional or organizational position, the institution has substituted a question about identity for a question about evidence.\n\nThis is not merely an intellectual problem. It is an accountability problem.\n\nThe institution may be using a legitimate authority boundary for a purpose that the boundary does not justify.\n\nA professional licensing requirement can determine who may perform a medical procedure. It cannot determine whether a waiting-room clock is accurate. An employment hierarchy can determine who may change a workflow. It cannot determine whether a documented bottleneck exists.\n\nWhen an institution treats the first kind of authority as though it establishes the second, it extends the authority of its boundary beyond the function that justifies it.\n\nThat extension deserves scrutiny.\n\nThe problem becomes more serious when the institution alone determines whether its extension is legitimate.\n\nAt that point, the defense is circular: the institution's authority is justified by the rules through which the institution recognizes its own authority.\n\n**Expertise deserves consideration. It does not confer immunity from examination.**\n\n## 6. Public Interfaces Create Public Consequences\n\nThe problem becomes especially important when an institution's actions extend beyond its own boundaries.\n\nA private organization may establish internal rules for decision-making. A university may determine its administrative structure. A professional association may establish standards for membership.\n\nBut these organizations do not operate in isolation.\n\nTheir decisions affect employees, students, customers, patients, suppliers, researchers, surrounding communities, and members of the public who depend upon their services or encounter their consequences.\n\nAn institution may control its internal operations. It does not thereby acquire exclusive ownership of every legitimate question about those operations.\n\nThis article proposes a straightforward structural principle:\n\n**When an institution exercises authority through an interface that affects people outside its boundaries, those effects create a legitimate basis for external scrutiny.**\n\nThis is a principle of accountability, not an assertion that every affected person automatically acquires legal standing to sue, access confidential records, or direct institutional operations. Those powers depend on additional rules and circumstances.\n\nThe distinction matters. Having standing to question an institution is not identical to having authority to change it. But lacking the second does not negate the first.\n\nA commuter may identify a defect in a transit system without possessing the authority to alter its timetable. A patient may question a hospital's administrative process without possessing the credentials to practice medicine. An employee may identify a defect in another department without being authorized to reorganize it.\n\nTheir observations do not become invalid at the organizational boundary.\n\nBrian Wynne's 1992 examination of Cumbrian sheep farmers' responses to scientific advice after the Chernobyl disaster offers a useful illustration. The case involved relationships between institutional scientific expertise, practical local knowledge, and public trust. The farmers' knowledge did not make them radiation scientists. Nor did the scientists' expertise render the farmers' understanding of local agricultural conditions irrelevant.\n\nThe institutional challenge was to account for relevant knowledge across a boundary, rather than assuming that authority within one domain settled every question arising outside it.\n\nThe same principle applies to workplaces, public services, and professional institutions.\n\n**Authority can travel outward through an institution's interfaces. Accountability must be able to travel back through them.**\n\nBut a critical distinction follows: the mere existence of a complaint channel does not establish that accountability can travel through it.\n\nA functioning feedback interface must connect observations to an actor capable of responding. An institution that receives complaints without any obligation to evaluate them has created an input mechanism, not necessarily a corrective mechanism.\n\nThe public is permitted to transmit information.\n\nThe institution retains the power to decide whether that information matters.\n\nAnd if no independent mechanism can examine that decision, the institution can preserve its own authority by refusing to recognize the evidence that challenges it.\n\n## 7. A Worked Example: The Bus That Is Always Late\n\nConsider a hypothetical public transit service that publishes scheduled arrival times and provides passengers with live vehicle locations.\n\nPassengers repeatedly observe that certain buses arrive substantially later than their published schedules predict. A systems engineer who does not work for the transit agency collects timestamped observations, compares scheduled and actual arrival times, and identifies a recurring discrepancy.\n\nThe engineer proposes that the agency examine whether its prediction system adequately incorporates vehicle position, accumulated delay, traffic conditions, and time spent at stops.\n\nThe agency responds that the engineer lacks professional experience in transit operations.\n\nDoes this response identify an error in the analysis?\n\nNo. It identifies a possible limitation in the analyst's background.\n\nThat limitation may matter. Transit professionals possess relevant knowledge about dispatch procedures, labor requirements, traffic controls, safety obligations, and service planning. Any proposed modification should account for those constraints.\n\nBut the original observation remains independently testable. The scheduled arrival time can be compared with the actual arrival time. The reliability of the prediction can be measured. The agency can examine whether the discrepancy reflects an unrealistic timetable, a defective prediction model, an operational disruption, or some combination of causes.\n\nNow consider the organizational arrangement through which the engineer must submit the proposal.\n\nThe agency requires outside suggestions to be approved by an internal operations department. That department determines whether a proposal concerns an operational issue, whether the proposer possesses appropriate expertise, and whether further investigation is warranted.\n\nThe engineer submits the analysis.\n\nThe department declines to review it because the engineer lacks transit operations credentials.\n\nThe decision follows established procedure.\n\nThe complaint is closed.\n\nThe discrepancy continues.\n\nEvery administrative step may have been completed correctly. No employee necessarily violated a rule, falsified a report, or acted with malicious intent.\n\nNevertheless, the system has excluded a reproducible observation without evaluating it.\n\nNow suppose the engineer appeals.\n\nThe appeal goes to the same department, or to a superior whose review is limited to determining whether established procedures were followed.\n\nThey were.\n\nThe rejection is upheld.\n\nThe institution has now produced two procedurally valid decisions without examining the original evidence.\n\n**This is not an absence of administrative process. It is an administrative process capable of preserving a defect.**\n\nThe example is hypothetical, but its causal structure is testable. We can examine who controls admission, what criteria govern review, whether technical objections are recorded, whether an independent reviewer can examine procedural exclusions, and whether repeated discrepancies produce corrective action.\n\nThe important question is no longer whether the institution possesses a complaints procedure.\n\nIt is whether the procedure can produce correction when the defect being reported implicates the institution's own rules.\n\n## 8. The Strongest Defense of Institutional Boundaries\n\nThere are good reasons institutions do not implement every proposal submitted by employees, customers, researchers, or members of the public.\n\nOrganizations have limited resources. Evaluation consumes time. Proposed remedies can introduce risks that are not immediately visible to outsiders. An apparent improvement to one process may damage another. Specialized expertise, legal obligations, and operational context can be indispensable to determining whether a proposed change is viable.\n\nIt would be unreasonable to demand exhaustive review of every suggestion. Institutions must establish priorities, protect confidential information, and reject claims that lack sufficient evidence to warrant investigation.\n\nNor is an institution necessarily acting defensively when it rejects a proposal from someone outside its professional community. Some proposals are poorly informed. Some are impractical. Some are already implemented. Some are incompatible with requirements that the proposer has not recognized.\n\nThese objections are not inconveniences to be brushed aside. They are real constraints.\n\nBut they do not answer the structural question.\n\n**Who determines whether a proposed remedy has failed a legitimate requirement, and who can examine that determination when the gatekeeper has an interest in preserving the existing arrangement?**\n\nAn admission threshold can be necessary. It can also be designed in a way that makes correction unusually difficult.\n\nAdministrative burdens offer a useful parallel. Donald Moynihan, Pamela Herd, and Hope Harvey described learning, psychological, and compliance costs in citizens' interactions with public programs, showing how these burdens can have consequences beyond the formal rules governing eligibility.\n\nA comparable mechanism can arise in institutional feedback systems. The cost of documenting, submitting, defending, and repeatedly resubmitting a proposal may be assigned almost entirely to the person raising the problem. The institution bears little cost for declining to examine it.\n\nEach requirement may appear reasonable in isolation.\n\nTogether, they can make participation impractical.\n\nThis does not mean every burdensome procedure was designed to suppress criticism. It means that the consequences of a procedure cannot be established solely by examining its stated purpose.\n\nA rule may claim to protect quality while operating primarily to reduce the volume of proposals reaching decision-makers. A review process may claim to guarantee fairness while preserving the exclusive authority of the parties whose decisions are under review.\n\nThe structural test is whether the restriction protects a demonstrable requirement at a proportionate cost.\n\nIf it does, retain it.\n\nIf it does not, its administrative legitimacy is insufficient.\n\n**A procedure is not justified merely because the institution has a procedure requiring it.**\n\n## 9. The Rejection Is Evidence Too\n\nThere is a second object of analysis that is easy to overlook.\n\nWhen an institution refuses to evaluate a documented defect, the refusal itself becomes observable behavior.\n\nThe investigator can examine the original problem and the process through which the institution responded to it.\n\nThis creates two distinct questions:\n\n**Is the alleged operational defect real?**\n\n**Does the institution possess a functioning mechanism for evaluating evidence of that defect?**\n\nThe answers need not be the same.\n\nAn institution may correctly reject a technically defective proposal while maintaining a dysfunctional review process. It may identify a legitimate constraint while failing to disclose that constraint to affected parties. It may possess a formally independent review board whose jurisdiction excludes precisely the administrative decisions most likely to require scrutiny.\n\nWe can investigate these possibilities without claiming to know the private motivations of decision-makers.\n\nThe evidence lies in the arrangement and its outputs.\n\nWho receives reports? Who classifies them? Who may reject them? What criteria govern rejection? Are those criteria published? Are reasons recorded? Can relevant evidence reach someone with authority to act? Can the admission decision itself be reviewed? What happens when the same documented defect recurs?\n\nThese questions turn institutional resistance into something measurable.\n\nA particularly revealing test is to compare how substantively similar proposals are treated when they originate from different positions within the institution. If an internally sponsored proposal receives technical evaluation while an equivalent external proposal is rejected without review, the difference warrants examination.\n\nThat discrepancy would not, by itself, establish corrupt intent. It would identify a relationship between the source of a proposal and its treatment that the institution should be able to justify.\n\nThe absence of such justification is meaningful.\n\nAlbert O. Hirschman's *Exit, Voice, and Loyalty* examined how people and organizations respond to deterioration, including the conditions under which expressing dissatisfaction can influence institutional behavior. Voice cannot serve its corrective function when the organization is unresponsive to it.\n\nThere is an important distinction between allowing people to speak and arranging the institution so that their speech can matter.\n\nAn institution can tolerate unlimited criticism while maintaining complete discretion over whether any criticism produces a decision.\n\n**The right to complain is not an accountability mechanism if the authority receiving the complaint is also free to make it disappear.**\n\n## 10. Accountability Must Be Engineered, Not Requested\n\nA functioning accountability process cannot depend exclusively on the goodwill of the authority being examined.\n\nThat is the central problem with asking institutions merely to listen more carefully, welcome outside expertise, or remain open to correction.\n\nThese are desirable behaviors, but they are not sufficient architectural properties.\n\nIf the institution's existing configuration rewards procedural compliance, protects incumbent authority, and permits decision-makers to reject inconvenient evidence without independent examination, a request for greater openness does not alter that configuration.\n\nIt asks the system to behave differently while preserving the conditions that produced the original behavior.\n\nMark Bovens's work on accountability provides a useful conceptual foundation. Accountability involves a relationship in which an actor must explain and justify conduct to a forum that can question, judge, and impose or initiate consequences.\n\nThat final feature matters.\n\nA process that permits questions but provides no meaningful consequence for refusing to answer them may support communication. It does not necessarily establish accountability.\n\nFor consequential institutional decisions, a stronger architecture requires several connected functions.\n\n**Evidence must have a defined route into evaluation.** An institution may establish reasonable submission standards, but those standards should concern the relevance, specificity, and evidentiary quality of the claim rather than the prestige or affiliation of its author.\n\n**Admission and evaluation must be distinguishable.** The person authorized to reject a proposal without technical review should not possess unlimited discretion to declare the proposal unworthy of consideration. Rejections based on scope, relevance, or resource constraints should be identifiable as such.\n\n**Material decisions must produce inspectable reasons.** A rejected proposal should not disappear behind an unexplained status label where the consequences justify a fuller account. The decision record should distinguish factual disagreement, missing evidence, conflicting requirements, implementation costs, and lack of decision authority.\n\n**Conflicted decisions must be reviewable outside the conflicted authority.** A department should not be the final and exclusive judge of whether evidence concerning its own performance deserves examination. Independent review may take different institutional forms, but independence cannot consist merely of a different employee applying the same unchallengeable exclusion rule.\n\n**Repeated failures must trigger reconsideration.** If evidence of the same defect continues to accumulate, the system should not permit an earlier administrative rejection to permanently settle the matter. Recurrence changes the evidentiary state and may justify reopening the decision.\n\n**Accountability must connect to consequences.** Depending on the institution, these may include publication of findings, mandatory reassessment, changes to operating procedures, independent audit, appeal, supervisory review, or other enforceable obligations. Not every rejected proposal warrants a sanction. But a system in which nonresponse and unjustified exclusion have no consequences leaves corrective action entirely at the discretion of the authority under examination.\n\nThese are design requirements, not guarantees that every external proposal will receive unlimited resources. A credible process still needs proportional thresholds, protected information, and defenses against frivolous or malicious submissions.\n\nThe requirement is that those safeguards be specified, examinable, and proportionate to the risks they address.\n\nThis changes the institution's obligation.\n\nIt need not accept every proposal.\n\nIt need not allow unauthorized people to alter its operations.\n\nIt need not agree with an external critic.\n\nBut when a sufficiently documented, consequential defect meets the institution's legitimate review criteria, **the institution should not be able to terminate examination solely by invoking the authority of the people whose conduct is being examined.**\n\nNor should it be able to define every refusal as procedurally justified simply because its own rules authorize refusal.\n\nAn accountable institution must permit examination of those rules as well.\n\nThat is the difference between procedural compliance and structural accountability.\n\nOne asks whether the institution followed its established process.\n\nThe other asks whether that process is capable of producing the outcomes for which the institution claims authority.\n\n## 11. The Complaint Is Permitted\n\nThe research is not new. Organizational silence, professional boundary-making, resistance to external knowledge, organizational learning, and the consequences of administrative burdens have been studied for decades.\n\nRalph Katz and Thomas Allen investigated declining communication with external information sources in long-standing research groups. Morrison and Milliken examined the organizational conditions that discourage employees from communicating problems. Edmondson studied psychological safety and learning behavior. Gieryn examined the professional construction of intellectual boundaries. Argyris examined the difficulty organizations encounter when correction requires reconsidering their governing assumptions.\n\nThese contributions do not establish a universal theory of institutional self-preservation. They provide several independently developed reasons to examine how organizational arrangements affect the receipt and use of corrective information.\n\nThe resulting question is not whether every rejected proposal is correct.\n\nIt is whether the institutional architecture permits a correct proposal to be recognized and acted upon when doing so conflicts with established authority.\n\nAn institution can be populated by intelligent, conscientious, highly trained people who recognize its defects, complain about them sincerely, and nevertheless participate in maintaining the arrangements that prevent their correction.\n\nThat does not require stupidity, malice, or a coordinated conspiracy.\n\nIt requires only an arrangement in which the authority to recognize a problem is separated from the means of correcting it, while those responsible for the existing arrangement retain control over the boundary between the two.\n\nThe institution can then continue to recognize its problems without becoming responsible for solving them.\n\nAnd here the familiar invitation to trust professional expertise becomes insufficient.\n\nAccountability does not require us to assume that institutional actors are incompetent. It does not even require us to assume that they are dishonest.\n\nIt requires us to recognize that **competence and good intentions are not substitutes for oversight, transparency, and independently examinable decisions**.\n\nIf a proposed remedy is wrong, demonstrate why.\n\nIf it is incomplete, identify what is missing.\n\nIf it is infeasible, explain the constraint.\n\nIf it works but cannot be implemented, identify the dependency preventing implementation.\n\nIf the institution cannot afford to investigate it, identify the resource limitation and the criteria used to prioritize the investigation.\n\nAnd if the only objection is that the person proposing it does not belong to the institution, explain how that fact changes the observable behavior of the system under investigation.\n\nBut we must go further than asking for explanations.\n\n**If the institution can refuse to answer all these questions without consequence, the problem is no longer merely the rejection of a proposal. The problem is the architecture of accountability itself.**\n\nThe remedy is not simply to encourage better institutional behavior. It is to establish arrangements in which the people exercising authority cannot exclusively determine whether their own exercise of authority warrants examination.\n\nThe complaint is permitted.\n\nThe remedy is not.\n\nAnd the institution may be functioning exactly as its rules allow.\n\n**That is why the rules—not merely the people following them—must be open to correction.**\n\n---\n\n## Research and References\n\n1. **Morrison, E. W., & Milliken, F. J. (2000).** “Organizational Silence: A Barrier to Change and Development in a Pluralistic World.” *Academy of Management Review*, 25(4), 706–725. [Original research](https://doi.org/10.5465/amr.2000.3707697).\n2. **Edmondson, A. (1999).** “Psychological Safety and Learning Behavior in Work Teams.” *Administrative Science Quarterly*, 44(2), 350–383. [University-hosted research and PDF](https://dash.harvard.edu/entities/publication/13a7b031-0fdd-45ec-a7e0-2b80e2bc679f).\n3. **Katz, R., & Allen, T. J. (1982).** “Investigating the Not Invented Here (NIH) Syndrome: A Look at the Performance, Tenure, and Communication Patterns of 50 R&D Project Groups.” *R&D Management*, 12(1), 7–20. https://doi.org/10.1111/j.1467-9310.1982.tb00478.x.\n4. **Gieryn, T. F. (1983).** “Boundary-Work and the Demarcation of Science from Non-Science.” *American Sociological Review*, 48(6), 781–795. [Research PDF](https://www.hv.se/globalassets/dokument/forska/lina/gieryn-boundaryworkdemarcationscience-1983.pdf).\n5. **Ballantyne, N. (2019).** “Epistemic Trespassing.” *Mind*, 128(510), 367–395. https://doi.org/10.1093/mind/fzx042.\n6. **Wynne, B. (1992).** “Misunderstood Misunderstanding: Social Identities and Public Uptake of Science.” *Public Understanding of Science*, 1(3), 281–304. [Research PDF](https://dourish.com/classes/readings/Wynne-Misunderstood-PUS.pdf).\n7. **International Council on Systems Engineering.** “About Systems Engineering.” https://www.incose.org/About%20Systems%20Engineering/.\n8. **Bovens, M. (2007).** “Analysing and Assessing Accountability: A Conceptual Framework.” *European Law Journal*, 13(4), 447–468. https://doi.org/10.1111/j.1468-0386.2007.00378.x.\n9. **Argyris, C. (1977).** “Double Loop Learning in Organizations.” *Harvard Business Review*, September 1977. https://hbr.org/1977/09/double-loop-learning-in-organizations.\n10. **Hirschman, A. O. (1970).** *Exit, Voice, and Loyalty: Responses to Decline in Firms, Organizations, and States.* Harvard University Press. [University-hosted excerpt](https://arken.nmbu.no/~sigury/AOS_234/AOS234%20files/Hirschman_Exit_voice_loyality.pdf).\n11. **Moynihan, D. P., Herd, P., & Harvey, H. (2015).** “Administrative Burden: Learning, Psychological, and Compliance Costs in Citizen-State Interactions.” *Journal of Public Administration Research and Theory*, 25(1), 43–69. https://doi.org/10.1093/jopart/muu009.\n",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "There is a peculiar ritual performed in workplaces, universities, government agencies, and professional organizations around the world. People gather to discuss what is wrong with the institution. They complain about inefficiency, bureaucracy, outdated methods, poor leadership, and problems that everyone seems to recognize but nobody seems able to correct. The complaints may be entirely justified. They may even be encouraged by the institution itself."
+    },
+    {
+      "type": "paragraph",
+      "text": "Then someone proposes a solution."
+    },
+    {
+      "type": "paragraph",
+      "text": "Suddenly, the conversation changes. The proposal is premature, the problem is more complicated than it appears, the person proposing it doesn't understand the field, or the matter belongs to somebody else's department. The institution that freely acknowledged the problem now discovers a remarkable abundance of reasons why nobody should attempt to solve it."
+    },
+    {
+      "type": "paragraph",
+      "text": "This raises a question worth taking seriously: Why can an institution accommodate criticism of its failures while resisting attempts to correct them?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The answer cannot simply be that institutions dislike criticism. Evidently, many are quite capable of tolerating it. The more interesting possibility is that criticism and correction interact with institutional authority in fundamentally different ways."
+    },
+    {
+      "type": "paragraph",
+      "text": "A complaint identifies dissatisfaction. A proposed remedy introduces a decision. If the proposal demonstrates that an existing arrangement is unnecessarily defective, someone may have to explain why that arrangement persists."
+    },
+    {
+      "type": "paragraph",
+      "text": "But the explanation may never be required."
+    },
+    {
+      "type": "paragraph",
+      "text": "The institution may already possess a procedure for ensuring that the person asking the question never reaches anyone obligated to answer it."
+    },
+    {
+      "type": "paragraph",
+      "text": "The problem is not always that institutions fail to recognize defects. Sometimes the mechanisms through which defects must be reported are the very mechanisms that prevent their correction."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "1. The Difference Between Complaining and Correcting"
+    },
+    {
+      "type": "paragraph",
+      "text": "A complaint can circulate indefinitely without changing the structure of an institution. Employees can complain to coworkers, professors can criticize their universities, and public officials can acknowledge failures in the organizations they administer. None of these activities necessarily requires a redistribution of authority, a modification of procedure, or a commitment of resources."
+    },
+    {
+      "type": "paragraph",
+      "text": "A remedy is different. Even a modest proposal asks an institution to compare its current arrangement against an alternative. If the alternative performs better, the institution faces a choice: adopt it, identify a legitimate reason not to, or continue the existing arrangement despite the demonstrated opportunity for improvement."
+    },
+    {
+      "type": "paragraph",
+      "text": "That is a consequential change."
+    },
+    {
+      "type": "paragraph",
+      "text": "It transforms a general expression of dissatisfaction into a question about institutional decisions. The relevant issue is no longer merely whether the problem exists, but why the people authorized to address it have chosen a particular course of action."
+    },
+    {
+      "type": "paragraph",
+      "text": "Organizational research gives us reason to examine this distinction. Elizabeth Morrison and Frances Milliken described organizational silence as a collective pattern in which employees withhold information about problems because organizational conditions make speaking up seem unwise. Amy Edmondson's research likewise associated psychological safety with learning behavior in work teams. These findings do not establish that every rejected proposal is an instance of institutional self-protection. They establish that the conditions under which organizations receive, process, and respond to information materially affect their capacity to learn."
+    },
+    {
+      "type": "paragraph",
+      "text": "There is an additional problem. Even when information is successfully communicated, the institution may have no effective mechanism for converting that information into corrective action."
+    },
+    {
+      "type": "paragraph",
+      "text": "An organization can maintain an elaborate complaints process while leaving its decision-making arrangements entirely untouched."
+    },
+    {
+      "type": "paragraph",
+      "text": "Receiving criticism is not the same operation as responding to evidence."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2. When the Gatekeeper Is Part of the Problem"
+    },
+    {
+      "type": "paragraph",
+      "text": "Consider an institution in which a department controls a process, evaluates its performance, determines whether proposed improvements are worth investigating, and decides which outside observations deserve consideration."
+    },
+    {
+      "type": "paragraph",
+      "text": "The department's continued authority depends, in part, on the legitimacy of its existing procedures. A proposal arrives demonstrating that one of those procedures may be unnecessary, inefficient, or harmful."
+    },
+    {
+      "type": "paragraph",
+      "text": "Who evaluates the proposal?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The department responsible for the procedure."
+    },
+    {
+      "type": "paragraph",
+      "text": "Who decides whether the evidence is sufficient to justify an investigation?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The same department."
+    },
+    {
+      "type": "paragraph",
+      "text": "Who determines whether the investigation requires participation from anyone outside the department?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Again, the same department."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nothing in this arrangement requires anyone to behave dishonestly. Individual decision-makers may sincerely believe they are protecting legitimate professional standards, controlling costs, and maintaining operational stability."
+    },
+    {
+      "type": "paragraph",
+      "text": "But the configuration creates a conflict between two functions: preserving the department's administrative authority and independently evaluating whether that authority is being exercised effectively."
+    },
+    {
+      "type": "paragraph",
+      "text": "The institution has placed the authority to examine a possible defect inside the structure that may be responsible for producing it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Under those conditions, rejecting an external proposal may be administratively easier than evaluating it. Evaluation consumes resources, introduces uncertainty, and may require changes that disturb established responsibilities. Rejection preserves the current arrangement and may satisfy every existing procedural requirement."
+    },
+    {
+      "type": "paragraph",
+      "text": "This does not establish that all institutions maximize self-preservation or that every gatekeeper acts to protect personal power. It identifies a configuration in which the costs of correction fall on the people authorized to permit it, while the costs of continued failure may fall on someone else."
+    },
+    {
+      "type": "paragraph",
+      "text": "That configuration matters regardless of anyone's intentions."
+    },
+    {
+      "type": "paragraph",
+      "text": "If the institution measures compliance with established procedures more readily than improvement in the outcomes those procedures are supposed to produce, employees may be rewarded for preserving an unsuccessful process while being penalized for attempting to replace it."
+    },
+    {
+      "type": "paragraph",
+      "text": "The resulting dysfunction can be maintained through entirely ordinary administrative behavior."
+    },
+    {
+      "type": "paragraph",
+      "text": "Chris Argyris's work on organizational learning helps explain why organizations may correct errors without reconsidering the assumptions and governing arrangements that produced them. His distinction between ordinary error correction and double-loop learning is especially relevant: an institution can respond to poor results while leaving the underlying rules of operation intact."
+    },
+    {
+      "type": "paragraph",
+      "text": "The implication is uncomfortable."
+    },
+    {
+      "type": "paragraph",
+      "text": "A system can successfully execute its procedures while repeatedly failing the people those procedures were created to serve."
+    },
+    {
+      "type": "paragraph",
+      "text": "The defect may not be a breakdown in compliance."
+    },
+    {
+      "type": "paragraph",
+      "text": "It may be compliance itself."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "3. The Workplace: That's Not Your Department"
+    },
+    {
+      "type": "paragraph",
+      "text": "Consider a workplace in which an employee notices that a recurring administrative process creates unnecessary delays."
+    },
+    {
+      "type": "paragraph",
+      "text": "The employee does not supervise the department responsible for the process. Nevertheless, the delays affect their work, and they can identify the sequence of operations producing them. They document the problem, propose an alternative workflow, and explain how its performance could be evaluated."
+    },
+    {
+      "type": "paragraph",
+      "text": "Their supervisor responds: \"That's not your department.\""
+    },
+    {
+      "type": "paragraph",
+      "text": "That statement may accurately describe the employee's organizational position. It does not address the substance of the proposal."
+    },
+    {
+      "type": "paragraph",
+      "text": "Three questions have been collapsed into one."
+    },
+    {
+      "type": "paragraph",
+      "text": "Competence: Does the employee understand the relevant process well enough to analyze it?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Standing: Does the employee have a legitimate basis for raising the problem?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Decision authority: Is the employee authorized to implement the proposed change?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The employee might possess the first two without possessing the third. That arrangement is perfectly ordinary. What does not follow is that the absence of decision authority invalidates the analysis."
+    },
+    {
+      "type": "paragraph",
+      "text": "A manager may have good reasons to decline the proposed change. It may create new dependencies, interfere with another process, violate a regulatory requirement, or cost more than it saves. These objections can be examined because they identify conditions relevant to the proposal."
+    },
+    {
+      "type": "paragraph",
+      "text": "\"That's not your department\" identifies none of them."
+    },
+    {
+      "type": "paragraph",
+      "text": "More importantly, the statement can function as an administrative termination condition. The proposal need not be evaluated because the employee has failed a preliminary test that has nothing to do with the technical merits of the proposal."
+    },
+    {
+      "type": "paragraph",
+      "text": "The employee has encountered a boundary between observation and action."
+    },
+    {
+      "type": "paragraph",
+      "text": "Organizational boundaries exist for legitimate reasons. Departments coordinate specialized work, allocate responsibility, protect sensitive information, and establish decision authority. But a boundary intended to regulate who may act should not automatically determine whose evidence may be considered."
+    },
+    {
+      "type": "paragraph",
+      "text": "When the two are conflated, an institution can exclude information without ever formally disputing its accuracy."
+    },
+    {
+      "type": "paragraph",
+      "text": "And the exclusion can be recorded as procedurally correct."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is how an organization can manufacture compliance while losing access to opportunities for correction."
+    },
+    {
+      "type": "paragraph",
+      "text": "The employee may still submit a complaint. The organization may still record that complaint. A supervisor may even acknowledge that the employee's frustration is understandable."
+    },
+    {
+      "type": "paragraph",
+      "text": "But the proposed remedy never reaches the people authorized to evaluate it."
+    },
+    {
+      "type": "paragraph",
+      "text": "The complaint has been processed. The defect has not."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "4. The Outsider Problem"
+    },
+    {
+      "type": "paragraph",
+      "text": "The same mechanism appears when an institution receives criticism or assistance from someone outside its professional or organizational boundaries."
+    },
+    {
+      "type": "paragraph",
+      "text": "Imagine a systems engineer examining a hospital's patient scheduling process. The engineer identifies a dependency between appointment allocation, staffing availability, and the time required to prepare treatment rooms. Their analysis suggests that changing the sequence of certain operations could reduce waiting times without increasing staffing requirements."
+    },
+    {
+      "type": "paragraph",
+      "text": "The response: \"You're not a healthcare professional.\""
+    },
+    {
+      "type": "paragraph",
+      "text": "Correct. But what, precisely, does that establish?"
+    },
+    {
+      "type": "paragraph",
+      "text": "It may establish that the engineer lacks the clinical expertise necessary to determine appropriate treatment priorities. It may establish that a proposed change requires examination by medical professionals before implementation. It may identify a consequential limitation in the analysis."
+    },
+    {
+      "type": "paragraph",
+      "text": "What it does not establish is that the scheduling dependency does not exist."
+    },
+    {
+      "type": "paragraph",
+      "text": "Systems engineering is explicitly concerned with the relationships between components, processes, constraints, and operating environments. The International Council on Systems Engineering describes the discipline as transdisciplinary and integrative. Its legitimate scope includes relationships between systems, including systems operating in specialized domains."
+    },
+    {
+      "type": "paragraph",
+      "text": "Crossing domain boundaries is not an accidental feature of systems engineering. It is fundamental to the discipline."
+    },
+    {
+      "type": "paragraph",
+      "text": "A systems engineer examining hospital scheduling needs accurate information about clinical constraints. A clinician examining a proposed scheduling model needs to evaluate those constraints and their consequences. Neither profession's expertise automatically invalidates the other's contribution."
+    },
+    {
+      "type": "paragraph",
+      "text": "The appropriate response is collaboration between relevant competencies, not the exclusion of one on the grounds that the other already occupies the institution."
+    },
+    {
+      "type": "paragraph",
+      "text": "Philosopher Nathan Ballantyne has examined epistemic trespassing: experts making judgments beyond their areas of expertise. The concern is legitimate. Outsiders can overlook requirements that domain specialists understand, and unjustified confidence can make such errors consequential."
+    },
+    {
+      "type": "paragraph",
+      "text": "But there is a difference between identifying an actual deficiency in an argument and treating professional affiliation as sufficient evidence of deficiency."
+    },
+    {
+      "type": "paragraph",
+      "text": "A domain boundary identifies where specialized knowledge is required. It does not determine where valid reasoning is permitted."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nor does professional affiliation establish ownership of every question involving a discipline's subject matter."
+    },
+    {
+      "type": "paragraph",
+      "text": "If an institution provides a service with measurable consequences, those consequences can be examined using methods appropriate to the behavior under investigation. A claim about scheduling performance can be evaluated as a claim about scheduling performance. Clinical expertise becomes necessary wherever clinical constraints materially affect that analysis."
+    },
+    {
+      "type": "paragraph",
+      "text": "The distinction is operational, not ceremonial."
+    },
+    {
+      "type": "paragraph",
+      "text": "And the institution's preferred classification of the observer does not change the behavior being observed."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "5. When Expertise Becomes a Gate"
+    },
+    {
+      "type": "paragraph",
+      "text": "In 1983, sociologist Thomas Gieryn examined boundary-work: the processes through which scientists distinguish their professional activity from other forms of knowledge and establish claims to intellectual authority. His analysis described professional boundaries as serving multiple purposes, including scientific autonomy and the pursuit of professional resources and authority."
+    },
+    {
+      "type": "paragraph",
+      "text": "The existence of a boundary is not, by itself, evidence of wrongdoing."
+    },
+    {
+      "type": "paragraph",
+      "text": "The question is what the boundary is being used to protect."
+    },
+    {
+      "type": "paragraph",
+      "text": "A hospital must prevent unqualified personnel from performing clinical procedures. A university must maintain standards for evaluating research. A transit agency must ensure that operational changes do not compromise safety. These restrictions protect identifiable requirements of their respective systems."
+    },
+    {
+      "type": "paragraph",
+      "text": "But consider what happens when the same boundaries are invoked to reject observations rather than regulate actions."
+    },
+    {
+      "type": "paragraph",
+      "text": "An engineer identifies a reproducible scheduling defect. An employee documents a recurring workflow failure. A researcher demonstrates that an established institutional explanation does not account for available evidence."
+    },
+    {
+      "type": "paragraph",
+      "text": "If the response consists only of identifying the critic's professional or organizational position, the institution has substituted a question about identity for a question about evidence."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is not merely an intellectual problem. It is an accountability problem."
+    },
+    {
+      "type": "paragraph",
+      "text": "The institution may be using a legitimate authority boundary for a purpose that the boundary does not justify."
+    },
+    {
+      "type": "paragraph",
+      "text": "A professional licensing requirement can determine who may perform a medical procedure. It cannot determine whether a waiting-room clock is accurate. An employment hierarchy can determine who may change a workflow. It cannot determine whether a documented bottleneck exists."
+    },
+    {
+      "type": "paragraph",
+      "text": "When an institution treats the first kind of authority as though it establishes the second, it extends the authority of its boundary beyond the function that justifies it."
+    },
+    {
+      "type": "paragraph",
+      "text": "That extension deserves scrutiny."
+    },
+    {
+      "type": "paragraph",
+      "text": "The problem becomes more serious when the institution alone determines whether its extension is legitimate."
+    },
+    {
+      "type": "paragraph",
+      "text": "At that point, the defense is circular: the institution's authority is justified by the rules through which the institution recognizes its own authority."
+    },
+    {
+      "type": "paragraph",
+      "text": "Expertise deserves consideration. It does not confer immunity from examination."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "6. Public Interfaces Create Public Consequences"
+    },
+    {
+      "type": "paragraph",
+      "text": "The problem becomes especially important when an institution's actions extend beyond its own boundaries."
+    },
+    {
+      "type": "paragraph",
+      "text": "A private organization may establish internal rules for decision-making. A university may determine its administrative structure. A professional association may establish standards for membership."
+    },
+    {
+      "type": "paragraph",
+      "text": "But these organizations do not operate in isolation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Their decisions affect employees, students, customers, patients, suppliers, researchers, surrounding communities, and members of the public who depend upon their services or encounter their consequences."
+    },
+    {
+      "type": "paragraph",
+      "text": "An institution may control its internal operations. It does not thereby acquire exclusive ownership of every legitimate question about those operations."
+    },
+    {
+      "type": "paragraph",
+      "text": "This article proposes a straightforward structural principle:"
+    },
+    {
+      "type": "paragraph",
+      "text": "When an institution exercises authority through an interface that affects people outside its boundaries, those effects create a legitimate basis for external scrutiny."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is a principle of accountability, not an assertion that every affected person automatically acquires legal standing to sue, access confidential records, or direct institutional operations. Those powers depend on additional rules and circumstances."
+    },
+    {
+      "type": "paragraph",
+      "text": "The distinction matters. Having standing to question an institution is not identical to having authority to change it. But lacking the second does not negate the first."
+    },
+    {
+      "type": "paragraph",
+      "text": "A commuter may identify a defect in a transit system without possessing the authority to alter its timetable. A patient may question a hospital's administrative process without possessing the credentials to practice medicine. An employee may identify a defect in another department without being authorized to reorganize it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Their observations do not become invalid at the organizational boundary."
+    },
+    {
+      "type": "paragraph",
+      "text": "Brian Wynne's 1992 examination of Cumbrian sheep farmers' responses to scientific advice after the Chernobyl disaster offers a useful illustration. The case involved relationships between institutional scientific expertise, practical local knowledge, and public trust. The farmers' knowledge did not make them radiation scientists. Nor did the scientists' expertise render the farmers' understanding of local agricultural conditions irrelevant."
+    },
+    {
+      "type": "paragraph",
+      "text": "The institutional challenge was to account for relevant knowledge across a boundary, rather than assuming that authority within one domain settled every question arising outside it."
+    },
+    {
+      "type": "paragraph",
+      "text": "The same principle applies to workplaces, public services, and professional institutions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Authority can travel outward through an institution's interfaces. Accountability must be able to travel back through them."
+    },
+    {
+      "type": "paragraph",
+      "text": "But a critical distinction follows: the mere existence of a complaint channel does not establish that accountability can travel through it."
+    },
+    {
+      "type": "paragraph",
+      "text": "A functioning feedback interface must connect observations to an actor capable of responding. An institution that receives complaints without any obligation to evaluate them has created an input mechanism, not necessarily a corrective mechanism."
+    },
+    {
+      "type": "paragraph",
+      "text": "The public is permitted to transmit information."
+    },
+    {
+      "type": "paragraph",
+      "text": "The institution retains the power to decide whether that information matters."
+    },
+    {
+      "type": "paragraph",
+      "text": "And if no independent mechanism can examine that decision, the institution can preserve its own authority by refusing to recognize the evidence that challenges it."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "7. A Worked Example: The Bus That Is Always Late"
+    },
+    {
+      "type": "paragraph",
+      "text": "Consider a hypothetical public transit service that publishes scheduled arrival times and provides passengers with live vehicle locations."
+    },
+    {
+      "type": "paragraph",
+      "text": "Passengers repeatedly observe that certain buses arrive substantially later than their published schedules predict. A systems engineer who does not work for the transit agency collects timestamped observations, compares scheduled and actual arrival times, and identifies a recurring discrepancy."
+    },
+    {
+      "type": "paragraph",
+      "text": "The engineer proposes that the agency examine whether its prediction system adequately incorporates vehicle position, accumulated delay, traffic conditions, and time spent at stops."
+    },
+    {
+      "type": "paragraph",
+      "text": "The agency responds that the engineer lacks professional experience in transit operations."
+    },
+    {
+      "type": "paragraph",
+      "text": "Does this response identify an error in the analysis?"
+    },
+    {
+      "type": "paragraph",
+      "text": "No. It identifies a possible limitation in the analyst's background."
+    },
+    {
+      "type": "paragraph",
+      "text": "That limitation may matter. Transit professionals possess relevant knowledge about dispatch procedures, labor requirements, traffic controls, safety obligations, and service planning. Any proposed modification should account for those constraints."
+    },
+    {
+      "type": "paragraph",
+      "text": "But the original observation remains independently testable. The scheduled arrival time can be compared with the actual arrival time. The reliability of the prediction can be measured. The agency can examine whether the discrepancy reflects an unrealistic timetable, a defective prediction model, an operational disruption, or some combination of causes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Now consider the organizational arrangement through which the engineer must submit the proposal."
+    },
+    {
+      "type": "paragraph",
+      "text": "The agency requires outside suggestions to be approved by an internal operations department. That department determines whether a proposal concerns an operational issue, whether the proposer possesses appropriate expertise, and whether further investigation is warranted."
+    },
+    {
+      "type": "paragraph",
+      "text": "The engineer submits the analysis."
+    },
+    {
+      "type": "paragraph",
+      "text": "The department declines to review it because the engineer lacks transit operations credentials."
+    },
+    {
+      "type": "paragraph",
+      "text": "The decision follows established procedure."
+    },
+    {
+      "type": "paragraph",
+      "text": "The complaint is closed."
+    },
+    {
+      "type": "paragraph",
+      "text": "The discrepancy continues."
+    },
+    {
+      "type": "paragraph",
+      "text": "Every administrative step may have been completed correctly. No employee necessarily violated a rule, falsified a report, or acted with malicious intent."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nevertheless, the system has excluded a reproducible observation without evaluating it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Now suppose the engineer appeals."
+    },
+    {
+      "type": "paragraph",
+      "text": "The appeal goes to the same department, or to a superior whose review is limited to determining whether established procedures were followed."
+    },
+    {
+      "type": "paragraph",
+      "text": "They were."
+    },
+    {
+      "type": "paragraph",
+      "text": "The rejection is upheld."
+    },
+    {
+      "type": "paragraph",
+      "text": "The institution has now produced two procedurally valid decisions without examining the original evidence."
+    },
+    {
+      "type": "paragraph",
+      "text": "This is not an absence of administrative process. It is an administrative process capable of preserving a defect."
+    },
+    {
+      "type": "paragraph",
+      "text": "The example is hypothetical, but its causal structure is testable. We can examine who controls admission, what criteria govern review, whether technical objections are recorded, whether an independent reviewer can examine procedural exclusions, and whether repeated discrepancies produce corrective action."
+    },
+    {
+      "type": "paragraph",
+      "text": "The important question is no longer whether the institution possesses a complaints procedure."
+    },
+    {
+      "type": "paragraph",
+      "text": "It is whether the procedure can produce correction when the defect being reported implicates the institution's own rules."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "8. The Strongest Defense of Institutional Boundaries"
+    },
+    {
+      "type": "paragraph",
+      "text": "There are good reasons institutions do not implement every proposal submitted by employees, customers, researchers, or members of the public."
+    },
+    {
+      "type": "paragraph",
+      "text": "Organizations have limited resources. Evaluation consumes time. Proposed remedies can introduce risks that are not immediately visible to outsiders. An apparent improvement to one process may damage another. Specialized expertise, legal obligations, and operational context can be indispensable to determining whether a proposed change is viable."
+    },
+    {
+      "type": "paragraph",
+      "text": "It would be unreasonable to demand exhaustive review of every suggestion. Institutions must establish priorities, protect confidential information, and reject claims that lack sufficient evidence to warrant investigation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nor is an institution necessarily acting defensively when it rejects a proposal from someone outside its professional community. Some proposals are poorly informed. Some are impractical. Some are already implemented. Some are incompatible with requirements that the proposer has not recognized."
+    },
+    {
+      "type": "paragraph",
+      "text": "These objections are not inconveniences to be brushed aside. They are real constraints."
+    },
+    {
+      "type": "paragraph",
+      "text": "But they do not answer the structural question."
+    },
+    {
+      "type": "paragraph",
+      "text": "Who determines whether a proposed remedy has failed a legitimate requirement, and who can examine that determination when the gatekeeper has an interest in preserving the existing arrangement?"
+    },
+    {
+      "type": "paragraph",
+      "text": "An admission threshold can be necessary. It can also be designed in a way that makes correction unusually difficult."
+    },
+    {
+      "type": "paragraph",
+      "text": "Administrative burdens offer a useful parallel. Donald Moynihan, Pamela Herd, and Hope Harvey described learning, psychological, and compliance costs in citizens' interactions with public programs, showing how these burdens can have consequences beyond the formal rules governing eligibility."
+    },
+    {
+      "type": "paragraph",
+      "text": "A comparable mechanism can arise in institutional feedback systems. The cost of documenting, submitting, defending, and repeatedly resubmitting a proposal may be assigned almost entirely to the person raising the problem. The institution bears little cost for declining to examine it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Each requirement may appear reasonable in isolation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Together, they can make participation impractical."
+    },
+    {
+      "type": "paragraph",
+      "text": "This does not mean every burdensome procedure was designed to suppress criticism. It means that the consequences of a procedure cannot be established solely by examining its stated purpose."
+    },
+    {
+      "type": "paragraph",
+      "text": "A rule may claim to protect quality while operating primarily to reduce the volume of proposals reaching decision-makers. A review process may claim to guarantee fairness while preserving the exclusive authority of the parties whose decisions are under review."
+    },
+    {
+      "type": "paragraph",
+      "text": "The structural test is whether the restriction protects a demonstrable requirement at a proportionate cost."
+    },
+    {
+      "type": "paragraph",
+      "text": "If it does, retain it."
+    },
+    {
+      "type": "paragraph",
+      "text": "If it does not, its administrative legitimacy is insufficient."
+    },
+    {
+      "type": "paragraph",
+      "text": "A procedure is not justified merely because the institution has a procedure requiring it."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "9. The Rejection Is Evidence Too"
+    },
+    {
+      "type": "paragraph",
+      "text": "There is a second object of analysis that is easy to overlook."
+    },
+    {
+      "type": "paragraph",
+      "text": "When an institution refuses to evaluate a documented defect, the refusal itself becomes observable behavior."
+    },
+    {
+      "type": "paragraph",
+      "text": "The investigator can examine the original problem and the process through which the institution responded to it."
+    },
+    {
+      "type": "paragraph",
+      "text": "This creates two distinct questions:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Is the alleged operational defect real?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Does the institution possess a functioning mechanism for evaluating evidence of that defect?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The answers need not be the same."
+    },
+    {
+      "type": "paragraph",
+      "text": "An institution may correctly reject a technically defective proposal while maintaining a dysfunctional review process. It may identify a legitimate constraint while failing to disclose that constraint to affected parties. It may possess a formally independent review board whose jurisdiction excludes precisely the administrative decisions most likely to require scrutiny."
+    },
+    {
+      "type": "paragraph",
+      "text": "We can investigate these possibilities without claiming to know the private motivations of decision-makers."
+    },
+    {
+      "type": "paragraph",
+      "text": "The evidence lies in the arrangement and its outputs."
+    },
+    {
+      "type": "paragraph",
+      "text": "Who receives reports? Who classifies them? Who may reject them? What criteria govern rejection? Are those criteria published? Are reasons recorded? Can relevant evidence reach someone with authority to act? Can the admission decision itself be reviewed? What happens when the same documented defect recurs?"
+    },
+    {
+      "type": "paragraph",
+      "text": "These questions turn institutional resistance into something measurable."
+    },
+    {
+      "type": "paragraph",
+      "text": "A particularly revealing test is to compare how substantively similar proposals are treated when they originate from different positions within the institution. If an internally sponsored proposal receives technical evaluation while an equivalent external proposal is rejected without review, the difference warrants examination."
+    },
+    {
+      "type": "paragraph",
+      "text": "That discrepancy would not, by itself, establish corrupt intent. It would identify a relationship between the source of a proposal and its treatment that the institution should be able to justify."
+    },
+    {
+      "type": "paragraph",
+      "text": "The absence of such justification is meaningful."
+    },
+    {
+      "type": "paragraph",
+      "text": "Albert O. Hirschman's Exit, Voice, and Loyalty examined how people and organizations respond to deterioration, including the conditions under which expressing dissatisfaction can influence institutional behavior. Voice cannot serve its corrective function when the organization is unresponsive to it."
+    },
+    {
+      "type": "paragraph",
+      "text": "There is an important distinction between allowing people to speak and arranging the institution so that their speech can matter."
+    },
+    {
+      "type": "paragraph",
+      "text": "An institution can tolerate unlimited criticism while maintaining complete discretion over whether any criticism produces a decision."
+    },
+    {
+      "type": "paragraph",
+      "text": "The right to complain is not an accountability mechanism if the authority receiving the complaint is also free to make it disappear."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "10. Accountability Must Be Engineered, Not Requested"
+    },
+    {
+      "type": "paragraph",
+      "text": "A functioning accountability process cannot depend exclusively on the goodwill of the authority being examined."
+    },
+    {
+      "type": "paragraph",
+      "text": "That is the central problem with asking institutions merely to listen more carefully, welcome outside expertise, or remain open to correction."
+    },
+    {
+      "type": "paragraph",
+      "text": "These are desirable behaviors, but they are not sufficient architectural properties."
+    },
+    {
+      "type": "paragraph",
+      "text": "If the institution's existing configuration rewards procedural compliance, protects incumbent authority, and permits decision-makers to reject inconvenient evidence without independent examination, a request for greater openness does not alter that configuration."
+    },
+    {
+      "type": "paragraph",
+      "text": "It asks the system to behave differently while preserving the conditions that produced the original behavior."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mark Bovens's work on accountability provides a useful conceptual foundation. Accountability involves a relationship in which an actor must explain and justify conduct to a forum that can question, judge, and impose or initiate consequences."
+    },
+    {
+      "type": "paragraph",
+      "text": "That final feature matters."
+    },
+    {
+      "type": "paragraph",
+      "text": "A process that permits questions but provides no meaningful consequence for refusing to answer them may support communication. It does not necessarily establish accountability."
+    },
+    {
+      "type": "paragraph",
+      "text": "For consequential institutional decisions, a stronger architecture requires several connected functions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Evidence must have a defined route into evaluation. An institution may establish reasonable submission standards, but those standards should concern the relevance, specificity, and evidentiary quality of the claim rather than the prestige or affiliation of its author."
+    },
+    {
+      "type": "paragraph",
+      "text": "Admission and evaluation must be distinguishable. The person authorized to reject a proposal without technical review should not possess unlimited discretion to declare the proposal unworthy of consideration. Rejections based on scope, relevance, or resource constraints should be identifiable as such."
+    },
+    {
+      "type": "paragraph",
+      "text": "Material decisions must produce inspectable reasons. A rejected proposal should not disappear behind an unexplained status label where the consequences justify a fuller account. The decision record should distinguish factual disagreement, missing evidence, conflicting requirements, implementation costs, and lack of decision authority."
+    },
+    {
+      "type": "paragraph",
+      "text": "Conflicted decisions must be reviewable outside the conflicted authority. A department should not be the final and exclusive judge of whether evidence concerning its own performance deserves examination. Independent review may take different institutional forms, but independence cannot consist merely of a different employee applying the same unchallengeable exclusion rule."
+    },
+    {
+      "type": "paragraph",
+      "text": "Repeated failures must trigger reconsideration. If evidence of the same defect continues to accumulate, the system should not permit an earlier administrative rejection to permanently settle the matter. Recurrence changes the evidentiary state and may justify reopening the decision."
+    },
+    {
+      "type": "paragraph",
+      "text": "Accountability must connect to consequences. Depending on the institution, these may include publication of findings, mandatory reassessment, changes to operating procedures, independent audit, appeal, supervisory review, or other enforceable obligations. Not every rejected proposal warrants a sanction. But a system in which nonresponse and unjustified exclusion have no consequences leaves corrective action entirely at the discretion of the authority under examination."
+    },
+    {
+      "type": "paragraph",
+      "text": "These are design requirements, not guarantees that every external proposal will receive unlimited resources. A credible process still needs proportional thresholds, protected information, and defenses against frivolous or malicious submissions."
+    },
+    {
+      "type": "paragraph",
+      "text": "The requirement is that those safeguards be specified, examinable, and proportionate to the risks they address."
+    },
+    {
+      "type": "paragraph",
+      "text": "This changes the institution's obligation."
+    },
+    {
+      "type": "paragraph",
+      "text": "It need not accept every proposal."
+    },
+    {
+      "type": "paragraph",
+      "text": "It need not allow unauthorized people to alter its operations."
+    },
+    {
+      "type": "paragraph",
+      "text": "It need not agree with an external critic."
+    },
+    {
+      "type": "paragraph",
+      "text": "But when a sufficiently documented, consequential defect meets the institution's legitimate review criteria, the institution should not be able to terminate examination solely by invoking the authority of the people whose conduct is being examined."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nor should it be able to define every refusal as procedurally justified simply because its own rules authorize refusal."
+    },
+    {
+      "type": "paragraph",
+      "text": "An accountable institution must permit examination of those rules as well."
+    },
+    {
+      "type": "paragraph",
+      "text": "That is the difference between procedural compliance and structural accountability."
+    },
+    {
+      "type": "paragraph",
+      "text": "One asks whether the institution followed its established process."
+    },
+    {
+      "type": "paragraph",
+      "text": "The other asks whether that process is capable of producing the outcomes for which the institution claims authority."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "11. The Complaint Is Permitted"
+    },
+    {
+      "type": "paragraph",
+      "text": "The research is not new. Organizational silence, professional boundary-making, resistance to external knowledge, organizational learning, and the consequences of administrative burdens have been studied for decades."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ralph Katz and Thomas Allen investigated declining communication with external information sources in long-standing research groups. Morrison and Milliken examined the organizational conditions that discourage employees from communicating problems. Edmondson studied psychological safety and learning behavior. Gieryn examined the professional construction of intellectual boundaries. Argyris examined the difficulty organizations encounter when correction requires reconsidering their governing assumptions."
+    },
+    {
+      "type": "paragraph",
+      "text": "These contributions do not establish a universal theory of institutional self-preservation. They provide several independently developed reasons to examine how organizational arrangements affect the receipt and use of corrective information."
+    },
+    {
+      "type": "paragraph",
+      "text": "The resulting question is not whether every rejected proposal is correct."
+    },
+    {
+      "type": "paragraph",
+      "text": "It is whether the institutional architecture permits a correct proposal to be recognized and acted upon when doing so conflicts with established authority."
+    },
+    {
+      "type": "paragraph",
+      "text": "An institution can be populated by intelligent, conscientious, highly trained people who recognize its defects, complain about them sincerely, and nevertheless participate in maintaining the arrangements that prevent their correction."
+    },
+    {
+      "type": "paragraph",
+      "text": "That does not require stupidity, malice, or a coordinated conspiracy."
+    },
+    {
+      "type": "paragraph",
+      "text": "It requires only an arrangement in which the authority to recognize a problem is separated from the means of correcting it, while those responsible for the existing arrangement retain control over the boundary between the two."
+    },
+    {
+      "type": "paragraph",
+      "text": "The institution can then continue to recognize its problems without becoming responsible for solving them."
+    },
+    {
+      "type": "paragraph",
+      "text": "And here the familiar invitation to trust professional expertise becomes insufficient."
+    },
+    {
+      "type": "paragraph",
+      "text": "Accountability does not require us to assume that institutional actors are incompetent. It does not even require us to assume that they are dishonest."
+    },
+    {
+      "type": "paragraph",
+      "text": "It requires us to recognize that competence and good intentions are not substitutes for oversight, transparency, and independently examinable decisions."
+    },
+    {
+      "type": "paragraph",
+      "text": "If a proposed remedy is wrong, demonstrate why."
+    },
+    {
+      "type": "paragraph",
+      "text": "If it is incomplete, identify what is missing."
+    },
+    {
+      "type": "paragraph",
+      "text": "If it is infeasible, explain the constraint."
+    },
+    {
+      "type": "paragraph",
+      "text": "If it works but cannot be implemented, identify the dependency preventing implementation."
+    },
+    {
+      "type": "paragraph",
+      "text": "If the institution cannot afford to investigate it, identify the resource limitation and the criteria used to prioritize the investigation."
+    },
+    {
+      "type": "paragraph",
+      "text": "And if the only objection is that the person proposing it does not belong to the institution, explain how that fact changes the observable behavior of the system under investigation."
+    },
+    {
+      "type": "paragraph",
+      "text": "But we must go further than asking for explanations."
+    },
+    {
+      "type": "paragraph",
+      "text": "If the institution can refuse to answer all these questions without consequence, the problem is no longer merely the rejection of a proposal. The problem is the architecture of accountability itself."
+    },
+    {
+      "type": "paragraph",
+      "text": "The remedy is not simply to encourage better institutional behavior. It is to establish arrangements in which the people exercising authority cannot exclusively determine whether their own exercise of authority warrants examination."
+    },
+    {
+      "type": "paragraph",
+      "text": "The complaint is permitted."
+    },
+    {
+      "type": "paragraph",
+      "text": "The remedy is not."
+    },
+    {
+      "type": "paragraph",
+      "text": "And the institution may be functioning exactly as its rules allow."
+    },
+    {
+      "type": "paragraph",
+      "text": "That is why the rules—not merely the people following them—must be open to correction."
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Research and References"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Morrison, E. W., & Milliken, F. J. (2000). “Organizational Silence: A Barrier to Change and Development in a Pluralistic World.” Academy of Management Review, 25(4), 706–725. Original research.",
+        "Edmondson, A. (1999). “Psychological Safety and Learning Behavior in Work Teams.” Administrative Science Quarterly, 44(2), 350–383. University-hosted research and PDF.",
+        "Katz, R., & Allen, T. J. (1982). “Investigating the Not Invented Here (NIH) Syndrome: A Look at the Performance, Tenure, and Communication Patterns of 50 R&D Project Groups.” R&D Management, 12(1), 7–20. https://doi.org/10.1111/j.1467-9310.1982.tb00478.x.",
+        "Gieryn, T. F. (1983). “Boundary-Work and the Demarcation of Science from Non-Science.” American Sociological Review, 48(6), 781–795. Research PDF.",
+        "Ballantyne, N. (2019). “Epistemic Trespassing.” Mind, 128(510), 367–395. https://doi.org/10.1093/mind/fzx042.",
+        "Wynne, B. (1992). “Misunderstood Misunderstanding: Social Identities and Public Uptake of Science.” Public Understanding of Science, 1(3), 281–304. Research PDF.",
+        "International Council on Systems Engineering. “About Systems Engineering.” https://www.incose.org/About%20Systems%20Engineering/.",
+        "Bovens, M. (2007). “Analysing and Assessing Accountability: A Conceptual Framework.” European Law Journal, 13(4), 447–468. https://doi.org/10.1111/j.1468-0386.2007.00378.x.",
+        "Argyris, C. (1977). “Double Loop Learning in Organizations.” Harvard Business Review, September 1977. https://hbr.org/1977/09/double-loop-learning-in-organizations.",
+        "Hirschman, A. O. (1970). Exit, Voice, and Loyalty: Responses to Decline in Firms, Organizations, and States. Harvard University Press. University-hosted excerpt.",
+        "Moynihan, D. P., Herd, P., & Harvey, H. (2015). “Administrative Burden: Learning, Psychological, and Compliance Costs in Citizen-State Interactions.” Journal of Public Administration Research and Theory, 25(1), 43–69. https://doi.org/10.1093/jopart/muu009."
+      ]
+    }
+  ],
+  "readingMinutes": 23,
+  "heroImage": "",
+  "images": [],
+  "attachments": [
+    {
+      "name": "the-complaint-is-permitted-the-remedy-is-not.pdf",
+      "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-complaint-is-permitted-the-remedy-is-not/the-complaint-is-permitted-the-remedy-is-not-4d13f271fa9767b5.pdf",
+      "mimeType": "application/pdf",
+      "releaseAssetId": 741003911,
+      "releaseTag": "measure-pdf-the-complaint-is-permitted-the-remedy-is-not"
+    }
+  ],
+  "style": {
+    "background": "#e9e4d9",
+    "surface": "#f8f5ee",
+    "text": "#252729",
+    "muted": "#6c6d6f",
+    "accent": "#b5481d",
+    "border": "#d1c8b8",
+    "codeBackground": "#171a1d",
+    "codeText": "#f2f4f5",
+    "bodyFont": "editorial",
+    "headingFont": "system",
+    "codeFont": "mono",
+    "fontSize": 19,
+    "lineHeight": 1.72,
+    "titleSize": 68,
+    "width": 780,
+    "radius": 2,
+    "titleAlign": "left",
+    "customCss": ""
+  },
+  "updatedAt": "2026-11-12T20:38:00.412Z"
+}
