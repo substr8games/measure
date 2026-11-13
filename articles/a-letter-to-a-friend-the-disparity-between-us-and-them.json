@@ -1,0 +1,124 @@
+{
+  "schema": "phi-labs.article.v1",
+  "id": "a-letter-to-a-friend-the-disparity-between-us-and-them",
+  "type": "article",
+  "title": "A Letter to a Friend: the Disparity Between Us and Them",
+  "profileId": "article",
+  "subtitle": "",
+  "doi": "10.5281/zenodo.24197670",
+  "summary": "",
+  "author": "Phi Labs Research",
+  "date": "2026-11-13",
+  "published": "2026-11-13",
+  "section": "humanities",
+  "sections": [
+    "humanities"
+  ],
+  "tags": [
+    "class-warfare"
+  ],
+  "showToc": false,
+  "classification": "explainer",
+  "markdown": "## RE: THERE IS SOMETHING IN THE AIR\n\nI appreciate that you've noticed the shift in me over the last year, and it comes down to this: when I was unable to return to normal work, it had many side effects. Take a look at the premise of what I've been researching and see if the claim in the beginning does not logically follow from the conclusion.\n\n\n## THE CLAIM AND THE ACCUSATION\n\nAll of the institutions that control the interfaces we have to use to engage with society and government are rigged against the average person to extract and funnel time, energy, and money into someone else's pockets. They have been thoroughly captured by corporations that hold such a disproportionate amount of unchecked power that they write the actual laws the government uses to police them—and then use that compromised legal apparatus to confer benefits to themselves and work against the public interest wherever it makes them money (Gilens & Page, 2014). It is called **regulatory capture** (Stigler, 1971), and it is so pervasive that it impacts almost every aspect of the average person's life. It allows them to set up tollbooth after tollbooth—what economists call **rent-seeking** (Tullock, 1967; Krueger, 1974)—at every interface where we are forced to interact with an institution-owned system (work, school, shopping, voting, the economy), then force people to run the gauntlet every single day.\n\n## THE BEAST AND THE MILL\n\nThink of it like this: the average person gets treated like a beast on a treadmill, where the treadmill powers the economic engine, and the engine itself is compromised to generate currency for the corporations. Every day, this confers a little more power to the corporations and exhausts the working class that much more. When we are no longer forced to constantly engage with the interfaces that extract our time, energy, and economic value for someone in a position of economic power, you eventually—and suddenly—get flooded with huge amounts of energy that have to go somewhere (Mullainathan & Shafir, 2013). That is why I am always so amped up.\n\n## TOO BIG TO FAIL -- OR TO REGULATE\n\nThe implications of this are nearly impossible to believe for the average person because they have no frame of reference for a state where they are not constantly being milked for their value. But listen to this: what happened to me is just the natural state of the brain when it is not subject to continuous political and economic extraction. I am not saying everyone would agree with me given the same circumstances. I am saying there would finally be time and energy available to discuss how to govern the same corporations that currently operate with complete impunity, immunity, and exemption from regulation and the law. As it stands, they are functionally untouchable.\n\n\n## HIDDEN IN PLAIN SIGHT\n\nNow think about this. Everything above is just one logical conclusion following the next—it makes complete sense when you stop and trace it, and none of it is a new concept. Yet one of the built-in results of this system is that the average person is constantly interrupted from thinking about it by that exact same system. That is why the environment is hypersaturated with attention funnels and information warfare (Wu, 2016; Zuboff, 2019) that pit the middle class against each other instead of allowing them to govern the institutions they are subject to. And you can sum up the entire thing in two words (Buffett, 2006):\n\n**Class warfare.**\n\n---\n\n### LOGICAL CHAIN & CITATION MAP\n\n    Institutional Interfaces & Regulatory Capture (Gilens & Page, 2014; Stigler, 1971)\n    Corporations capture governing institutions, write their own rules, and use the legal apparatus to extract time, energy, and money from the public.\n    Institutional Tollbooths & The Treadmill (Tullock, 1967; Krueger, 1974)\n    Rent-seeking bottlenecks across work, school, commerce, and voting exhaust the working class daily while compounding corporate power.\n    Stepping Off the Interfaces & Reclaimed Energy (Mullainathan & Shafir, 2013)\n    Removing chronic scarcity and extractive bandwidth taxes restores baseline brain energy, creating the mental surplus needed to question unaccountable power.\n    Attention Funnels & Class Warfare (Wu, 2016; Zuboff, 2019; Buffett, 2006)\n    The same system interrupts collective clarity through information saturation, pitting the middle class against itself so corporations remain untouchable.\n\n### REFERENCES\n\n    Buffett, W. (2006). Quoted in B. Stein, \"In Class Warfare, Guess Which Class Is Winning.\" The New York Times, November 26, 2006.\n    Gilens, M., & Page, B. I. (2014). \"Testing Theories of American Politics: Elites, Interest Groups, and Average Citizens.\" Perspectives on Politics, 12(3), 564–581.\n    Krueger, A. O. (1974). \"The Political Economy of the Rent-Seeking Society.\" American Economic Review, 64(3), 291–303.\n    Mullainathan, S., & Shafir, E. (2013). Scarcity: Why Having Too Little Means So Much. Times Books.\n    Stigler, G. J. (1971). \"The Theory of Economic Regulation.\" The Bell Journal of Economics and Management Science, 2(1), 3–21.\n    Tullock, G. (1967). \"The Welfare Costs of Tariffs, Monopolies, and Theft.\" Western Economic Journal, 5(3), 224–232.\n    Wu, T. (2016). The Attention Merchants: The Epic Scramble to Get Inside Our Heads. Knopf.\n    Zuboff, S. (2019). The Age of Surveillance Capitalism. PublicAffairs.\n\n[R.A.I.D.](https://measure.philabsresearch.io/#/article/r-a-i-d-license) (C) Phi Labs Research 2026\n**DOI**: 10.5281/zenodo.24197670",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "RE: THERE IS SOMETHING IN THE AIR"
+    },
+    {
+      "type": "paragraph",
+      "text": "I appreciate that you've noticed the shift in me over the last year, and it comes down to this: when I was unable to return to normal work, it had many side effects. Take a look at the premise of what I've been researching and see if the claim in the beginning does not logically follow from the conclusion."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "THE CLAIM AND THE ACCUSATION"
+    },
+    {
+      "type": "paragraph",
+      "text": "All of the institutions that control the interfaces we have to use to engage with society and government are rigged against the average person to extract and funnel time, energy, and money into someone else's pockets. They have been thoroughly captured by corporations that hold such a disproportionate amount of unchecked power that they write the actual laws the government uses to police them—and then use that compromised legal apparatus to confer benefits to themselves and work against the public interest wherever it makes them money (Gilens & Page, 2014). It is called regulatory capture (Stigler, 1971), and it is so pervasive that it impacts almost every aspect of the average person's life. It allows them to set up tollbooth after tollbooth—what economists call rent-seeking (Tullock, 1967; Krueger, 1974)—at every interface where we are forced to interact with an institution-owned system (work, school, shopping, voting, the economy), then force people to run the gauntlet every single day."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "THE BEAST AND THE MILL"
+    },
+    {
+      "type": "paragraph",
+      "text": "Think of it like this: the average person gets treated like a beast on a treadmill, where the treadmill powers the economic engine, and the engine itself is compromised to generate currency for the corporations. Every day, this confers a little more power to the corporations and exhausts the working class that much more. When we are no longer forced to constantly engage with the interfaces that extract our time, energy, and economic value for someone in a position of economic power, you eventually—and suddenly—get flooded with huge amounts of energy that have to go somewhere (Mullainathan & Shafir, 2013). That is why I am always so amped up."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "TOO BIG TO FAIL -- OR TO REGULATE"
+    },
+    {
+      "type": "paragraph",
+      "text": "The implications of this are nearly impossible to believe for the average person because they have no frame of reference for a state where they are not constantly being milked for their value. But listen to this: what happened to me is just the natural state of the brain when it is not subject to continuous political and economic extraction. I am not saying everyone would agree with me given the same circumstances. I am saying there would finally be time and energy available to discuss how to govern the same corporations that currently operate with complete impunity, immunity, and exemption from regulation and the law. As it stands, they are functionally untouchable."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "HIDDEN IN PLAIN SIGHT"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now think about this. Everything above is just one logical conclusion following the next—it makes complete sense when you stop and trace it, and none of it is a new concept. Yet one of the built-in results of this system is that the average person is constantly interrupted from thinking about it by that exact same system. That is why the environment is hypersaturated with attention funnels and information warfare (Wu, 2016; Zuboff, 2019) that pit the middle class against each other instead of allowing them to govern the institutions they are subject to. And you can sum up the entire thing in two words (Buffett, 2006):"
+    },
+    {
+      "type": "paragraph",
+      "text": "Class warfare."
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "LOGICAL CHAIN & CITATION MAP"
+    },
+    {
+      "type": "paragraph",
+      "text": "Institutional Interfaces & Regulatory Capture (Gilens & Page, 2014; Stigler, 1971)\n    Corporations capture governing institutions, write their own rules, and use the legal apparatus to extract time, energy, and money from the public.\n    Institutional Tollbooths & The Treadmill (Tullock, 1967; Krueger, 1974)\n    Rent-seeking bottlenecks across work, school, commerce, and voting exhaust the working class daily while compounding corporate power.\n    Stepping Off the Interfaces & Reclaimed Energy (Mullainathan & Shafir, 2013)\n    Removing chronic scarcity and extractive bandwidth taxes restores baseline brain energy, creating the mental surplus needed to question unaccountable power.\n    Attention Funnels & Class Warfare (Wu, 2016; Zuboff, 2019; Buffett, 2006)\n    The same system interrupts collective clarity through information saturation, pitting the middle class against itself so corporations remain untouchable."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "REFERENCES"
+    },
+    {
+      "type": "paragraph",
+      "text": "Buffett, W. (2006). Quoted in B. Stein, \"In Class Warfare, Guess Which Class Is Winning.\" The New York Times, November 26, 2006.\n    Gilens, M., & Page, B. I. (2014). \"Testing Theories of American Politics: Elites, Interest Groups, and Average Citizens.\" Perspectives on Politics, 12(3), 564–581.\n    Krueger, A. O. (1974). \"The Political Economy of the Rent-Seeking Society.\" American Economic Review, 64(3), 291–303.\n    Mullainathan, S., & Shafir, E. (2013). Scarcity: Why Having Too Little Means So Much. Times Books.\n    Stigler, G. J. (1971). \"The Theory of Economic Regulation.\" The Bell Journal of Economics and Management Science, 2(1), 3–21.\n    Tullock, G. (1967). \"The Welfare Costs of Tariffs, Monopolies, and Theft.\" Western Economic Journal, 5(3), 224–232.\n    Wu, T. (2016). The Attention Merchants: The Epic Scramble to Get Inside Our Heads. Knopf.\n    Zuboff, S. (2019). The Age of Surveillance Capitalism. PublicAffairs."
+    },
+    {
+      "type": "paragraph",
+      "text": "R.A.I.D. (C) Phi Labs Research 2026\nDOI: 10.5281/zenodo.24197670"
+    }
+  ],
+  "readingMinutes": 4,
+  "heroImage": "",
+  "images": [],
+  "attachments": [],
+  "style": {
+    "background": "#e9e4d9",
+    "surface": "#f8f5ee",
+    "text": "#252729",
+    "muted": "#6c6d6f",
+    "accent": "#b5481d",
+    "border": "#d1c8b8",
+    "codeBackground": "#171a1d",
+    "codeText": "#f2f4f5",
+    "bodyFont": "editorial",
+    "headingFont": "system",
+    "codeFont": "mono",
+    "fontSize": 19,
+    "lineHeight": 1.72,
+    "titleSize": 68,
+    "width": 780,
+    "radius": 2,
+    "titleAlign": "left",
+    "customCss": ""
+  },
+  "updatedAt": "2026-11-13T14:23:51.631Z"
+}
