@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-13T00:24:44.237Z",
+  "updatedAt": "2026-11-13T00:29:53.812Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -36,6 +36,47 @@
         "image": "images/media/mystery-software-b7015fe6-4f08a6d22c5db938.png"
       },
       "updatedAt": "2026-11-13T00:24:42.089Z"
+    },
+    {
+      "id": "structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p",
+      "type": "article",
+      "title": "Structuralist Methodology: Foundations for Actionable Discourse in Contemporary Philosophy",
+      "subtitle": "Academic institutions can recognize and reproduce philosophical work independently of its capacity to alter, predict, or intervene in the systems it describes. The prevalence of non-actionable discourse is a question for empirical audit. This report introduces an output-based operational classification of philosophical inquiry, establishes the distinction between institutional recognition and actionable capability, and evaluates theoretical frameworks by what their investigations enable rather than how their traditions classify themselves.",
+      "summary": "Academic institutions can recognize and reproduce philosophical work independently of its capacity to alter, predict, or intervene in the systems it describes. The prevalence of non-actionable discourse is a question for empirical audit. This report introduces an output-based operational classification of philosophical inquiry, establishes the distinction between institutional recognition and actionable capability, and evaluates theoretical frameworks by what their investigations enable rather than how their traditions classify themselves.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "special-reports"
+      ],
+      "tags": [
+        "structuralism",
+        "standard",
+        "philosophy",
+        "foundations",
+        "action"
+      ],
+      "doi": "10.5281/zenodo.24174297",
+      "author": "Phi Labs Research",
+      "published": "2026-11-12",
+      "date": "2026-11-12",
+      "updatedAt": "2026-11-13T00:29:47.131Z",
+      "readingMinutes": 1,
+      "classification": "deep-dive",
+      "content": "articles/structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p.json",
+      "url": "#/article/structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p/structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p-25cce602d5627628.pdf",
+      "attachments": [
+        {
+          "name": "PHI-RESEARCH-SMAD-001.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p/structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p-25cce602d5627628.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 741645065,
+          "releaseTag": "measure-pdf-structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
     },
     {
       "id": "the-complaint-is-permitted-the-remedy-is-not",

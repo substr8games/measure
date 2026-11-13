@@ -6,7 +6,7 @@
   <description>All published articles, including editorials, satire, Breaking, Play, and Special Reports.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Fri, 13 Nov 2026 00:24:44 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 13 Nov 2026 00:29:54 GMT</lastBuildDate>
   <item>
     <title>The Complaint Is Permitted. The Remedy Is Not.</title>
     <link>https://philabsresearch.io/read/the-complaint-is-permitted-the-remedy-is-not/</link>
@@ -16,6 +16,16 @@
     <category>humanities</category>
     <category>technology</category>
     <category>politics</category>
+    <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
+  </item>
+  <item>
+    <title>Structuralist Methodology: Foundations for Actionable Discourse in Contemporary Philosophy</title>
+    <link>https://philabsresearch.io/read/structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p/</link>
+    <guid isPermaLink="true">https://philabsresearch.io/read/structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p/</guid>
+    <description>Academic institutions can recognize and reproduce philosophical work independently of its capacity to alter, predict, or intervene in the systems it describes. The prevalence of non-actionable discourse is a question for empirical audit. This report introduces an output-based operational classification of philosophical inquiry, establishes the distinction between institutional recognition and actionable capability, and evaluates theoretical frameworks by what their investigations enable rather than how their traditions classify themselves.</description>
+    <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
+    <category>humanities</category>
+    <category>special-reports</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
