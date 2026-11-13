@@ -1,8 +1,42 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-12T20:38:06.343Z",
+  "updatedAt": "2026-11-13T00:24:44.237Z",
   "items": [
+    {
+      "schema": "phi-labs.media.v1",
+      "id": "mystery-software-b7015fe6",
+      "type": "media",
+      "mediaType": "image",
+      "mediaKind": "funny",
+      "title": "mystery software",
+      "summary": "",
+      "blurb": "",
+      "advertiser": "",
+      "galleryId": "",
+      "viewerImage": "",
+      "viewerCaption": "",
+      "tags": [
+        "useless"
+      ],
+      "section": "curiosities",
+      "sections": [
+        "curiosities"
+      ],
+      "date": "2026-11-13",
+      "published": "2026-11-13",
+      "url": "images/media/mystery-software-b7015fe6-4f08a6d22c5db938.png",
+      "image": "images/media/mystery-software-b7015fe6-4f08a6d22c5db938.png",
+      "pdf": "",
+      "file": "images/media/mystery-software-b7015fe6-4f08a6d22c5db938.png",
+      "originalFilename": "zathura-mystery-software.png",
+      "mimeType": "image/png",
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/media/mystery-software-b7015fe6-4f08a6d22c5db938.png"
+      },
+      "updatedAt": "2026-11-13T00:24:42.089Z"
+    },
     {
       "id": "the-complaint-is-permitted-the-remedy-is-not",
       "type": "article",
