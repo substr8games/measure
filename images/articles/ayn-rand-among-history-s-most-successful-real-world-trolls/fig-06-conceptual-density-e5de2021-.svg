@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" role="img" aria-labelledby="title desc">
+<title id="title">Figure 06: Conceptual density schematic</title><desc id="desc">A non-numeric conceptual chart shows rhetorical provocation fluctuating and increasing across exposure while operational specificity follows a separate flatter path. The graph is illustrative, not measured data.</desc>
+<rect width="1000" height="320" fill="#10151E"/><rect x="12" y="12" width="976" height="296" rx="12" fill="none" stroke="#344251"/>
+<text x="36" y="40" fill="#AEBFCD" font-family="monospace" font-size="14" letter-spacing="2">FIG.06 / CONCEPTUAL RELATIONSHIP — NOT MEASURED DATA</text>
+<g stroke="#324251" stroke-width="1"><path d="M98 83 H938 M98 126 H938 M98 169 H938 M98 212 H938 M98 255 H938" stroke-dasharray="4 6"/></g>
+<path d="M98 62 V255 H938" stroke="#8797A8" stroke-width="2" fill="none"/>
+<text x="32" y="173" transform="rotate(-90 32 173)" text-anchor="middle" fill="#AEBFCD" font-family="sans-serif" font-size="17">Relative intensity</text>
+<text x="900" y="290" text-anchor="end" fill="#AEBFCD" font-family="sans-serif" font-size="17">Exposure / repetition →</text>
+<path d="M100 247 C165 247 195 230 240 205 S302 244 348 218 S410 110 463 166 S515 211 558 146 S624 181 676 99 S751 161 812 80 S868 115 936 62" fill="none" stroke="#CB97FF" stroke-width="4"/>
+<path d="M100 245 C211 246 289 237 355 228 S503 225 590 216 S800 208 936 205" fill="none" stroke="#55C5FF" stroke-width="3" stroke-dasharray="10 7"/>
+<rect x="576" y="55" width="345" height="54" rx="6" fill="#10151E" stroke="#344251"/>
+<path d="M594 74 H644" stroke="#CB97FF" stroke-width="4"/><text x="655" y="80" font-family="sans-serif" font-size="16" fill="#ECECF4">Rhetorical provocation</text>
+<path d="M594 95 H644" stroke="#55C5FF" stroke-width="3" stroke-dasharray="8 5"/><text x="655" y="101" font-family="sans-serif" font-size="16" fill="#ECECF4">Operational specificity</text>
+</svg>

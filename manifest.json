@@ -1,8 +1,34 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-13T14:23:54.239Z",
+  "updatedAt": "2026-11-18T18:12:14.808Z",
   "items": [
+    {
+      "id": "ayn-rand-among-history-s-most-successful-real-world-trolls",
+      "type": "article",
+      "title": "Ayn Rand Among History’s Most Successful Real-World Trolls",
+      "subtitle": "",
+      "summary": "",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [],
+      "doi": "",
+      "author": "Phi Labs",
+      "published": "2026-11-18",
+      "date": "2026-11-18",
+      "updatedAt": "2026-11-18T18:12:10.657Z",
+      "readingMinutes": 16,
+      "classification": "",
+      "content": "articles/ayn-rand-among-history-s-most-successful-real-world-trolls.json",
+      "url": "#/article/ayn-rand-among-history-s-most-successful-real-world-trolls",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "id": "a-letter-to-a-friend-the-disparity-between-us-and-them",
       "type": "article",

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" role="img" aria-labelledby="title desc">
+<title id="title">Figure 07: Final diagnostic readout</title><desc id="desc">A laboratory-style readout labels the subject troll-equivalent, with authorial intent undetermined and cultural replication observed.</desc>
+<rect width="1000" height="320" fill="#10151E"/><rect x="12" y="12" width="976" height="296" rx="12" fill="none" stroke="#344251"/>
+<text x="38" y="43" fill="#AEBFCD" font-family="monospace" font-size="15" letter-spacing="2">PHI LABS / BEHAVIORAL &amp; IDEOLOGICAL AUDIT DIVISION</text><path d="M38 57 H961" stroke="#344251" stroke-width="2"/>
+<text x="41" y="96" fill="#AEBFCD" font-family="monospace" font-size="16">DOC: TM-AUD-1957-RAND</text><text x="960" y="96" text-anchor="end" fill="#AEBFCD" font-family="monospace" font-size="16">CASE STATUS: CLOSED</text>
+<rect x="38" y="115" width="924" height="110" rx="8" fill="#3A2128" stroke="#F06E65" stroke-width="3"/>
+<text x="500" y="156" fill="#F7BAB2" font-family="monospace" font-size="20" letter-spacing="4" text-anchor="middle">FUNCTIONAL PHENOTYPE</text>
+<text x="500" y="203" fill="#FFF4F3" font-family="sans-serif" font-size="51" font-weight="bold" letter-spacing="4" text-anchor="middle">TROLL-EQUIVALENT</text>
+<rect x="38" y="242" width="446" height="49" rx="6" fill="#1B2B35" stroke="#55C5FF"/><rect x="516" y="242" width="446" height="49" rx="6" fill="#18342B" stroke="#4BEA91"/>
+<text x="261" y="272" text-anchor="middle" fill="#ACDDFA" font-size="20" font-family="monospace">INTENT: INDETERMINATE</text>
+<text x="739" y="272" text-anchor="middle" fill="#B0F2C8" font-size="20" font-family="monospace">REPLICATION: OBSERVED</text>
+</svg>
