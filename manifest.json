@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-21T05:49:49.062Z",
+  "updatedAt": "2026-11-21T06:01:36.970Z",
   "items": [
     {
       "id": "through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s",
@@ -20,7 +20,7 @@
       "author": "Phi Labs",
       "published": "2026-11-21",
       "date": "2026-11-21",
-      "updatedAt": "2026-11-21T05:49:42.618Z",
+      "updatedAt": "2026-11-21T06:01:34.452Z",
       "readingMinutes": 16,
       "classification": "",
       "content": "articles/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s.json",
@@ -30,9 +30,7 @@
         {
           "name": "through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s-2.pdf",
           "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s-1427d35d88328663.pdf",
-          "mimeType": "application/pdf",
-          "releaseAssetId": 774578984,
-          "releaseTag": "measure-pdf-through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s"
+          "mimeType": "application/pdf"
         }
       ],
       "directory": {
