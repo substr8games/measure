@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-21T06:01:36.970Z",
+  "updatedAt": "2026-11-21T06:55:36.831Z",
   "items": [
     {
       "id": "through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s",
@@ -90,40 +90,6 @@
       "directory": {
         "style": "text"
       }
-    },
-    {
-      "schema": "phi-labs.media.v1",
-      "id": "mystery-software-b7015fe6",
-      "type": "media",
-      "mediaType": "image",
-      "mediaKind": "funny",
-      "title": "mystery software",
-      "summary": "",
-      "blurb": "",
-      "advertiser": "",
-      "galleryId": "",
-      "viewerImage": "",
-      "viewerCaption": "",
-      "tags": [
-        "useless"
-      ],
-      "section": "curiosities",
-      "sections": [
-        "curiosities"
-      ],
-      "date": "2026-11-13",
-      "published": "2026-11-13",
-      "url": "images/media/mystery-software-b7015fe6-4f08a6d22c5db938.png",
-      "image": "images/media/mystery-software-b7015fe6-4f08a6d22c5db938.png",
-      "pdf": "",
-      "file": "images/media/mystery-software-b7015fe6-4f08a6d22c5db938.png",
-      "originalFilename": "zathura-mystery-software.png",
-      "mimeType": "image/png",
-      "directory": {
-        "style": "thumbnail",
-        "image": "images/media/mystery-software-b7015fe6-4f08a6d22c5db938.png"
-      },
-      "updatedAt": "2026-11-13T00:24:42.089Z"
     },
     {
       "id": "structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p",
