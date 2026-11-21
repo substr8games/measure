@@ -1,8 +1,44 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-18T18:12:14.808Z",
+  "updatedAt": "2026-11-21T05:49:49.062Z",
   "items": [
+    {
+      "id": "through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s",
+      "type": "article",
+      "title": "Through No One's Fault, Apparently: How Reddit Became a Captured-ass Fifth-World Shithole",
+      "subtitle": "",
+      "summary": "",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "technology",
+        "special-reports"
+      ],
+      "tags": [],
+      "doi": "",
+      "author": "Phi Labs",
+      "published": "2026-11-21",
+      "date": "2026-11-21",
+      "updatedAt": "2026-11-21T05:49:42.618Z",
+      "readingMinutes": 16,
+      "classification": "",
+      "content": "articles/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s.json",
+      "url": "#/article/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s-1427d35d88328663.pdf",
+      "attachments": [
+        {
+          "name": "through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s-2.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s-1427d35d88328663.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 774578984,
+          "releaseTag": "measure-pdf-through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "id": "ayn-rand-among-history-s-most-successful-real-world-trolls",
       "type": "article",
