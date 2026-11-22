@@ -1,8 +1,47 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-21T06:55:36.831Z",
+  "updatedAt": "2026-11-22T21:25:55.323Z",
   "items": [
+    {
+      "id": "the-death-of-the-chosen-one",
+      "type": "article",
+      "title": "The Death of the Chosen One",
+      "subtitle": "Why institutions confuse persistence with legitimacy, how unexamined residue stalls repair, and the four-question test no leader gets to exempt themselves from.",
+      "summary": "Why institutions confuse persistence with legitimacy, how unexamined residue stalls repair, and the four-question test no leader gets to exempt themselves from.",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "gameplay-mechanics",
+        "power-fantasy",
+        "asymmetry"
+      ],
+      "doi": "",
+      "author": "Phi Labs Research",
+      "published": "2026-11-22",
+      "date": "2026-11-22",
+      "updatedAt": "2026-11-22T21:25:46.636Z",
+      "readingMinutes": 7,
+      "classification": "copy",
+      "content": "articles/the-death-of-the-chosen-one.json",
+      "url": "#/article/the-death-of-the-chosen-one",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-death-of-the-chosen-one/the-death-of-the-chosen-one-57b7847ba4a05bfa.pdf",
+      "attachments": [
+        {
+          "name": "the-death-of-the-chosen-one.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-death-of-the-chosen-one/the-death-of-the-chosen-one-57b7847ba4a05bfa.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 780511861,
+          "releaseTag": "measure-pdf-the-death-of-the-chosen-one"
+        }
+      ],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/the-death-of-the-chosen-one/chosen-one-hero-a3767fff-.png"
+      }
+    },
     {
       "id": "through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s",
       "type": "article",

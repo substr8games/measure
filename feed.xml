@@ -6,7 +6,16 @@
   <description>All published articles, including editorials, satire, Breaking, Play, and Special Reports.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Sat, 21 Nov 2026 06:55:37 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 22 Nov 2026 21:25:56 GMT</lastBuildDate>
+  <item>
+    <title>The Death of the Chosen One</title>
+    <link>https://philabsresearch.io/read/the-death-of-the-chosen-one/</link>
+    <guid isPermaLink="true">https://philabsresearch.io/read/the-death-of-the-chosen-one/</guid>
+    <description>Why institutions confuse persistence with legitimacy, how unexamined residue stalls repair, and the four-question test no leader gets to exempt themselves from.</description>
+    <pubDate>Sun, 22 Nov 2026 12:00:00 GMT</pubDate>
+    <category>humanities</category>
+    <media:content url="https://philabsresearch.io/images/articles/the-death-of-the-chosen-one/chosen-one-hero-a3767fff-.png" medium="image" />
+  </item>
   <item>
     <title>Through No One&#39;s Fault, Apparently: How Reddit Became a Captured-ass Fifth-World Shithole</title>
     <link>https://philabsresearch.io/read/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s/</link>
