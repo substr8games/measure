@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-22T21:25:55.323Z",
+  "updatedAt": "2026-11-22T21:28:41.802Z",
   "items": [
     {
       "id": "the-death-of-the-chosen-one",
@@ -22,18 +22,18 @@
       "author": "Phi Labs Research",
       "published": "2026-11-22",
       "date": "2026-11-22",
-      "updatedAt": "2026-11-22T21:25:46.636Z",
+      "updatedAt": "2026-11-22T21:28:34.873Z",
       "readingMinutes": 7,
       "classification": "copy",
       "content": "articles/the-death-of-the-chosen-one.json",
       "url": "#/article/the-death-of-the-chosen-one",
-      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-death-of-the-chosen-one/the-death-of-the-chosen-one-57b7847ba4a05bfa.pdf",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-death-of-the-chosen-one/the-death-of-the-chosen-one-3d8ed22a067b719f.pdf",
       "attachments": [
         {
-          "name": "the-death-of-the-chosen-one.pdf",
-          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-death-of-the-chosen-one/the-death-of-the-chosen-one-57b7847ba4a05bfa.pdf",
+          "name": "the-death-of-the-chosen-one-1.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-death-of-the-chosen-one/the-death-of-the-chosen-one-3d8ed22a067b719f.pdf",
           "mimeType": "application/pdf",
-          "releaseAssetId": 780511861,
+          "releaseAssetId": 780519408,
           "releaseTag": "measure-pdf-the-death-of-the-chosen-one"
         }
       ],
