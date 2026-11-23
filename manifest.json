@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-23T17:36:10.446Z",
+  "updatedAt": "2026-11-23T17:38:42.075Z",
   "items": [
     {
       "id": "first-strike-denied-the-epistemic-vaccine",
@@ -67,7 +67,7 @@
       "author": "Phi Labs Investigates",
       "published": "2026-11-23",
       "date": "2026-11-23",
-      "updatedAt": "2026-11-23T17:27:52.298Z",
+      "updatedAt": "2026-11-23T17:38:38.784Z",
       "readingMinutes": 4,
       "classification": "investigation",
       "content": "articles/tin-can-s-secret-past-exposed.json",
