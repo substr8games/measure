@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="title desc">
+  
+  
+  <defs>
+    <style><![CDATA[
+      .mono{font-family:'IBM Plex Mono','DejaVu Sans Mono',monospace}
+      .sans{font-family:'IBM Plex Sans','Noto Sans',Arial,sans-serif}
+      .ink{fill:#17232b}.sub{fill:#52616a}.edge{stroke:#c3c9c7;stroke-width:1.8}
+    ]]></style>
+    <marker id="arrowSlate" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 1L9 5L0 9" fill="none" stroke="#596972" stroke-width="1.9"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="#f8f7f3"/>
+  <rect x="31" y="29" width="1538" height="842" fill="none" stroke="#c8cacc" stroke-width="1.8"/>
+  <path d="M31 29H231 M31 29V106 M1569 29H1369 M1569 29V106 M31 871H231 M31 871V795 M1569 871H1369 M1569 871V795" stroke="#ad2336" stroke-width="3" fill="none"/>
+  <text x="72" y="75" class="mono" font-size="18" font-weight="bold" fill="#a62233" letter-spacing="1.5">THE MEASURE / INSTITUTIONAL INTERFACES</text>
+  <text x="1528" y="75" class="mono" text-anchor="end" font-size="18" font-weight="bold" fill="#a62233" letter-spacing="1.5">FIGURE 02 / REV01</text>
+  <text x="72" y="122" class="sans ink" font-size="42" font-weight="800">THE FIRST-STRIKE ADVANTAGE</text>
+  <text x="73" y="157" class="mono sub" font-size="19">An information-ordering intervention, not an institutional permission request.</text>
+  <path d="M72 179H1528" stroke="#c3c6c5" stroke-width="2"/>
+  
+  <rect x="72" y="210" width="1456" height="43" fill="#332d31"/>
+  <text x="94" y="238" class="mono" fill="#fff" font-weight="bold" font-size="19" letter-spacing="1">A / LEGACY SEQUENCE</text>
+  <text x="1509" y="238" text-anchor="end" class="mono" fill="#edb0b4" font-weight="bold" font-size="17">REACTIVE CORRECTION</text>
+  <g>
+    <rect x="72" y="274" width="264" height="157" rx="6" fill="#fff" class="edge"/>
+    <path d="M72 274H336" stroke="#5f6870" stroke-width="6"/>
+    <text x="94" y="310" class="mono" fill="#7b8083" font-size="17">01 / T0</text>
+    <text x="94" y="346" class="sans ink" font-size="25" font-weight="800">PAPER</text>
+    <text x="94" y="375" class="sans ink" font-size="25" font-weight="800">PUBLISHED</text>
+    <text x="94" y="410" class="mono sub" font-size="14">Primary argument issued</text>
+  </g>
+  <g>
+    <rect x="370" y="274" width="264" height="157" rx="6" fill="#fff0ee" stroke="#bf747a" stroke-width="2"/>
+    <path d="M370 274H634" stroke="#b3313b" stroke-width="6"/>
+    <text x="392" y="310" class="mono" fill="#b3313b" font-size="17">02 / T1</text>
+    <text x="392" y="346" class="sans ink" font-size="25" font-weight="800">CRITIC</text>
+    <text x="392" y="375" class="sans ink" font-size="25" font-weight="800">REFRAMES</text>
+    <text x="392" y="410" class="mono sub" font-size="14">Substitute is supplied</text>
+  </g>
+  <g>
+    <rect x="668" y="274" width="264" height="157" rx="6" fill="#fff0ee" stroke="#bf747a" stroke-width="2"/>
+    <path d="M668 274H932" stroke="#b3313b" stroke-width="6"/>
+    <text x="690" y="310" class="mono" fill="#b3313b" font-size="17">03 / T2</text>
+    <text x="690" y="346" class="sans ink" font-size="25" font-weight="800">FRAMING</text>
+    <text x="690" y="375" class="sans ink" font-size="25" font-weight="800">CIRCULATES</text>
+    <text x="690" y="410" class="mono sub" font-size="14">Summary outruns source</text>
+  </g>
+  <g>
+    <rect x="966" y="274" width="264" height="157" rx="6" fill="#fff" class="edge"/>
+    <path d="M966 274H1230" stroke="#5f6870" stroke-width="6"/>
+    <text x="988" y="310" class="mono" fill="#7b8083" font-size="17">04 / T3</text>
+    <text x="988" y="346" class="sans ink" font-size="25" font-weight="800">AUTHOR</text>
+    <text x="988" y="375" class="sans ink" font-size="25" font-weight="800">CORRECTS</text>
+    <text x="988" y="410" class="mono sub" font-size="14">Rebuttal issued later</text>
+  </g>
+  <g>
+    <rect x="1264" y="274" width="264" height="157" rx="6" fill="#fff" class="edge"/>
+    <path d="M1264 274H1528" stroke="#5f6870" stroke-width="6"/>
+    <text x="1286" y="310" class="mono" fill="#7b8083" font-size="17">05 / T4</text>
+    <text x="1286" y="346" class="sans ink" font-size="25" font-weight="800">FRAMING</text>
+    <text x="1286" y="375" class="sans ink" font-size="25" font-weight="800">PERSISTS</text>
+    <text x="1286" y="410" class="mono sub" font-size="14">Correction competes</text>
+  </g>
+  <g stroke="#596972" stroke-width="2.5" fill="none" marker-end="url(#arrowSlate)">
+    <path d="M338 351H365"/><path d="M636 351H663"/><path d="M934 351H961"/><path d="M1232 351H1259"/>
+  </g>
+  
+  <path d="M72 462H1528" stroke="#ccd0ce" stroke-width="2"/>
+  <rect x="354" y="449" width="892" height="40" fill="#f8f7f3"/>
+  <text x="800" y="475" text-anchor="middle" class="mono" font-size="18" font-weight="bold" fill="#a62233" letter-spacing="0.5">THE DIAGNOSTIC RECORD MOVES BEFORE THE FIRST REVIEW</text>
+  
+  <rect x="72" y="511" width="1456" height="43" fill="#1b343b"/>
+  <text x="94" y="539" class="mono" fill="#fff" font-weight="bold" font-size="19" letter-spacing="1">B / EV SEQUENCE</text>
+  <text x="1509" y="539" text-anchor="end" class="mono" fill="#9fe2d2" font-weight="bold" font-size="17">PREEMPTIVE DIAGNOSTIC RECORD</text>
+  <g>
+    <rect x="72" y="575" width="264" height="157" rx="6" fill="#fff" class="edge"/>
+    <path d="M72 575H336" stroke="#5f6870" stroke-width="6"/>
+    <text x="94" y="611" class="mono" fill="#7b8083" font-size="17">01 / T-1</text>
+    <text x="94" y="647" class="sans ink" font-size="25" font-weight="800">CLAIMS</text>
+    <text x="94" y="676" class="sans ink" font-size="25" font-weight="800">AUDITED</text>
+    <text x="94" y="711" class="mono sub" font-size="14">Scope + evidence bound</text>
+  </g>
+  <g>
+    <rect x="370" y="575" width="264" height="157" rx="6" fill="#ebf5f1" stroke="#6a9d8e" stroke-width="2"/>
+    <path d="M370 575H634" stroke="#246c63" stroke-width="6"/>
+    <text x="392" y="611" class="mono" fill="#246c63" font-size="17">02 / T0</text>
+    <text x="392" y="647" class="sans ink" font-size="25" font-weight="800">EV</text>
+    <text x="392" y="676" class="sans ink" font-size="25" font-weight="800">PUBLISHED</text>
+    <text x="392" y="711" class="mono sub" font-size="14">Attached to source work</text>
+  </g>
+  <g>
+    <rect x="668" y="575" width="264" height="157" rx="6" fill="#fff" class="edge"/>
+    <path d="M668 575H932" stroke="#5f6870" stroke-width="6"/>
+    <text x="690" y="611" class="mono" fill="#7b8083" font-size="17">03 / T1</text>
+    <text x="690" y="647" class="sans ink" font-size="25" font-weight="800">CRITIC</text>
+    <text x="690" y="676" class="sans ink" font-size="25" font-weight="800">RESPONDS</text>
+    <text x="690" y="711" class="mono sub" font-size="14">Objection is inspectable</text>
+  </g>
+  <g>
+    <rect x="966" y="575" width="264" height="157" rx="6" fill="#ebf5f1" stroke="#6a9d8e" stroke-width="2"/>
+    <path d="M966 575H1230" stroke="#246c63" stroke-width="6"/>
+    <text x="988" y="611" class="mono" fill="#246c63" font-size="17">04 / T2</text>
+    <text x="988" y="647" class="sans ink" font-size="25" font-weight="800">OBJECTION</text>
+    <text x="988" y="676" class="sans ink" font-size="25" font-weight="800">TRIAGED</text>
+    <text x="988" y="711" class="mono sub" font-size="14">Materiality evaluated</text>
+  </g>
+  <g>
+    <rect x="1264" y="575" width="264" height="157" rx="6" fill="#fff" class="edge"/>
+    <path d="M1264 575H1528" stroke="#5f6870" stroke-width="6"/>
+    <text x="1286" y="611" class="mono" fill="#7b8083" font-size="17">05 / T3</text>
+    <text x="1286" y="647" class="sans ink" font-size="25" font-weight="800">CLAIM</text>
+    <text x="1286" y="676" class="sans ink" font-size="25" font-weight="800">EVALUATED</text>
+    <text x="1286" y="711" class="mono sub" font-size="14">Evidence stays central</text>
+  </g>
+  <g stroke="#596972" stroke-width="2.5" fill="none" marker-end="url(#arrowSlate)">
+    <path d="M338 652H365"/><path d="M636 652H663"/><path d="M934 652H961"/><path d="M1232 652H1259"/>
+  </g>
+  <rect x="72" y="767" width="1456" height="72" rx="4" fill="#1b303c"/>
+  <path d="M72 767H1528" stroke="#bb934d" stroke-width="5"/>
+  <text x="800" y="801" class="sans" text-anchor="middle" font-size="24" font-weight="800" fill="#fff">EDITORIAL ADMISSION IS NOT EVIDENTIARY VALIDITY.</text>
+  <text x="800" y="823" text-anchor="middle" class="mono" font-size="16" fill="#d4dde0">The EV changes the order of public information—not the truth value of the claim.</text>
+  <text x="72" y="860" class="mono" font-size="14" fill="#687378">PHI-EVAC-001 / SCHEMATIC PROCESS COMPARISON</text>
+  <text x="1528" y="860" text-anchor="end" class="mono" font-size="14" fill="#687378">NO EMPIRICAL EFFECT SIZE CLAIMED</text>
+</svg>

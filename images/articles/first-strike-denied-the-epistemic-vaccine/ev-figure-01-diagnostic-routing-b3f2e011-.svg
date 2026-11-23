@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="title desc">
+  
+  
+  <defs>
+    <style><![CDATA[
+      .mono{font-family:'IBM Plex Mono','DejaVu Sans Mono',monospace}
+      .sans{font-family:'IBM Plex Sans','Noto Sans',Arial,sans-serif}
+      .ink{fill:#17232b}.sub{fill:#54616a}.paper{fill:#f8f7f3}.edge{stroke:#c7c9c7;stroke-width:2}
+      .dash{stroke:#c5c9c8;stroke-width:1.5;stroke-dasharray:5 7}.line{stroke:#69777d;stroke-width:2.5;fill:none}
+      .arrow{stroke:#566873;stroke-width:3;fill:none;marker-end:url(#arrowDark)}
+    ]]></style>
+    <marker id="arrowDark" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 1 L9 5 L0 9" fill="none" stroke="#566873" stroke-width="1.9"/></marker>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 1 L9 5 L0 9" fill="none" stroke="#246c63" stroke-width="1.9"/></marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 1 L9 5 L0 9" fill="none" stroke="#b3313b" stroke-width="1.9"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="#f8f7f3"/>
+  <rect x="31" y="29" width="1538" height="842" fill="none" stroke="#c8cacc" stroke-width="1.8"/>
+  <path d="M31 29H231 M31 29V106 M1569 29H1369 M1569 29V106 M31 871H231 M31 871V795 M1569 871H1369 M1569 871V795" stroke="#ad2336" stroke-width="3" fill="none"/>
+  <g class="mono" fill="#a62233" font-size="18" font-weight="bold" letter-spacing="1.5">
+    <text x="72" y="75">THE MEASURE / STRUCTURAL METHODS</text>
+    <text x="1525" y="75" text-anchor="end">FIGURE 01 / REV01</text>
+  </g>
+  <text x="72" y="122" class="sans ink" font-size="42" font-weight="800" letter-spacing="1">DIAGNOSTIC ADMISSION PROTOCOL</text>
+  <text x="73" y="157" class="mono sub" font-size="19">An objection must contact the proposition it purports to defeat.</text>
+  <path d="M72 178H1528" stroke="#c3c6c5" stroke-width="2"/>
+  <text x="74" y="222" class="mono" font-size="17" font-weight="bold" fill="#9e2635" letter-spacing="1.2">01 / ESTABLISH THE EVALUATION BOUNDARY</text>
+  
+  <g>
+    <rect x="72" y="247" width="446" height="168" rx="7" fill="#fff" stroke="#bbc1c2" stroke-width="2"/>
+    <rect x="72" y="247" width="446" height="10" fill="#1b303c"/>
+    <text x="98" y="296" class="mono" font-size="17" font-weight="bold" fill="#9c2938">01 / P</text>
+    <text x="98" y="332" class="sans ink" font-size="26" font-weight="800">PROTECTED CLAIM</text>
+    <text x="98" y="369" class="mono sub" font-size="16">Proposition, declared scope,</text>
+    <text x="98" y="390" class="mono sub" font-size="16">evidence, and inferential limit.</text>
+  </g>
+  <g>
+    <rect x="577" y="247" width="446" height="168" rx="7" fill="#fff" stroke="#bbc1c2" stroke-width="2"/>
+    <rect x="577" y="247" width="446" height="10" fill="#1b303c"/>
+    <text x="603" y="296" class="mono" font-size="17" font-weight="bold" fill="#9c2938">02 / D</text>
+    <text x="603" y="332" class="sans ink" font-size="25" font-weight="800">ANTICIPATED DISMISSAL</text>
+    <text x="603" y="369" class="mono sub" font-size="16">Strongest plausible objection,</text>
+    <text x="603" y="390" class="mono sub" font-size="16">expressed on its own terms.</text>
+  </g>
+  <g>
+    <rect x="1082" y="247" width="446" height="168" rx="7" fill="#fff" stroke="#bbc1c2" stroke-width="2"/>
+    <rect x="1082" y="247" width="446" height="10" fill="#1b303c"/>
+    <text x="1108" y="296" class="mono" font-size="17" font-weight="bold" fill="#9c2938">03 / Q(D)</text>
+    <text x="1108" y="332" class="sans ink" font-size="26" font-weight="800">SUBSTITUTED BASIS</text>
+    <text x="1108" y="369" class="mono sub" font-size="16">Different premise, authority,</text>
+    <text x="1108" y="390" class="mono sub" font-size="16">category, or proof requirement.</text>
+  </g>
+  <path d="M521 330H565" class="arrow"/>
+  <path d="M1026 330H1070" class="arrow"/>
+  
+  <path d="M1305 418V446H800V473" class="arrow"/>
+  <text x="74" y="466" class="mono" font-size="17" font-weight="bold" fill="#9e2635" letter-spacing="1.2">02 / TEST MATERIALITY</text>
+  <g>
+    <rect x="472" y="475" width="656" height="123" rx="8" fill="#192e3b"/>
+    <path d="M472 485H1128" stroke="#ba9446" stroke-width="5"/>
+    <text x="800" y="524" class="mono" text-anchor="middle" font-size="19" font-weight="bold" fill="#f6ca79" letter-spacing="1">ACTUAL DEPENDENCY TEST</text>
+    <text x="800" y="555" class="sans" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">If established, does the objection</text>
+    <text x="800" y="582" class="sans" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">materially alter the actual claim?</text>
+  </g>
+  <text x="74" y="640" class="mono" font-size="17" font-weight="bold" fill="#9e2635" letter-spacing="1.2">03 / ROUTE BY THE RESULT</text>
+  
+  <path d="M710 599V620H399V659" fill="none" stroke="#246c63" stroke-width="3.2" marker-end="url(#arrowTeal)"/>
+  <path d="M890 599V620H1201V659" fill="none" stroke="#b3313b" stroke-width="3.2" marker-end="url(#arrowRed)"/>
+  <rect x="72" y="669" width="712" height="144" rx="7" fill="#eef5f1" stroke="#6a9f93" stroke-width="2"/>
+  <path d="M72 669V813" stroke="#246c63" stroke-width="9"/>
+  <text x="101" y="706" class="mono" font-size="18" font-weight="bold" fill="#246c63">YES / MATERIAL CHALLENGE</text>
+  <text x="101" y="742" class="sans ink" font-size="26" font-weight="800">ADMIT TO SUBSTANTIVE REVIEW</text>
+  <text x="101" y="775" class="mono sub" font-size="16">Test the record and inference; correct the</text>
+  <text x="101" y="796" class="mono sub" font-size="16">claim when the challenge is demonstrated.</text>
+  <rect x="816" y="669" width="712" height="144" rx="7" fill="#fff1ee" stroke="#c78b8c" stroke-width="2"/>
+  <path d="M816 669V813" stroke="#b3313b" stroke-width="9"/>
+  <text x="846" y="706" class="mono" font-size="18" font-weight="bold" fill="#b3313b">NO / NONRESPONSIVE DEFLECTION</text>
+  <text x="846" y="742" class="sans ink" font-size="26" font-weight="800">ISSUE DIAGNOSTIC RESOLUTION</text>
+  <text x="846" y="775" class="mono sub" font-size="16">Identify substitution; restore scope; name</text>
+  <text x="846" y="796" class="mono sub" font-size="16">the evidence that would actually refute P.</text>
+  <path d="M72 832H1528" stroke="#c3c6c5" stroke-width="2"/>
+  <text x="73" y="857" class="mono" font-size="15" font-weight="bold" fill="#17232b">INVARIANT: DISMISSING A DEFLECTION DOES NOT PROVE THE PROTECTED CLAIM.</text>
+  <text x="1528" y="857" class="mono" text-anchor="end" font-size="13" fill="#6c777b">PHI-EVAC-001 / SOURCE-BOUND MODEL</text>
+</svg>

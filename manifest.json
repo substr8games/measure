@@ -1,8 +1,49 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-22T21:28:41.802Z",
+  "updatedAt": "2026-11-23T17:09:35.560Z",
   "items": [
+    {
+      "id": "first-strike-denied-the-epistemic-vaccine",
+      "type": "article",
+      "title": "FIRST STRIKE DENIED: The Epistemic Vaccine",
+      "subtitle": "An institutional countermeasure against the preemptive substitution of an argument.",
+      "summary": "An institutional countermeasure against the preemptive substitution of an argument.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "special-reports"
+      ],
+      "tags": [
+        "asymmetric",
+        "academia",
+        "logical-fallacy",
+        "first-strike",
+        "tactical"
+      ],
+      "doi": "10.5281/zenodo.24456972",
+      "author": "Phi Labs Research",
+      "published": "2026-11-23",
+      "date": "2026-11-23",
+      "updatedAt": "2026-11-23T17:09:21.451Z",
+      "readingMinutes": 11,
+      "classification": "explainer",
+      "content": "articles/first-strike-denied-the-epistemic-vaccine.json",
+      "url": "#/article/first-strike-denied-the-epistemic-vaccine",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-first-strike-denied-the-epistemic-vaccine/first-strike-denied-the-epistemic-vaccine-73a10b5bd66f898d.pdf",
+      "attachments": [
+        {
+          "name": "First-Strike-Denied-The-Epistemic-Vaccine-Publication.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-first-strike-denied-the-epistemic-vaccine/first-strike-denied-the-epistemic-vaccine-73a10b5bd66f898d.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 783813031,
+          "releaseTag": "measure-pdf-first-strike-denied-the-epistemic-vaccine"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "id": "the-death-of-the-chosen-one",
       "type": "article",
