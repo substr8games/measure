@@ -6,7 +6,7 @@
   <description>All published articles, including editorials, satire, Breaking, Play, and Special Reports.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Mon, 23 Nov 2026 17:38:42 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 23 Nov 2026 21:17:55 GMT</lastBuildDate>
   <item>
     <title>TIN CAN&#39;S SECRET PAST EXPOSED</title>
     <link>https://philabsresearch.io/read/tin-can-s-secret-past-exposed/</link>
@@ -17,6 +17,17 @@
     <category>politics</category>
     <category>curiosities</category>
     <media:content url="https://philabsresearch.io/images/articles/tin-can-s-secret-past-exposed/04-tin-can-on-trial-c87b92a6-.png" medium="image" />
+  </item>
+  <item>
+    <title>Reddit Is Deprecated</title>
+    <link>https://philabsresearch.io/read/reddit-is-deprecated/</link>
+    <guid isPermaLink="true">https://philabsresearch.io/read/reddit-is-deprecated/</guid>
+    <description>Phi Labs Research has formally deprecated Reddit as a source. The platform remains available for its intended purpose of telling a stranger that their question has already been answered, then linking to a thread in which a different stranger asks the same question.</description>
+    <pubDate>Mon, 23 Nov 2026 12:00:00 GMT</pubDate>
+    <category>humanities</category>
+    <category>technology</category>
+    <category>curiosities</category>
+    <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
     <title>FIRST STRIKE DENIED: The Epistemic Vaccine</title>

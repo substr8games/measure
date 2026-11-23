@@ -1,0 +1,261 @@
+{
+  "schema": "phi-labs.article.v1",
+  "id": "reddit-is-deprecated",
+  "type": "article",
+  "title": "Reddit Is Deprecated",
+  "profileId": "article",
+  "subtitle": "Phi Labs Research has formally deprecated Reddit as a source. The platform remains available for its intended purpose of telling a stranger that their question has already been answered, then linking to a thread in which a different stranger asks the same question.",
+  "doi": "",
+  "summary": "Phi Labs Research has formally deprecated Reddit as a source. The platform remains available for its intended purpose of telling a stranger that their question has already been answered, then linking to a thread in which a different stranger asks the same question.",
+  "author": "Phi Labs Research",
+  "date": "2026-11-23",
+  "published": "2026-11-23",
+  "section": "humanities",
+  "sections": [
+    "humanities",
+    "technology",
+    "curiosities"
+  ],
+  "tags": [
+    "garbage",
+    "inadmissable",
+    "reddit",
+    "untrusted",
+    "zero-trust"
+  ],
+  "showToc": true,
+  "classification": "explainer",
+  "markdown": "# Reddit Is Deprecated\n\n![snoo gallows 2](images/articles/reddit-is-deprecated/snoo-gallows-2-37ad2faa-.png)\n\n*The Measure · Technology · November 23, 2026*\n\nPhi Labs Research has formally deprecated Reddit as a source. The platform remains available for its intended purpose of telling a stranger that their question has already been answered, then linking to a thread in which a different stranger asks the same question.\n\nThe research policy is simple. Reddit material gets **Q0 (Unreliable)** and is **inadmissible** as evidence, corroboration, or citation. The same rule applies when a thread turns up by accident. A researcher can establish a claim with admissible evidence, and that evidence gets the citation. The Reddit thread can continue doing whatever it was doing when we found it.\n\n## Why zero?\n\nBecause one would send the wrong message.\n\nConsider the sentence “Everyone knows this.” It sounds like a claim about the world. In a thread, it can turn out to mean that six people remember reading it there before. By the time it reaches the seventh person, they have six witnesses and still need a source.\n\nThat matters when we write something a reader ought to be able to check. If we say a company changed a rule, the reader should be able to see the rule and what changed. If we say a piece of software lost a feature, show the release where it disappeared or reproduce the behavior. A screenshot of a comment can faithfully preserve every pixel of somebody being wrong.\n\n## Migration notes\n\nIf a draft cites a Reddit thread for a product change, look for the release notes or the archived product page. If it cites a comment about a live performance, look for the recording, a contemporary review, or someone who was there. If the evidence still comes up short, take the claim out of the draft. You can still remember it fondly.\n\nAny objections may be posted to Reddit.\n\n---\n\n![reddit fifth world shithole](images/articles/reddit-is-deprecated/reddit-fifth-world-shithole-6262ccfe-.png)\n\n---\n\n## Addendum: The Differential Geometry and Topology of Q0\n\n*Phi Labs Research · Mathematical & Structuralist Post-Mortem · November 23, 2026*\n\nDeprecating Reddit to **Q0 (Unreliable)** is not a stylistic preference; it is the only mathematically coherent assignment available once the platform's citation topology, information flux, and spatial geometry are audited.\n\n### 1. Algebraic Topology: The Zero-Boundary Citation Cycle ($\\partial C = 0$)\n\nModel public discourse as a directed graph $G = (V, E)$, where vertices $v_i \\in V$ represent discrete claims and a directed edge $u \\to v$ denotes that $v$ cites, paraphrases, or relies upon $u$.\n\nIn an admissible empirical system, any valid claim $v_n$ is anchored to a primary artifact $v_0$—an archived product page, a diff, a signed release note, or direct instrument telemetry—with in-degree $\\deg^-(v_0) = 0$ representing an external boundary condition in physical reality. Expressed as a 1-chain $C = \\sum_{k=1}^{n} e_k$, an admissible proof has a non-zero topological boundary:\n\n$$\n\\partial C = v_n - v_0 \\neq 0\n$$\n\nThe starter audit identifies Reddit's native failure mode: six users recall reading a claim in prior threads, and the seventh user treats those six recollections as corroboration. Topologically, this collapses the DAG into a closed directed cycle $C_7 = (v_1 \\to v_2 \\to \\dots \\to v_7 \\to v_1)$ with zero external root. Taking the boundary operator over the closed loop yields:\n\n$$\n\\partial C_7 = \\sum_{i=1}^{7} \\left(v_{(i \\bmod 7) + 1} - v_i\\right) = 0\n$$\n\nA closed citation loop is a 1-cycle in the first homology group $H_1(G)$ with **zero boundary**. Upvotes, awards, and consensus replies merely assign scalar weights to vertices lying on a closed manifold that never intersects ground truth. Six witnesses circulating inside $\\ker(\\partial)$ do not produce six units of evidence; they trace a closed curve whose net displacement from reality is identically $\\mathbf{0}$.\n\n### 2. Vector Space Geometry: Why Q0 Cannot Be Q1\n\nIn a normed evidence space $\\mathcal{E}$, a primary verifiable artifact acts as a unit basis vector $\\mathbf{e}_i$ with $\\lVert\\mathbf{e}_i\\rVert = 1$. Assigning Reddit **Q1**—or any positive weight $\\epsilon > 0$, however small—introduces a fatal geometric vulnerability via scalar accumulation:\n\n$$\n\\left\\lVert \\sum_{k=1}^{N} \\epsilon \\, \\hat{\\mathbf{u}} \\right\\rVert = N\\epsilon\n$$\n\nFor any $\\epsilon > 0$, there exists a finite integer $N > \\frac{1}{\\epsilon}$ such that $N$ mutually plagiarizing threads achieve a greater vector norm than a single primary source, automating authority laundering. Setting the platform's admissibility weight strictly to **Q0** enforces annihilation under scalar multiplication:\n\n$$\n0 \\cdot \\sum_{k=1}^{N} \\text{thread}_k = \\mathbf{0} \\qquad \\forall N \\in \\mathbb{N}\n$$\n\nNo finite or countably infinite stack of Q0 objects can span a non-zero basis vector in $\\mathcal{E}$. A lossless PNG of a comment thread preserves every pixel of a zero-vector without altering its magnitude.\n\n### 3. Information Theory: Thermodynamic Heat Death of a Thread\n\nTreat sequential summaries across threads as a discrete Markov chain $X_0 \\to X_1 \\to \\dots \\to X_k$, where $X_0$ is the underlying real-world event (e.g., a deprecated software feature or rule change) and $X_k$ is the $k$-th user synthesis. By the **Data Processing Inequality**:\n\n$$\nI(X_0; X_k) \\le I(X_0; X_{k-1}) \\le \\dots \\le I(X_0; X_1)\n$$\n\nMutual information with reality $I(X_0; X_k)$ is monotonically non-increasing at every hop, while internal consensus confidence $P(\\text{“Everyone knows this”} \\mid X_1, \\dots, X_6)$ approaches $1$. Once $X_0$ is severed or never linked, $I(X_0; X_k) = 0$ while internal thread activity remains high. Thermodynamically, the system reaches **maximum epistemic entropy**: maximum local thermal agitation (nested replies, karma velocity, moral outrage) paired with zero extractable work (verifiable signal).\n\n### 4. Network Geometry: The Check-Valve Manifold & Dimensional Collapse\n\nBeyond individual threads, Reddit's 2026 infrastructure changes converted the platform from an open-web graph into an **Enclosed Extraction Silo (W5-EES)** with asymmetric boundary flux:\n\n- **Topological Diode (Asymmetric Flux):** Reddit expanded access to inbound publisher RSS tools via Reddit Pro on March 30, 2026, stopped accepting new public API requests on October 31, and ended outbound RSS support on November 13. Remaining public API access is scheduled to end in March 2027. Old Reddit already requires login. The boundary operator enforces one-way rectification. [Publisher RSS](https://searchengineland.com/reddit-pro-new-features-public-beta-472991) · [Public API and Old Reddit](https://www.techrepublic.com/de/article/news-reddit-rss-public-api-shutdown/) · [Outbound RSS](https://www.levellr.com/reddit-rss-feed-shutdown/) · [Commercial licensing](https://www.reuters.com/technology/reddit-ai-content-licensing-deal-with-google-sources-say-2024-02-22/)\n\n  $$\n  \\Phi_{\\text{in}} > 0, \\qquad \\Phi_{\\text{out}}^{\\text{public}} = 0, \\qquad \\Phi_{\\text{out}}^{\\text{commercial}} > 0\n  $$\n\n- **Pipe vs. Wire Decoupling:** Public transport routes (**pipes**) are sealed against open-web traversal, while execution authorization (**wires**) is restricted to proprietary Devvit sandboxes and licensed commercial AI ingestion pipelines.\n- **Voronoi Collapse into a 1D Pacifier:** High-leverage cognitive architectures preserve multi-dimensional relational adjacency—such as hexagonal lattices governed by the $\\frac{\\sqrt{3}}{2}$ packing ratio—where equidistant Voronoi cells enable deterministic $O(1)$ coordinate traversal without linear sludge. Reddit projects multi-variable disputes onto a 1D karma-sorted tree of unbounded depth $d \\to \\infty$, burying non-consensus corrections below the viewport fold while offering users local UI buttons inside a zero-escape-velocity potential well.\n- **Spectral Aliasing:** Because the ranking function samples discourse at the frequency of emotional arousal rather than verification, high-frequency ground truth folds back into low-frequency consensus myths—producing epistemic Moiré interference where two out-of-phase comment chains generate a phantom \"fact\" present in neither original observation.\n\nReddit fails both as an archive and as a coordinate system because a closed loop with zero boundary, zero outward public flux, and zero basis norm cannot locate anything outside itself.\n",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Reddit Is Deprecated"
+    },
+    {
+      "type": "image",
+      "alt": "snoo gallows 2",
+      "src": "images/articles/reddit-is-deprecated/snoo-gallows-2-37ad2faa-.png"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Measure · Technology · November 23, 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "Phi Labs Research has formally deprecated Reddit as a source. The platform remains available for its intended purpose of telling a stranger that their question has already been answered, then linking to a thread in which a different stranger asks the same question."
+    },
+    {
+      "type": "paragraph",
+      "text": "The research policy is simple. Reddit material gets Q0 (Unreliable) and is inadmissible as evidence, corroboration, or citation. The same rule applies when a thread turns up by accident. A researcher can establish a claim with admissible evidence, and that evidence gets the citation. The Reddit thread can continue doing whatever it was doing when we found it."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Why zero?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Because one would send the wrong message."
+    },
+    {
+      "type": "paragraph",
+      "text": "Consider the sentence “Everyone knows this.” It sounds like a claim about the world. In a thread, it can turn out to mean that six people remember reading it there before. By the time it reaches the seventh person, they have six witnesses and still need a source."
+    },
+    {
+      "type": "paragraph",
+      "text": "That matters when we write something a reader ought to be able to check. If we say a company changed a rule, the reader should be able to see the rule and what changed. If we say a piece of software lost a feature, show the release where it disappeared or reproduce the behavior. A screenshot of a comment can faithfully preserve every pixel of somebody being wrong."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Migration notes"
+    },
+    {
+      "type": "paragraph",
+      "text": "If a draft cites a Reddit thread for a product change, look for the release notes or the archived product page. If it cites a comment about a live performance, look for the recording, a contemporary review, or someone who was there. If the evidence still comes up short, take the claim out of the draft. You can still remember it fondly."
+    },
+    {
+      "type": "paragraph",
+      "text": "Any objections may be posted to Reddit."
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "image",
+      "alt": "reddit fifth world shithole",
+      "src": "images/articles/reddit-is-deprecated/reddit-fifth-world-shithole-6262ccfe-.png"
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Addendum: The Differential Geometry and Topology of Q0"
+    },
+    {
+      "type": "paragraph",
+      "text": "Phi Labs Research · Mathematical & Structuralist Post-Mortem · November 23, 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "Deprecating Reddit to Q0 (Unreliable) is not a stylistic preference; it is the only mathematically coherent assignment available once the platform's citation topology, information flux, and spatial geometry are audited."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "1. Algebraic Topology: The Zero-Boundary Citation Cycle ($\\partial C = 0$)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Model public discourse as a directed graph $G = (V, E)$, where vertices $v_i \\in V$ represent discrete claims and a directed edge $u \\to v$ denotes that $v$ cites, paraphrases, or relies upon $u$."
+    },
+    {
+      "type": "paragraph",
+      "text": "In an admissible empirical system, any valid claim $v_n$ is anchored to a primary artifact $v_0$—an archived product page, a diff, a signed release note, or direct instrument telemetry—with in-degree $\\deg^-(v_0) = 0$ representing an external boundary condition in physical reality. Expressed as a 1-chain $C = \\sum_{k=1}^{n} e_k$, an admissible proof has a non-zero topological boundary:"
+    },
+    {
+      "type": "code",
+      "language": "latex",
+      "text": "\\partial C = v_n - v_0 \\neq 0"
+    },
+    {
+      "type": "paragraph",
+      "text": "The starter audit identifies Reddit's native failure mode: six users recall reading a claim in prior threads, and the seventh user treats those six recollections as corroboration. Topologically, this collapses the DAG into a closed directed cycle $C_7 = (v_1 \\to v_2 \\to \\dots \\to v_7 \\to v_1)$ with zero external root. Taking the boundary operator over the closed loop yields:"
+    },
+    {
+      "type": "code",
+      "language": "latex",
+      "text": "\\partial C_7 = \\sum_{i=1}^{7} \\left(v_{(i \\bmod 7) + 1} - v_i\\right) = 0"
+    },
+    {
+      "type": "paragraph",
+      "text": "A closed citation loop is a 1-cycle in the first homology group $H_1(G)$ with zero boundary. Upvotes, awards, and consensus replies merely assign scalar weights to vertices lying on a closed manifold that never intersects ground truth. Six witnesses circulating inside $\\ker(\\partial)$ do not produce six units of evidence; they trace a closed curve whose net displacement from reality is identically $\\mathbf{0}$."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2. Vector Space Geometry: Why Q0 Cannot Be Q1"
+    },
+    {
+      "type": "paragraph",
+      "text": "In a normed evidence space $\\mathcal{E}$, a primary verifiable artifact acts as a unit basis vector $\\mathbf{e}_i$ with $\\lVert\\mathbf{e}_i\\rVert = 1$. Assigning Reddit Q1—or any positive weight $\\epsilon > 0$, however small—introduces a fatal geometric vulnerability via scalar accumulation:"
+    },
+    {
+      "type": "code",
+      "language": "latex",
+      "text": "\\left\\lVert \\sum_{k=1}^{N} \\epsilon \\, \\hat{\\mathbf{u}} \\right\\rVert = N\\epsilon"
+    },
+    {
+      "type": "paragraph",
+      "text": "For any $\\epsilon > 0$, there exists a finite integer $N > \\frac{1}{\\epsilon}$ such that $N$ mutually plagiarizing threads achieve a greater vector norm than a single primary source, automating authority laundering. Setting the platform's admissibility weight strictly to Q0 enforces annihilation under scalar multiplication:"
+    },
+    {
+      "type": "code",
+      "language": "latex",
+      "text": "0 \\cdot \\sum_{k=1}^{N} \\text{thread}_k = \\mathbf{0} \\qquad \\forall N \\in \\mathbb{N}"
+    },
+    {
+      "type": "paragraph",
+      "text": "No finite or countably infinite stack of Q0 objects can span a non-zero basis vector in $\\mathcal{E}$. A lossless PNG of a comment thread preserves every pixel of a zero-vector without altering its magnitude."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "3. Information Theory: Thermodynamic Heat Death of a Thread"
+    },
+    {
+      "type": "paragraph",
+      "text": "Treat sequential summaries across threads as a discrete Markov chain $X_0 \\to X_1 \\to \\dots \\to X_k$, where $X_0$ is the underlying real-world event (e.g., a deprecated software feature or rule change) and $X_k$ is the $k$-th user synthesis. By the Data Processing Inequality:"
+    },
+    {
+      "type": "code",
+      "language": "latex",
+      "text": "I(X_0; X_k) \\le I(X_0; X_{k-1}) \\le \\dots \\le I(X_0; X_1)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mutual information with reality $I(X_0; X_k)$ is monotonically non-increasing at every hop, while internal consensus confidence $P(\\text{“Everyone knows this”} \\mid X_1, \\dots, X_6)$ approaches $1$. Once $X_0$ is severed or never linked, $I(X_0; X_k) = 0$ while internal thread activity remains high. Thermodynamically, the system reaches maximum epistemic entropy: maximum local thermal agitation (nested replies, karma velocity, moral outrage) paired with zero extractable work (verifiable signal)."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "4. Network Geometry: The Check-Valve Manifold & Dimensional Collapse"
+    },
+    {
+      "type": "paragraph",
+      "text": "Beyond individual threads, Reddit's 2026 infrastructure changes converted the platform from an open-web graph into an Enclosed Extraction Silo (W5-EES) with asymmetric boundary flux:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Topological Diode (Asymmetric Flux): Reddit expanded access to inbound publisher RSS tools via Reddit Pro on March 30, 2026, stopped accepting new public API requests on October 31, and ended outbound RSS support on November 13. Remaining public API access is scheduled to end in March 2027. Old Reddit already requires login. The boundary operator enforces one-way rectification. Publisher RSS · Public API and Old Reddit · Outbound RSS · Commercial licensing"
+      ]
+    },
+    {
+      "type": "code",
+      "language": "latex",
+      "text": "\\Phi_{\\text{in}} > 0, \\qquad \\Phi_{\\text{out}}^{\\text{public}} = 0, \\qquad \\Phi_{\\text{out}}^{\\text{commercial}} > 0"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Pipe vs. Wire Decoupling: Public transport routes (pipes) are sealed against open-web traversal, while execution authorization (wires) is restricted to proprietary Devvit sandboxes and licensed commercial AI ingestion pipelines.",
+        "Voronoi Collapse into a 1D Pacifier: High-leverage cognitive architectures preserve multi-dimensional relational adjacency—such as hexagonal lattices governed by the $\\frac{\\sqrt{3}}{2}$ packing ratio—where equidistant Voronoi cells enable deterministic $O(1)$ coordinate traversal without linear sludge. Reddit projects multi-variable disputes onto a 1D karma-sorted tree of unbounded depth $d \\to \\infty$, burying non-consensus corrections below the viewport fold while offering users local UI buttons inside a zero-escape-velocity potential well.",
+        "Spectral Aliasing: Because the ranking function samples discourse at the frequency of emotional arousal rather than verification, high-frequency ground truth folds back into low-frequency consensus myths—producing epistemic Moiré interference where two out-of-phase comment chains generate a phantom \"fact\" present in neither original observation."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Reddit fails both as an archive and as a coordinate system because a closed loop with zero boundary, zero outward public flux, and zero basis norm cannot locate anything outside itself."
+    }
+  ],
+  "readingMinutes": 6,
+  "heroImage": "",
+  "images": [
+    {
+      "originalFilename": "reddit-fifth-world-shithole.png",
+      "filename": "reddit-fifth-world-shithole-6262ccfe-.png",
+      "path": "images/articles/reddit-is-deprecated/reddit-fifth-world-shithole-6262ccfe-.png"
+    },
+    {
+      "originalFilename": "snoo-gallows-2.png",
+      "filename": "snoo-gallows-2-37ad2faa-.png",
+      "path": "images/articles/reddit-is-deprecated/snoo-gallows-2-37ad2faa-.png"
+    }
+  ],
+  "attachments": [
+    {
+      "name": "reddit-is-deprecated.pdf",
+      "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-reddit-is-deprecated/reddit-is-deprecated-41b3f82dec8fcb4a.pdf",
+      "mimeType": "application/pdf",
+      "releaseAssetId": 784573895,
+      "releaseTag": "measure-pdf-reddit-is-deprecated"
+    }
+  ],
+  "style": {
+    "background": "#e9e4d9",
+    "surface": "#f8f5ee",
+    "text": "#252729",
+    "muted": "#6c6d6f",
+    "accent": "#b5481d",
+    "border": "#d1c8b8",
+    "codeBackground": "#171a1d",
+    "codeText": "#f2f4f5",
+    "bodyFont": "editorial",
+    "headingFont": "system",
+    "codeFont": "mono",
+    "fontSize": 19,
+    "lineHeight": 1.72,
+    "titleSize": 68,
+    "width": 780,
+    "radius": 2,
+    "titleAlign": "left",
+    "customCss": ""
+  },
+  "updatedAt": "2026-11-23T21:17:40.952Z"
+}

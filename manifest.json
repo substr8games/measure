@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-23T17:38:42.075Z",
+  "updatedAt": "2026-11-23T21:17:54.463Z",
   "items": [
     {
       "id": "first-strike-denied-the-epistemic-vaccine",
@@ -38,6 +38,48 @@
           "mimeType": "application/pdf",
           "releaseAssetId": 783813031,
           "releaseTag": "measure-pdf-first-strike-denied-the-epistemic-vaccine"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "reddit-is-deprecated",
+      "type": "article",
+      "title": "Reddit Is Deprecated",
+      "subtitle": "Phi Labs Research has formally deprecated Reddit as a source. The platform remains available for its intended purpose of telling a stranger that their question has already been answered, then linking to a thread in which a different stranger asks the same question.",
+      "summary": "Phi Labs Research has formally deprecated Reddit as a source. The platform remains available for its intended purpose of telling a stranger that their question has already been answered, then linking to a thread in which a different stranger asks the same question.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "technology",
+        "curiosities"
+      ],
+      "tags": [
+        "garbage",
+        "inadmissable",
+        "reddit",
+        "untrusted",
+        "zero-trust"
+      ],
+      "doi": "",
+      "author": "Phi Labs Research",
+      "published": "2026-11-23",
+      "date": "2026-11-23",
+      "updatedAt": "2026-11-23T21:17:40.952Z",
+      "readingMinutes": 6,
+      "classification": "explainer",
+      "content": "articles/reddit-is-deprecated.json",
+      "url": "#/article/reddit-is-deprecated",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-reddit-is-deprecated/reddit-is-deprecated-41b3f82dec8fcb4a.pdf",
+      "attachments": [
+        {
+          "name": "reddit-is-deprecated.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-reddit-is-deprecated/reddit-is-deprecated-41b3f82dec8fcb4a.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 784573895,
+          "releaseTag": "measure-pdf-reddit-is-deprecated"
         }
       ],
       "directory": {
