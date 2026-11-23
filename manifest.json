@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-23T21:18:59.491Z",
+  "updatedAt": "2026-11-23T21:25:55.750Z",
   "items": [
     {
       "id": "first-strike-denied-the-epistemic-vaccine",
@@ -67,7 +67,7 @@
       "author": "Phi Labs Research",
       "published": "2026-11-23",
       "date": "2026-11-23",
-      "updatedAt": "2026-11-23T21:18:57.361Z",
+      "updatedAt": "2026-11-23T21:25:53.133Z",
       "readingMinutes": 6,
       "classification": "explainer",
       "content": "articles/reddit-is-deprecated.json",
