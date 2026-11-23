@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-23T17:28:02.418Z",
+  "updatedAt": "2026-11-23T17:33:32.033Z",
   "items": [
     {
       "id": "first-strike-denied-the-epistemic-vaccine",
@@ -122,22 +122,26 @@
       "id": "through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s",
       "type": "article",
       "title": "Through No One's Fault, Apparently: How Reddit Became a Captured-ass Fifth-World Shithole",
-      "subtitle": "",
-      "summary": "",
+      "subtitle": "An investigation into the extraordinary coincidence by which a public conversation platform came to own the exits, license the conversations, and charge admission to the machinery its communities built.",
+      "summary": "An investigation into the extraordinary coincidence by which a public conversation platform came to own the exits, license the conversations, and charge admission to the machinery its communities built.",
       "section": "humanities",
       "sections": [
         "humanities",
         "technology",
         "special-reports"
       ],
-      "tags": [],
+      "tags": [
+        "fifth-world",
+        "architecture",
+        "economics"
+      ],
       "doi": "",
       "author": "Phi Labs",
       "published": "2026-11-21",
       "date": "2026-11-21",
-      "updatedAt": "2026-11-21T06:01:34.452Z",
+      "updatedAt": "2026-11-23T17:33:29.390Z",
       "readingMinutes": 16,
-      "classification": "",
+      "classification": "deep-dive",
       "content": "articles/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s.json",
       "url": "#/article/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s",
       "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s-1427d35d88328663.pdf",
