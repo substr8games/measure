@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-23T17:09:35.560Z",
+  "updatedAt": "2026-11-23T17:28:02.418Z",
   "items": [
     {
       "id": "first-strike-denied-the-epistemic-vaccine",
@@ -42,6 +42,41 @@
       ],
       "directory": {
         "style": "text"
+      }
+    },
+    {
+      "id": "tin-can-s-secret-past-exposed",
+      "type": "article",
+      "title": "TIN CAN'S SECRET PAST EXPOSED",
+      "subtitle": "Unlabeled Witness Refuses to Deny Allegations of Being Full of Beans",
+      "summary": "An unidentified tin can was forcibly removed from a courtroom yesterday following a contentious hearing that has raised serious questions about the witness's credibility, personal history, and possible involvement with several other canned goods.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "politics",
+        "curiosities"
+      ],
+      "tags": [
+        "anonymous",
+        "pretentious",
+        "investigation",
+        "satire",
+        "meta"
+      ],
+      "doi": "",
+      "author": "Phi Labs Investigates",
+      "published": "2026-11-23",
+      "date": "2026-11-23",
+      "updatedAt": "2026-11-23T17:27:52.298Z",
+      "readingMinutes": 4,
+      "classification": "investigation",
+      "content": "articles/tin-can-s-secret-past-exposed.json",
+      "url": "#/article/tin-can-s-secret-past-exposed",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/tin-can-s-secret-past-exposed/04-tin-can-on-trial-c87b92a6-.png"
       }
     },
     {
