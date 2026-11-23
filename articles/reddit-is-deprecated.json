@@ -215,7 +215,7 @@
     }
   ],
   "readingMinutes": 6,
-  "heroImage": "",
+  "heroImage": "images/articles/reddit-is-deprecated/snoo-gallows-2-37ad2faa-.png",
   "images": [
     {
       "originalFilename": "reddit-fifth-world-shithole.png",
@@ -232,9 +232,7 @@
     {
       "name": "reddit-is-deprecated.pdf",
       "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-reddit-is-deprecated/reddit-is-deprecated-41b3f82dec8fcb4a.pdf",
-      "mimeType": "application/pdf",
-      "releaseAssetId": 784573895,
-      "releaseTag": "measure-pdf-reddit-is-deprecated"
+      "mimeType": "application/pdf"
     }
   ],
   "style": {
@@ -257,5 +255,5 @@
     "titleAlign": "left",
     "customCss": ""
   },
-  "updatedAt": "2026-11-23T21:17:40.952Z"
+  "updatedAt": "2026-11-23T21:18:57.361Z"
 }
