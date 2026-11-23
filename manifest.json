@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-23T17:35:02.958Z",
+  "updatedAt": "2026-11-23T17:36:10.446Z",
   "items": [
     {
       "id": "first-strike-denied-the-epistemic-vaccine",
@@ -317,15 +317,16 @@
       "author": "Phi Labs Staffff",
       "published": "2026-11-10",
       "date": "2026-11-10",
-      "updatedAt": "2026-11-10T17:35:43.588Z",
+      "updatedAt": "2026-11-23T17:36:07.381Z",
       "readingMinutes": 4,
-      "classification": "",
+      "classification": "explainer",
       "content": "articles/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up.json",
       "url": "#/article/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
       "pdf": "",
       "attachments": [],
       "directory": {
-        "style": "text"
+        "style": "thumbnail",
+        "image": "images/articles/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up/immortal-acc2fe29-.png"
       }
     },
     {
