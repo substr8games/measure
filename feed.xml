@@ -6,7 +6,7 @@
   <description>All published articles, including editorials, satire, Breaking, Play, and Special Reports.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Tue, 24 Nov 2026 20:43:35 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 24 Nov 2026 20:51:07 GMT</lastBuildDate>
   <item>
     <title>PHI LABS GRUDGINGLY AGREES TO ESTABLISH A LIMITED CULT OF PERSONALITY</title>
     <link>https://philabsresearch.io/read/phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality/</link>
@@ -288,9 +288,9 @@
     <guid isPermaLink="true">https://philabsresearch.io/read/no-reasonable-person-would-take-this-publication-seriously/</guid>
     <description>An open letter and formal grievance from Phi Labs Research.</description>
     <pubDate>Fri, 06 Nov 2026 12:00:00 GMT</pubDate>
-    <category>curiosities</category>
     <category>breaking</category>
-    <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
+    <category>internal</category>
+    <media:content url="https://philabsresearch.io/images/articles/no-reasonable-person-would-take-this-publication-seriously/loopholes-explained-00a4dccf-.png" medium="image" />
   </item>
   <item>
     <title>The Example Is the Argument</title>

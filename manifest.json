@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-24T20:43:34.652Z",
+  "updatedAt": "2026-11-24T20:51:06.521Z",
   "items": [
     {
       "id": "phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality",
@@ -959,17 +959,21 @@
       "title": "No Reasonable Person Would Take This Publication Seriously",
       "subtitle": "Seriously, why won't anyone take us seriously?",
       "summary": "An open letter and formal grievance from Phi Labs Research.",
-      "section": "curiosities",
+      "section": "breaking",
       "sections": [
-        "curiosities",
-        "breaking"
+        "breaking",
+        "internal"
       ],
-      "tags": [],
+      "tags": [
+        "publishing",
+        "plausible",
+        "deniability"
+      ],
       "doi": "",
       "author": "Phi Labs Staff",
       "published": "2026-11-06",
       "date": "2026-11-06",
-      "updatedAt": "2026-11-07T04:32:43.515Z",
+      "updatedAt": "2026-11-24T20:51:02.522Z",
       "readingMinutes": 2,
       "classification": "copy",
       "content": "articles/no-reasonable-person-would-take-this-publication-seriously.json",
@@ -977,7 +981,8 @@
       "pdf": "",
       "attachments": [],
       "directory": {
-        "style": "text"
+        "style": "thumbnail",
+        "image": "images/articles/no-reasonable-person-would-take-this-publication-seriously/loopholes-explained-00a4dccf-.png"
       }
     },
     {
