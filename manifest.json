@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-24T20:51:06.521Z",
+  "updatedAt": "2026-11-24T21:10:50.246Z",
   "items": [
     {
       "id": "phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality",
@@ -1267,11 +1267,12 @@
     {
       "id": "system-fault-phi-labs-research-reluctantly-declares-itself-authoritative",
       "type": "article",
-      "title": "[SYSTEM FAULT] Phi Labs Research Reluctantly Declares Itself Authoritative",
+      "title": "Phi Labs Research Unenthusiastically Declares Itself Authoritative",
       "subtitle": "Phi Labs Research assumes responsibility for ensuring other parties act responsibly.",
       "summary": "Phi Labs Research assumes responsibility for ensuring other parties act responsibly.",
-      "section": "breaking",
+      "section": "internal",
       "sections": [
+        "internal",
         "breaking"
       ],
       "tags": [
@@ -1279,18 +1280,19 @@
         "authority"
       ],
       "doi": "",
-      "author": "THE ORACLE / UNDERWORLD DESK",
+      "author": "Phi Labs Staff",
       "published": "2026-11-05",
       "date": "2026-11-05",
-      "updatedAt": "2026-11-05T22:31:04.624Z",
+      "updatedAt": "2026-11-24T21:10:43.615Z",
       "readingMinutes": 2,
-      "classification": "",
+      "classification": "copy",
       "content": "articles/system-fault-phi-labs-research-reluctantly-declares-itself-authoritative.json",
       "url": "#/article/system-fault-phi-labs-research-reluctantly-declares-itself-authoritative",
       "pdf": "",
       "attachments": [],
       "directory": {
-        "style": "text"
+        "style": "thumbnail",
+        "image": "images/articles/system-fault-phi-labs-research-reluctantly-declares-itself-authoritative/no-checkpoint-h1-f1bf2668-.png"
       }
     },
     {

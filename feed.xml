@@ -6,7 +6,7 @@
   <description>All published articles, including editorials, satire, Breaking, Play, and Special Reports.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Tue, 24 Nov 2026 20:51:07 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 24 Nov 2026 21:10:51 GMT</lastBuildDate>
   <item>
     <title>PHI LABS GRUDGINGLY AGREES TO ESTABLISH A LIMITED CULT OF PERSONALITY</title>
     <link>https://philabsresearch.io/read/phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality/</link>
@@ -303,13 +303,14 @@
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
-    <title>[SYSTEM FAULT] Phi Labs Research Reluctantly Declares Itself Authoritative</title>
+    <title>Phi Labs Research Unenthusiastically Declares Itself Authoritative</title>
     <link>https://philabsresearch.io/read/system-fault-phi-labs-research-reluctantly-declares-itself-authoritative/</link>
     <guid isPermaLink="true">https://philabsresearch.io/read/system-fault-phi-labs-research-reluctantly-declares-itself-authoritative/</guid>
     <description>Phi Labs Research assumes responsibility for ensuring other parties act responsibly.</description>
     <pubDate>Thu, 05 Nov 2026 12:00:00 GMT</pubDate>
+    <category>internal</category>
     <category>breaking</category>
-    <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
+    <media:content url="https://philabsresearch.io/images/articles/system-fault-phi-labs-research-reluctantly-declares-itself-authoritative/no-checkpoint-h1-f1bf2668-.png" medium="image" />
   </item>
   <item>
     <title>[SYSTEM EVENT] ACHILLES VULNERABILITY EXPLOITED IN UNPATCHED HEEL DEPENDENCY; GREEK C-SUITE STUNNED</title>
