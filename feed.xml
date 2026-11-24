@@ -6,7 +6,17 @@
   <description>All published articles, including editorials, satire, Breaking, Play, and Special Reports.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Tue, 24 Nov 2026 06:09:14 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 24 Nov 2026 20:42:26 GMT</lastBuildDate>
+  <item>
+    <title>PHI LABS GRUDGINGLY AGREES TO ESTABLISH A LIMITED CULT OF PERSONALITY</title>
+    <link>https://philabsresearch.io/read/phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality/</link>
+    <guid isPermaLink="true">https://philabsresearch.io/read/phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality/</guid>
+    <description>Less than twenty-four hours ago, Phi Labs Research published three pages of carefully reasoned arguments explaining why it is not a cult of personality. Following further internal deliberation, Phi Labs Research has reluctantly agreed to become one.</description>
+    <pubDate>Tue, 24 Nov 2026 12:00:00 GMT</pubDate>
+    <category>internal</category>
+    <category>breaking</category>
+    <media:content url="https://philabsresearch.io/images/articles/phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality/lincoln-disappointed-5c787204-.png" medium="image" />
+  </item>
   <item>
     <title>TIN CAN&#39;S SECRET PAST EXPOSED</title>
     <link>https://philabsresearch.io/read/tin-can-s-secret-past-exposed/</link>
@@ -14,7 +24,7 @@
     <description>An unidentified tin can was forcibly removed from a courtroom yesterday following a contentious hearing that has raised serious questions about the witness&#39;s credibility, personal history, and possible involvement with several other canned goods.</description>
     <pubDate>Mon, 23 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <category>curiosities</category>
     <media:content url="https://philabsresearch.io/images/articles/tin-can-s-secret-past-exposed/04-tin-can-on-trial-c87b92a6-.png" medium="image" />
   </item>
@@ -105,7 +115,7 @@
     <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
     <category>technology</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
@@ -229,7 +239,7 @@
     <description>A structural analysis of how American labor law severed the connections between workers while preserving the integrated power of capital.</description>
     <pubDate>Sat, 07 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
@@ -240,7 +250,7 @@
     <pubDate>Sat, 07 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
     <category>technology</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
@@ -250,7 +260,7 @@
     <description>A structural analysis of how the legacy cartel weaponizes the illusion of horizontal conflict to conceal the vertical architecture of extraction.</description>
     <pubDate>Fri, 06 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
@@ -353,7 +363,7 @@
     <description>How a publicly built middle class became a privately guarded asset—and why its beneficiaries now call the access problem a character flaw.</description>
     <pubDate>Wed, 04 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
@@ -390,7 +400,7 @@
     <guid isPermaLink="true">https://philabsresearch.io/read/manufacturing-distraction-federal-elections-and-the-compute-cartel/</guid>
     <description>Phi labs breaks down manufactured conflict, managed participation, and the difference between using a system and governing it.</description>
     <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
-    <category>politics</category>
+    <category>public-discourse</category>
     <category>technology</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
@@ -413,7 +423,7 @@
     <category>humanities</category>
     <category>science</category>
     <category>technology</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>

@@ -1,8 +1,41 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-24T18:49:38.791Z",
+  "updatedAt": "2026-11-24T20:42:25.831Z",
   "items": [
+    {
+      "id": "phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality",
+      "type": "article",
+      "title": "PHI LABS GRUDGINGLY AGREES TO ESTABLISH A LIMITED CULT OF PERSONALITY",
+      "subtitle": "An official announcement regarding a significant reversal in institutional policy and the establishment of a new section of The Measure.",
+      "summary": "Less than twenty-four hours ago, Phi Labs Research published three pages of carefully reasoned arguments explaining why it is not a cult of personality. Following further internal deliberation, Phi Labs Research has reluctantly agreed to become one.",
+      "section": "internal",
+      "sections": [
+        "internal",
+        "breaking"
+      ],
+      "tags": [
+        "authoritarianism",
+        "institutionalism",
+        "cult",
+        "personality"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-24",
+      "date": "2026-11-24",
+      "updatedAt": "2026-11-24T20:42:19.888Z",
+      "readingMinutes": 4,
+      "classification": "copy",
+      "content": "articles/phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality.json",
+      "url": "#/article/phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality/lincoln-disappointed-5c787204-.png"
+      }
+    },
     {
       "id": "first-strike-denied-the-epistemic-vaccine",
       "type": "article",

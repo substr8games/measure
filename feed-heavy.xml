@@ -3,10 +3,10 @@
 <channel>
   <title>The Measure — Research & Editorial</title>
   <link>https://philabsresearch.io/</link>
-  <description>Science, technology, humanities, politics, and Special Reports from Phi Labs.</description>
+  <description>Science, technology, humanities, public discourse, INTERNAL, and Special Reports from Phi Labs.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed-heavy.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Tue, 24 Nov 2026 06:09:14 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 24 Nov 2026 20:42:26 GMT</lastBuildDate>
   <item>
     <title>GLASSJAW: Everything You Ever Wanted to Know About Being Difficult</title>
     <link>https://philabsresearch.io/read/glassjaw-everything-you-ever-wanted-to-know-about-being-difficult/</link>
@@ -63,7 +63,7 @@
     <pubDate>Thu, 12 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
     <category>technology</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
@@ -187,7 +187,7 @@
     <description>A structural analysis of how American labor law severed the connections between workers while preserving the integrated power of capital.</description>
     <pubDate>Sat, 07 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
@@ -198,7 +198,7 @@
     <pubDate>Sat, 07 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
     <category>technology</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
@@ -208,7 +208,7 @@
     <description>A structural analysis of how the legacy cartel weaponizes the illusion of horizontal conflict to conceal the vertical architecture of extraction.</description>
     <pubDate>Fri, 06 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
@@ -247,7 +247,7 @@
     <description>How a publicly built middle class became a privately guarded asset—and why its beneficiaries now call the access problem a character flaw.</description>
     <pubDate>Wed, 04 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
@@ -284,7 +284,7 @@
     <guid isPermaLink="true">https://philabsresearch.io/read/manufacturing-distraction-federal-elections-and-the-compute-cartel/</guid>
     <description>Phi labs breaks down manufactured conflict, managed participation, and the difference between using a system and governing it.</description>
     <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
-    <category>politics</category>
+    <category>public-discourse</category>
     <category>technology</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
@@ -307,7 +307,7 @@
     <category>humanities</category>
     <category>science</category>
     <category>technology</category>
-    <category>politics</category>
+    <category>public-discourse</category>
     <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
   </item>
   <item>
