@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-24T02:20:53.865Z",
+  "updatedAt": "2026-11-24T06:00:24.147Z",
   "items": [
     {
       "id": "first-strike-denied-the-epistemic-vaccine",
@@ -75,6 +75,40 @@
       "directory": {
         "style": "thumbnail",
         "image": "images/articles/glassjaw-everything-you-ever-wanted-to-know-about-being-difficult/glassjaw-hero-6488c405-.png"
+      }
+    },
+    {
+      "id": "phi-labs-is-not-a-cult-of-personality-please-stop-calling-us-that",
+      "type": "article",
+      "title": "PHI LABS IS NOT A CULT OF PERSONALITY, PLEASE STOP CALLING US THAT",
+      "subtitle": "An official clarification from an institution whose considerable prestige, legendary humility, and famously warm, inviting disposition have apparently caused some confusion.",
+      "summary": "An official clarification from an institution whose considerable prestige, legendary humility, and famously warm, inviting disposition have apparently caused some confusion.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "breaking"
+      ],
+      "tags": [
+        "authority",
+        "control",
+        "cult",
+        "psyop",
+        "authoritarian"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-23",
+      "date": "2026-11-23",
+      "updatedAt": "2026-11-24T06:00:20.103Z",
+      "readingMinutes": 6,
+      "classification": "copy",
+      "content": "articles/phi-labs-is-not-a-cult-of-personality-please-stop-calling-us-that.json",
+      "url": "#/article/phi-labs-is-not-a-cult-of-personality-please-stop-calling-us-that",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/phi-labs-is-not-a-cult-of-personality-please-stop-calling-us-that/lincoln-hero-b0e62e45-.png"
       }
     },
     {
