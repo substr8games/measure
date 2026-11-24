@@ -1831,7 +1831,8 @@ let content = {
     {id:'breaking',name:'Breaking',summary:'Fictional dispatches from the Oracle: mythological breaking news about the world that never existed, reporting on the one that does.'},
     {id:'technology',name:'Technology',summary:'Engineering, computing, AI, tools and the systems we build.'},
     {id:'structuralism',name:'Structuralism',summary:'Structural relationships, authority, systems, causality, and the methods of understanding them.'},
-    {id:'politics',name:'Politics',summary:'Institutions, governance, policy and civic life.'},
+    {id:'public-discourse',name:'Public Discourse',summary:'Institutions, governance, policy and civic life.'},
+    {id:'internal',name:'Internal',summary:'Institutional announcements and internal affairs of Phi Labs Research.'},
     {id:'curiosities',name:'Curiosities',summary:'Art, memes, educational material, visual experiments and other curiosities.'},
     {id:'special-reports',name:'Special Reports',summary:'Major research papers and portable PDF editions.'}
   ],
@@ -1843,14 +1844,21 @@ const escapeHTML = (value = '') => String(value ?? '').replace(/[&<>"']/g, ch =>
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
 })[ch]);
 let sections = [];
-// Legacy section IDs remain readable while repository records are retagged.
-const canonicalSectionId = id => id === 'humor' ? 'curiosities' : (id === 'science' || id === 'humanities') ? 'structuralism' : id;
+// Rev56: Legacy section IDs route to current sections without retagging publication records.
+const canonicalSectionId = id => id === 'politics' ? 'public-discourse' : id === 'humor' ? 'curiosities' : (id === 'science' || id === 'humanities') ? 'structuralism' : id;
 const section = id => sections.find(s => s.id === canonicalSectionId(id));
 const arrow = '<svg viewBox="0 0 22 22" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M3 11h15m-6-6 6 6-6 6"/></svg>';
 const articleUrl = a => a.type === 'gallery' ? `#/gallery/${encodeURIComponent(String(a.id))}` : `#/article/${encodeURIComponent(String(a.id))}`;
 const sectionUrl = id => `#/section/${encodeURIComponent(canonicalSectionId(id))}`;
 const isSpecial = a => a.type === 'pdf' || (Array.isArray(a.sections) && a.sections.includes('special-reports'));
-const articleSections = a => [...new Set((Array.isArray(a.sections) && a.sections.length ? a.sections : a.section ? [a.section] : []).map(canonicalSectionId))];
+const articleSections = a => {
+  const ids = (Array.isArray(a.sections) && a.sections.length ? a.sections : a.section ? [a.section] : []).map(canonicalSectionId);
+  // Historical LCP precursor: route the legacy classification, not the article file.
+  if (a.id === 'phi-labs-is-not-a-cult-of-personality-please-stop-calling-us-that' && !ids.includes('internal')) {
+    return [...new Set(ids.map(id => id === 'structuralism' ? 'internal' : id))];
+  }
+  return [...new Set(ids)];
+};
 const belongsTo = (a, id) => canonicalSectionId(id) === 'special-reports' ? isSpecial(a) : articleSections(a).includes(canonicalSectionId(id));
 const allArticles = () => [...content.articles].sort((a,b) => String(b.published || b.date).localeCompare(String(a.published || a.date)));
 const inSection = id => allArticles().filter(a => belongsTo(a,id));
@@ -1913,7 +1921,7 @@ function frontPage() {
   if (!featured) return `${edition()}
     <section class="hero" aria-labelledby="hero-title"><span class="eyebrow">THE MEASURE / PHI LABS</span>
     <h1 id="hero-title">An independent<br>measure of things<span class="accent-word">.</span></h1>
-    <p class="hero-summary">Technology. Structuralism. Politics. Curiosities. Special Reports.<br>Independent inquiry, collected in the public record.</p>
+    <p class="hero-summary">Technology. Structuralism. Public Discourse. Internal. Curiosities. Special Reports.<br>Independent inquiry, collected in the public record.</p>
     <div class="hero-footer"><a class="inline-link" href="#/about">About the publication ${arrow}</a></div></section>
     ${sectionTitle('Latest articles', 0)}<p class="empty-state">The record is ready for its first publication.</p>${seriesPreview()}`;
   const latest = eligible.filter(a => !isSpecial(a) && a.id !== featured.id).slice(0,5);
@@ -2060,7 +2068,7 @@ function about() {
   return `${edition()}<header class="page-head"><span class="eyebrow">ABOUT THE PUBLICATION</span><h1>An independent<br>measure of things<span class="accent-word">.</span></h1><p>The Measure is the editorial and research publication of Phi Labs.</p></header>
     <div class="about-copy"><p>The Measure provides a home for exploratory research, scientific and philosophical inquiry, technical analysis, and work undertaken in the public interest.</p>
     <p>Articles are rendered directly from JSON. Special Reports also have portable PDF editions, and appear both in their subject section and the Special Reports catalog.</p></div>
-    <dl><div class="info-pair"><dt>Published by</dt><dd>Phi Labs</dd></div><div class="info-pair"><dt>Founded</dt><dd>28 October 2026</dd></div><div class="info-pair"><dt>Formats</dt><dd>Online articles / longform PDFs</dd></div><div class="info-pair"><dt>Sections</dt><dd>Breaking / Technology / Structuralism / Politics / Curiosities / Special Reports</dd></div></dl>${previewNotice()}`;
+    <dl><div class="info-pair"><dt>Published by</dt><dd>Phi Labs</dd></div><div class="info-pair"><dt>Founded</dt><dd>28 October 2026</dd></div><div class="info-pair"><dt>Formats</dt><dd>Online articles / longform PDFs</dd></div><div class="info-pair"><dt>Sections</dt><dd>Breaking / Technology / Structuralism / Public Discourse / Internal / Curiosities / Special Reports</dd></div></dl>${previewNotice()}`;
 }
 function notFound() {
   return `${edition()}<header class="page-head"><span class="eyebrow">RECORD NOT FOUND</span><h1>Nothing at this address<span class="accent-word">.</span></h1><p>The requested article or section does not exist in the current publication index.</p></header><div class="article-end"><a href="#/">← Return to front page</a></div>`;
