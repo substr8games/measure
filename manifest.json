@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-24T06:00:24.147Z",
+  "updatedAt": "2026-11-24T06:06:44.219Z",
   "items": [
     {
       "id": "first-strike-denied-the-epistemic-vaccine",
@@ -99,7 +99,7 @@
       "author": "Phi Labs Staff",
       "published": "2026-11-23",
       "date": "2026-11-23",
-      "updatedAt": "2026-11-24T06:00:20.103Z",
+      "updatedAt": "2026-11-24T06:06:42.169Z",
       "readingMinutes": 6,
       "classification": "copy",
       "content": "articles/phi-labs-is-not-a-cult-of-personality-please-stop-calling-us-that.json",
