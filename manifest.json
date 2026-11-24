@@ -1,17 +1,419 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-10T17:35:46.918Z",
+  "updatedAt": "2026-11-24T18:49:38.791Z",
   "items": [
+    {
+      "id": "first-strike-denied-the-epistemic-vaccine",
+      "type": "article",
+      "title": "FIRST STRIKE DENIED: The Epistemic Vaccine",
+      "subtitle": "An institutional countermeasure against the preemptive substitution of an argument.",
+      "summary": "An institutional countermeasure against the preemptive substitution of an argument.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "special-reports"
+      ],
+      "tags": [
+        "asymmetric",
+        "academia",
+        "logical-fallacy",
+        "first-strike",
+        "tactical"
+      ],
+      "doi": "10.5281/zenodo.24456972",
+      "author": "Phi Labs Research",
+      "published": "2026-11-23",
+      "date": "2026-11-23",
+      "updatedAt": "2026-11-23T17:09:21.451Z",
+      "readingMinutes": 11,
+      "classification": "explainer",
+      "content": "articles/first-strike-denied-the-epistemic-vaccine.json",
+      "url": "#/article/first-strike-denied-the-epistemic-vaccine",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-first-strike-denied-the-epistemic-vaccine/first-strike-denied-the-epistemic-vaccine-73a10b5bd66f898d.pdf",
+      "attachments": [
+        {
+          "name": "First-Strike-Denied-The-Epistemic-Vaccine-Publication.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-first-strike-denied-the-epistemic-vaccine/first-strike-denied-the-epistemic-vaccine-73a10b5bd66f898d.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 783813031,
+          "releaseTag": "measure-pdf-first-strike-denied-the-epistemic-vaccine"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "glassjaw-everything-you-ever-wanted-to-know-about-being-difficult",
+      "type": "article",
+      "title": "GLASSJAW: Everything You Ever Wanted to Know About Being Difficult",
+      "subtitle": "Being difficult isn't the opposite of being beautiful. Sometimes it's how you get there.",
+      "summary": "There are bands you discover, bands you grow to love, and bands that make you wonder why the fuck you need other bands in the first place. Glassjaw belongs to that last category. Formed on Long Island in 1993 by vocalist Daryl Palumbo and guitarist Justin Beck, Glassjaw released two extraordinary studio albums in remarkably quick succession: *Everything You Ever Wanted to Know About Silence* in 2000 and *Worship and Tribute* in 2002. Both would become landmarks of post-hardcore, although neither seemed particularly concerned with obeying the genre's conventions.",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "glassjaw",
+        "soundscape",
+        "architecture",
+        "music",
+        "culture"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-23",
+      "date": "2026-11-23",
+      "updatedAt": "2026-11-24T02:20:50.502Z",
+      "readingMinutes": 11,
+      "classification": "copy",
+      "content": "articles/glassjaw-everything-you-ever-wanted-to-know-about-being-difficult.json",
+      "url": "#/article/glassjaw-everything-you-ever-wanted-to-know-about-being-difficult",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/glassjaw-everything-you-ever-wanted-to-know-about-being-difficult/glassjaw-hero-6488c405-.png"
+      }
+    },
+    {
+      "id": "phi-labs-is-not-a-cult-of-personality-please-stop-calling-us-that",
+      "type": "article",
+      "title": "PHI LABS IS NOT A CULT OF PERSONALITY, PLEASE STOP CALLING US THAT",
+      "subtitle": "An official clarification from an institution whose considerable prestige, legendary humility, and famously warm, inviting disposition have apparently caused some confusion.",
+      "summary": "An official clarification from an institution whose considerable prestige, legendary humility, and famously warm, inviting disposition have apparently caused some confusion.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "breaking"
+      ],
+      "tags": [
+        "authority",
+        "control",
+        "cult",
+        "psyop",
+        "authoritarian"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-23",
+      "date": "2026-11-23",
+      "updatedAt": "2026-11-24T06:09:11.477Z",
+      "readingMinutes": 6,
+      "classification": "copy",
+      "content": "articles/phi-labs-is-not-a-cult-of-personality-please-stop-calling-us-that.json",
+      "url": "#/article/phi-labs-is-not-a-cult-of-personality-please-stop-calling-us-that",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/phi-labs-is-not-a-cult-of-personality-please-stop-calling-us-that/lincoln-hero-b0e62e45-.png"
+      }
+    },
+    {
+      "id": "reddit-is-deprecated",
+      "type": "article",
+      "title": "Reddit Is Deprecated",
+      "subtitle": "Phi Labs Research has formally deprecated Reddit as a source. The platform remains available for its intended purpose of telling a stranger that their question has already been answered, then linking to a thread in which a different stranger asks the same question.",
+      "summary": "Phi Labs Research has formally deprecated Reddit as a source. The platform remains available for its intended purpose of telling a stranger that their question has already been answered, then linking to a thread in which a different stranger asks the same question.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "technology",
+        "curiosities"
+      ],
+      "tags": [
+        "garbage",
+        "inadmissable",
+        "reddit",
+        "untrusted",
+        "zero-trust"
+      ],
+      "doi": "",
+      "author": "Phi Labs Research",
+      "published": "2026-11-23",
+      "date": "2026-11-23",
+      "updatedAt": "2026-11-23T21:25:53.133Z",
+      "readingMinutes": 6,
+      "classification": "explainer",
+      "content": "articles/reddit-is-deprecated.json",
+      "url": "#/article/reddit-is-deprecated",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-reddit-is-deprecated/reddit-is-deprecated-41b3f82dec8fcb4a.pdf",
+      "attachments": [
+        {
+          "name": "reddit-is-deprecated.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-reddit-is-deprecated/reddit-is-deprecated-41b3f82dec8fcb4a.pdf",
+          "mimeType": "application/pdf"
+        }
+      ],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/reddit-is-deprecated/snoo-gallows-2-37ad2faa-.png"
+      }
+    },
+    {
+      "id": "tin-can-s-secret-past-exposed",
+      "type": "article",
+      "title": "TIN CAN'S SECRET PAST EXPOSED",
+      "subtitle": "Unlabeled Witness Refuses to Deny Allegations of Being Full of Beans",
+      "summary": "An unidentified tin can was forcibly removed from a courtroom yesterday following a contentious hearing that has raised serious questions about the witness's credibility, personal history, and possible involvement with several other canned goods.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "politics",
+        "curiosities"
+      ],
+      "tags": [
+        "anonymous",
+        "pretentious",
+        "investigation",
+        "satire",
+        "meta"
+      ],
+      "doi": "",
+      "author": "Phi Labs Investigates",
+      "published": "2026-11-23",
+      "date": "2026-11-23",
+      "updatedAt": "2026-11-23T17:38:38.784Z",
+      "readingMinutes": 4,
+      "classification": "investigation",
+      "content": "articles/tin-can-s-secret-past-exposed.json",
+      "url": "#/article/tin-can-s-secret-past-exposed",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/tin-can-s-secret-past-exposed/04-tin-can-on-trial-c87b92a6-.png"
+      }
+    },
+    {
+      "id": "the-death-of-the-chosen-one",
+      "type": "article",
+      "title": "The Death of the Chosen One",
+      "subtitle": "Why institutions confuse persistence with legitimacy, how unexamined residue stalls repair, and the four-question test no leader gets to exempt themselves from.",
+      "summary": "Why institutions confuse persistence with legitimacy, how unexamined residue stalls repair, and the four-question test no leader gets to exempt themselves from.",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "gameplay-mechanics",
+        "power-fantasy",
+        "asymmetry"
+      ],
+      "doi": "",
+      "author": "Phi Labs Research",
+      "published": "2026-11-22",
+      "date": "2026-11-22",
+      "updatedAt": "2026-11-22T21:28:34.873Z",
+      "readingMinutes": 7,
+      "classification": "copy",
+      "content": "articles/the-death-of-the-chosen-one.json",
+      "url": "#/article/the-death-of-the-chosen-one",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-death-of-the-chosen-one/the-death-of-the-chosen-one-3d8ed22a067b719f.pdf",
+      "attachments": [
+        {
+          "name": "the-death-of-the-chosen-one-1.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-death-of-the-chosen-one/the-death-of-the-chosen-one-3d8ed22a067b719f.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 780519408,
+          "releaseTag": "measure-pdf-the-death-of-the-chosen-one"
+        }
+      ],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/the-death-of-the-chosen-one/chosen-one-hero-a3767fff-.png"
+      }
+    },
+    {
+      "id": "through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s",
+      "type": "article",
+      "title": "Through No One's Fault, Apparently: How Reddit Became a Captured-ass Fifth-World Shithole",
+      "subtitle": "An investigation into the extraordinary coincidence by which a public conversation platform came to own the exits, license the conversations, and charge admission to the machinery its communities built.",
+      "summary": "An investigation into the extraordinary coincidence by which a public conversation platform came to own the exits, license the conversations, and charge admission to the machinery its communities built.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "technology",
+        "special-reports"
+      ],
+      "tags": [
+        "fifth-world",
+        "architecture",
+        "economics"
+      ],
+      "doi": "",
+      "author": "Phi Labs",
+      "published": "2026-11-21",
+      "date": "2026-11-21",
+      "updatedAt": "2026-11-23T17:33:29.390Z",
+      "readingMinutes": 16,
+      "classification": "deep-dive",
+      "content": "articles/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s.json",
+      "url": "#/article/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s-1427d35d88328663.pdf",
+      "attachments": [
+        {
+          "name": "through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s-2.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s/through-no-one-s-fault-apparently-how-reddit-became-a-captured-ass-fifth-world-s-1427d35d88328663.pdf",
+          "mimeType": "application/pdf"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "ayn-rand-among-history-s-most-successful-real-world-trolls",
+      "type": "article",
+      "title": "Ayn Rand Among History’s Most Successful Real-World Trolls",
+      "subtitle": "One could be forgiven for quickly scanning Ayn Rand’s body of work as a particularly committed case of early-to-mid-twentieth-century trolling. Here at *The Measure*, we’re taking that proposition seriously.",
+      "summary": "One could be forgiven for quickly scanning Ayn Rand’s body of work as a particularly committed case of early-to-mid-twentieth-century trolling. Here at *The Measure*, we’re taking that proposition seriously.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "curiosities"
+      ],
+      "tags": [
+        "irony",
+        "satire",
+        "objectivism"
+      ],
+      "doi": "",
+      "author": "Phi Labs",
+      "published": "2026-11-18",
+      "date": "2026-11-18",
+      "updatedAt": "2026-11-23T17:35:00.568Z",
+      "readingMinutes": 16,
+      "classification": "explainer",
+      "content": "articles/ayn-rand-among-history-s-most-successful-real-world-trolls.json",
+      "url": "#/article/ayn-rand-among-history-s-most-successful-real-world-trolls",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "a-letter-to-a-friend-the-disparity-between-us-and-them",
+      "type": "article",
+      "title": "A Letter to a Friend: the Disparity Between Us and Them",
+      "subtitle": "",
+      "summary": "",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "class-warfare"
+      ],
+      "doi": "10.5281/zenodo.24197670",
+      "author": "Phi Labs Research",
+      "published": "2026-11-13",
+      "date": "2026-11-13",
+      "updatedAt": "2026-11-13T14:23:51.631Z",
+      "readingMinutes": 4,
+      "classification": "explainer",
+      "content": "articles/a-letter-to-a-friend-the-disparity-between-us-and-them.json",
+      "url": "#/article/a-letter-to-a-friend-the-disparity-between-us-and-them",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p",
+      "type": "article",
+      "title": "Structuralist Methodology: Foundations for Actionable Discourse in Contemporary Philosophy",
+      "subtitle": "Academic institutions can recognize and reproduce philosophical work independently of its capacity to alter, predict, or intervene in the systems it describes. The prevalence of non-actionable discourse is a question for empirical audit. This report introduces an output-based operational classification of philosophical inquiry, establishes the distinction between institutional recognition and actionable capability, and evaluates theoretical frameworks by what their investigations enable rather than how their traditions classify themselves.",
+      "summary": "Academic institutions can recognize and reproduce philosophical work independently of its capacity to alter, predict, or intervene in the systems it describes. The prevalence of non-actionable discourse is a question for empirical audit. This report introduces an output-based operational classification of philosophical inquiry, establishes the distinction between institutional recognition and actionable capability, and evaluates theoretical frameworks by what their investigations enable rather than how their traditions classify themselves.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "special-reports"
+      ],
+      "tags": [
+        "structuralism",
+        "standard",
+        "philosophy",
+        "foundations",
+        "action"
+      ],
+      "doi": "10.5281/zenodo.24174297",
+      "author": "Phi Labs Research",
+      "published": "2026-11-12",
+      "date": "2026-11-12",
+      "updatedAt": "2026-11-13T00:29:47.131Z",
+      "readingMinutes": 1,
+      "classification": "deep-dive",
+      "content": "articles/structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p.json",
+      "url": "#/article/structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p/structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p-25cce602d5627628.pdf",
+      "attachments": [
+        {
+          "name": "PHI-RESEARCH-SMAD-001.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p/structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p-25cce602d5627628.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 741645065,
+          "releaseTag": "measure-pdf-structuralist-methodology-foundations-for-actionable-discourse-in-contemporary-p"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "the-complaint-is-permitted-the-remedy-is-not",
+      "type": "article",
+      "title": "The Complaint Is Permitted. The Remedy Is Not.",
+      "subtitle": "How institutions turn professional boundaries into barriers against correction—and why accountability cannot depend on their permission.",
+      "summary": "How institutions turn professional boundaries into barriers against correction—and why accountability cannot depend on their permission.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "technology",
+        "politics"
+      ],
+      "tags": [
+        "institutionalism",
+        "systems",
+        "engineering",
+        "remedy"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-12",
+      "date": "2026-11-12",
+      "updatedAt": "2026-11-12T20:38:00.412Z",
+      "readingMinutes": 23,
+      "classification": "deep-dive",
+      "content": "articles/the-complaint-is-permitted-the-remedy-is-not.json",
+      "url": "#/article/the-complaint-is-permitted-the-remedy-is-not",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-complaint-is-permitted-the-remedy-is-not/the-complaint-is-permitted-the-remedy-is-not-4d13f271fa9767b5.pdf",
+      "attachments": [
+        {
+          "name": "the-complaint-is-permitted-the-remedy-is-not.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-complaint-is-permitted-the-remedy-is-not/the-complaint-is-permitted-the-remedy-is-not-4d13f271fa9767b5.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 741003911,
+          "releaseTag": "measure-pdf-the-complaint-is-permitted-the-remedy-is-not"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
+    },
     {
       "id": "blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
       "type": "article",
       "title": "Blacklisted: How Immortal Technique Built a Bare Metal Machine from the Ground Up",
       "subtitle": "In the early 2000s, one underground hip-hop artist bypassed the institutional gateways and built a sovereign bare-metal machine. Operating outside of the major-label ecosystem, he built a massive, self-sustaining cultural presence without corporate radio support, television rotation, or institutional endorsement. A structural take on the career of Immortal Technique.",
       "summary": "In the early 2000s, underground hip-hop artist Immortal Technique bypassed the institutional gateways and built a sovereign bare-metal machine. Operating outside of the major-label ecosystem, he built a massive, self-sustaining cultural presence without corporate radio support, television rotation, or institutional endorsement.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism"
+        "humanities"
       ],
       "tags": [
         "Culture",
@@ -20,14 +422,106 @@
         "infrastructure"
       ],
       "doi": "",
-      "author": "Phi Labs Staffff",
+      "author": "Phi Labs Staff",
       "published": "2026-11-10",
       "date": "2026-11-10",
-      "updatedAt": "2026-11-10T17:35:43.588Z",
+      "updatedAt": "2026-11-24T18:49:36.494Z",
       "readingMinutes": 4,
-      "classification": "",
+      "classification": "explainer",
       "content": "articles/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up.json",
       "url": "#/article/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/blacklisted-how-immortal-technique-built-a-bare-metal-machine-from-the-ground-up/immortal-acc2fe29-.png"
+      }
+    },
+    {
+      "id": "punching-up-aesop-rock-and-the-art-of-feeding-off-your-oppressor",
+      "type": "article",
+      "title": "Punching Up: Aesop Rock and the Art of Feeding Off Your Oppressor",
+      "subtitle": "Before Ian Matthias Bavitz became a fixture of independent hip-hop as Aesop Rock, he lived the exact material contradiction that animates his early catalog. A structuralist take on the career of Aesop Rock.",
+      "summary": "Before Ian Matthias Bavitz became a fixture of independent hip-hop as Aesop Rock, he lived the exact material contradiction that animates his early catalog. A structuralist take on the career of Aesop Rock.",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "culture",
+        "hip-hop",
+        "independent"
+      ],
+      "doi": "",
+      "author": "Phi Labs Research",
+      "published": "2026-11-10",
+      "date": "2026-11-10",
+      "updatedAt": "2026-11-10T18:35:51.730Z",
+      "readingMinutes": 6,
+      "classification": "deep-dive",
+      "content": "articles/punching-up-aesop-rock-and-the-art-of-feeding-off-your-oppressor.json",
+      "url": "#/article/punching-up-aesop-rock-and-the-art-of-feeding-off-your-oppressor",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "the-public-domain-is-not-a-graveyard",
+      "type": "article",
+      "title": "THE PUBLIC DOMAIN IS NOT A GRAVEYARD",
+      "subtitle": "Fifteen years of copyright. The rest of history belongs to everyone.",
+      "summary": "Copyright was never supposed to give people permanent authority over culture. It was supposed to encourage creation by granting temporary exclusive rights, after which the public would receive the freedom to reproduce, preserve, reinterpret, and build upon the work. That exchange is the foundation of the copyright bargain. The creator receives protection. The public eventually receives the work. But the bargain has changed.",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "copyright",
+        "intellectual",
+        "property"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-10",
+      "date": "2026-11-10",
+      "updatedAt": "2026-11-10T18:13:52.551Z",
+      "readingMinutes": 14,
+      "classification": "copy",
+      "content": "articles/the-public-domain-is-not-a-graveyard.json",
+      "url": "#/article/the-public-domain-is-not-a-graveyard",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "the-universe-has-a-recurring-punchline",
+      "type": "article",
+      "title": "The Universe Has a Recurring Punchline",
+      "subtitle": "On the structural absurdity of existence, the reliability of irony, and why we keep asking questions that have already been answered.",
+      "summary": "On the structural absurdity of existence, the reliability of irony, and why we keep asking questions that have already been answered.",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "comedy",
+        "structure",
+        "jokes",
+        "humor"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-10",
+      "date": "2026-11-10",
+      "updatedAt": "2026-11-10T17:52:01.691Z",
+      "readingMinutes": 4,
+      "classification": "copy",
+      "content": "articles/the-universe-has-a-recurring-punchline.json",
+      "url": "#/article/the-universe-has-a-recurring-punchline",
       "pdf": "",
       "attachments": [],
       "directory": {
@@ -74,9 +568,9 @@
       "title": "[2/6] The Structure of Things - The Connections Have Rules",
       "subtitle": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
       "summary": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, The Structure of Things introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism"
+        "humanities"
       ],
       "tags": [
         "structuralism",
@@ -103,9 +597,10 @@
       "title": "[3/6] The Structure of Things: When the Parts Become a Whole",
       "subtitle": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
       "summary": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism"
+        "humanities",
+        "science"
       ],
       "tags": [
         "structuralism"
@@ -131,9 +626,10 @@
       "title": "[4/6] The Structure of Things: Who Gets to Decide?",
       "subtitle": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
       "summary": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism"
+        "humanities",
+        "science"
       ],
       "tags": [
         "structuralism"
@@ -159,9 +655,10 @@
       "title": "[5/6] The Structure of Things: When Different Things Work the Same Way",
       "subtitle": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
       "summary": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism"
+        "humanities",
+        "science"
       ],
       "tags": [
         "structuralism"
@@ -187,9 +684,10 @@
       "title": "[6/6] The Structure of Things: Learning to See Structure",
       "subtitle": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
       "summary": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism"
+        "humanities",
+        "science"
       ],
       "tags": [
         "structuralism"
@@ -247,9 +745,9 @@
       "title": "The Subject Was Never the Subject",
       "subtitle": "How Dan Olson (Folding Ideas) uses the visible absurdities of the internet to expose the structures that produce them.",
       "summary": "How Dan Olson (Folding Ideas) uses the visible absurdities of the internet to expose the structures that produce them.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism",
+        "humanities",
         "technology"
       ],
       "tags": [
@@ -285,9 +783,9 @@
       "title": "Canva's Election Day Layoff Dump",
       "subtitle": "How to bury a corporate crisis beneath a national spectacle—and call it a new beginning.",
       "summary": "How to bury a corporate crisis beneath a national spectacle—and call it a new beginning.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism",
+        "humanities",
         "technology",
         "politics"
       ],
@@ -325,9 +823,9 @@
       "title": "The Capital Strike: Taft-Hartley and the Structural Sabotage of the American Working Class",
       "subtitle": "A structural analysis of how American labor law severed the connections between workers while preserving the integrated power of capital.",
       "summary": "A structural analysis of how American labor law severed the connections between workers while preserving the integrated power of capital.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism",
+        "humanities",
         "politics"
       ],
       "tags": [],
@@ -360,9 +858,9 @@
       "title": "The Passion Tax",
       "subtitle": "How the Restaurant Industry Turns Professional Pride Into an Excuse for Economic Exploitation",
       "summary": "How the Restaurant Industry Turns Professional Pride Into an Excuse for Economic Exploitation",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism"
+        "humanities"
       ],
       "tags": [
         "restaurants",
@@ -481,9 +979,10 @@
       "title": "[1/6] The Structure of Things:  An Introduction and Deep Dive into Structuralism",
       "subtitle": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
       "summary": "Why do systems behave in ways their individual parts cannot explain? From traffic intersections to institutional accountability, *The Structure of Things* introduces structuralism as a method for understanding how relationships, organization, and constraints determine the behavior of complex systems.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism"
+        "humanities",
+        "science"
       ],
       "tags": [],
       "doi": "",
@@ -507,9 +1006,9 @@
       "title": "There's No Class War in America; Only Epistemic and Economic Subjugation",
       "subtitle": "A structural analysis of how the legacy cartel weaponizes the illusion of horizontal conflict to conceal the vertical architecture of extraction.",
       "summary": "A structural analysis of how the legacy cartel weaponizes the illusion of horizontal conflict to conceal the vertical architecture of extraction.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism",
+        "humanities",
         "politics"
       ],
       "tags": [],
@@ -762,9 +1261,10 @@
       "title": "The Example Is the Argument",
       "subtitle": "How Angela Collier's video about string theory demonstrates structuralist reasoning without needing to name it.",
       "summary": "How Angela Collier's video about string theory demonstrates structuralist reasoning without needing to name it.",
-      "section": "structuralism",
+      "section": "science",
       "sections": [
-        "structuralism"
+        "science",
+        "humanities"
       ],
       "tags": [
         "science",
@@ -998,9 +1498,9 @@
       "title": "The Legacy Debt Exploit and the Bootstraps Hallucination",
       "subtitle": "How a publicly built middle class became a privately guarded asset—and why its beneficiaries now call the access problem a character flaw.",
       "summary": "How a publicly built middle class became a privately guarded asset—and why its beneficiaries now call the access problem a character flaw.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism",
+        "humanities",
         "politics"
       ],
       "tags": [
@@ -1289,9 +1789,9 @@
       "title": "R.A.I.D. License",
       "subtitle": "An aggressively independent, anti-corporate-enclosure license for published works compiled by Phi Labs Research",
       "summary": "An aggressively independent license for published works compiled by Phi Labs Research",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism"
+        "humanities"
       ],
       "tags": [
         "distribution",
@@ -1499,9 +1999,10 @@
       "title": "The Institutionalist Manifesto",
       "subtitle": "An Earnest Defense of Everything That Already Exists",
       "summary": "A steelman argument for the modern conservative.",
-      "section": "structuralism",
+      "section": "humanities",
       "sections": [
-        "structuralism",
+        "humanities",
+        "science",
         "technology",
         "politics"
       ],
@@ -1536,7 +2037,7 @@
       "section": "technology",
       "sections": [
         "technology",
-        "structuralism"
+        "humanities"
       ],
       "tags": [
         "llm",
