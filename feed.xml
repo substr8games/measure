@@ -6,7 +6,7 @@
   <description>All published articles, including editorials, satire, Breaking, Play, and Special Reports.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Tue, 24 Nov 2026 21:10:51 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 24 Nov 2026 22:59:37 GMT</lastBuildDate>
   <item>
     <title>PHI LABS GRUDGINGLY AGREES TO ESTABLISH A LIMITED CULT OF PERSONALITY</title>
     <link>https://philabsresearch.io/read/phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality/</link>
@@ -65,8 +65,11 @@
     <description>An institutional countermeasure against the preemptive substitution of an argument.</description>
     <pubDate>Mon, 23 Nov 2026 12:00:00 GMT</pubDate>
     <category>humanities</category>
+    <category>breaking</category>
+    <category>technology</category>
+    <category>public-discourse</category>
     <category>special-reports</category>
-    <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
+    <media:content url="https://philabsresearch.io/images/articles/first-strike-denied-the-epistemic-vaccine/first-strike-hero-hex-01-65567193-.png" medium="image" />
   </item>
   <item>
     <title>The Death of the Chosen One</title>

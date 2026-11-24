@@ -13,6 +13,9 @@
   "section": "humanities",
   "sections": [
     "humanities",
+    "breaking",
+    "technology",
+    "public-discourse",
     "special-reports"
   ],
   "tags": [
@@ -334,7 +337,7 @@
     }
   ],
   "readingMinutes": 11,
-  "heroImage": "",
+  "heroImage": "images/articles/first-strike-denied-the-epistemic-vaccine/first-strike-hero-hex-01-65567193-.png",
   "images": [
     {
       "originalFilename": "EV-Figure-02-First-Strike-Sequence.png",
@@ -366,9 +369,7 @@
     {
       "name": "First-Strike-Denied-The-Epistemic-Vaccine-Publication.pdf",
       "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-first-strike-denied-the-epistemic-vaccine/first-strike-denied-the-epistemic-vaccine-73a10b5bd66f898d.pdf",
-      "mimeType": "application/pdf",
-      "releaseAssetId": 783813031,
-      "releaseTag": "measure-pdf-first-strike-denied-the-epistemic-vaccine"
+      "mimeType": "application/pdf"
     }
   ],
   "style": {
@@ -391,5 +392,5 @@
     "titleAlign": "left",
     "customCss": ""
   },
-  "updatedAt": "2026-11-23T17:09:21.451Z"
+  "updatedAt": "2026-11-24T22:59:34.241Z"
 }
