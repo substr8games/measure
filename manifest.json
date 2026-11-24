@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-23T21:25:55.750Z",
+  "updatedAt": "2026-11-24T02:20:53.865Z",
   "items": [
     {
       "id": "first-strike-denied-the-epistemic-vaccine",
@@ -42,6 +42,39 @@
       ],
       "directory": {
         "style": "text"
+      }
+    },
+    {
+      "id": "glassjaw-everything-you-ever-wanted-to-know-about-being-difficult",
+      "type": "article",
+      "title": "GLASSJAW: Everything You Ever Wanted to Know About Being Difficult",
+      "subtitle": "Being difficult isn't the opposite of being beautiful. Sometimes it's how you get there.",
+      "summary": "There are bands you discover, bands you grow to love, and bands that make you wonder why the fuck you need other bands in the first place. Glassjaw belongs to that last category. Formed on Long Island in 1993 by vocalist Daryl Palumbo and guitarist Justin Beck, Glassjaw released two extraordinary studio albums in remarkably quick succession: *Everything You Ever Wanted to Know About Silence* in 2000 and *Worship and Tribute* in 2002. Both would become landmarks of post-hardcore, although neither seemed particularly concerned with obeying the genre's conventions.",
+      "section": "humanities",
+      "sections": [
+        "humanities"
+      ],
+      "tags": [
+        "glassjaw",
+        "soundscape",
+        "architecture",
+        "music",
+        "culture"
+      ],
+      "doi": "",
+      "author": "Phi Labs Staff",
+      "published": "2026-11-23",
+      "date": "2026-11-23",
+      "updatedAt": "2026-11-24T02:20:50.502Z",
+      "readingMinutes": 11,
+      "classification": "copy",
+      "content": "articles/glassjaw-everything-you-ever-wanted-to-know-about-being-difficult.json",
+      "url": "#/article/glassjaw-everything-you-ever-wanted-to-know-about-being-difficult",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/glassjaw-everything-you-ever-wanted-to-know-about-being-difficult/glassjaw-hero-6488c405-.png"
       }
     },
     {
