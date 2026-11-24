@@ -10,9 +10,9 @@
   "author": "Phi Labs Staff",
   "date": "2026-11-23",
   "published": "2026-11-23",
-  "section": "humanities",
+  "section": "internal",
   "sections": [
-    "humanities",
+    "internal",
     "breaking"
   ],
   "tags": [
@@ -246,5 +246,5 @@
     "titleAlign": "left",
     "customCss": ""
   },
-  "updatedAt": "2026-11-24T06:09:11.477Z"
+  "updatedAt": "2026-11-24T20:43:31.776Z"
 }
