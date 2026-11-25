@@ -6,7 +6,19 @@
   <description>Science, technology, humanities, public discourse, INTERNAL, and Special Reports from Phi Labs.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed-heavy.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Wed, 25 Nov 2026 02:28:35 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 25 Nov 2026 18:28:06 GMT</lastBuildDate>
+  <item>
+    <title>At Least He Was Honest: Levent Alpöge, Anthropic, and Claude Are Formally Deprecated</title>
+    <link>https://philabsresearch.io/read/at-least-he-was-honest-levent-alp-ge-anthropic-and-claude-are-formally-deprecate/</link>
+    <guid isPermaLink="true">https://philabsresearch.io/read/at-least-he-was-honest-levent-alp-ge-anthropic-and-claude-are-formally-deprecate/</guid>
+    <description>Phi Labs Research has formally deprecated Levent Alpöge, Anthropic, and Claude as admissible mathematical authorities regarding the November 20, 2026 Riemann Hypothesis release, assigning the submitted artifact a Q0 (Inadmissible / Uninspectable Artifact) rating.</description>
+    <pubDate>Wed, 25 Nov 2026 12:00:00 GMT</pubDate>
+    <category>humanities</category>
+    <category>technology</category>
+    <category>internal</category>
+    <category>public-discourse</category>
+    <media:content url="https://philabsresearch.io/images/articles/at-least-he-was-honest-levent-alp-ge-anthropic-and-claude-are-formally-deprecate/claude-anthropic-not-funny-d482f73d-.png" medium="image" />
+  </item>
   <item>
     <title>GLASSJAW: Everything You Ever Wanted to Know About Difficulty</title>
     <link>https://philabsresearch.io/read/glassjaw-everything-you-ever-wanted-to-know-about-being-difficult/</link>

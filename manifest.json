@@ -1,8 +1,43 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-25T02:28:34.661Z",
+  "updatedAt": "2026-11-25T18:28:05.245Z",
   "items": [
+    {
+      "id": "at-least-he-was-honest-levent-alp-ge-anthropic-and-claude-are-formally-deprecate",
+      "type": "article",
+      "title": "At Least He Was Honest: Levent Alpöge, Anthropic, and Claude Are Formally Deprecated",
+      "subtitle": "Phi Labs Research has formally deprecated Levent Alpöge, Anthropic, and Claude as admissible mathematical authorities regarding the November 20, 2026 Riemann Hypothesis release, assigning the submitted artifact a Q0 (Inadmissible / Uninspectable Artifact) rating.",
+      "summary": "Phi Labs Research has formally deprecated Levent Alpöge, Anthropic, and Claude as admissible mathematical authorities regarding the November 20, 2026 Riemann Hypothesis release, assigning the submitted artifact a Q0 (Inadmissible / Uninspectable Artifact) rating.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "technology",
+        "internal",
+        "public-discourse"
+      ],
+      "tags": [
+        "Charlatan",
+        "power-grab",
+        "authority",
+        "epistemic-seizure"
+      ],
+      "doi": "",
+      "author": "Phi Labs Research",
+      "published": "2026-11-25",
+      "date": "2026-11-25",
+      "updatedAt": "2026-11-25T18:27:58.880Z",
+      "readingMinutes": 6,
+      "classification": "explainer",
+      "content": "articles/at-least-he-was-honest-levent-alp-ge-anthropic-and-claude-are-formally-deprecate.json",
+      "url": "#/article/at-least-he-was-honest-levent-alp-ge-anthropic-and-claude-are-formally-deprecate",
+      "pdf": "",
+      "attachments": [],
+      "directory": {
+        "style": "thumbnail",
+        "image": "images/articles/at-least-he-was-honest-levent-alp-ge-anthropic-and-claude-are-formally-deprecate/claude-anthropic-not-funny-d482f73d-.png"
+      }
+    },
     {
       "id": "phi-labs-grudgingly-agrees-to-establish-a-limited-cult-of-personality",
       "type": "article",
