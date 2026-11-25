@@ -2,9 +2,9 @@
   "schema": "phi-labs.article.v1",
   "id": "glassjaw-everything-you-ever-wanted-to-know-about-being-difficult",
   "type": "article",
-  "title": "GLASSJAW: Everything You Ever Wanted to Know About Being Difficult",
+  "title": "GLASSJAW: Everything You Ever Wanted to Know About Difficulty",
   "profileId": "article",
-  "subtitle": "Being difficult isn't the opposite of being beautiful. Sometimes it's how you get there.",
+  "subtitle": "Difficulty isn't the opposite of beauty. Sometimes it's how something ugly becomes beautiful.",
   "doi": "",
   "summary": "There are bands you discover, bands you grow to love, and bands that make you wonder why the fuck you need other bands in the first place. Glassjaw belongs to that last category. Formed on Long Island in 1993 by vocalist Daryl Palumbo and guitarist Justin Beck, Glassjaw released two extraordinary studio albums in remarkably quick succession: *Everything You Ever Wanted to Know About Silence* in 2000 and *Worship and Tribute* in 2002. Both would become landmarks of post-hardcore, although neither seemed particularly concerned with obeying the genre's conventions.",
   "author": "Phi Labs Staff",
@@ -445,5 +445,5 @@
     "titleAlign": "left",
     "customCss": ""
   },
-  "updatedAt": "2026-11-24T02:20:50.502Z"
+  "updatedAt": "2026-11-25T02:28:32.024Z"
 }
