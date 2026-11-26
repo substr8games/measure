@@ -20,6 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://substr8games.github.io/measure/images/social-card.png">
   <title>The Measure — A Phi Labs Publication</title>
+  <script src="interactive-media.js"></script>
   <link rel="icon" type="image/png" href="images/logo.png">
   <style>
 :root {
@@ -1279,6 +1280,8 @@ body.breaking-ticker-visible .breaking-ticker { display:flex; }
   body.measure-wire-active .breaking-ticker{display:none!important}
   .section-bar .nav-wire{color:#f1bd64;font-weight:800;letter-spacing:.08em;text-shadow:0 0 5px #96703866}
   .section-bar .nav-wire:hover{color:#ffe0a7}
+.print-pagebreak{display:none}
+@media print{.print-pagebreak{display:block;break-before:page;page-break-before:always;height:0}.article-body h1,.article-body h2,.article-body h3{break-after:avoid-page}}
   </style>
 </head>
 <body>
@@ -1741,11 +1744,12 @@ function tokenizeMarkdown(md) {
   const begins = s => /^(?:\s*$|#{1,6} |```|~~~|>\s?|\s*[-*+] |\s*\d+\. |\s*(?:---|___|\*\*\*)\s*$)/.test(s);
   while(i<lines.length){
     const line=lines[i];
+    if(/^[ ]{0,3}<!--[ \t]*pagebreak[ \t]*-->[ \t]*$/i.test(line)){blocks.push({type:"pagebreak"});i++;continue;}
     const editorial = readEditorialGrid(lines, i);
     if (editorial) { blocks.push(editorial.block); i=editorial.next; continue; }
     if(!line.trim()){i++;continue;}
-    let m=line.match(/^(```|~~~)([^\s`]*)/);
-    if(m){const fence=m[1],lang=m[2]||'';i++;const body=[];while(i<lines.length&&!lines[i].startsWith(fence))body.push(lines[i++]);if(i<lines.length)i++;blocks.push({type:'code',lang,text:body.join('\n')});continue;}
+    let m=line.match(/^ {0,3}(`{3,}|~{3,})\s*([^\s`]*)/);
+    if(m){const fence=m[1],lang=m[2]||'';i++;const body=[];while(i<lines.length&&!new RegExp('^ {0,3}'+fence[0]+'{'+fence.length+',}\\s*$').test(lines[i]))body.push(lines[i++]);if(i<lines.length)i++;blocks.push({type:'code',lang,text:body.join('\n')});continue;}
     m=line.match(/^(#{1,6})\s+(.+)$/);
     if(m){blocks.push({type:'heading',depth:m[1].length,text:m[2]});i++;continue;}
     if(/^\s*(?:---|___|\*\*\*)\s*$/.test(line)){blocks.push({type:'hr'});i++;continue;}
@@ -1762,7 +1766,7 @@ function tokenizeMarkdown(md) {
       blocks.push({type:'table',header,rows});continue;
     }
     const body=[line];i++;
-    while(i<lines.length&&!begins(lines[i])&&!/^\s*(?:\{\[\||\[\|)/.test(lines[i])&&!(lines[i].includes('|')&&i+1<lines.length&&/^\s*\|?\s*:?-{3,}/.test(lines[i+1])))body.push(lines[i++]);
+    while(i<lines.length&&!begins(lines[i])&&!/^[ ]{0,3}<!--[ \t]*pagebreak[ \t]*-->[ \t]*$/i.test(lines[i])&&!/^\s*(?:\{\[\||\[\|)/.test(lines[i])&&!(lines[i].includes('|')&&i+1<lines.length&&/^\s*\|?\s*:?-{3,}/.test(lines[i+1])))body.push(lines[i++]);
     blocks.push({type:'paragraph',text:body.join('\n')});
   }
   return blocks;
@@ -1780,7 +1784,8 @@ function renderEditorialGrid(block) {
   return `<div class="editorial-grid-scroll"><div class="editorial-grid" style="--editorial-columns:${columns};--editorial-min-width:${columns * 165}px" role="group" aria-label="Editorial layout">${content}</div></div>`;
 }
 function renderMarkdown(md){
-  return tokenizeMarkdown(String(md || '').replace(/<!--\s*pagebreak\s*-->/gi, '')).map(b=>{
+  return tokenizeMarkdown(md).map(b=>{
+    if(b.type==='pagebreak')return '<div class="print-pagebreak" aria-hidden="true"></div>';
     switch(b.type){
       case 'heading':return `<h${b.depth}>${inlineMarkdown(b.text)}</h${b.depth}>`;
       case 'paragraph':return `<p>${inlineMarkdown(b.text).replace(/\n/g,'<br>')}</p>`;
@@ -2210,6 +2215,7 @@ let currentRender = 0;
 let lowerRegisterHomeMode = null;
 async function render(preserveScroll = false) {
   if (!content) return;
+  MeasureInteractiveMedia.unmount(main.querySelector('.article-content'));
   const renderId = ++currentRender;
   const r = route();
   // Curiosities and Breaking never surface in the homepage register, but remain available on other routes.
@@ -2236,7 +2242,7 @@ async function render(preserveScroll = false) {
         if (!response.ok) throw new Error('HTTP ' + response.status);
         const record = await response.json();
         if (record.id !== entry.id || (!Array.isArray(record.blocks) && typeof record.markdown !== 'string')) throw new Error('Malformed article JSON');
-        Object.assign(entry, { blocks:Array.isArray(record.blocks) ? record.blocks : [], markdown:record.markdown, author:record.author, subtitle:record.subtitle,
+        Object.assign(entry, { blocks:Array.isArray(record.blocks) ? record.blocks : [], markdown:record.markdown, author:record.author, subtitle:record.subtitle, interactiveMedia:record.interactiveMedia,
           readingMinutes:record.readingMinutes, classification:classificationValid(record.classification) || entry.classification });
       } catch(error) {
         entry.blocks = [{type:'paragraph',text:'Article temporarily unavailable: '+error.message}];
@@ -2272,6 +2278,10 @@ async function render(preserveScroll = false) {
     }
   } else main.innerHTML = notFound();
   renderDirectory(r);
+  if (r.type === 'article') {
+    const entry=content.articles.find(a=>a.id===r.id);
+    MeasureInteractiveMedia.mount(main.querySelector('.article-content'),entry?.interactiveMedia);
+  }
   mountArticleToc(r);
   const seriesLink = document.getElementById('directory-series');
   if (seriesLink) (r.type === 'series-index' || r.type === 'series') ? seriesLink.setAttribute('aria-current','page') : seriesLink.removeAttribute('aria-current');
@@ -2734,19 +2744,19 @@ window.addEventListener('hashchange', () => render());
   // Every other publication image, including cover thumbnails, opens this inspector.
   main.addEventListener('click', event => {
     const img = event.target.closest('img');
-    if (!img || img.closest('.gallery-public-card')) return;
+    if (!img || img.closest('.gallery-public-card, [data-tm-interactive]')) return;
     if (event.button !== 0 || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
     if (openFromImg(img)) {event.preventDefault();event.stopImmediatePropagation();}
   }, true);
   main.addEventListener('keydown', event => {
     if (event.key !== 'Enter' && event.key !== ' ') return;
     const img = event.target.closest('img.image-viewer-target');
-    if (!img) return;
+    if (!img || img.closest('[data-tm-interactive]')) return;
     if (openFromImg(img)) {event.preventDefault();event.stopImmediatePropagation();}
   },true);
   function decorateImages() {
     main.querySelectorAll('img:not(.image-viewer-target)').forEach(img => {
-      if (img.closest('.gallery-public-card')) return;
+      if (img.closest('.gallery-public-card, [data-tm-interactive]')) return;
       img.classList.add('image-viewer-target');
       img.title = 'View full-size image';
       if (!img.closest('a, button')) {
