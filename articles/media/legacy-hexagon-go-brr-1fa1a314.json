@@ -1,0 +1,34 @@
+{
+  "schema": "phi-labs.media.v1",
+  "id": "legacy-hexagon-go-brr-1fa1a314",
+  "type": "media",
+  "mediaType": "image",
+  "mediaKind": "funny",
+  "title": "legacy hexagon go brr",
+  "summary": "",
+  "blurb": "",
+  "advertiser": "",
+  "galleryId": "",
+  "viewerImage": "",
+  "viewerCaption": "",
+  "tags": [
+    "geometry"
+  ],
+  "section": "curiosities",
+  "sections": [
+    "curiosities"
+  ],
+  "date": "2026-11-27",
+  "published": "2026-11-27",
+  "url": "images/media/legacy-hexagon-go-brr-1fa1a314-84c3cecf1dc9b16d.png",
+  "image": "images/media/legacy-hexagon-go-brr-1fa1a314-84c3cecf1dc9b16d.png",
+  "pdf": "",
+  "file": "images/media/legacy-hexagon-go-brr-1fa1a314-84c3cecf1dc9b16d.png",
+  "originalFilename": "legacy-hexagon.png",
+  "mimeType": "image/png",
+  "directory": {
+    "style": "thumbnail",
+    "image": "images/media/legacy-hexagon-go-brr-1fa1a314-84c3cecf1dc9b16d.png"
+  },
+  "updatedAt": "2026-11-27T02:16:55.129Z"
+}

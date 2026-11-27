@@ -34,6 +34,8 @@ a{color:var(--gold);text-underline-offset:3px}a:hover{color:#fff}a:focus-visible
 .article-body .math-display{margin:1.3em 0;padding:.25em 0;overflow-x:auto;text-align:center}.article-body .math-error{color:#bd493c;white-space:pre-wrap}
 .archive-list{list-style:none;padding:0;margin:32px 0}.archive-list li{padding:20px 0;border-top:1px solid var(--line)}.archive-list a{font-size:18px;line-height:1.5}.archive-list small{display:block;font-size:11px;color:var(--muted);margin-top:6px}
 footer{margin:75px 0 35px;border-top:1px solid var(--gold);padding-top:24px;font-size:11px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;justify-content:space-between}
+.print-pagebreak{display:none}
+@media print{.print-pagebreak{display:block;break-before:page;page-break-before:always;height:0}.article-body h1,.article-body h2,.article-body h3{break-after:avoid-page}}
 @media(max-width:600px){.mast{padding-top:25px}.entry{margin:39px 0 65px}.article-body{font-size:17px}}
 </style>
 </head>
