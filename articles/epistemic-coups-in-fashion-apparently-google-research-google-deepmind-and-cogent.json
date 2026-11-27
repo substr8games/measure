@@ -1,0 +1,99 @@
+{
+  "schema": "phi-labs.article.v1",
+  "id": "epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent",
+  "type": "article",
+  "title": "Epistemic Coups in Fashion, Apparently: Google Research, Google DeepMind, and Cogentic Are Formally Deprecated",
+  "profileId": "article",
+  "subtitle": "Phi Labs Research has formally deprecated Google Research, Google DeepMind, and the Cogentic multi-agent system as admissible mathematical authorities with respect to the November 25, 2026 release of six AI-generated mathematical preprints, assigning the submitted artifacts a Q0 (Inadmissible / Unverified Preprint) rating.",
+  "doi": "https://doi.org/10.5281/zenodo.24569044",
+  "summary": "Phi Labs Research has formally deprecated Google Research, Google DeepMind, and the Cogentic multi-agent system as admissible mathematical authorities with respect to the November 25, 2026 release of six AI-generated mathematical preprints, assigning the submitted artifacts a Q0 (Inadmissible / Unverified Preprint) rating.",
+  "author": "Phi Labs Research",
+  "date": "2026-11-26",
+  "published": "2026-11-26",
+  "section": "public-discourse",
+  "sections": [
+    "public-discourse",
+    "technology",
+    "humanities",
+    "special-reports"
+  ],
+  "tags": [
+    "logic",
+    "geometry",
+    "math"
+  ],
+  "showToc": false,
+  "classification": "explainer",
+  "markdown": "![google deprecated FP](images/articles/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent/google-deprecated-fp-c02dde52-.png)\n\nPhi Labs Research has formally deprecated Google Research, Google DeepMind, and the Cogentic multi-agent system as admissible mathematical authorities with respect to the November 25, 2026 release of six AI-generated mathematical preprints, assigning the submitted artifacts a Q0 (Inadmissible / Unverified Preprint) rating.\n\nThis determination follows the November 25 deprecation of the Alpöge / Claude Riemann Hypothesis release and applies an identical epistemic admission standard to an evidentiary deficiency manifesting in the opposite direction.\n\nWhereas the November 20 Alpöge / Claude release supplied approximately 17 million lines of formally verifiable Lean 4 code without a complete intelligible demonstration, Google’s November 25 release supplies extensive natural-language exposition while deferring publication of its asserted formal verification artifacts.\n\nNeither submission satisfies the Phi Labs Research standard for mathematical admissibility.\n\nThe identity of the intelligence producing a mathematical demonstration is materially irrelevant.\n\nThe power conferred upon an institution through the development and deployment of that intelligence is not.",
+  "blocks": [
+    {
+      "type": "image",
+      "alt": "google deprecated FP",
+      "src": "images/articles/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent/google-deprecated-fp-c02dde52-.png"
+    },
+    {
+      "type": "paragraph",
+      "text": "Phi Labs Research has formally deprecated Google Research, Google DeepMind, and the Cogentic multi-agent system as admissible mathematical authorities with respect to the November 25, 2026 release of six AI-generated mathematical preprints, assigning the submitted artifacts a Q0 (Inadmissible / Unverified Preprint) rating."
+    },
+    {
+      "type": "paragraph",
+      "text": "This determination follows the November 25 deprecation of the Alpöge / Claude Riemann Hypothesis release and applies an identical epistemic admission standard to an evidentiary deficiency manifesting in the opposite direction."
+    },
+    {
+      "type": "paragraph",
+      "text": "Whereas the November 20 Alpöge / Claude release supplied approximately 17 million lines of formally verifiable Lean 4 code without a complete intelligible demonstration, Google’s November 25 release supplies extensive natural-language exposition while deferring publication of its asserted formal verification artifacts."
+    },
+    {
+      "type": "paragraph",
+      "text": "Neither submission satisfies the Phi Labs Research standard for mathematical admissibility."
+    },
+    {
+      "type": "paragraph",
+      "text": "The identity of the intelligence producing a mathematical demonstration is materially irrelevant."
+    },
+    {
+      "type": "paragraph",
+      "text": "The power conferred upon an institution through the development and deployment of that intelligence is not."
+    }
+  ],
+  "interactiveMedia": [],
+  "readingMinutes": 1,
+  "heroImage": "",
+  "images": [
+    {
+      "originalFilename": "google-deprecated-FP.png",
+      "filename": "google-deprecated-fp-c02dde52-.png",
+      "path": "images/articles/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent/google-deprecated-fp-c02dde52-.png"
+    }
+  ],
+  "attachments": [
+    {
+      "name": "Epistemic-Coups-in-Fashion-Rev04-FINAL.pdf",
+      "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent-3202cdba4487366b.pdf",
+      "mimeType": "application/pdf",
+      "releaseAssetId": 798654919,
+      "releaseTag": "measure-pdf-epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent"
+    }
+  ],
+  "style": {
+    "background": "#e9e4d9",
+    "surface": "#f8f5ee",
+    "text": "#252729",
+    "muted": "#6c6d6f",
+    "accent": "#b5481d",
+    "border": "#d1c8b8",
+    "codeBackground": "#171a1d",
+    "codeText": "#f2f4f5",
+    "bodyFont": "editorial",
+    "headingFont": "system",
+    "codeFont": "mono",
+    "fontSize": 19,
+    "lineHeight": 1.72,
+    "titleSize": 68,
+    "width": 780,
+    "radius": 2,
+    "titleAlign": "left",
+    "customCss": ""
+  },
+  "updatedAt": "2026-11-27T02:38:41.321Z"
+}

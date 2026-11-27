@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-27T02:16:57.973Z",
+  "updatedAt": "2026-11-27T02:39:01.287Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -36,6 +36,47 @@
         "image": "images/media/legacy-hexagon-go-brr-1fa1a314-84c3cecf1dc9b16d.png"
       },
       "updatedAt": "2026-11-27T02:16:55.129Z"
+    },
+    {
+      "id": "epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent",
+      "type": "article",
+      "title": "Epistemic Coups in Fashion, Apparently: Google Research, Google DeepMind, and Cogentic Are Formally Deprecated",
+      "subtitle": "Phi Labs Research has formally deprecated Google Research, Google DeepMind, and the Cogentic multi-agent system as admissible mathematical authorities with respect to the November 25, 2026 release of six AI-generated mathematical preprints, assigning the submitted artifacts a Q0 (Inadmissible / Unverified Preprint) rating.",
+      "summary": "Phi Labs Research has formally deprecated Google Research, Google DeepMind, and the Cogentic multi-agent system as admissible mathematical authorities with respect to the November 25, 2026 release of six AI-generated mathematical preprints, assigning the submitted artifacts a Q0 (Inadmissible / Unverified Preprint) rating.",
+      "section": "public-discourse",
+      "sections": [
+        "public-discourse",
+        "technology",
+        "humanities",
+        "special-reports"
+      ],
+      "tags": [
+        "logic",
+        "geometry",
+        "math"
+      ],
+      "doi": "https://doi.org/10.5281/zenodo.24569044",
+      "author": "Phi Labs Research",
+      "published": "2026-11-26",
+      "date": "2026-11-26",
+      "updatedAt": "2026-11-27T02:38:41.321Z",
+      "readingMinutes": 1,
+      "classification": "explainer",
+      "content": "articles/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent.json",
+      "url": "#/article/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent-3202cdba4487366b.pdf",
+      "attachments": [
+        {
+          "name": "Epistemic-Coups-in-Fashion-Rev04-FINAL.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent-3202cdba4487366b.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 798654919,
+          "releaseTag": "measure-pdf-epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
     },
     {
       "id": "at-least-he-was-honest-levent-alp-ge-anthropic-and-claude-are-formally-deprecate",
