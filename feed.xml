@@ -6,7 +6,17 @@
   <description>All published articles, including editorials, satire, Breaking, Play, and Special Reports.</description>
   <language>en-us</language>
   <atom:link href="https://philabsresearch.io/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Fri, 27 Nov 2026 02:39:02 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 27 Nov 2026 02:44:34 GMT</lastBuildDate>
+  <item>
+    <title>The Institutions Are Closed. Your Deadline Is Not.</title>
+    <link>https://philabsresearch.io/read/the-institutions-are-closed-your-deadline-is-not/</link>
+    <guid isPermaLink="true">https://philabsresearch.io/read/the-institutions-are-closed-your-deadline-is-not/</guid>
+    <description>On Thanksgiving Day, Americans are expected to exercise their legal rights through infrastructure that has suspended its ordinary operations for the holiday.</description>
+    <pubDate>Thu, 26 Nov 2026 12:00:00 GMT</pubDate>
+    <category>humanities</category>
+    <category>public-discourse</category>
+    <media:content url="https://philabsresearch.io/images/social-card.png" medium="image" />
+  </item>
   <item>
     <title>Epistemic Coups in Fashion, Apparently: Google Research, Google DeepMind, and Cogentic Are Formally Deprecated</title>
     <link>https://philabsresearch.io/read/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent/</link>

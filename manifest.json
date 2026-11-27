@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-27T02:39:01.287Z",
+  "updatedAt": "2026-11-27T02:44:33.601Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -72,6 +72,45 @@
           "mimeType": "application/pdf",
           "releaseAssetId": 798654919,
           "releaseTag": "measure-pdf-epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent"
+        }
+      ],
+      "directory": {
+        "style": "text"
+      }
+    },
+    {
+      "id": "the-institutions-are-closed-your-deadline-is-not",
+      "type": "article",
+      "title": "The Institutions Are Closed. Your Deadline Is Not.",
+      "subtitle": "On Thanksgiving Day, Americans are expected to exercise their legal rights through infrastructure that has suspended its ordinary operations for the holiday.",
+      "summary": "On Thanksgiving Day, Americans are expected to exercise their legal rights through infrastructure that has suspended its ordinary operations for the holiday.",
+      "section": "humanities",
+      "sections": [
+        "humanities",
+        "public-discourse"
+      ],
+      "tags": [
+        "architecture",
+        "denial",
+        "legacy"
+      ],
+      "doi": "",
+      "author": "Phi Labs Research",
+      "published": "2026-11-26",
+      "date": "2026-11-26",
+      "updatedAt": "2026-11-27T02:44:27.532Z",
+      "readingMinutes": 7,
+      "classification": "deep-dive",
+      "content": "articles/the-institutions-are-closed-your-deadline-is-not.json",
+      "url": "#/article/the-institutions-are-closed-your-deadline-is-not",
+      "pdf": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-institutions-are-closed-your-deadline-is-not/the-institutions-are-closed-your-deadline-is-not-00d49c53d44b170d.pdf",
+      "attachments": [
+        {
+          "name": "the-institutions-are-closed-your-deadline-is-not-1.pdf",
+          "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-institutions-are-closed-your-deadline-is-not/the-institutions-are-closed-your-deadline-is-not-00d49c53d44b170d.pdf",
+          "mimeType": "application/pdf",
+          "releaseAssetId": 798673963,
+          "releaseTag": "measure-pdf-the-institutions-are-closed-your-deadline-is-not"
         }
       ],
       "directory": {

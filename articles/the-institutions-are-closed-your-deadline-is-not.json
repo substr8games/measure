@@ -1,0 +1,392 @@
+{
+  "schema": "phi-labs.article.v1",
+  "id": "the-institutions-are-closed-your-deadline-is-not",
+  "type": "article",
+  "title": "The Institutions Are Closed. Your Deadline Is Not.",
+  "profileId": "article",
+  "subtitle": "On Thanksgiving Day, Americans are expected to exercise their legal rights through infrastructure that has suspended its ordinary operations for the holiday.",
+  "doi": "",
+  "summary": "On Thanksgiving Day, Americans are expected to exercise their legal rights through infrastructure that has suspended its ordinary operations for the holiday.",
+  "author": "Phi Labs Research",
+  "date": "2026-11-26",
+  "published": "2026-11-26",
+  "section": "humanities",
+  "sections": [
+    "humanities",
+    "public-discourse"
+  ],
+  "tags": [
+    "architecture",
+    "denial",
+    "legacy"
+  ],
+  "showToc": true,
+  "classification": "deep-dive",
+  "markdown": "**BURIED IN PLAIN SIGHT | SPECIAL REPORT**\n\nPhi Labs Research | November 26, 2026\n\n---\n\nWhile Americans observe Thanksgiving, multiple proposed class-action settlements are approaching the expiration of their claims periods. Millions of dollars in potential compensation are subject to administrative deadlines coinciding with one of the most widely observed holidays in the United States.\n\nAmong them is a settlement allocating $28 million to individuals subjected to repeated strip searches while in the custody of the New York City Department of Correction.\n\nPost offices are closed. Regular mail delivery is suspended. Federal courts are observing the holiday.\n\nThe published deadline for exercising certain legal rights is nevertheless today.\n\n## I. The $28 Million Thanksgiving Deadline\n\nIn *Lewis et al. v. City of New York et al.*, the City of New York has agreed to allocate $28 million toward compensating eligible individuals subjected to strip searches upon arrival at Manhattan Court Division after already having undergone strip searches before departing Rikers Island.\n\nThe applicable class period begins on March 28, 2020, for individuals classified as Enhanced Security and October 1, 2022, for other eligible individuals. Both periods conclude on February 29, 2024.\n\nThe $28 million constitutes the claimant distribution pool. Administrative costs, court-approved legal fees and designated service awards are separately provided for.\n\nAccording to the authorized settlement administrator, November 26, 2026, is the deadline for three distinct actions:\n\n- Submitting a claim for compensation.\n- Requesting exclusion from the settlement to preserve one's independent legal rights.\n- Formally objecting to the terms of the settlement.\n\nClaims may be submitted electronically or by mail. Requests for exclusion require a signed, mailed submission. Objections require both a court filing and mailed copies to designated recipients.\n\nNovember 26, 2026, is Thanksgiving Day.\n\nFederal Rule of Civil Procedure 6(a) provides for the extension of certain calculated deadlines when they expire on legal holidays. Its time-computation provisions distinguish such periods from deadlines established as specific calendar dates. Whether a particular extension applies depends upon the governing order and applicable procedural rules.\n\nEven where a procedural extension is available, the published instructions direct individuals to a holiday deadline. The availability of a procedural remedy does not eliminate the access constraint communicated by the notice.\n\nThe affected population includes individuals whose continued incarceration may substantially restrict their access to communications and administrative infrastructure.\n\nThe institution administering the remedy has designated a deadline. Institutions necessary to exercise certain rights under that remedy have suspended their ordinary operations.\n\nThe compatibility of these arrangements warrants scrutiny.\n\n## II. An Inventory of Holiday Restitution\n\nThe New York settlement is not an isolated instance. Phi Labs Research identified at least five proposed class-action settlements with published claims deadlines falling on Thanksgiving or Black Friday.\n\n| Settlement | Subject | Published claims deadline |\n|---|---|---|\n| City of New York | Repeated strip searches | November 26 |\n| CPAP Medical Supplies and Services | Medical data breach | November 26 |\n| Ben E. Keith Company | Data security incident | November 26 |\n| Finastra Technology | Financial technology data breach | November 27 |\n| Dr. Squatch | Allegedly misleading product labeling | November 27 |\n\nThe distinction between these dates is material. Thanksgiving is a federal holiday during which ordinary postal services are suspended. Black Friday is not a federal holiday, and regular postal operations resume.\n\nThe Black Friday cases are therefore examples of deadlines coinciding with a major period of public distraction rather than the same nationwide postal closure.\n\nThe underlying allegations differ considerably. The administrative architecture is remarkably similar.\n\nEach settlement requires affirmative action from eligible individuals to obtain designated benefits. The institutions administering those settlements have established the temporal boundary within which that action must occur.\n\nIn several cases, the expiration of the opportunity to obtain compensation does not preserve the individual's opportunity to pursue independent litigation.\n\nIt extinguishes the former without restoring the latter.\n\n## III. The Asymmetry of Inaction\n\nThe proposed CPAP Medical Supplies settlement provides for reimbursement of documented losses up to $5,000 per eligible claimant, subject to an aggregate reimbursement limit of $500,000 for that benefit. Eligible individuals may also claim two years of medical data monitoring.\n\nAffected individuals are instructed to submit their claims by Thanksgiving Day. Their published opportunity to exclude themselves from the settlement expired on October 30.\n\nConsider the structural implications.\n\nAn eligible individual who remains within the settlement class but fails to submit a valid claim may receive no compensation. If the settlement becomes final, that same individual relinquishes the legal claims covered by the settlement.\n\nThe individual's inaction produces two different outcomes for the two parties:\n\n**For the individual:** the loss of access to settlement benefits.\n\n**For the defendant:** protection against subsequent litigation concerning the released claims.\n\nThe proposed Dr. Squatch settlement exhibits the same asymmetry. Individuals who neither exclude themselves nor submit a timely valid claim forfeit their opportunity to receive payment while remaining subject to the settlement upon its final approval and effectiveness.\n\nDr. Squatch denies the underlying allegations and has not admitted wrongdoing.\n\nThe question examined here is not whether the original allegations are true. It is whether the architecture of restitution adequately serves the people for whom restitution is ostensibly being administered.\n\n## IV. Time as an Instrument of Authority\n\nA deadline is not merely a date.\n\nIt is an architectural boundary governing the accessibility of an affordance. Before the boundary, an action is permitted. Beyond it, the same action may become administratively inadmissible.\n\nThe authority establishing that boundary exercises control over the conditions under which the individual may obtain a remedy.\n\nThe selection of a deadline therefore cannot be meaningfully separated from the availability of the infrastructure necessary to satisfy it.\n\nA postmark requirement is dependent upon postal infrastructure. A filing requirement is dependent upon filing infrastructure. A documentation requirement is dependent upon access to records. An electronic submission requirement is dependent upon access to appropriate communications technology.\n\nThese dependencies are intrinsic to the remedy.\n\nAn institution cannot meaningfully evaluate accessibility by examining only the existence of a claims portal or the nominal duration of a claims period. It must examine the complete architecture through which the intended beneficiary is expected to act.\n\nA door that exists is not necessarily a door that opens.\n\nThe availability of the door on preceding days does not render its scheduled closure on the final designated day irrelevant.\n\n## V. The Complaint Is Permitted. The Remedy Is Conditional.\n\nIn its earlier publication, [*The Complaint Is Permitted. The Remedy Is Not.*](https://doi.org/10.5281/zenodo.24182058), Phi Labs Research examined the distinction between an institution permitting the expression of a grievance and providing an effective means of obtaining its resolution.\n\nThe holiday restitution deadline exposes a related mechanism.\n\nHere, the remedy has been negotiated. Its monetary value can be announced. Its administrative procedures can be documented. Its existence can be publicly celebrated as evidence that the institutional mechanisms of accountability are functioning.\n\nThe actual receipt of the remedy remains contingent upon the individual's successful navigation of those mechanisms.\n\nWhere the individual fails to navigate them, the defendant can retain the legal benefits of a finalized settlement without an individual payment having been delivered.\n\nThe public announcement of restitution and the actual distribution of restitution are two distinct events.\n\nThe former must never be accepted as evidence of the latter.\n\nNor does every unclaimed dollar necessarily return to the defendant. In the New York settlement, the designated compensation pool is apportioned among successful claimants according to their respective numbers of qualifying searches.\n\nThe distribution mechanism must be examined separately from the release of legal claims.\n\nThe architectural concern is the potential exclusion of intended beneficiaries, irrespective of the ultimate destination of the money.\n\n## VI. Making Accountability an Inevitability\n\nPhi Labs Research proposes that restitution mechanisms be evaluated against five elementary requirements:\n\n1. Deadlines must not expire during the scheduled closure of infrastructure necessary to satisfy them.\n2. Individuals must have access to reasonably equivalent means of exercising their legal rights.\n3. Compensation should be distributed automatically wherever beneficiaries and entitlements can be reliably established.\n4. The extinguishment of an individual's independent legal rights without compensation must be subjected to explicit scrutiny.\n5. Settlement administrators should publicly disclose participation rates, rejected claims, uncompensated class members and the ultimate distribution of settlement funds.\n\nThese requirements do not prevent institutions from resolving disputes. They prevent the administrative resolution of a dispute from being mistaken for the delivery of a remedy.\n\nWhether the Thanksgiving deadlines examined here were selected to suppress participation remains an open investigative question. Their coincidence with scheduled institutional closures, however, is independently verifiable.\n\nThe appropriate subject of accountability is not exclusively the intention of the architect.\n\nIt is also the architecture.\n\n**If the institutions are entitled to a holiday, so are the people to whom those institutions owe restitution.**\n\n---\n\n### Source Records\n\n1. [Lewis et al. v. City of New York et al. — Authorized Settlement Administrator, FAQ §§ 5, 8–10, 14–16, 18–19](https://nystripsearchsettlement.com/frequently-asked-questions.aspx)\n2. [Brett Conner v. CPAP Medical Supplies and Services, Inc. — Settlement FAQ §§ 7–10, 15, 20](https://cpapdataincidentsettlement.com/faq/)\n3. [Baca et al. v. Ben E. Keith Company — Authorized Settlement Website](https://www.bekdataincidentsettlement.com/)\n4. [Tina Parsley Hughes et al. v. Finastra Technology, Inc. — Settlement FAQ](https://www.finastradatasettlement.com/faq/)\n5. [Guzman et al. v. Dr. Squatch, LLC — Authorized Settlement Website](https://www.personalcareproductssettlement.com/)\n6. [Cornell Legal Information Institute — Federal Rule of Civil Procedure 6 and 2009 Advisory Committee Notes](https://www.law.cornell.edu/rules/frcp/rule_6)\n7. [Associated Press — Thanksgiving and Black Friday Institutional Closures](https://apnews.com/article/d9e8009c6a07f309b69d7b020b562dcd)\n8. [AARP — Postal Service Holidays in 2026](https://www.aarp.org/government-elections/post-office-holidays-closed.html)\n\nSettlement administrator websites consulted November 26, 2026.\n\n---\n\n**THE MEASURE**\n\nA Phi Labs Publication\n\n*Making Accountability an Inevitability.*",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "BURIED IN PLAIN SIGHT | SPECIAL REPORT"
+    },
+    {
+      "type": "paragraph",
+      "text": "Phi Labs Research | November 26, 2026"
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "paragraph",
+      "text": "While Americans observe Thanksgiving, multiple proposed class-action settlements are approaching the expiration of their claims periods. Millions of dollars in potential compensation are subject to administrative deadlines coinciding with one of the most widely observed holidays in the United States."
+    },
+    {
+      "type": "paragraph",
+      "text": "Among them is a settlement allocating $28 million to individuals subjected to repeated strip searches while in the custody of the New York City Department of Correction."
+    },
+    {
+      "type": "paragraph",
+      "text": "Post offices are closed. Regular mail delivery is suspended. Federal courts are observing the holiday."
+    },
+    {
+      "type": "paragraph",
+      "text": "The published deadline for exercising certain legal rights is nevertheless today."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "I. The $28 Million Thanksgiving Deadline"
+    },
+    {
+      "type": "paragraph",
+      "text": "In Lewis et al. v. City of New York et al., the City of New York has agreed to allocate $28 million toward compensating eligible individuals subjected to strip searches upon arrival at Manhattan Court Division after already having undergone strip searches before departing Rikers Island."
+    },
+    {
+      "type": "paragraph",
+      "text": "The applicable class period begins on March 28, 2020, for individuals classified as Enhanced Security and October 1, 2022, for other eligible individuals. Both periods conclude on February 29, 2024."
+    },
+    {
+      "type": "paragraph",
+      "text": "The $28 million constitutes the claimant distribution pool. Administrative costs, court-approved legal fees and designated service awards are separately provided for."
+    },
+    {
+      "type": "paragraph",
+      "text": "According to the authorized settlement administrator, November 26, 2026, is the deadline for three distinct actions:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Submitting a claim for compensation.",
+        "Requesting exclusion from the settlement to preserve one's independent legal rights.",
+        "Formally objecting to the terms of the settlement."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Claims may be submitted electronically or by mail. Requests for exclusion require a signed, mailed submission. Objections require both a court filing and mailed copies to designated recipients."
+    },
+    {
+      "type": "paragraph",
+      "text": "November 26, 2026, is Thanksgiving Day."
+    },
+    {
+      "type": "paragraph",
+      "text": "Federal Rule of Civil Procedure 6(a) provides for the extension of certain calculated deadlines when they expire on legal holidays. Its time-computation provisions distinguish such periods from deadlines established as specific calendar dates. Whether a particular extension applies depends upon the governing order and applicable procedural rules."
+    },
+    {
+      "type": "paragraph",
+      "text": "Even where a procedural extension is available, the published instructions direct individuals to a holiday deadline. The availability of a procedural remedy does not eliminate the access constraint communicated by the notice."
+    },
+    {
+      "type": "paragraph",
+      "text": "The affected population includes individuals whose continued incarceration may substantially restrict their access to communications and administrative infrastructure."
+    },
+    {
+      "type": "paragraph",
+      "text": "The institution administering the remedy has designated a deadline. Institutions necessary to exercise certain rights under that remedy have suspended their ordinary operations."
+    },
+    {
+      "type": "paragraph",
+      "text": "The compatibility of these arrangements warrants scrutiny."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "II. An Inventory of Holiday Restitution"
+    },
+    {
+      "type": "paragraph",
+      "text": "The New York settlement is not an isolated instance. Phi Labs Research identified at least five proposed class-action settlements with published claims deadlines falling on Thanksgiving or Black Friday."
+    },
+    {
+      "type": "paragraph",
+      "text": "The distinction between these dates is material. Thanksgiving is a federal holiday during which ordinary postal services are suspended. Black Friday is not a federal holiday, and regular postal operations resume."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Black Friday cases are therefore examples of deadlines coinciding with a major period of public distraction rather than the same nationwide postal closure."
+    },
+    {
+      "type": "paragraph",
+      "text": "The underlying allegations differ considerably. The administrative architecture is remarkably similar."
+    },
+    {
+      "type": "paragraph",
+      "text": "Each settlement requires affirmative action from eligible individuals to obtain designated benefits. The institutions administering those settlements have established the temporal boundary within which that action must occur."
+    },
+    {
+      "type": "paragraph",
+      "text": "In several cases, the expiration of the opportunity to obtain compensation does not preserve the individual's opportunity to pursue independent litigation."
+    },
+    {
+      "type": "paragraph",
+      "text": "It extinguishes the former without restoring the latter."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "III. The Asymmetry of Inaction"
+    },
+    {
+      "type": "paragraph",
+      "text": "The proposed CPAP Medical Supplies settlement provides for reimbursement of documented losses up to $5,000 per eligible claimant, subject to an aggregate reimbursement limit of $500,000 for that benefit. Eligible individuals may also claim two years of medical data monitoring."
+    },
+    {
+      "type": "paragraph",
+      "text": "Affected individuals are instructed to submit their claims by Thanksgiving Day. Their published opportunity to exclude themselves from the settlement expired on October 30."
+    },
+    {
+      "type": "paragraph",
+      "text": "Consider the structural implications."
+    },
+    {
+      "type": "paragraph",
+      "text": "An eligible individual who remains within the settlement class but fails to submit a valid claim may receive no compensation. If the settlement becomes final, that same individual relinquishes the legal claims covered by the settlement."
+    },
+    {
+      "type": "paragraph",
+      "text": "The individual's inaction produces two different outcomes for the two parties:"
+    },
+    {
+      "type": "paragraph",
+      "text": "For the individual: the loss of access to settlement benefits."
+    },
+    {
+      "type": "paragraph",
+      "text": "For the defendant: protection against subsequent litigation concerning the released claims."
+    },
+    {
+      "type": "paragraph",
+      "text": "The proposed Dr. Squatch settlement exhibits the same asymmetry. Individuals who neither exclude themselves nor submit a timely valid claim forfeit their opportunity to receive payment while remaining subject to the settlement upon its final approval and effectiveness."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dr. Squatch denies the underlying allegations and has not admitted wrongdoing."
+    },
+    {
+      "type": "paragraph",
+      "text": "The question examined here is not whether the original allegations are true. It is whether the architecture of restitution adequately serves the people for whom restitution is ostensibly being administered."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "IV. Time as an Instrument of Authority"
+    },
+    {
+      "type": "paragraph",
+      "text": "A deadline is not merely a date."
+    },
+    {
+      "type": "paragraph",
+      "text": "It is an architectural boundary governing the accessibility of an affordance. Before the boundary, an action is permitted. Beyond it, the same action may become administratively inadmissible."
+    },
+    {
+      "type": "paragraph",
+      "text": "The authority establishing that boundary exercises control over the conditions under which the individual may obtain a remedy."
+    },
+    {
+      "type": "paragraph",
+      "text": "The selection of a deadline therefore cannot be meaningfully separated from the availability of the infrastructure necessary to satisfy it."
+    },
+    {
+      "type": "paragraph",
+      "text": "A postmark requirement is dependent upon postal infrastructure. A filing requirement is dependent upon filing infrastructure. A documentation requirement is dependent upon access to records. An electronic submission requirement is dependent upon access to appropriate communications technology."
+    },
+    {
+      "type": "paragraph",
+      "text": "These dependencies are intrinsic to the remedy."
+    },
+    {
+      "type": "paragraph",
+      "text": "An institution cannot meaningfully evaluate accessibility by examining only the existence of a claims portal or the nominal duration of a claims period. It must examine the complete architecture through which the intended beneficiary is expected to act."
+    },
+    {
+      "type": "paragraph",
+      "text": "A door that exists is not necessarily a door that opens."
+    },
+    {
+      "type": "paragraph",
+      "text": "The availability of the door on preceding days does not render its scheduled closure on the final designated day irrelevant."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "V. The Complaint Is Permitted. The Remedy Is Conditional."
+    },
+    {
+      "type": "paragraph",
+      "text": "In its earlier publication, The Complaint Is Permitted. The Remedy Is Not., Phi Labs Research examined the distinction between an institution permitting the expression of a grievance and providing an effective means of obtaining its resolution."
+    },
+    {
+      "type": "paragraph",
+      "text": "The holiday restitution deadline exposes a related mechanism."
+    },
+    {
+      "type": "paragraph",
+      "text": "Here, the remedy has been negotiated. Its monetary value can be announced. Its administrative procedures can be documented. Its existence can be publicly celebrated as evidence that the institutional mechanisms of accountability are functioning."
+    },
+    {
+      "type": "paragraph",
+      "text": "The actual receipt of the remedy remains contingent upon the individual's successful navigation of those mechanisms."
+    },
+    {
+      "type": "paragraph",
+      "text": "Where the individual fails to navigate them, the defendant can retain the legal benefits of a finalized settlement without an individual payment having been delivered."
+    },
+    {
+      "type": "paragraph",
+      "text": "The public announcement of restitution and the actual distribution of restitution are two distinct events."
+    },
+    {
+      "type": "paragraph",
+      "text": "The former must never be accepted as evidence of the latter."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nor does every unclaimed dollar necessarily return to the defendant. In the New York settlement, the designated compensation pool is apportioned among successful claimants according to their respective numbers of qualifying searches."
+    },
+    {
+      "type": "paragraph",
+      "text": "The distribution mechanism must be examined separately from the release of legal claims."
+    },
+    {
+      "type": "paragraph",
+      "text": "The architectural concern is the potential exclusion of intended beneficiaries, irrespective of the ultimate destination of the money."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "VI. Making Accountability an Inevitability"
+    },
+    {
+      "type": "paragraph",
+      "text": "Phi Labs Research proposes that restitution mechanisms be evaluated against five elementary requirements:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Deadlines must not expire during the scheduled closure of infrastructure necessary to satisfy them.",
+        "Individuals must have access to reasonably equivalent means of exercising their legal rights.",
+        "Compensation should be distributed automatically wherever beneficiaries and entitlements can be reliably established.",
+        "The extinguishment of an individual's independent legal rights without compensation must be subjected to explicit scrutiny.",
+        "Settlement administrators should publicly disclose participation rates, rejected claims, uncompensated class members and the ultimate distribution of settlement funds."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "These requirements do not prevent institutions from resolving disputes. They prevent the administrative resolution of a dispute from being mistaken for the delivery of a remedy."
+    },
+    {
+      "type": "paragraph",
+      "text": "Whether the Thanksgiving deadlines examined here were selected to suppress participation remains an open investigative question. Their coincidence with scheduled institutional closures, however, is independently verifiable."
+    },
+    {
+      "type": "paragraph",
+      "text": "The appropriate subject of accountability is not exclusively the intention of the architect."
+    },
+    {
+      "type": "paragraph",
+      "text": "It is also the architecture."
+    },
+    {
+      "type": "paragraph",
+      "text": "If the institutions are entitled to a holiday, so are the people to whom those institutions owe restitution."
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Source Records"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Lewis et al. v. City of New York et al. — Authorized Settlement Administrator, FAQ §§ 5, 8–10, 14–16, 18–19",
+        "Brett Conner v. CPAP Medical Supplies and Services, Inc. — Settlement FAQ §§ 7–10, 15, 20",
+        "Baca et al. v. Ben E. Keith Company — Authorized Settlement Website",
+        "Tina Parsley Hughes et al. v. Finastra Technology, Inc. — Settlement FAQ",
+        "Guzman et al. v. Dr. Squatch, LLC — Authorized Settlement Website",
+        "Cornell Legal Information Institute — Federal Rule of Civil Procedure 6 and 2009 Advisory Committee Notes",
+        "Associated Press — Thanksgiving and Black Friday Institutional Closures",
+        "AARP — Postal Service Holidays in 2026"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Settlement administrator websites consulted November 26, 2026."
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "paragraph",
+      "text": "THE MEASURE"
+    },
+    {
+      "type": "paragraph",
+      "text": "A Phi Labs Publication"
+    },
+    {
+      "type": "paragraph",
+      "text": "Making Accountability an Inevitability."
+    }
+  ],
+  "interactiveMedia": [],
+  "readingMinutes": 7,
+  "heroImage": "",
+  "images": [],
+  "attachments": [
+    {
+      "name": "the-institutions-are-closed-your-deadline-is-not-1.pdf",
+      "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-the-institutions-are-closed-your-deadline-is-not/the-institutions-are-closed-your-deadline-is-not-00d49c53d44b170d.pdf",
+      "mimeType": "application/pdf",
+      "releaseAssetId": 798673963,
+      "releaseTag": "measure-pdf-the-institutions-are-closed-your-deadline-is-not"
+    }
+  ],
+  "style": {
+    "background": "#e9e4d9",
+    "surface": "#f8f5ee",
+    "text": "#252729",
+    "muted": "#6c6d6f",
+    "accent": "#b5481d",
+    "border": "#d1c8b8",
+    "codeBackground": "#171a1d",
+    "codeText": "#f2f4f5",
+    "bodyFont": "editorial",
+    "headingFont": "system",
+    "codeFont": "mono",
+    "fontSize": 19,
+    "lineHeight": 1.72,
+    "titleSize": 68,
+    "width": 780,
+    "radius": 2,
+    "titleAlign": "left",
+    "customCss": ""
+  },
+  "updatedAt": "2026-11-27T02:44:27.532Z"
+}
