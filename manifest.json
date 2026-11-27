@@ -1,7 +1,7 @@
 {
   "schema": "phi-labs.publication-manifest.v1",
   "version": 1,
-  "updatedAt": "2026-11-27T02:44:33.601Z",
+  "updatedAt": "2026-11-27T02:46:43.915Z",
   "items": [
     {
       "schema": "phi-labs.media.v1",
@@ -59,7 +59,7 @@
       "author": "Phi Labs Research",
       "published": "2026-11-26",
       "date": "2026-11-26",
-      "updatedAt": "2026-11-27T02:38:41.321Z",
+      "updatedAt": "2026-11-27T02:46:40.767Z",
       "readingMinutes": 1,
       "classification": "explainer",
       "content": "articles/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent.json",
@@ -69,13 +69,12 @@
         {
           "name": "Epistemic-Coups-in-Fashion-Rev04-FINAL.pdf",
           "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent-3202cdba4487366b.pdf",
-          "mimeType": "application/pdf",
-          "releaseAssetId": 798654919,
-          "releaseTag": "measure-pdf-epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent"
+          "mimeType": "application/pdf"
         }
       ],
       "directory": {
-        "style": "text"
+        "style": "thumbnail",
+        "image": "images/articles/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent/google-deprecated-fp-c02dde52-.png"
       }
     },
     {

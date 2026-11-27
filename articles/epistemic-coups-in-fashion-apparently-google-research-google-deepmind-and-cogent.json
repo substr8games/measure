@@ -58,7 +58,7 @@
   ],
   "interactiveMedia": [],
   "readingMinutes": 1,
-  "heroImage": "",
+  "heroImage": "images/articles/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent/google-deprecated-fp-c02dde52-.png",
   "images": [
     {
       "originalFilename": "google-deprecated-FP.png",
@@ -70,9 +70,7 @@
     {
       "name": "Epistemic-Coups-in-Fashion-Rev04-FINAL.pdf",
       "path": "https://github.com/substr8games/measure/releases/download/measure-pdf-epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent/epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent-3202cdba4487366b.pdf",
-      "mimeType": "application/pdf",
-      "releaseAssetId": 798654919,
-      "releaseTag": "measure-pdf-epistemic-coups-in-fashion-apparently-google-research-google-deepmind-and-cogent"
+      "mimeType": "application/pdf"
     }
   ],
   "style": {
@@ -95,5 +93,5 @@
     "titleAlign": "left",
     "customCss": ""
   },
-  "updatedAt": "2026-11-27T02:38:41.321Z"
+  "updatedAt": "2026-11-27T02:46:40.767Z"
 }
